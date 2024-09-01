@@ -10,7 +10,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 
 # News
 
-## **Jul 20, 2019**        Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK
+**Jul 20, 2019**        Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK
 
-## **Sep 01, 2018**        Admitted to Dalian University of Technology
+**Sep 01, 2018**        Admitted to Dalian University of Technology
 
