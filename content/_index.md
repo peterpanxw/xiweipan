@@ -10,11 +10,11 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 
 ## News
 
-**Jun 16, 2022**<p>&nbsp;&nbsp;&nbsp;Graduated with the honor of *Outstanding Graduates of DUT, Class of 2022*</p>
+<p>**Jun 16, 2022**&nbsp;&nbsp;&nbsp;Graduated with the honor of *Outstanding Graduates of DUT, Class of 2022*</p>
 
-**Sep 28, 2021**<p>&nbsp;&nbsp;&nbsp;Pre-admitted to Dalian University of Technology for master's study</p>
+<p>**Sep 28, 2021**&nbsp;&nbsp;&nbsp;Pre-admitted to Dalian University of Technology for master's study</p>
 
-**Jul 20, 2019**<p>&nbsp;&nbsp;&nbsp;Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK</p>
+<p>**Jul 20, 2019**&nbsp;&nbsp;&nbsp;Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK</p>
 
-**Sep 01, 2018**<p>&nbsp;&nbsp;&nbsp;Admitted to Dalian University of Technology</p>
+<p>**Sep 01, 2018**&nbsp;&nbsp;&nbsp;Admitted to Dalian University of Technology</p>
 
