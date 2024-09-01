@@ -8,9 +8,9 @@ Hello, welcome to my homepage! My name is **Xiwei (Peter) Pan**, a native of the
 
 Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (Qian Lingxi Excellence in Education Program) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
 
-# News
+## News
 
-**Jul 20, 2019**$emsp;$emsp;Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK
-
-**Sep 01, 2018**$emsp;Admitted to Dalian University of Technology
+**Jun 16, 2022**&#20;&#20;Graduated with the honor of *Outstanding Graduates of DUT, Class of 2022*\
+**Jul 20, 2019**&#20;&#20;Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK\
+**Sep 01, 2018**&#20;&#20;Admitted to Dalian University of Technology
 
