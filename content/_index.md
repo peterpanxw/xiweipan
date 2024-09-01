@@ -10,8 +10,6 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 
 ## News
 
-<p><b>Sep 16, 2023</b>&emsp;&emsp;&emsp;My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
-
 <p><b>Jun 16, 2022</b>&emsp;&emsp;&emsp;Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em></p>
 
 <p><b>Sep 28, 2021</b>&emsp;&emsp;&emsp;Pre-admitted to Dalian University of Technology for master's study</p>
