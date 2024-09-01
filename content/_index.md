@@ -10,7 +10,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 
 ## News
 
-<p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;My first research paper was accepted by the <em>International Journal for Numerical Methods in Engineering</em>!</p>
+<p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <em>International Journal for Numerical Methods in Engineering</em>!</p>
 
 <p><b>Jun 16, 2022</b>&nbsp;&nbsp;&nbsp;Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em></p>
 
