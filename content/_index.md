@@ -10,7 +10,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 
 ## News
 
-**Jun 16, 2022**<p>&nbsp;&nbsp;&nbsp;</p>Graduated with the honor of *Outstanding Graduates of DUT, Class of 2022*
+**Jun 16, 2022**<p>&nbsp;&nbsp;&nbsp;Graduated with the honor of *Outstanding Graduates of DUT, Class of 2022*</p>
 
 **Sep 28, 2021**<p>&nbsp;&nbsp;&nbsp;Pre-admitted to Dalian University of Technology for master's study</p>
 
