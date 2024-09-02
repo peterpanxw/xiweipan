@@ -20,7 +20,7 @@ projects = "/projects/:year/:month/:day/:slug/"
     url = "/en/about/"
     weight = 2
 [[menu.en]]
-    name = "projects"
+    name = "Projects"
     url = "/en/projects/"
     weight = 3
 [[menu.en]]

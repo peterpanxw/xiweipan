@@ -1,5 +1,6 @@
 ---
 title: Home
+date: today
 ---
 
 {{<figure src="Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="500">}}
