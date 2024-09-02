@@ -51,13 +51,13 @@ projects = "/projects/:year/:month/:day/:slug/"
     MathJaxVersion = "2.7.5"
     favicon = "media/favicon.png"
     # Edit by yourself:
-    GithubEdit = "https://github.com/peterpanxw/xiweiblog/edit/main/content/"
+    GithubEdit = "https://github.com/peterpanxw/xiweipan/edit/main/content/"
     copyright = "&copy;"
     copyrightYear = "2020-2024"
     # Edit by yourself:
-    GithubRepo = "https://github.com/peterpanxw/xiweiblog"
+    GithubRepo = "https://github.com/peterpanxw/xiweipan"
     # Edit by yourself:
-    ContentSource = "https://raw.githubusercontent.com/peterpanxw/xiweiblog/main/content/" 
+    ContentSource = "https://raw.githubusercontent.com/peterpanxw/xiweipan/main/content/" 
 
 [params.logo]
   # Change the logo picture as your prefer:
