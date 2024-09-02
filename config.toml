@@ -41,8 +41,8 @@ projects = "/projects/:year/:month/:day/:slug/"
     weight = 3
 
 [params]
-    description = "Peronal website of Your Name"
-    homeText = "You just need a Hugo blog from scratch"
+    description = "Peronal website of Xiwei Pan"
+    homeText = "Xiwei Pan's Personal Website"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "projects"
     # singleLang = true
@@ -64,7 +64,7 @@ projects = "/projects/:year/:month/:day/:slug/"
   url = "media/peterpan-logo.png" # you can change it
   width = 50.0
   height = 50.0
-  alt = "Hugo-ht"
+  alt = "Xiwei Pan"
 
 [params.lang]
 
