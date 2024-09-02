@@ -1,7 +1,7 @@
 ---
-title: 'English projects'
+title: 'English Projects'
 date: ''
 ---
 
-## projects
+## Projects
 

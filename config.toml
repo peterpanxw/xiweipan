@@ -20,7 +20,7 @@ projects = "/projects/:year/:month/:day/:slug/"
     url = "/en/about/"
     weight = 2
 [[menu.en]]
-    name = "Projects"
+    name = "projects"
     url = "/en/projects/"
     weight = 3
 [[menu.en]]
@@ -44,7 +44,7 @@ projects = "/projects/:year/:month/:day/:slug/"
     description = "Peronal website of Your Name"
     homeText = "You just need a Hugo blog from scratch"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
-    blogDirName = "Projects"
+    blogDirName = "projects"
     # singleLang = true
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
