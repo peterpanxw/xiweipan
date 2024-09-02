@@ -1,4 +1,4 @@
-baseURL = "https://xiweiblog.vercel.app/"
+baseURL = "https://xiweipan.vercel.app/"
 languageCode = "en-us"
 title = "潘玺玮: Xiwei Pan"
 theme = "hugo-ht"
