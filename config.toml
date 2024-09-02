@@ -9,7 +9,7 @@ enableRobotsTXT = true
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
-posts = "/posts/:year/:month/:day/:slug/"
+projects = "/projects/:year/:month/:day/:slug/"
 
 [[menu.en]]
     name = "Home"
@@ -20,12 +20,12 @@ posts = "/posts/:year/:month/:day/:slug/"
     url = "/en/about/"
     weight = 2
 [[menu.en]]
-    name = "Posts"
-    url = "/en/posts/"
+    name = "projects"
+    url = "/en/projects/"
     weight = 3
 [[menu.en]]
     name = "中文"
-    url = "/cn/posts/"
+    url = "/cn/projects/"
     weight = 4
 [[menu.cn]]
     name = "关于"
@@ -33,7 +33,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     weight = 1
 [[menu.cn]]
     name = "日志"
-    url = "/cn/posts/"
+    url = "/cn/projects/"
     weight = 2
 [[menu.cn]]
     name = "English"
@@ -44,7 +44,7 @@ posts = "/posts/:year/:month/:day/:slug/"
     description = "Peronal website of Your Name"
     homeText = "You just need a Hugo blog from scratch"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
-    blogDirName = "posts"
+    blogDirName = "projects"
     # singleLang = true
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
