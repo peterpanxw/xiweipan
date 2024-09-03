@@ -27,7 +27,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <div>
   <div style="float: left">
     <a target="_blank" href="/figures/BL.png">
-      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" hspace="35" height="100" width="150" style="vertical-align:middle"/>
+      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" hspace="30" height="100" width="150" style="vertical-align:middle"/>
     </a>
   </div>
   <div style="font-size: 16px">
