@@ -24,17 +24,28 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
+ <div class="mainPro-img">
+     <img class="qqq" src="figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" style="width: 100%;">
+ </div>
+ .qqq{
+    transition: all 0.2s linear;
+}
+.qqq:hover{
+    transform: scale(0.8);
+    transition: all 0.2s linear;
+}
+<br>
 <div>
 	<div style="float: left">
 		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
 	</div>
-	<div style="font-size: 18px">
+	<div style="font-size: 16px">
 		<b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
     </div>
-    <div style="font-size: 16px">
+    <div style="font-size: 14px">
 		Xiwei, Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
     </div>
-    <div style="font-size: 16px">
+    <div style="font-size: 14px">
 		International Journal for Numerical Methods in Engineering, 2024
 	</div>
 </div>
@@ -43,13 +54,13 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 	<div style="float: left">
 		<img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="350"/>
 	</div>
-	<div style="font-size: 18px">
+	<div style="font-size: 16px">
 		<b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>
     </div>
-    <div style="font-size: 16px">
+    <div style="font-size: 14px">
 		Xiwei, Pan and Yichao Zhu
     </div>
-    <div style="font-size: 16px">
+    <div style="font-size: 14px">
 		arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.
 	</div>
 </div>
