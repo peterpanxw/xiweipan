@@ -68,8 +68,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 		International Journal for Numerical Methods in Engineering, 2024
 	</div>
 </div>
-
-</html>
 <script>
   function imgClick(e) {
     showImagePreview(e.target.src)
