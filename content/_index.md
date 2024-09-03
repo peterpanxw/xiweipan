@@ -44,7 +44,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <div>
   <div style="float: left">
     <a target="_blank" href="/figures/Shell.png">
-      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" hspace="20" width="180" height="100">
+      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" hspace="20" width="150" height="100">
     </a>
   </div>
   <div style="font-size: 16px">
