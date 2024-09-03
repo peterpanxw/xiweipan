@@ -24,17 +24,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
- <div class="mainPro-img">
-     <img class="qqq" src="figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" style="width: 100%;">
- </div>
- .qqq{
-    transition: all 0.2s linear;
-}
-.qqq:hover{
-    transform: scale(0.8);
-    transition: all 0.2s linear;
-}
-<br>
 <div>
 	<div style="float: left">
 		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
@@ -64,3 +53,115 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 		arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.
 	</div>
 </div>
+<br>
+<div>
+	<div style="float: left">
+		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
+	</div>
+	<div style="font-size: 16px">
+		<b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
+    </div>
+    <div style="font-size: 14px">
+		Xiwei, Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
+    </div>
+    <div style="font-size: 14px">
+		International Journal for Numerical Methods in Engineering, 2024
+	</div>
+</div>
+
+</html>
+<script>
+  function imgClick(e) {
+    showImagePreview(e.target.src)
+  }
+  // 遮罩层对象
+  let div = null
+  // 图片对象
+  let img = null
+  // 缩放倍数
+  let scale = 1
+  // 记录初始点击时间
+  let startTime = 0
+  // 区分是否为点击
+  let isClick = true
+  // 图片放大函数
+  function showImagePreview(url) {
+    // 创建遮罩
+    div = document.createElement("div")
+    div.style.position = "fixed";
+    div.style.top = "0";
+    div.style.bottom = "0";
+    div.style.left = "0";
+    div.style.right = "0";
+    div.style.backgroundColor = "rgba(0,0,0,0.8)";
+    div.style.display = "flex";
+    div.style.justifyContent = "center";
+    div.style.alignItems = "center";
+    div.style.zIndex = "1000";
+    // 遮罩层鼠标滚轮事件
+    div.onwheel = (e) => zoom(e)
+    // 记录点击初始时间
+    div.onmousedown = (e) => startTime = e.timeStamp
+    // 遮罩层鼠标抬起，主要记录时间差是否大于200ms
+    div.onmouseup = (e) => divMouseUp(e)
+    // click最后触发，根据时间差的结果判断是否要触发
+    div.onclick = () => {
+      if (isClick) {
+        document.body.removeChild(div)
+      }
+    };
+    // 创建图片
+    img = document.createElement("img")
+    img.src = url
+    img.style.position = "relative"
+    img.style.transform = `scale(${scale})`
+    // 图片移动操作
+    img.onmousedown = (e) => imgMouseDown(e)
+    img.onmouseup = (e) => imgMouseUP(e)
+    // div.addEventListener("wheel", (e) => zoom(e), { passive: false })
+    div.appendChild(img)
+    document.body.appendChild(div)
+  }
+  // 图片缩放操作函数
+  function zoom(wheelEvent) {
+    wheelEvent.preventDefault()
+    if (wheelEvent.deltaY > 0) {
+      scale = scale * 0.9
+    } else {
+      scale = scale * 1.1
+    }
+    img.style.transform = `scale(${scale})`
+  }
+  
+  function imgMouseDown(downEvent) {
+    downEvent.preventDefault()
+    const rect = window.getComputedStyle(img, null)
+    let leftNum = parseInt(rect.getPropertyValue("left"))
+    let topNum = parseInt(rect.top)
+    div.onmousemove = (moveEvent) => {
+      img.style.top = moveEvent.clientY - downEvent.clientY + topNum + "px";
+      img.style.left = moveEvent.clientX - downEvent.clientX + leftNum + "px";
+    }
+  }
+  // 便于理解单独抽离
+  function imgMouseUP(e) {
+    div.onmousemove = null
+  }
+
+  function divMouseUp(e) {
+    if (e.timeStamp - startTime > 200) {
+      isClick = false
+    } else {
+      isClick = true
+    }
+  }
+</script>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>
