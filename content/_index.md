@@ -30,19 +30,26 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 	</div>
 	<div style="font-size: 18px">
 		<b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
+    </div>
+    <div style="font-size: 16px">
 		Xiwei, Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
+    </div>
+    <div style="font-size: 16px">
 		International Journal for Numerical Methods in Engineering, 2024
 	</div>
 </div>
-
-
+<br>
 <div>
 	<div style="float: left">
 		<img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="350"/>
 	</div>
 	<div style="font-size: 18px">
-		<b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>\
-		Xiwei, Pan and Yichao Zhu\
+		<b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>
+    </div>
+    <div style="font-size: 16px">
+		Xiwei, Pan and Yichao Zhu
+    </div>
+    <div style="font-size: 16px">
 		arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.
 	</div>
 </div>
