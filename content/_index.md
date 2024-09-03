@@ -56,8 +56,8 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
         } 
     </style> 
 </head>
-<div class="thumb-container">
-	<div style="float: left">
+<div>
+	<div style="float: left"  class="thumb-container">
 		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
 	</div>
 	<div style="font-size: 16px">
