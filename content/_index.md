@@ -25,9 +25,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
 <div>
-  <div style="float: left" hspace="20">
+  <div style="float: left">
     <a target="_blank" href="/figures/BL.png">
-      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="150" height="100" style="vertical-align:middle"/>
+      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" hspace="20" width="150" height="100">
     </a>
   </div>
   <div style="font-size: 16px">
@@ -42,9 +42,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 </div>
 <br>
 <div>
-  <div style="float: left" hspace="20">
+  <div style="float: left">
     <a target="_blank" href="/figures/Shell.png">
-      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" width="180" height="100" style="vertical-align:middle"/>
+      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" hspace="20" width="180" height="100">
     </a>
   </div>
   <div style="font-size: 16px">
