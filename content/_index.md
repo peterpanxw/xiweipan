@@ -54,9 +54,11 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 	</div>
 </div>
 <br>
+<body>
 <div>
 	<img onclick="imgClick(event)" src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="150" height="150" style="object-fit: cover;">
 </div>
+</body>
 <script>
   function imgClick(e) {
     showImagePreview(e.target.src)
