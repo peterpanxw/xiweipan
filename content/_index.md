@@ -2,13 +2,13 @@
 title: Home
 ---
 
-{{<figure src="Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="500">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="500">}}
 
 Hello, welcome to my homepage! My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a master's student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm). I am very interested in multiscale modeling of complex systems, with a focus on spatially varying multiscale configurations and plate/shell structures.
 
 Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (Qian Lingxi Excellence in Education Program) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
 
-My [curriculum vitae (CV)](Xiwei_CV.pdf).
+My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## News
 
@@ -22,7 +22,7 @@ My [curriculum vitae (CV)](Xiwei_CV.pdf).
 
 <p><b>Sep 01, 2018</b>&nbsp;&nbsp;&nbsp;&nbsp;Admitted to Dalian University of Technology for undergraduate study</p>
 
-## Selected Publications
+## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-1. **Xiwei, Pan**, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu. Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects. International Journal for Numerical Methods in Engineering, 125(1):e7367, 2024.
-2. **Xiwei, Pan** and Yichao Zhu. Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells. arXiv e-prints, page [arXiv:2407.21021](https://arxiv.org/abs/2407.21021v1), July 2024.
+![Boundary Layer in Asymptotic Homogenization](/figures/BL.png) **Xiwei, Pan**, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu. Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects. International Journal for Numerical Methods in Engineering, 125(1):e7367, 2024.
+![Representation of Multi-layered Thin Shell](/figures/Shell.png) **Xiwei, Pan** and Yichao Zhu. Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells. arXiv e-prints, page [arXiv:2407.21021](https://arxiv.org/abs/2407.21021v1), July 2024.
