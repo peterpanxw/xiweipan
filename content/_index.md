@@ -26,18 +26,18 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 <div>
 	<div style="float: left">
-		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="300"/>
+		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
 	</div>
 	<div>
-		<b>Xiwei, Pan</b>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu. Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects. International Journal for Numerical Methods in Engineering, 125(1):e7367, 2024.
+		<font size="3"><b>Xiwei, Pan</b>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu. Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects. International Journal for Numerical Methods in Engineering, 125(1):e7367, 2024.</font>
 	</div>
 </div>
 
 <div>
 	<div style="float: left">
-		<img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="300"/>
+		<img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="350"/>
 	</div>
 	<div>
-		<b>Xiwei, Pan</b> and Yichao Zhu. Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells. arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.
+		<font size="3"><b>Xiwei, Pan</b> and Yichao Zhu. Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells. arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.</font>
 	</div>
 </div>
