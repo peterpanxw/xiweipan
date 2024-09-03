@@ -56,6 +56,17 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
         } 
     </style> 
 </head>
+<div>
 	<div style="float: left">
 		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
 	</div>
+	<div style="font-size: 16px">
+		<b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
+    </div>
+    <div style="font-size: 14px">
+		Xiwei, Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
+    </div>
+    <div style="font-size: 14px">
+		International Journal for Numerical Methods in Engineering, 2024
+	</div>
+</div>
