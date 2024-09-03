@@ -27,7 +27,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <div>
   <div style="float: left">
     <a target="_blank" href="/figures/BL.png">
-      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="300">
+      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="150">
     </a>
     <div style="font-size: 16px">
       <b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
