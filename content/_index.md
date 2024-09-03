@@ -145,12 +145,3 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     }
   }
 </script>
-<style>
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-</style>
