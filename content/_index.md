@@ -24,7 +24,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-<div>
+1. <div>
   <div style="float: left">
     <a target="_blank" href="/figures/BL.png">
       <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" height="100" style="vertical-align:middle"/>
@@ -40,8 +40,8 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     International Journal for Numerical Methods in Engineering, 2024
   </div>
 </div>
-<br>
-<div>
+
+2. <div>
   <div style="float: left">
     <a target="_blank" href="/figures/Shell.png">
       <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" height="100" style="vertical-align:middle"/>
