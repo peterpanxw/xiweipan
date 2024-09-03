@@ -37,6 +37,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     Xiwei Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
   </div>
   <div style="font-size: 14px">
-      International Journal for Numerical Methods in Engineering, 2024
+    International Journal for Numerical Methods in Engineering, 2024
   </div>
 </div>
