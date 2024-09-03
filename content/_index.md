@@ -41,8 +41,8 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 		<img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="350"/>
 	</div>
 	<div style="font-size: 18px">
-		<b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>
-		Xiwei, Pan and Yichao Zhu
+		<b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>\
+		Xiwei, Pan and Yichao Zhu\
 		arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024.
 	</div>
 </div>
