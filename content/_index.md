@@ -24,6 +24,48 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
+<style>
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+   }
+ 
+   .modal-image {
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      margin: auto;
+      margin-top: 5%;
+   }
+</style>
+ 
+<img src="figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" onclick="showModal(this)">
+ 
+<div id="modal" class="modal" onclick="hideModal()">
+  <img id="modal-image" class="modal-image">
+</div>
+ 
+<script>
+   function showModal(image) {
+      var modal = document.getElementById("modal");
+      var modalImage = document.getElementById("modal-image");
+      modal.style.display = "block";
+      modalImage.src = image.src;
+   }
+ 
+   function hideModal() {
+      var modal = document.getElementById("modal");
+      modal.style.display = "none";
+   }
+</script>
+
+
 <div>
 	<div style="float: left">
 		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
