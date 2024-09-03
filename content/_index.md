@@ -36,3 +36,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <a target="_blank" href="/figures/BL.png">
   <img src="/figures/BL.png" alt="photo" width="300">
 </a>
+<div style="font-size: 16px">
+  <b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells.</b>
+</div>
