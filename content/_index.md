@@ -24,76 +24,38 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>html图片放大缩小多种案例(附源码) - xcLeigh</title>
-	<link href="figures/BL.png" rel="icon">
-    <style type="text/css">
-        .nav {
-            height: 41px;
-            border-top: 3px solid #ff8500;
-            border-bottom: 1px solid #ff8500;
-            background-color: #fff;
-            line-height: 41px;
-        }
-        .link {
-            /*   此时的a为行内元素 修改高无效 需要将a转换为行内块元素 它既可以有宽度 又可以有高度*/
-            display: inline-block;
-            height: 41px;
-            padding: 0 10px;
-            /* 上下为0  左右为20px */
-            font-size: 12px;
-            color: orange;
-            text-decoration: none;
-			float:right;
-        }
-        .link:hover {
-            background-color: #eee;
-            color: #E70722;
-        }
-        .active{
-            background-color: #eee;
-            color: #E70722;
-        }
-        .nav span {
-            /*   此时的a为行内元素 修改高无效 需要将a转换为行内块元素 它既可以有宽度 又可以有高度*/
-            display: inline-block;
-            line-height: 30px;
-            padding: 0 20px;
-            /* 上下为0  左右为20px */
-            font-size: 12px;
-            color: #4c4ac4;
-            text-decoration: none;
-			cursor:pointer;
-        }
-        .nav span:hover {
-            background-color: #eee;
-            color: #ff8500;
-        }
-    </style>
+<head>   
+    <title> 
+        Thumbnail Image using HTML and CSS 
+    </title> 
+    <style> 
+        .thumb-container { 
+            width: 300px; 
+            height: 180px; 
+            overflow: hidden; 
+            padding: 5px; 
+            border: 1px solid #e1e1e1; 
+            border-radius: 8px; 
+            margin: 20px; 
+        } 
+  
+        .thumb-image { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            border-radius: 5px; 
+        } 
+  
+        .thumb-image:hover { 
+            scale: 1.02; 
+            cursor: pointer; 
+        } 
+  
+        .thumb-container:hover { 
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5); 
+        } 
+    </style> 
 </head>
-<body style="margin:auto;padding:auto; background-color:rgba(255,133,0,0.03);">
-	<div class="dicContent" style="width:100%; height:calc(100% - 46px); z-index:111; position:absolute; margin:0px;padding:0px; margin-top:46px;">
-		<iframe  class="dicContent" id="iframeContent" src="resource/简约版本图片预览/index.html" border="0" style="border:0px;width:100%;height:calc(100%); position: absolute; margin:0px;padding:0px;background-color: transparent !important;"></iframe>
+	<div style="float: left">
+		<img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="350"/>
 	</div>
-    <div class="nav">
-        <a href="javascript:void(0);" class="link active" onclick="showContent('figures/BL.png',this)">图片预览</a>
-    </div>
-</body>
-<script type="text/javascript">
-	function showUrl(url){
-        window.open(url,"_blank");
-    }
-    function showContent(url,obj){
-        var arr=document.getElementsByClassName("link");
-        for(var i=0;i<arr.length;i++){
-            arr[i].classList.remove("active");
-        }
-        obj.setAttribute("class","link active");
-        document.getElementById("iframeContent").src=url;
-    }
-</script>
-</html>
-
