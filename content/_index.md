@@ -33,13 +33,10 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     box-shadow: 0px 4px 5px #FFD700;
   }
 </style>
-
+<a target="_blank" href="/figures/BL.png">
+  <img src="/figures/BL.png" alt="photo" width="300">
+</a>
 <div>
-  <div div style="float: left">
-    <a target="_blank" href="/figures/BL.png">
-      <img src="/figures/BL.png" alt="photo" width="300">
-    </a>
-  </div>
   <div style="font-size: 16px">
     <b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
     </div>
