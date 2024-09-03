@@ -25,13 +25,13 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
 <figure>
-  <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="200"/>
+  <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" width="300" float: left/>
 </figure>
 
 **Xiwei, Pan**, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu. Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects. International Journal for Numerical Methods in Engineering, 125(1):e7367, 2024.
 
 <figure>
-  <img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="200"/>
+  <img src="/figures/Shell.png" alt="Representation of Multi-layered Thin Shell" width="300" float: left/>
 </figure>
 
 **Xiwei, Pan** and Yichao Zhu. Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells. arXiv e-prints, page [arXiv:2407.21021](https://arxiv.org/abs/2407.21021v1), July 2024.
