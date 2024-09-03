@@ -40,20 +40,3 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
       International Journal for Numerical Methods in Engineering, 2024
   </div>
 </div>
-<br>
-<div>
-  <div style="float: left">
-    <a target="_blank" href="/figures/Shell.png">
-      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" hspace="35" height="100" style="vertical-align:middle"/>
-    </a>
-  </div>
-  <div style="font-size: 16px">
-      <b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells</b>
-  </div>
-  <div style="font-size: 14px">
-      Xiwei Pan and Yichao Zhu
-  </div>
-  <div style="font-size: 14px">
-      arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024
-  </div>
-</div>
