@@ -39,7 +39,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   .thumbnail {
     width: 150px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: opacity 0.3s;
     margin-right: 20px;
   }
 
@@ -74,10 +74,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     width: 100%;
     max-width: 700px;
     border-radius: 10px;
-  }
-
-  /* Nonlinear animation for the modal (enlarging process) */
-  .modal-content {
     animation: nonlinearZoom 0.6s ease-out;
   }
 
@@ -104,7 +100,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     color: #333;
     font-size: 30px;
     font-weight: bold;
-    transition: 0.3s;
+    transition: color 0.3s;
     cursor: pointer;
   }
 
@@ -112,7 +108,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   .close:focus {
     color: #555;
     text-decoration: none;
-    cursor: pointer;
   }
 </style>
 
@@ -130,7 +125,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
+    <img class="modal-content" id="img01" src="">
 </div>
 
 <script>
@@ -152,5 +147,12 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
     modal.style.display = "none";
+}
+
+// Close the modal if the user clicks anywhere outside of the modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 </script>
