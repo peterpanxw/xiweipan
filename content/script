@@ -1,3 +1,5 @@
+// Ensure JavaScript runs after the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
 const thumbnail = document.getElementById('thumbnail');
 const enlargedImage = document.getElementById('enlargedImage');
 const overlay = document.getElementById('overlay');
@@ -13,5 +15,7 @@ overlay.classList.remove('show');
 });
 
 enlargedImage.addEventListener('click', (event) => {
-event.stopPropagation(); // Prevent click on the enlarged image from closing it
+// Prevent the click event on the enlarged image from closing it
+event.stopPropagation();
+});
 });
