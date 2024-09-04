@@ -26,16 +26,16 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thumbnail with Enlarge Effect</title>
+<title>Thumbnail with Enlarge Animation</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
   }
 
   .thumbnail-container {
@@ -45,9 +45,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
   .thumbnail {
     width: 200px;
-    height: 200px;
+    height: 150px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .thumbnail:hover {
@@ -61,33 +61,55 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
-    height: 80vh;
-    object-fit: contain;
-    border: 2px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
   }
 
   .enlarged-image.show {
     display: block;
-    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+  }
+
+  .overlay.show {
+    display: block;
   }
 </style>
 <div class="thumbnail-container">
   <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
-  <img src="/figures/BL.png" alt="Enlarged Image" class="enlarged-image" id="enlargedImage">
+  <div class="overlay" id="overlay"></div>
+  <img src="/figures/BL.png" alt="Enlarged View" class="enlarged-image" id="enlargedImage">
 </div>
 <script>
   const thumbnail = document.getElementById('thumbnail');
   const enlargedImage = document.getElementById('enlargedImage');
+  const overlay = document.getElementById('overlay');
 
   thumbnail.addEventListener('click', () => {
-    enlargedImage.classList.toggle('show');
+    enlargedImage.classList.add('show');
+    overlay.classList.add('show');
   });
 
-  enlargedImage.addEventListener('click', () => {
+  overlay.addEventListener('click', () => {
     enlargedImage.classList.remove('show');
+    overlay.classList.remove('show');
   });
 </script>
