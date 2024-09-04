@@ -12,6 +12,7 @@ body {
 #thumbnail {
     cursor: pointer;
     width: 200px; /* Thumbnail size */
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -35,6 +36,7 @@ body {
 .overlay img {
     max-width: 90%;
     max-height: 90%;
+    border-radius: 8px;
     animation: enlarge 0.5s ease-out;
 }
 

@@ -1,8 +1,13 @@
-function enlargeImage() {
-    document.getElementById('overlay').style.display = 'flex';
-    document.getElementById('enlargedImage').src = document.getElementById('thumbnail').src;
+function openOverlay() {
+    const overlay = document.getElementById('overlay');
+    const thumbnail = document.getElementById('thumbnail');
+    const enlargedImage = document.getElementById('enlargedImage');
+    
+    enlargedImage.src = thumbnail.src;
+    overlay.style.display = 'flex';
 }
 
-function closeImage() {
-    document.getElementById('overlay').style.display = 'none';
+function closeOverlay() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
 }
