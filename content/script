@@ -1,12 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const thumbnail = document.getElementById('thumbnail');
-    const overlay = document.getElementById('overlay');
+    const enlargedView = document.getElementById('enlargedView');
+    const closeBtn = document.getElementById('closeBtn');
 
     thumbnail.addEventListener('click', () => {
-        overlay.style.display = 'flex';
+        enlargedView.style.display = 'flex';
     });
 
-    overlay.addEventListener('click', () => {
-        overlay.style.display = 'none';
+    closeBtn.addEventListener('click', () => {
+        enlargedView.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === enlargedView) {
+            enlargedView.style.display = 'none';
+        }
     });
 });

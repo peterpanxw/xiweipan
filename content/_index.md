@@ -29,17 +29,19 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumbnail Enlargement</title>
+    <title>Thumbnail to Enlarged Image</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="thumbnail-container">
         <img src="/figures/BL_thumbnail.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
-        <div class="overlay" id="overlay">
-            <img src="/figures/BL.png" alt="Enlarged View" class="enlarged-image">
+        <div class="enlarged-view" id="enlargedView">
+            <span class="close" id="closeBtn">&times;</span>
+            <img src="/figures/BL.png" alt="Enlarged" class="enlarged-image">
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
 
