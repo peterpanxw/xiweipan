@@ -96,7 +96,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <div class="thumbnail-container">
   <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
   <div class="overlay" id="overlay"></div>
-  <img src="/figures/Shell.png" alt="Enlarged View" class="enlarged-image" id="enlargedImage">
+  <img src="/figures/BL_Enlarged.png" alt="Enlarged View" class="enlarged-image" id="enlargedImage">
 </div>
 <script>
   const thumbnail = document.getElementById('thumbnail');
