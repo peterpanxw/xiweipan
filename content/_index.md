@@ -28,11 +28,10 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thumbnail with Enlarged View and Explanations</title>
 <style>
-  /* Style for the container */
-  .thumbnail-container {
+  /* Container for thumbnail and explanation */
+  .container {
     display: flex;
     align-items: center;
-    margin: 20px;
   }
 
   /* Style for the thumbnail */
@@ -40,7 +39,8 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     width: 150px;
     cursor: pointer;
     transition: 0.3s;
-    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
 
   /* Add a hover effect to the thumbnail */
@@ -48,77 +48,73 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     opacity: 0.7;
   }
 
-  /* Style for the explanations */
+  /* Style for the explanation box */
   .explanation {
-    max-width: 300px;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
   }
 
   /* Style for the modal */
   .modal {
     display: none;
     position: fixed;
-    z-index: 10;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    animation: float 1s ease-in-out;
   }
 
   /* Style for the enlarged image inside the modal */
   .modal-content {
+    margin: auto;
     display: block;
-    width: 100%;
-    max-width: 700px;
-    border-radius: 10px;
-    animation: nonlinearZoom 0.6s ease-out;
+    width: 80%;
+    max-width: 800px;
+    animation: zoom 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   }
 
-  @keyframes nonlinearZoom {
-    0% {
-      transform: scale(0.5);
-      opacity: 0;
-    }
-    50% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-      opacity: 1;
-    }
+  @keyframes zoom {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+  }
+
+  @keyframes float {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 
   /* Style for the close button */
   .close {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #333;
-    font-size: 30px;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
     cursor: pointer;
+    transition: 0.3s;
   }
 
   .close:hover,
   .close:focus {
-    color: #555;
+    color: #bbb;
     text-decoration: none;
     cursor: pointer;
   }
 </style>
-<!-- Container with thumbnail and explanation -->
-<div class="thumbnail-container">
+
+<!-- Container for thumbnail and explanation -->
+<div class="container">
+    <!-- Thumbnail image -->
     <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="myThumbnail">
+    <!-- Explanation section -->
     <div class="explanation">
-        <h3>Image Explanation</h3>
-        <p>
-            This is a brief explanation of the image. You can add more details here, describing the content or purpose of the image. Feel free to expand this section with relevant information.
-        </p>
+        <h2>Image Title</h2>
+        <p>This is a brief explanation or description related to the thumbnail image. You can add any additional details here to provide more context or information.</p>
     </div>
 </div>
 
@@ -145,14 +141,7 @@ img.onclick = function() {
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function() { 
     modal.style.display = "none";
-}
-
-// Close the modal when clicking anywhere outside the image
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
 }
 </script>
