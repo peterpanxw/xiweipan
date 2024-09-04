@@ -112,4 +112,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     enlargedImage.classList.remove('show');
     overlay.classList.remove('show');
   });
+
+  enlargedImage.addEventListener('click', (event) => {
+            // Prevent the click event on the enlarged image from closing it
+    event.stopPropagation();
+  });
 </script>
