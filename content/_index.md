@@ -39,7 +39,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   .thumbnail {
     width: 150px;
     cursor: pointer;
-    transition: opacity 0.3s;
+    transition: 0.3s;
     margin-right: 20px;
   }
 
@@ -100,7 +100,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     color: #333;
     font-size: 30px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: 0.3s;
     cursor: pointer;
   }
 
@@ -108,6 +108,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   .close:focus {
     color: #555;
     text-decoration: none;
+    cursor: pointer;
   }
 </style>
 
@@ -125,7 +126,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img01" src="">
+    <img class="modal-content" id="img01">
 </div>
 
 <script>
@@ -136,7 +137,7 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("myThumbnail");
 var modalImg = document.getElementById("img01");
 
-img.onclick = function(){
+img.onclick = function() {
     modal.style.display = "block";
     modalImg.src = this.src;
 }
@@ -145,11 +146,11 @@ img.onclick = function(){
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
+span.onclick = function() {
     modal.style.display = "none";
 }
 
-// Close the modal if the user clicks anywhere outside of the modal
+// Close the modal when clicking anywhere outside the image
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
