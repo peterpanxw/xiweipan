@@ -1,19 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const thumbnail = document.getElementById('thumbnail');
-    const enlargedView = document.getElementById('enlargedView');
-    const closeBtn = document.getElementById('closeBtn');
+// Get modal element
+var modal = document.getElementById('modal');
 
-    thumbnail.addEventListener('click', () => {
-        enlargedView.style.display = 'flex';
-    });
+// Get thumbnail and modal content
+var thumbnail = document.getElementById('thumbnail');
+var modalContent = document.getElementById('modal-content');
 
-    closeBtn.addEventListener('click', () => {
-        enlargedView.style.display = 'none';
-    });
+// Get close button
+var close = document.getElementById('close');
 
-    window.addEventListener('click', (event) => {
-        if (event.target === enlargedView) {
-            enlargedView.style.display = 'none';
-        }
-    });
-});
+// When the user clicks on the thumbnail, open the modal
+thumbnail.onclick = function() {
+    modal.style.display = 'flex';
+}
+
+// When the user clicks on the close button, close the modal
+close.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// When the user clicks anywhere outside of the modal content, close the modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
