@@ -24,14 +24,21 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thumbnail with Enlarge Animation</title>
-<link rel="stylesheet" href="styles.css">
-<div class="gallery">
-  <img id="thumbnail" src="/figures/BL_thumbnail.png" alt="Thumbnail" onclick="enlargeImage()">
-  <div id="overlay" class="overlay" onclick="closeImage()">
-    <img id="enlargedImage" src="/figures/BL.png" alt="Enlarged Image">
-  </div>
-</div>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail with Enlarging Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gallery">
+        <img id="thumbnail" src="/figures/BL_thumbnail.png" alt="Thumbnail" onclick="openOverlay()">
+        <div id="overlay" class="overlay" onclick="closeOverlay()">
+            <img id="enlargedImage" src="/figures/BL.png" alt="Enlarged Image">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
