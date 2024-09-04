@@ -29,8 +29,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <title>Thumbnail with Enlarge Animation</title>
 <link rel="stylesheet" href="styles.css">
 <div class="thumbnail-container">
-  <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
-  <div class="overlay" id="overlay"></div>
-  <img src="/figures/BL_Enlarged.png" alt="Enlarged View" class="enlarged-image" id="enlargedImage">
+  <img src="/figures/BL.png" alt="Thumbnail Image" class="thumbnail" id="thumbnail">
+  <div class="overlay" id="overlay">
+    <img src="/figures/BL.png" alt="Enlarged Image" class="enlarged-image">
+  </div>
 </div>
 <script src="script.js"></script>
