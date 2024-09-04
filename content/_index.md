@@ -24,31 +24,39 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thumbnail with Enlarged View</title>
 <style>
-  /* Basic styles for the thumbnail */
+  /* Style for the thumbnail */
   .thumbnail {
     width: 150px;
-    height: auto;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: 0.3s;
   }
 
-  /* Modal styles */
+  /* Add a hover effect to the thumbnail */
+  .thumbnail:hover {
+    opacity: 0.7;
+  }
+
+  /* Style for the modal */
   .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.8); 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
   }
 
+  /* Style for the enlarged image inside the modal */
   .modal-content {
     margin: auto;
     display: block;
@@ -56,25 +64,27 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     max-width: 700px;
   }
 
-  .modal-content, #caption {
+  /* Add animation to the enlarged image */
+  .modal-content {
     animation-name: zoom;
     animation-duration: 0.6s;
   }
 
   @keyframes zoom {
-    from {transform: scale(0)} 
+    from {transform: scale(0)}
     to {transform: scale(1)}
   }
 
-  /* Close button styles */
+  /* Style for the close button */
   .close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: white;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
   }
 
   .close:hover,
@@ -84,34 +94,34 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     cursor: pointer;
   }
 </style>
-<!-- Thumbnail Image -->
-<img id="myThumbnail" src="figures/BL.png" alt="Thumbnail Image" class="thumbnail">
+
+<!-- Thumbnail image -->
+<img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="myThumbnail">
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
 </div>
-<script>
-        // Get the modal
-  var modal = document.getElementById("myModal");
 
-        // Get the image and insert it inside the modal
-  var img = document.getElementById("myThumbnail");
-  var modalImg = document.getElementById("img01");
-  var captionText = document.getElementById("caption");
-  img.onclick = function(){
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal
+var img = document.getElementById("myThumbnail");
+var modalImg = document.getElementById("img01");
+
+img.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
+}
 
-        // Get the <span> element that closes the modal
-  var span = document.getElementsByClassName("close")[0];
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-        // When the user clicks on <span> (x), close the modal
-  span.onclick = function() { 
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
     modal.style.display = "none";
-  }
+}
 </script>
-
