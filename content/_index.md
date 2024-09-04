@@ -28,10 +28,10 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thumbnail with Enlarge Animation</title>
 <link rel="stylesheet" href="styles.css">
-<div class="thumbnail-container">
-  <img src="/figures/BL.png" alt="Thumbnail Image" class="thumbnail" id="thumbnail">
-  <div class="overlay" id="overlay">
-    <img src="/figures/BL.png" alt="Enlarged Image" class="enlarged-image">
+<div class="gallery">
+  <img id="thumbnail" src="/figures/BL.png" alt="Thumbnail" onclick="enlargeImage()">
+  <div id="overlay" class="overlay" onclick="closeImage()">
+    <img id="enlargedImage" src="/figures/BL.png" alt="Enlarged Image">
   </div>
 </div>
 <script src="script.js"></script>

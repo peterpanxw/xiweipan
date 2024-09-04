@@ -1,12 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const thumbnail = document.getElementById('thumbnail');
-    const overlay = document.getElementById('overlay');
+function enlargeImage() {
+    document.getElementById('overlay').style.display = 'flex';
+    document.getElementById('enlargedImage').src = document.getElementById('thumbnail').src;
+}
 
-    thumbnail.addEventListener('click', () => {
-        overlay.style.display = 'flex';
-    });
-
-    overlay.addEventListener('click', () => {
-        overlay.style.display = 'none';
-    });
-});
+function closeImage() {
+    document.getElementById('overlay').style.display = 'none';
+}
