@@ -111,7 +111,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     cursor: pointer;
   }
 </style>
-
 <!-- Container with thumbnail and explanation -->
 <div class="thumbnail-container">
     <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="myThumbnail">
