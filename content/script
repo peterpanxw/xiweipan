@@ -1,7 +1,17 @@
-document.getElementById('thumbnail').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'flex';
+const thumbnail = document.getElementById('thumbnail');
+const enlargedImage = document.getElementById('enlargedImage');
+const overlay = document.getElementById('overlay');
+
+thumbnail.addEventListener('click', () => {
+enlargedImage.classList.add('show');
+overlay.classList.add('show');
 });
 
-document.getElementById('close-btn').addEventListener('click', function() {
-    document.getElementById('overlay').style.display = 'none';
+overlay.addEventListener('click', () => {
+enlargedImage.classList.remove('show');
+overlay.classList.remove('show');
+});
+
+enlargedImage.addEventListener('click', (event) => {
+event.stopPropagation(); // Prevent click on the enlarged image from closing it
 });

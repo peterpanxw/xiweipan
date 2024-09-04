@@ -27,93 +27,10 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Thumbnail with Enlarge Animation</title>
-<style>
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-
-  .thumbnail-container {
-    position: relative;
-    display: inline-block;
-  }
-
-  .thumbnail {
-    width: 200px;
-    height: 150px;
-    cursor: pointer;
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .thumbnail:hover {
-    transform: scale(1.05);
-  }
-
-  .enlarged-image {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: auto;
-    border: 5px solid #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    animation: float 3s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0% { transform: translate(-50%, -50%) translateY(0); }
-    50% { transform: translate(-50%, -50%) translateY(-20px); }
-    100% { transform: translate(-50%, -50%) translateY(0); }
-  }
-
-  .enlarged-image.show {
-    display: block;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 999;
-  }
-
-  .overlay.show {
-    display: block;
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 <div class="thumbnail-container">
   <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
   <div class="overlay" id="overlay"></div>
   <img src="/figures/BL_Enlarged.png" alt="Enlarged View" class="enlarged-image" id="enlargedImage">
 </div>
-<script>
-  const thumbnail = document.getElementById('thumbnail');
-  const enlargedImage = document.getElementById('enlargedImage');
-  const overlay = document.getElementById('overlay');
-
-  thumbnail.addEventListener('click', () => {
-    enlargedImage.classList.add('show');
-    overlay.classList.add('show');
-  });
-
-  overlay.addEventListener('click', () => {
-    enlargedImage.classList.remove('show');
-    overlay.classList.remove('show');
-  });
-
-  enlargedImage.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent click on the enlarged image from closing it
-          });
-</script>
+<script src="script.js"></script>

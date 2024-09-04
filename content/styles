@@ -1,69 +1,64 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     background-color: #f0f0f0;
-}
+    font-family: Arial, sans-serif;
+  }
 
-.thumbnail-container {
+  .thumbnail-container {
     position: relative;
-}
+    display: inline-block;
+  }
 
-.thumbnail {
-    cursor: pointer;
+  .thumbnail {
     width: 200px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
+    height: 150px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
 
-.overlay {
+  .thumbnail:hover {
+    transform: scale(1.05);
+  }
+
+  .enlarged-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-20px); }
+    100% { transform: translate(-50%, -50%) translateY(0); }
+  }
+
+  .enlarged-image.show {
+    display: block;
+  }
+
+  .overlay {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-}
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+  }
 
-.enlarged {
-    position: relative;
-    max-width: 80%;
-    max-height: 80%;
-    animation: float 2s ease-in-out infinite;
-}
-
-.enlarged-img {
-    width: 100%;
-    height: auto;
+  .overlay.show {
     display: block;
-    transform: scale(1.2);
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+  }
