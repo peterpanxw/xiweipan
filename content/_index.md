@@ -24,10 +24,9 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thumbnail with Enlarged View</title>
+<title>Thumbnail with Enlarged View and Explanations</title>
 <style>
   /* Style for the thumbnail */
   .thumbnail {
@@ -52,27 +51,40 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
-  /* Style for the enlarged image inside the modal */
+  /* Style for the modal content */
   .modal-content {
+    display: flex;
     margin: auto;
-    display: block;
     width: 80%;
-    max-width: 700px;
-  }
-
-  /* Add animation to the enlarged image */
-  .modal-content {
+    max-width: 900px;
     animation-name: zoom;
-    animation-duration: 0.6s;
+    animation-duration: 0.8s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Nonlinear zoom */
   }
 
+  /* Keyframe for zoom animation */
   @keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
+    from {transform: scale(0);}
+    to {transform: scale(1);}
+  }
+
+  /* Style for the image in the modal */
+  .modal-img {
+    width: 70%;
+    margin-right: 20px;
+  }
+
+  /* Style for the explanation text */
+  .modal-text {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    width: 30%;
+    display: flex;
+    align-items: center;
   }
 
   /* Style for the close button */
@@ -101,7 +113,12 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <!-- The Modal -->
 <div id="myModal" class="modal">
     <span class="close">&times;</span>
-    <img class="modal-content" id="img01">
+    <div class="modal-content">
+        <img class="modal-img" id="img01">
+        <div class="modal-text">
+            <p id="imgText">This is a detailed explanation of the image. You can add any content here to describe the image, provide context, or add notes.</p>
+        </div>
+    </div>
 </div>
 
 <script>
@@ -111,10 +128,13 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal
 var img = document.getElementById("myThumbnail");
 var modalImg = document.getElementById("img01");
+var modalText = document.getElementById("imgText");
 
 img.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
+    // You can dynamically change the text content if needed
+    modalText.textContent = "This is the explanation that accompanies the image.";
 }
 
 // Get the <span> element that closes the modal
