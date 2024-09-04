@@ -26,39 +26,45 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elegant Thumbnail with Enlarged View</title>
+<title>Thumbnail with Enlarged View</title>
 <style>
   /* Container for the thumbnail and explanation */
   .container {
     display: flex;
     align-items: center;
     margin: 20px;
+    font-family: Arial, sans-serif;
   }
 
   /* Style for the thumbnail */
   .thumbnail {
-    width: 120px; /* Smaller thumbnail size */
-    height: 90px; /* Maintain aspect ratio */
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100px; /* Smaller size for a more elegant look */
+    height: 100px;
+    object-fit: cover; /* Ensure the image fits nicely */
     border-radius: 8px;
-    border: 2px solid #ddd; /* Subtle border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
   }
 
   /* Add a hover effect to the thumbnail */
   .thumbnail:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   }
 
   /* Style for the explanation text */
   .explanation {
     margin-left: 15px;
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #333;
+  }
+
+  .explanation h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #000;
   }
 
   /* Style for the modal */
@@ -72,22 +78,22 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-    animation: floatIn 0.5s ease-out;
+    animation: floatIn 0.6s ease-out;
   }
 
   /* Style for the enlarged image inside the modal */
   .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%;
+    max-width: 80%;
     max-height: 80%;
     border-radius: 8px;
-    animation: zoomIn 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+    animation: zoomIn 0.6s cubic-bezier(0.42, 0, 0.58, 1) forwards;
   }
 
   @keyframes zoomIn {
     0% {
-      transform: scale(0.5);
+      transform: scale(0.7);
       opacity: 0;
     }
     100% {
@@ -99,7 +105,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   @keyframes floatIn {
     0% {
       opacity: 0;
-      transform: translateY(-30px);
+      transform: translateY(-50px);
     }
     100% {
       opacity: 1;
@@ -110,12 +116,12 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   /* Style for the close button */
   .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 15px;
+    right: 35px;
     color: #fff;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
     cursor: pointer;
   }
 
@@ -131,8 +137,8 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
     <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="myThumbnail">
     <!-- Explanation text -->
     <div class="explanation">
-        <h4>Image Title</h4>
-        <p>This is a brief explanation of the image. Add details about the content or context here to provide additional information.</p>
+        <h3>Image Title</h3>
+        <p>This is a brief explanation of the image. Add details about the content, context, or any other relevant information here.</p>
     </div>
 </div>
 
