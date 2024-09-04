@@ -29,7 +29,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 <title>Thumbnail with Enlarge Animation</title>
 <link rel="stylesheet" href="styles.css">
 <div class="gallery">
-  <img id="thumbnail" src="/figures/BL.png" alt="Thumbnail" onclick="enlargeImage()">
+  <img id="thumbnail" src="/figures/BL_thumbnail.png" alt="Thumbnail" onclick="enlargeImage()">
   <div id="overlay" class="overlay" onclick="closeImage()">
     <img id="enlargedImage" src="/figures/BL.png" alt="Enlarged Image">
   </div>
