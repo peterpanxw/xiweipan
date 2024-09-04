@@ -114,7 +114,6 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   });
 
   enlargedImage.addEventListener('click', (event) => {
-            // Prevent the click event on the enlarged image from closing it
-    event.stopPropagation();
-  });
+            event.stopPropagation(); // Prevent click on the enlarged image from closing it
+          });
 </script>
