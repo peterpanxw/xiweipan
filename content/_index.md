@@ -24,17 +24,77 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thumbnail Enlarge Example</title>
-<link rel="stylesheet" href="styles.css">
-<div class="thumbnail-container">
-  <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
-</div>
-<div class="overlay" id="overlay">
-  <div class="enlarged" id="enlarged">
-  <img src="thumbnail.jpg" alt="Enlarged" class="enlarged-img">
-  <button class="close-btn" id="close-btn">&times;</button>
-  </div>
-</div>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail with Enlarge Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .thumbnail {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+
+        .enlarged-image {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+            height: 80vh;
+            object-fit: contain;
+            border: 2px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            z-index: 1000;
+            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .enlarged-image.show {
+            display: block;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail-container">
+        <img src="/figures/BL.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
+        <img src="/figures/BL.png" alt="Enlarged Image" class="enlarged-image" id="enlargedImage">
+    </div>
+    <script>
+        const thumbnail = document.getElementById('thumbnail');
+        const enlargedImage = document.getElementById('enlargedImage');
+
+        thumbnail.addEventListener('click', () => {
+            enlargedImage.classList.toggle('show');
+        });
+
+        enlargedImage.addEventListener('click', () => {
+            enlargedImage.classList.remove('show');
+        });
+    </script>
+</body>
+</html>
