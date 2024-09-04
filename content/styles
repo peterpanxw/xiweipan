@@ -12,7 +12,6 @@ body {
 #thumbnail {
     cursor: pointer;
     width: 200px; /* Thumbnail size */
-    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -31,13 +30,23 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .overlay img {
     max-width: 90%;
     max-height: 90%;
-    border-radius: 8px;
-    animation: enlarge 0.5s ease-out;
+    animation: enlarge 0.5s cubic-bezier(0.2, 0, 0.2, 1); /* Nonlinear easing */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
 }
 
 @keyframes enlarge {

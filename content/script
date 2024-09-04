@@ -1,13 +1,17 @@
-function openOverlay() {
+document.getElementById('thumbnail').addEventListener('click', function() {
     const overlay = document.getElementById('overlay');
-    const thumbnail = document.getElementById('thumbnail');
     const enlargedImage = document.getElementById('enlargedImage');
-    
-    enlargedImage.src = thumbnail.src;
-    overlay.style.display = 'flex';
+    enlargedImage.src = this.src; // Set the enlarged image source to the thumbnail's source
+    overlay.style.display = 'flex'; // Show the overlay
+});
+
+function closeImage() {
+    document.getElementById('overlay').style.display = 'none'; // Hide the overlay
 }
 
-function closeOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-}
+// Close the image overlay when clicking outside the enlarged image
+document.getElementById('overlay').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closeImage();
+    }
+});
