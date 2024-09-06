@@ -24,23 +24,36 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thumbnail with Modal</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="thumbnail-container">
-        <img src="/figures/BL_thumbnail.png" alt="Thumbnail" class="thumbnail" id="thumbnail">
-    </div>
-    <!-- Modal -->
-    <div class="modal" id="modal">
-        <span class="close" id="close">&times;</span>
-        <img src="/figures/BL.png" alt="Enlarged Image" class="modal-content" id="modal-content">
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+<div>
+  <div style="float: left">
+    <a target="_blank" href="/figures/BL.png">
+      <img src="/figures/BL.png" alt="Boundary Layer in Asymptotic Homogenization" hspace="20" height="120" style="vertical-align:left"/>
+    </a>
+  </div>
+  <div style="font-size: 16px">
+    <b>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</b>
+  </div>
+  <div style="font-size: 14px">
+    Xiwei Pan, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu
+  </div>
+  <div style="font-size: 14px">
+    International Journal for Numerical Methods in Engineering, 2024
+  </div>
+</div>
+<br>
+<div>
+  <div style="float: left">
+    <a target="_blank" href="/figures/Shell.png">
+      <img src="/figures/Shell.png" alt="Representation of Multi-Layered Thin Shell" hspace="20" height="95" style="vertical-align:left"/>
+    </a>
+  </div>
+  <div style="font-size: 16px">
+    <b>Isogeometric-based Asymptotic Analysis on Multi-layered Thin Shells</b>
+  </div>
+  <div style="font-size: 14px">
+    Xiwei Pan and Yichao Zhu
+  </div>
+  <div style="font-size: 14px">
+    arXiv e-prints, page <a href="https://arxiv.org/abs/2407.21021v1">arXiv:2407.21021</a>, July 2024
+  </div>
+</div>
