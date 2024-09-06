@@ -50,7 +50,6 @@
                 <a href="/" class="nav-logo">
                     <img src="static/media/peterpan-logo.png" width="50" height="50" alt="Xiwei Pan">
                 </a>
-
                 <!-- icons -->
                 <div class="navbar-brand social"> 
                     <a href="mailto:#"
@@ -73,62 +72,38 @@
                         target="_blank"><i class="nav-icon-brands nav-icon-linkedin"></i></a> 
                 </div> 
                 <!-- icons -->
-
                 <ul class="nav-links">
-
-
                     <li><a href="/">Home</a></li>
-
                     <li><a href="news.html">News</a></li>
-
                     <li><a href="/en/projects/">Projects</a></li>
-
                     <li><a href="/en/blog/">Blog</a></li>
-
                     <li><a href="/cn/projects/">中文</a></li>
-
-
                 </ul>
             </nav>
         </header>
-
-
-
-
         <main class="content">
-
             <div class="list-page">
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                     <a href="/figures/Xiwei_Portrait.JPG" itemprop="contentUrl">
                         <img itemprop="thumbnail" src="static/figures/Xiwei_Portrait.JPG" width="500" />
-
                     </a>
-
                     <figcaption>
                         <h4>Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)</h4>
-
                     </figcaption>
-
                 </figure>
-
-
                 <p>Hello, welcome to my homepage! My name is <strong>Xiwei (Peter) Pan</strong>, a native of the
                     beautiful city of <a href="https://en.wikipedia.org/wiki/Yangzhou" target="_blank"
                         rel="noreferrer noopener">Yangzhou</a>
-
                     , China. I&rsquo;m currently a master&rsquo;s student at <a href="https://www.dlut.edu.cn/"
                         target="_blank" rel="noreferrer noopener">Dalian University of Technology (DUT)</a>
-
                     working with Prof. <a href="http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm"
                         target="_blank" rel="noreferrer noopener">Yichao Zhu</a>
-
                     . I am very interested in multiscale modeling of complex systems, with a focus on spatially varying
                     multiscale configurations and plate/shell structures.</p>
                 <p>Before starting my master&rsquo;s program, I also earned a bachelor&rsquo;s degree in Engineering
                     Mechanics (Qian Lingxi Excellence in Education Program) from DUT. There, I gained a strong
                     foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.</p>
                 <p>My <a href="/files/Xiwei_CV.pdf">Curriculum Vitae (CV)</a>
-
                     .</p>
                 <h2 id="news">News</h2>
                 <p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;&nbsp;My first <a
@@ -146,10 +121,7 @@
                 <h2 id="selected-publicationshttpsxiweipanvercelappenprojects"><a
                         href="https://xiweipan.vercel.app/en/projects/" target="_blank"
                         rel="noreferrer noopener">Selected Publications</a>
-
                 </h2>
-
-
                 <!-- publications -->
                 <div class="publications">
                     <div class="publis-list">
@@ -237,67 +209,33 @@
                     </div>
                 </div>
                 <!-- publications -->
-
-
-
-
-
-
-
-                    <div class="thumbnail-container">
-                        
-                    </div>
-               
-                    
-
-
-
+                    <div class="thumbnail-container">            
+                    </div>                
             </div>
         </main>
-
         <footer class="footer">
-
             <ul class="footer-links">
-
                 <li>
                     <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">Made with <img
                             src="static/media/hugo-logo.png" width="22" height="22"></a>
                 </li>
-
                 <li>
                     <a href='https://github.com/peterpanxw/xiweipan' class="footer-links-kudos" target="_blank">
                         Content in
                         <i class="nav-icon nav-icon-github" style="font-size: 24px"></i>
                     </a>
                 </li>
-
-
-
             </ul>
             <div class="copyright-text">
-
                 ©
-
                 Xiwei (Peter) Pan
-
                 2020-2024
-
             </div>
-
         </footer>
-
-
-
-
-
         <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
-
             Site last updated on
             2021-01-07
-
         </div>
-
-
         <!-- js -->
        <script type="text/javascript" src="static/js/jq.min.js"></script>
        <script type="text/javascript" src="static/js/medium-zoom.min.js"></script>

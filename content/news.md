@@ -6,21 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>潘玺玮: Xiwei Pan</title>
-
-
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/fonts.css" />
-
-
     <link rel="icon" href="https://xiweipan.vercel.app/media/favicon.png">
-
-
-
     <!-- css -->
     <link rel="stylesheet" href="static/css/add.css">
     <!-- css -->
-
-
 </head>
 
 <body>
@@ -51,27 +42,16 @@
                         target="_blank"><i class="nav-icon-brands nav-icon-linkedin"></i></a> 
                 </div> 
                 <ul class="nav-links">
-
-
                     <li><a href="/">Home</a></li>
-
                     <li><a href="/en/projects/">News</a></li>
                     <li><a href="/en/projects/">Projects</a></li>
-
                     <li><a href="/en/blog/">Blog</a></li>
-
                     <li><a href="/cn/projects/">中文</a></li>
-
-
                 </ul>
             </nav>
         </header>
-
-
-
         <!-- content -->
         <main class="content">
-
             <div class="list-page news-list-page">
                 <div class="list-item">
                     <div class="item-time">
@@ -113,14 +93,9 @@
                         <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
                     </div>
                 </div>
-
-
-
             </div>
         </main>
         <!-- content -->
-
-
         <!-- js -->
         <script type="text/javascript" src="static/js/jq.min.js"></script>
        <script>
