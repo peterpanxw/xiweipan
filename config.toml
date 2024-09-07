@@ -2,6 +2,7 @@ baseURL = "https://xiweipan.vercel.app/"
 languageCode = "en-us"
 title = "潘玺玮: Xiwei Pan"
 theme = "hugo-ht"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
 enableRobotsTXT = true
 # enableGitInfo = true
