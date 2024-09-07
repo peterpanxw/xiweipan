@@ -6,11 +6,11 @@ title: Home
 
 Hello, welcome to my homepage! My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a master's student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm). I am very interested in multiscale modeling of complex systems, with a focus on spatially varying multiscale configurations and plate/shell structures.
 
-Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (Qian Lingxi Excellence in Education Program) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
+Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
 
 My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
-## News
+## **News**
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
       <div class="list-item">
@@ -56,7 +56,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   </div>
 
 
-## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
+## [**Selected Publications**](https://xiweipan.vercel.app/en/projects/)
 
 <div class="publications">
   <div class="publis-list">
@@ -80,7 +80,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
                   <a href="https://onlinelibrary.wiley.com/doi/10.1002/nme.7367" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-                  <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+                  <a href="/files/Local_BL.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">
                   <p>Asymptotic homogenisation offers a way to efficiently analyse the mechanical behaviour of multiscale configurations. But near a multiscale boundary, the homogenisation strategy should be modified, as the underlying periodicity assumption breaks down there. In this article, we introduce a machine-learning-based asymptotic homogenisation and localisation scheme to formulate such boundary layer effects. To this end, we define a set of boundary layer cells, where external loading conditions are imposed on one side of the cell, and matching conditions with the interior periodic cells are imposed on the opposite side. The formulation is also extended to cover situations where the multi-scale structure is not fully periodic, but spatially varying. Implied from the asymptotic results, neural networks can be trained to memorise the interrelationship between key local quantities, such as the magnitude of the local maximum von Mises stress, and the local mechanical and geometric features. Equipped with the trained neural networks, the online calculation for key (boundary-localised) quantities of interest under arbitrary loading conditions is expected to be accelerated substantially. Numerical examples are further presented to show the reliability of the proposed work for boundary stress prediction.</p>
