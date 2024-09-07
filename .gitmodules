@@ -1,4 +1,4 @@
 [submodule "themes/hugo-ht"]
 	path = themes/hugo-ht
-	url = https://github.com/peterpanxw/xiweipan
-	#url = https://github.com/hongtaoh/hugo-ht
+	#url = https://github.com/peterpanxw/xiweipan
+	url = https://github.com/hongtaoh/hugo-ht
