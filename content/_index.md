@@ -21,7 +21,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
               <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>2012</p>
           </div>
@@ -29,7 +29,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
               <p>Quo nobls cumque dolor lure voluptatemvoluptatem allas soluta.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>2013</p>
           </div>
@@ -37,7 +37,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
               <p>Rerum sit libero possimus amet excepturi.Exercitationem enimn dolores $untpraesentium dolorum praesentlum.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item  item-hide">
           <div class="item-time">
               <p>2014</p>
           </div>
@@ -45,7 +45,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
               <p>Voluptatibus weniarn ea reprehenderitatque. Reiciendis non laborum adiptsc ipsdpariatur omnis, Sed ipsam repudlandaevelit. Omnis libero nostruglirperiam nemdolor ea eos etus, fsse a s.naquequiem.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>2015</p>
           </div>
@@ -157,6 +157,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
                 absDom.addClass('item-show')
             }
         })
+        // timeline
         $('.list-item').click(function(){
             if($(this).hasClass('item-hide')){
                 $(this).removeClass('item-hide')
