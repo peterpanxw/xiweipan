@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="generator" content="Hugo 0.133.1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>潘玺玮: Xiwei Pan</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+
+
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/fonts.css" />
+    <link rel="stylesheet" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/github.min.css" rel="stylesheet">
+
+
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    <link rel="icon" href="https://xiweipan.vercel.app/media/favicon.png">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="static/css/add.css">
+    <!-- css -->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="nav">
+                <a href="/" class="nav-logo">
+                    <img src="static/media/peterpan-logo.png" width="50" height="50" alt="Xiwei Pan">
+                </a>
+                <!-- icons -->
+                <div class="navbar-brand social"> 
+                    <a href="mailto:#"
+                        title="email" rel="external nofollow noopener"
+                        target="_blank"><i class="nav-icon-solid nav-icon-envelope"></i></a> 
+                        <a
+                        href="https://orcid.org/" title="ORCID" rel="external nofollow noopener"
+                        target="_blank"><i class="nav-icon nav-icon-orcid"></i></a> 
+                        <a
+                        href="https://scholar.google.com/" title="Google Scholar"
+                        rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-google-scholar"></i></a> 
+                        <a
+                        href="https://www.researchgate.net/" title="ResearchGate"
+                        rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-researchgate"></i></a> 
+                        <a
+                        href="https://github.com/" title="GitHub" rel="external nofollow noopener"
+                        target="_blank"><i class="nav-icon-brands nav-icon-github"></i></a> 
+                        <a
+                        href="https://www.linkedin.com/" title="LinkedIn" rel="external nofollow noopener"
+                        target="_blank"><i class="nav-icon-brands nav-icon-linkedin"></i></a> 
+                </div> 
+                <!-- icons -->
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="/en/projects/">Projects</a></li>
+                    <li><a href="/en/blog/">Blog</a></li>
+                    <li><a href="/cn/projects/">中文</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="content">
+            <div class="list-page">
+                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a href="/figures/Xiwei_Portrait.JPG" itemprop="contentUrl">
+                        <img itemprop="thumbnail" src="static/figures/Xiwei_Portrait.JPG" width="500" />
+                    </a>
+                    <figcaption>
+                        <h4>Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)</h4>
+                    </figcaption>
+                </figure>
+                <p>Hello, welcome to my homepage! My name is <strong>Xiwei (Peter) Pan</strong>, a native of the
+                    beautiful city of <a href="https://en.wikipedia.org/wiki/Yangzhou" target="_blank"
+                        rel="noreferrer noopener">Yangzhou</a>
+                    , China. I&rsquo;m currently a master&rsquo;s student at <a href="https://www.dlut.edu.cn/"
+                        target="_blank" rel="noreferrer noopener">Dalian University of Technology (DUT)</a>
+                    working with Prof. <a href="http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm"
+                        target="_blank" rel="noreferrer noopener">Yichao Zhu</a>
+                    . I am very interested in multiscale modeling of complex systems, with a focus on spatially varying
+                    multiscale configurations and plate/shell structures.</p>
+                <p>Before starting my master&rsquo;s program, I also earned a bachelor&rsquo;s degree in Engineering
+                    Mechanics (Qian Lingxi Excellence in Education Program) from DUT. There, I gained a strong
+                    foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.</p>
+                <p>My <a href="/files/Xiwei_CV.pdf">Curriculum Vitae (CV)</a>
+                    .</p>
+                <h2 id="news">News</h2>
+                <p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;&nbsp;My first <a
+                        href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted
+                    by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for
+                            Numerical Methods in Engineering</em></a>!</p>
+                <p><b>Jun 16, 2022</b>&nbsp;&nbsp;&nbsp;&nbsp;Graduated with the honor of <em>Outstanding Graduates of
+                        DUT, Class of 2022</em></p>
+                <p><b>Sep 28, 2021</b>&nbsp;&nbsp;&nbsp;&nbsp;Pre-admitted to Dalian University of Technology for
+                    master's study</p>
+                <p><b>Jul 20, 2019</b>&nbsp;&nbsp;&nbsp;&nbsp;Attended the ACE Sustainable Civil Engineering Summer
+                    School at Cardiff University, UK</p>
+                <p><b>Sep 01, 2018</b>&nbsp;&nbsp;&nbsp;&nbsp;Admitted to Dalian University of Technology for
+                    undergraduate study</p>
+                <h2 id="selected-publicationshttpsxiweipanvercelappenprojects"><a
+                        href="https://xiweipan.vercel.app/en/projects/" target="_blank"
+                        rel="noreferrer noopener">Selected Publications</a>
+                </h2>
+                <!-- publications -->
+                <div class="publications">
+                    <div class="publis-list">
+                        <div class="publis-item">
+                            <div class="item-thumb">
+                                <img src="static/figures/BL.png"
+                                class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+                                alt="MolSets.webp" data-zoomable="" loading="eager"
+                                onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-tit">
+                                    <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
+                                </div>
+                                <div class="item-desc">
+                                    <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
+                                </div>
+                                <div class="item-periodical">
+                                    <em>PRX Energy</em>, 2024 
+                                </div>
+                                <div class="item-btn">
+                                    <a class="item-ctrl" href="javascript:;">ABS</a>
+                                    <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                                    <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+                                </div>
+                                <div class="item-abstract">
+                                    <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publis-item">
+                            <div class="item-thumb">
+                                <img src="static/figures/BL.png"
+                                class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+                                alt="MolSets.webp" data-zoomable="" loading="eager"
+                                onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-tit">
+                                    <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
+                                </div>
+                                <div class="item-desc">
+                                    <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
+                                </div>
+                                <div class="item-periodical">
+                                    <em>PRX Energy</em>, 2024 
+                                </div>
+                                <div class="item-btn">
+                                    <a class="item-ctrl" href="javascript:;">ABS</a>
+                                    <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                                    <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+                                </div>
+                                <div class="item-abstract">
+                                    <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="publis-item">
+                            <div class="item-thumb">
+                                <img src="static/figures/BL.png"
+                                class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+                                alt="MolSets.webp" data-zoomable="" loading="eager"
+                                onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-tit">
+                                    <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
+                                </div>
+                                <div class="item-desc">
+                                    <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
+                                </div>
+                                <div class="item-periodical">
+                                    <em>PRX Energy</em>, 2024 
+                                </div>
+                                <div class="item-btn">
+                                    <a class="item-ctrl" href="javascript:;">ABS</a>
+                                    <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                                    <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+                                </div>
+                                <div class="item-abstract">
+                                    <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- publications -->
+                    <div class="thumbnail-container">            
+                    </div>                
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="footer-links">
+                <li>
+                    <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">Made with <img
+                            src="static/media/hugo-logo.png" width="22" height="22"></a>
+                </li>
+                <li>
+                    <a href='https://github.com/peterpanxw/xiweipan' class="footer-links-kudos" target="_blank">
+                        Content in
+                        <i class="nav-icon nav-icon-github" style="font-size: 24px"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="copyright-text">
+                ©
+                Xiwei (Peter) Pan
+                2020-2024
+            </div>
+        </footer>
+        <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
+            Site last updated on
+            2021-01-07
+        </div>
+        <!-- js -->
+       <script type="text/javascript" src="static/js/jq.min.js"></script>
+       <script type="text/javascript" src="static/js/medium-zoom.min.js"></script>
+        <script>
+            $(document).ready(function () { 
+                medium_zoom = mediumZoom("[data-zoomable]", 
+                { background: 'rgba(1,1,1,0)'
+                 }) 
+                
+                $('.item-ctrl').click(function(){
+                    let absDom = $(this).parents('.item-content').find('.item-abstract');
+                    if(absDom.hasClass('item-show')){
+                        absDom.removeClass('item-show')
+                    }else{
+                        absDom.addClass('item-show')
+                    }
+                })
+                
+                
+                
+                
+                }); 
+        </script>
+        <!-- js -->
