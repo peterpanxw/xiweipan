@@ -11,6 +11,9 @@ cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
 projects = "/projects/:year/:month/:day/:slug/"
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
 [[menu.en]]
     name = "Home"
     url = "/"
@@ -65,6 +68,7 @@ projects = "/projects/:year/:month/:day/:slug/"
   width = 50.0
   height = 50.0
   alt = "Xiwei Pan"
+  
 
 [params.lang]
 
