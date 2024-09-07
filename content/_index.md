@@ -109,3 +109,19 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
       </div>
   </div>
 </div>
+<script type="text/javascript" src="/js/jq.min.js"></script>
+<script type="text/javascript" src="/js/medium-zoom.min.js"></script>
+<script>
+    $(document).ready(function () { 
+        medium_zoom = mediumZoom("[data-zoomable]", 
+        { background: 'rgba(1,1,1,0)'})         
+        $('.item-ctrl').click(function(){
+            let absDom = $(this).parents('.item-content').find('.item-abstract');
+            if(absDom.hasClass('item-show')){
+                absDom.removeClass('item-show')
+            }else{
+                absDom.addClass('item-show')
+            }
+        })    
+      }); 
+</script>
