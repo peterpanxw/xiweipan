@@ -18,7 +18,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
               <p>Sep 16, 2023</p>
           </div>
           <div class="item-content">
-              <p>My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
+              <p>My first research paper was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
           </div>
       </div>
       <div class="list-item">

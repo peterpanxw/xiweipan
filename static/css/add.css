@@ -273,6 +273,7 @@ a {
     top:50% !important;
     transform: scale(5.5) translate3d(40%, -20%, 0px) !important;
     position: fixed !important;
+    z-index: 9999;
     }
 .medium-zoom-overlay {
     cursor:pointer !Important;
