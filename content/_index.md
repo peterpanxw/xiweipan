@@ -27,7 +27,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   <div class="publis-list">
       <div class="publis-item">
           <div class="item-thumb">
-              <img src="static/figures/BL.png"
+              <img src="/figures/BL.png"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
@@ -54,7 +54,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
       </div>
       <div class="publis-item">
           <div class="item-thumb">
-              <img src="static/figures/BL.png"
+              <img src="/figures/BL.png"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
@@ -81,7 +81,7 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
       </div>
       <div class="publis-item">
           <div class="item-thumb">
-              <img src="static/figures/BL.png"
+              <img src="/figures/BL.png"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
