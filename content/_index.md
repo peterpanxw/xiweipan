@@ -156,6 +156,13 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
             }else{
                 absDom.addClass('item-show')
             }
+        })
+        $('.list-item').click(function(){
+            if($(this).hasClass('item-hide')){
+                $(this).removeClass('item-hide')
+            }else{
+                $(this).addClass('item-hide')
+            }
         })    
       }); 
 </script>
