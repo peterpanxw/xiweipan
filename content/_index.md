@@ -12,15 +12,49 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## News
 <link rel="stylesheet" href="/css/add.css">
-<p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;&nbsp;My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
+  <div class="list-page news-list-page">
+      <div class="list-item">
+          <div class="item-time">
+              <p>2011</p>
+          </div>
+          <div class="item-content">
+              <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
+          </div>
+      </div>
+      <div class="list-item">
+          <div class="item-time">
+              <p>2012</p>
+          </div>
+          <div class="item-content">
+              <p>Quo nobls cumque dolor lure voluptatemvoluptatem allas soluta.</p>
+          </div>
+      </div>
+      <div class="list-item">
+          <div class="item-time">
+              <p>2013</p>
+          </div>
+          <div class="item-content">
+              <p>Rerum sit libero possimus amet excepturi.Exercitationem enimn dolores $untpraesentium dolorum praesentlum.</p>
+          </div>
+      </div>
+      <div class="list-item">
+          <div class="item-time">
+              <p>2014</p>
+          </div>
+          <div class="item-content">
+              <p>Voluptatibus weniarn ea reprehenderitatque. Reiciendis non laborum adiptsc ipsdpariatur omnis, Sed ipsam repudlandaevelit. Omnis libero nostruglirperiam nemdolor ea eos etus, fsse a s.naquequiem.</p>
+          </div>
+      </div>
+      <div class="list-item">
+          <div class="item-time">
+              <p>2015</p>
+          </div>
+          <div class="item-content">
+              <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
+          </div>
+      </div>
+  </div>
 
-<p><b>Jun 16, 2022</b>&nbsp;&nbsp;&nbsp;&nbsp;Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em></p>
-
-<p><b>Sep 28, 2021</b>&nbsp;&nbsp;&nbsp;&nbsp;Pre-admitted to Dalian University of Technology for master's study</p>
-
-<p><b>Jul 20, 2019</b>&nbsp;&nbsp;&nbsp;&nbsp;Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK</p>
-
-<p><b>Sep 01, 2018</b>&nbsp;&nbsp;&nbsp;&nbsp;Admitted to Dalian University of Technology for undergraduate study</p>
 
 ## [Selected Publications](https://xiweipan.vercel.app/en/projects/)
 
