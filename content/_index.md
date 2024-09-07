@@ -11,7 +11,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
 My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## News
-<link rel="stylesheet" href="static/css/add.css">
+<link rel="stylesheet" href="/css/add.css">
 <p><b>Sep 16, 2023</b>&nbsp;&nbsp;&nbsp;&nbsp;My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
 
 <p><b>Jun 16, 2022</b>&nbsp;&nbsp;&nbsp;&nbsp;Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em></p>
