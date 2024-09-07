@@ -15,42 +15,42 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
   <div class="list-page news-list-page">
       <div class="list-item">
           <div class="item-time">
-              <p>2011</p>
+              <p>Sep 16, 2023</p>
           </div>
           <div class="item-content">
-              <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
+              <p>My first <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/nme.7367">research paper</a> was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
+          </div>
+      </div>
+      <div class="list-item">
+          <div class="item-time">
+              <p>Jun 16, 2022</p>
+          </div>
+          <div class="item-content">
+              <p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
           </div>
       </div>
       <div class="list-item item-hide">
           <div class="item-time">
-              <p>2012</p>
+              <p>Sep 28, 2021</p>
           </div>
           <div class="item-content">
-              <p>Quo nobls cumque dolor lure voluptatemvoluptatem allas soluta.</p>
-          </div>
-      </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>2013</p>
-          </div>
-          <div class="item-content">
-              <p>Rerum sit libero possimus amet excepturi.Exercitationem enimn dolores $untpraesentium dolorum praesentlum.</p>
+              <p>Pre-admitted to Dalian University of Technology for master's study in Computational Mechanics.</p>
           </div>
       </div>
       <div class="list-item  item-hide">
           <div class="item-time">
-              <p>2014</p>
+              <p>Jul 20, 2019</p>
           </div>
           <div class="item-content">
-              <p>Voluptatibus weniarn ea reprehenderitatque. Reiciendis non laborum adiptsc ipsdpariatur omnis, Sed ipsam repudlandaevelit. Omnis libero nostruglirperiam nemdolor ea eos etus, fsse a s.naquequiem.</p>
+              <p>Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK.</p>
           </div>
       </div>
       <div class="list-item item-hide">
           <div class="item-time">
-              <p>2015</p>
+              <p>Sep 01, 2018</p>
           </div>
           <div class="item-content">
-              <p>Neque sunt voluptatibus repellat pariatur utenim. Eveniet rerum susciplt eveniet ametdignissimas, Doloremque et distinctio quodmolestiae ut</p>
+              <p>Admitted to Dalian University of Technology for undergraduate study in Engineering Mechanics.</p>
           </div>
       </div>
   </div>
@@ -69,75 +69,48 @@ My [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
+                  <p>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</p>
               </div>
               <div class="item-desc">
-                  <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
+                  <p><em>Xiwei Pan</em>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>PRX Energy</em>, 2024 
+                  <em>International Journal for Numerical Methods in Engineering</em>, 2024 
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
-                  <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                  <a href="https://onlinelibrary.wiley.com/doi/10.1002/nme.7367" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
                   <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">
-                  <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
+                  <p>Asymptotic homogenisation offers a way to efficiently analyse the mechanical behaviour of multiscale configurations. But near a multiscale boundary, the homogenisation strategy should be modified, as the underlying periodicity assumption breaks down there. In this article, we introduce a machine-learning-based asymptotic homogenisation and localisation scheme to formulate such boundary layer effects. To this end, we define a set of boundary layer cells, where external loading conditions are imposed on one side of the cell, and matching conditions with the interior periodic cells are imposed on the opposite side. The formulation is also extended to cover situations where the multi-scale structure is not fully periodic, but spatially varying. Implied from the asymptotic results, neural networks can be trained to memorise the interrelationship between key local quantities, such as the magnitude of the local maximum von Mises stress, and the local mechanical and geometric features. Equipped with the trained neural networks, the online calculation for key (boundary-localised) quantities of interest under arbitrary loading conditions is expected to be accelerated substantially. Numerical examples are further presented to show the reliability of the proposed work for boundary stress prediction.</p>
               </div>
           </div>
       </div>
       <div class="publis-item">
           <div class="item-thumb">
-              <img src="/figures/BL.png"
+              <img src="/figures/Shell.png"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
+                  <p>Isogeometric-based asymptotic analysis on multi-layered thin shells</p>
               </div>
               <div class="item-desc">
-                  <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
+                  <p><em>Xiwei Pan</em>, Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>PRX Energy</em>, 2024 
+                  <em>arXiv:2407.21021</em>, 2024 
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
-                  <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-                  <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+                  <a href="https://arxiv.org/abs/2407.21021" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                  <a href="https://arxiv.org/pdf/2407.21021" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">
-                  <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
-              </div>
-          </div>
-      </div>
-      <div class="publis-item">
-          <div class="item-thumb">
-              <img src="/figures/BL.png"
-              class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
-              alt="MolSets.webp" data-zoomable="" loading="eager"
-              onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-          </div>
-          <div class="item-content">
-              <div class="item-tit">
-                  <p>Learning molecular mixture property using chemistry-aware graph neural network</p>
-              </div>
-              <div class="item-desc">
-                  <p><em>Hengrui Zhang</em>, Tianxing Lai, Jie Chen, Arumugam Manthiram, James M. Rondinelli, and Wei Chen</p>
-              </div>
-              <div class="item-periodical">
-                  <em>PRX Energy</em>, 2024 
-              </div>
-              <div class="item-btn">
-                  <a class="item-ctrl" href="javascript:;">ABS</a>
-                  <a href="https://link.aps.org/doi/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-                  <a href="https://journals.aps.org/prxenergy/pdf/10.1103/PRXEnergy.3.023006" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-              </div>
-              <div class="item-abstract">
-                  <p>Recent advances in machine learning (ML) have expedited materials discovery and design. One significant challenge faced in ML for materials is the expansive combinatorial space of potential materials formed by diverse constituents and their flexible configurations. This complexity is particularly evident in molecular mixtures, a frequently explored space for materials such as battery electrolytes. Owing to the complex structures of molecules and the sequence-independent nature of mixtures, conventional ML methods have difficulties in modeling such systems. Here we present MolSets, a specialized ML model for molecular mixtures. Representing individual molecules as graphs and their mixture as a set, MolSets leverages a graph neural network and the deep sets architecture to extract information at the molecule level and aggregate it at the mixture level, thus addressing local complexity while retaining global flexibility. We demonstrate the efficacy of MolSets in predicting the conductivity of lithium battery electrolytes and highlight its benefits in virtual screening of the combinatorial chemical space.</p>
+                  <p>Shell structures are generally modeled based on kinematic hypotheses, where certain involved parameters have to be evaluated phenomenologically. In this article, we propose an isogeometric-based asymptotic analysis scheme aimed at achieving a rational modeling and interpretation about the deformation behaviors of multi-layered thin shells (MTSs). Asymptotic analysis of the three-dimensional governing elasticity equations allows us to gain a deeper insight over shell theories in three aspects. Firstly, the intrinsic hierarchy lying in the displacement field, stress components, constitutive law, and momentum conservation, resulting from the shell thinness, is naturally suggested through asymptotic analysis, and not only the overall stiffness but also the key stress components can be formulated in a fully rational manner. Secondly, through detailed discussion on the order of non-dimensional maximum principal curvature, it is shown that a shell must deform in one of the following two deformation modes. One regime exhibits a mode resembling that of thin plates, while the other corresponds to a piecewise linear distribution of local transverse shear stresses along the thickness. And the specific orders of the key quantities are determined for both cases. Thirdly, in contrast with the existing arguments where an applied shear load on the shell surface necessitates the inclusion of transverse shear stresses for analysis, it is demonstrated that a leading-order shell theory derived from asymptotic analysis should suffice to output satisfactory predictions over the shell stiffness, as well as its internal stress distribution. Numerical examples of the deformation and strength analysis for the MTS are also presented to show the reliability of the proposed method for shell modeling.</p>
               </div>
           </div>
       </div>
