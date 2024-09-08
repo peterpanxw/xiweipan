@@ -70,11 +70,6 @@ projects = "/projects/:year/:month/:day/:slug/"
   height = 50.0
   alt = "Xiwei Pan"
 
-[params.icon]
-
-    [params.icon.mail]
-      name = "email"
-      url = "mailto:pxw2042086943@mail.dlut.edu.cn"
 
 [params.lang]
 
