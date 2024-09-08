@@ -69,7 +69,6 @@ projects = "/projects/:year/:month/:day/:slug/"
   width = 50.0
   height = 50.0
   alt = "Xiwei Pan"
-  
 
 [params.lang]
 
