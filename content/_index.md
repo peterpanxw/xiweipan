@@ -29,7 +29,7 @@ Before starting my master's program, I also earned a bachelor's degree in Engine
               <p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
           </div>
       </div>
-      <div class="list-item item-hide">
+      <div class="list-item">
           <div class="item-time">
               <p>Sep 28, 2021</p>
           </div>
