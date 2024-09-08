@@ -8,7 +8,7 @@ Hello, welcome to my homepage! My name is **Xiwei (Peter) Pan**, a native of the
 
 Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
 
-- I am actively seeking possible Ph.D. opportunities in multiscale structure analysis/design and AI4Science, here is my [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
+- I am actively seeking possible (fall 2025) Ph.D. opportunities in multiscale structure analysis/design and AI4Science, here is my [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
 ## **News**
 <link rel="stylesheet" href="/css/add.css">
