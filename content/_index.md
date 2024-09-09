@@ -13,6 +13,14 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 ## **News**
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
+    <div class="list-item">
+          <div class="item-time">
+              <p>Jul 21, 2024</p>
+          </div>
+          <div class="item-content">
+              <p>Attend the 16th World Congress on Computational Mechanics (WCCM) in Vancouver, Canada.</p>
+          </div>
+      </div>
       <div class="list-item">
           <div class="item-time">
               <p>Sep 16, 2023</p>
@@ -29,7 +37,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Sep 28, 2021</p>
           </div>
