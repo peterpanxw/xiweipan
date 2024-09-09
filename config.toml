@@ -10,7 +10,6 @@ enableRobotsTXT = true
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
 en = "/en/:year/:month/:day/:slug/"
-projects = "/projects/:year/:month/:day/:slug/"
 
 [frontmatter]
   lastmod = ["lastmod", ":git", "date", "publishDate"]
