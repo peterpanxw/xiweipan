@@ -1,5 +1,6 @@
 ---
 title: "Curriculum Vitae"
+data: ''
 type : list-single
 ---
 
