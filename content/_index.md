@@ -6,7 +6,7 @@ title: Home
 
 Hello, welcome to my homepage! My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a master's student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm). I am very interested in multiscale modeling/design of complex systems, with a focus on homogenization methods for spatially varying multiscale configurations and corresponding machine learning techniques.
 
-Before starting my master's program, I also earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
+Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in fundamental yet crucial courses in mathematics, mechanics, and computer science.
 
 - I am actively seeking possible (fall 2025) Ph.D. opportunities in multiscale structure analysis/design and AI4Science, here is my [Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 
