@@ -32,12 +32,12 @@ projects = "/projects/:year/:month/:day/:slug/"
     url = "/cn/projects/"
     weight = 4
 [[menu.cn]]
-    name = "博客"
-    url = "/cn/blog/"
+    name = "关于"
+    url = "/cn/about/"
     weight = 1
 [[menu.cn]]
-    name = "日志"
-    url = "/cn/projects/"
+    name = "博客"
+    url = "/cn/blog/"
     weight = 2
 [[menu.cn]]
     name = "English"
