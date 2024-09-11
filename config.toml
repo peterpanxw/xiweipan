@@ -48,7 +48,7 @@ en = "/en/:year/:month/:day/:slug/"
     homeText = "Xiwei Pan's Personal Website"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "blog"
-    # singleLang = true
+    singleLang = false
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
