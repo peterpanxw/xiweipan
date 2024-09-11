@@ -18,7 +18,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Jul 21, 2024</p>
           </div>
           <div class="item-content">
-              <p>Attend the 16th World Congress on Computational Mechanics (WCCM) in Vancouver, Canada.</p>
+              <p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) in Vancouver, Canada.</p>
           </div>
       </div>
       <div class="list-item">
@@ -104,7 +104,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Isogeometric-based asymptotic analysis on multi-layered thin shells</p>
+                  <p>Asymptotic Analysis for Rationalizing Deformation Models of Multi-Layered Thin Shells and Revealing the Role of Shear Forces</p>
               </div>
               <div class="item-desc">
                   <p><em>Xiwei Pan</em>, Yichao Zhu</p>
@@ -118,7 +118,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
                   <a href="https://arxiv.org/pdf/2407.21021" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">
-                  <p>Shell structures are generally modeled based on kinematic hypotheses, where certain involved parameters have to be evaluated phenomenologically. In this article, we propose an isogeometric-based asymptotic analysis scheme aimed at achieving a rational modeling and interpretation about the deformation behaviors of multi-layered thin shells (MTSs). Asymptotic analysis of the three-dimensional governing elasticity equations allows us to gain a deeper insight over shell theories in three aspects. Firstly, the intrinsic hierarchy lying in the displacement field, stress components, constitutive law, and momentum conservation, resulting from the shell thinness, is naturally suggested through asymptotic analysis, and not only the overall stiffness but also the key stress components can be formulated in a fully rational manner. Secondly, through detailed discussion on the order of non-dimensional maximum principal curvature, it is shown that a shell must deform in one of the following two deformation modes. One regime exhibits a mode resembling that of thin plates, while the other corresponds to a piecewise linear distribution of local transverse shear stresses along the thickness. And the specific orders of the key quantities are determined for both cases. Thirdly, in contrast with the existing arguments where an applied shear load on the shell surface necessitates the inclusion of transverse shear stresses for analysis, it is demonstrated that a leading-order shell theory derived from asymptotic analysis should suffice to output satisfactory predictions over the shell stiffness, as well as its internal stress distribution. Numerical examples of the deformation and strength analysis for the MTS are also presented to show the reliability of the proposed method for shell modeling.</p>
+                  <p>Shell structures are generally modeled based on kinematic hypotheses, where certain involved parameters have to be evaluated phenomenologically. In this article, we propose a scheme based on asymptotic analysis to provide a rational framework for modeling and interpreting the deformation behavior of multi-layered thin shells (MTSs). Asymptotic analysis of the three-dimensional governing elasticity equations allows us to gain a deeper insight over shell theories in three aspects. Firstly, the intrinsic hierarchy lying in the displacement field, stress components, constitutive law, and momentum conservation, resulting from the shell thinness, is naturally suggested through asymptotic analysis, and not only the overall stiffness but also the key stress components can be formulated in a fully rational manner. Secondly, through a detailed discussion on the order of non-dimensional maximum principal curvature, it is shown that a shell must deform in one of the following two deformation modes. One regime exhibits a mode resembling that of thin plates, while the other corresponds to a piecewise linear distribution of local transverse shear stress along the thickness. And the specific orders of key quantities are determined for both cases. Thirdly, in contrast with the existing arguments where an applied shear load on the shell surface necessitates the inclusion of transverse shear stresses for analysis, it is demonstrated that a leading-order multi-layered shell theory derived from asymptotic analysis should suffice to output satisfactory predictions over the shell stiffness, as well as its internal stress distribution. Numerical examples of the deformation and strength analysis for MTSs are also presented to show the reliability of the leading-order model.</p>
               </div>
           </div>
       </div>
