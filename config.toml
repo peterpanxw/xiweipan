@@ -4,8 +4,8 @@ title = "潘玺玮: Xiwei Pan"
 theme = "hugo-ht"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"
+enableGitInfo = true
 enableRobotsTXT = true
-# enableGitInfo = true
 
 [permalinks]
 cn = "/cn/:year/:month/:day/:slug/"
@@ -47,7 +47,7 @@ en = "/en/:year/:month/:day/:slug/"
     description = "Peronal website of Xiwei Pan"
     homeText = "Xiwei Pan's Personal Website"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
-    blogDirName = "projects"
+    blogDirName = "blog"
     # singleLang = true
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
