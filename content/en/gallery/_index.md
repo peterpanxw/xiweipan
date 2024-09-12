@@ -3,7 +3,7 @@ title: 'English Gallery'
 date: ''
 ---
 ## Moments
-
+<link rel="stylesheet" href="/css/add.css">
 <div class="publications">
   <div class="publis-list">
       <div class="publis-item">
