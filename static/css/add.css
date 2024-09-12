@@ -210,7 +210,6 @@ a {
 }
 .publis-list .item-thumb {
     max-width: 160px;
-    display: flex;
 }
 .publis-list .item-thumb  img{
     width:90%;
