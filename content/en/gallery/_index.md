@@ -8,7 +8,13 @@ date: ''
   <div class="publis-list">
       <div class="publis-item">
           <div class="item-thumb">
-              <img src="/figures/moments/2024-09-06-easonconcert.JPG"
+              <img src="/figures/moments/2024-09-06-easonconcert1.JPG"
+              class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+              alt="MolSets.webp" data-zoomable="" loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+          </div>
+          <div class="item-thumb">
+              <img src="/figures/moments/2024-09-06-easonconcert2.JPG"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
@@ -18,7 +24,7 @@ date: ''
                   <p>Freeze a moment &#128518;</p>
               </div>
               <div class="item-desc">
-                  <p><em>Fear and Dreams</em> concert of Eason Chan at Dalian</p>
+                  <p>"Fear and Dreams" concert of Eason Chan at Dalian</p>
               </div>
               <div class="item-periodical">
                   Sep 06, 2024
@@ -37,7 +43,7 @@ date: ''
                   <p>Goodbye Suzhou, goodbye my babe~ &#128557;</p>
               </div>
               <div class="item-desc">
-                  <p>View from the upper floors of <em>The Gate of the Orient</em></p>
+                  <p>View from the upper floors of <b>The Gate of the Orient</b></p>
               </div>
               <div class="item-periodical">
                   Jul 31, 2024 
