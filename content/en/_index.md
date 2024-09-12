@@ -3,5 +3,5 @@ title: "English page"
 type : nolisting
 ---
 
-### English homepage test 
+### English homepage
 
