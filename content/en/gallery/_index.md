@@ -19,6 +19,7 @@ date: ''
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
           </div>
+          <br>
           <div class="item-thumb">
               <img src="/figures/moments/2024-09-06-easonconcert3.JPG"
               class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
