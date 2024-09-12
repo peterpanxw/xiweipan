@@ -15,13 +15,13 @@ date: ''
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Machine-learning-based asymptotic homogenisation and localisation considering boundary layer effects</p>
+                  <p>Freeze a moment &#128518;</p>
               </div>
               <div class="item-desc">
-                  <p><em>Xiwei Pan</em>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu</p>
+                  <p><em>Fear and Dreams</em> concert of Eason Chan at Dalian</p>
               </div>
               <div class="item-periodical">
-                  <em>International Journal for Numerical Methods in Engineering</em>, 2024 
+                  Sep 06, 2024
               </div>
           </div>
       </div>
@@ -34,13 +34,13 @@ date: ''
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Asymptotic Analysis for Rationalizing Deformation Models of Multi-Layered Thin Shells and Revealing the Role of Shear Forces</p>
+                  <p>Goodbye Suzhou, goodbye my babe~ &#128557;</p>
               </div>
               <div class="item-desc">
-                  <p><em>Xiwei Pan</em>, Yichao Zhu</p>
+                  <p>View from the upper floors of <em>The Gate of the Orient</em></p>
               </div>
               <div class="item-periodical">
-                  <em>arXiv:2407.21021</em>, 2024 
+                  Jul 31, 2024 
               </div>
           </div>
       </div>
