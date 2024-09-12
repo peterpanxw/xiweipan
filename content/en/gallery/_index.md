@@ -19,6 +19,18 @@ date: ''
               alt="MolSets.webp" data-zoomable="" loading="eager"
               onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
           </div>
+          <div class="item-thumb">
+              <img src="/figures/moments/2024-09-06-easonconcert3.JPG"
+              class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+              alt="MolSets.webp" data-zoomable="" loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+          </div>
+          <div class="item-thumb">
+              <img src="/figures/moments/2024-09-06-easonconcert4.JPG"
+              class="preview z-depth-1 rounded medium-zoom-image" width="100%" height="auto"
+              alt="MolSets.webp" data-zoomable="" loading="eager"
+              onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+          </div>
           <div class="item-content">
               <div class="item-tit">
                   <p>Freeze a moment &#128518;</p>
