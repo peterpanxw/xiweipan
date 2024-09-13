@@ -5,6 +5,7 @@ date: ''
 ## Moments
 <link rel="stylesheet" href="/css/add.css">
 <p><font size="6">September 2024</font></p>
+<br>
 <div class="publications">
   <div class="publis-list">
       <div class="publis-item">
@@ -32,10 +33,9 @@ date: ''
               </div>
           </div>
       </div>
-      <br>
       <hr />
-      <br>
       <p><font size="6">July 2024</font></p>
+      <br>
       <div class="publis-item">
           <div class="item-thumb">
               <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen1.JPG"
