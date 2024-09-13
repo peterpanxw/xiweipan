@@ -51,10 +51,10 @@ date: ''
           </div>
           <div class="item-content">
               <div class="item-tit">
-                  <p>Goodbye Suzhou, goodbye my babe~ &#128557;</p>
+                  <p>Goodbye Suzhou &#128557;</p>
               </div>
               <div class="item-desc">
-                  <p>View from the upper floors of <b>The Gate of the Orient</b></p>
+                  <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou</p>
               </div>
               <div class="item-periodical">
                   Jul 31, 2024 
