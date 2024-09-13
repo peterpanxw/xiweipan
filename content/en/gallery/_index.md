@@ -33,7 +33,6 @@ date: ''
               </div>
           </div>
       </div>
-      <hr>
       <p><font size="6">July 2024</font></p>
       <br>
       <div class="publis-item">
