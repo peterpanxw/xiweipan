@@ -5,7 +5,7 @@ toc: false
 ---
 ## 我是？
 
-**潘玺玮**，成长于素有“淮左名都、竹西佳处”美称的江苏省[扬州市](https://baike.baidu.com/item/%E6%89%AC%E5%B7%9E%E5%B8%82/6102423)，现为大连理工大学工程力学系研究生三年级学生，从事一些与多尺度结构分析有关的研究，聚焦于渐近分析和机器学习方法在力学问题中的应用。
+**潘玺玮**，成长于素有“淮左名都、竹西佳处”美称的江苏省 [扬州市](https://baike.baidu.com/item/%E6%89%AC%E5%B7%9E%E5%B8%82/6102423)，现为大连理工大学工程力学系研究生三年级学生，从事一些与多尺度结构分析有关的研究，聚焦于渐近分析和机器学习方法在力学问题中的应用。
 
 最近，我忙于申请海外博士，DIY了研究方向、选校定位和申请资料等，这一过程的繁琐无法言说，只希望最后能有个好的结果。另一方面，这也是一个不断自我审视的过程。在一封封文书的不断迭代中，我好像逐渐明晰了自己的研究兴趣和人生方向，算是一个珍贵的自省以及重新定向的机会。
 
@@ -16,4 +16,4 @@ toc: false
 
 ## 关于本站
 
-本站主题基于[Hugo](https://gohugo.io/)以及[Hugo-ht](https://github.com/hongtaoh/hugo-ht)构建。如果你有兴趣搭建自己的个人网站 <i class='fa fa-object-group'></i>，我推荐你参考[郝洪涛](https://hongtaoh.com/)编写的一个非常直观、非常棒的指导手册[《如何零基础免费搭建个人网站》](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)。
+本站主题基于 [Hugo](https://gohugo.io/)以及 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)构建。如果你有兴趣搭建自己的个人网站 <i class='fa fa-object-group'></i>，我推荐你参考 [郝洪涛](https://hongtaoh.com/)编写的一个非常直观、非常棒的指导手册 [《如何零基础免费搭建个人网站》](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)。
