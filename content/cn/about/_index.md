@@ -16,4 +16,4 @@ toc: false
 
 ## 关于本站
 
-本站主题基于 [Hugo](https://gohugo.io/)以及 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)构建。如果你有兴趣搭建自己的个人网站 <i class='fa fa-object-group'></i>，我推荐你参考 [郝洪涛](https://hongtaoh.com/)编写的一个非常直观、非常棒的指导手册 [《如何零基础免费搭建个人网站》](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)。
+本站主题基于 [Hugo](https://gohugo.io/)以及 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)构建。如果你有兴趣搭建自己的个人网站 <i class='fa fa-object-group'></i>，我推荐你参考 [郝洪涛](https://hongtaoh.com/)编写的一个非常直观、非常棒的指导手册 [《如何零基础免费搭建个人网站》](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)，祝一切顺利~
