@@ -56,7 +56,7 @@ en = "/en/:year/:month/:day/:slug/"
     defaultLang = "en"
     MathJaxCDN = "//cdnjs.cloudflare.com/ajax/libs" 
     MathJaxVersion = "2.7.5"
-    favicon = "/media/favicon.png"
+    favicon = "/favicon.png"
     # Edit by yourself:
     GithubEdit = "https://github.com/peterpanxw/xiweipan/edit/main/content/"
     copyright = "&copy;"
@@ -68,7 +68,7 @@ en = "/en/:year/:month/:day/:slug/"
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "media/peterpan-logo.png" # you can change it
+  url = "/media/peterpan-logo.png" # you can change it
   width = 50.0
   height = 50.0
   alt = "Xiwei Pan"
