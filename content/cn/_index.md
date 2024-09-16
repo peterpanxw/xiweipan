@@ -1,6 +1,5 @@
 ---
 title: "中文页面"
-date: ''
 type : nolisting
 ---
 

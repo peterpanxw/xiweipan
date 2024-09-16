@@ -68,7 +68,7 @@ en = "/en/:year/:month/:day/:slug/"
 
 [params.logo]
   # Change the logo picture as your prefer:
-  url = "peterpan-logo.png"
+  url = "/media/peterpan-logo.png"
   width = 50.0
   height = 50.0
   alt = "Xiwei Pan"
