@@ -9,7 +9,7 @@ date: ''
     <div class="publications">
       <div class="publis-list">
         <p>
-          <font size="6">September 2024</font>
+          <font size="4">September 2024</font>
         </p>
         <br>
         <div class="publis-item">
@@ -44,7 +44,7 @@ date: ''
           </div>
         </div>
         <p>
-          <font size="6">August 2024</font>
+          <font size="4">August 2024</font>
         </p>
         <br>
         <div class="publis-item">
@@ -84,7 +84,7 @@ date: ''
           </div>
         </div>
         <p>
-          <font size="6">July 2024</font>
+          <font size="4">July 2024</font>
         </p>
         <br>
         <div class="publis-item">
@@ -164,3 +164,10 @@ date: ''
     </ul>
   </div>
 </main>
+
+<div class="pop-img pop-hide">
+  <img src="" alt="">
+</div>
+<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
+
+</div>
