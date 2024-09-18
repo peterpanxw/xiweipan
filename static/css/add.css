@@ -2,7 +2,10 @@
 a {
     text-decoration:none
 }
-
+p {
+    margin: 0;
+    padding:0
+}
 .navbar-brand.social {
     font-size: 1.7rem;
     float: left;
@@ -194,7 +197,7 @@ a {
 .publis-list {
     display:flex;
     flex-direction:column;
-    padding: 20px 0;
+    padding: 0;
 }
 .publis-list .publis-item a {
     text-decoration:none;
@@ -207,14 +210,30 @@ a {
 }
 .publis-item {
     display:flex;
+    margin-bottom: 25px;
+}
+.item-thumb-list {
+    max-width: 320px;
+    margin-bottom: 10px;
+    min-width: 320px;
 }
 .publis-list .item-thumb {
-    max-width: 160px;
+    max-width: 144px;
+    margin-right: 16px;
+    height: 108px;
+    overflow: hidden;
+    box-shadow: 1px 2px 10px 4px rgba(1,1,1,.1);
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 16px;
+    min-width: 144px;
+    min-height: 108px;
 }
 .publis-list .item-thumb  img{
-    width:90%;
-    box-shadow: 1px 2px 10px 4px rgba(1,1,1,.1);
-    border-radius:5px
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: zoom-in;
 }
 
 .publis-list .item-content {
@@ -225,8 +244,6 @@ a {
 
 .publis-list .item-tit {
     font-size: 18px;
-    /* font-weight: bolder; */
-    /* font-weight: bold; */
 }
 .publis-list .item-desc {
     font-size: 16px;
@@ -237,7 +254,7 @@ a {
     text-decoration:underline
 }
 .publis-list .item-periodical {
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
 }
 .publis-list .item-btn {
@@ -277,4 +294,46 @@ a {
     }
 .medium-zoom-overlay {
     cursor:pointer !Important;
+}
+
+.list-page h2 {
+    margin: 0;
+}
+
+.pop-img {
+    position:fixed;
+    background:rgba(1,1,1,0);
+    z-index:555;
+    cursor: pointer;
+        transition: all .3s  ;
+}
+.pop-img.pop-hide{
+    width:0;
+    height:0;
+    opacity: 0;
+}
+.pop-img.pop-show{
+    width:100%;
+    height:100%;
+    left: 50% !important;
+    top:50% !important;
+    transform: translate3d(-50%,-50%,0);
+    opacity: 1;
+}
+
+.pop-img img {
+    max-width:70%;
+    max-height:70%;
+    position:relative;
+    left: 50%;
+    top:50%;
+    transform: translate3d(-50%,-50%,0);
+    cursor: zoom-out;    
+}
+.medium-zoom-image {
+    opacity: 1;
+    transition: all .3s;
+}
+.publis-list .item-thumb img.pop-img-click {
+    opacity: .1;
 }
