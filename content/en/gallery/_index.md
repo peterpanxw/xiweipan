@@ -2,18 +2,16 @@
 title: 'English Gallery'
 date: ''
 ---
-## Moments
-<link rel="stylesheet" href="/css/add.css">
 <main class="content">
   <div class="list-page">
     <h2 id="moments">Moments</h2>
     <link rel="stylesheet" href="./css/add.css">
-    <p>
-      <font size="6">September 2024</font>
-    </p>
-    <br>
     <div class="publications">
       <div class="publis-list">
+        <p>
+          <font size="6">September 2024</font>
+        </p>
+        <br>
         <div class="publis-item">
           <div class="item-thumb-list">
             <div class="item-thumb">
@@ -35,13 +33,53 @@ date: ''
           </div>
           <div class="item-content">
             <div class="item-tit">
-              <p>Freeze a moment &#128518;</p>
+              <p>Freeze a moment &#128518; &#127880;</p>
             </div>
             <div class="item-desc">
               <p>"Fear and Dreams" concert of Eason Chan at Dalian</p>
             </div>
             <div class="item-periodical">
               Sep 06, 2024
+            </div>
+          </div>
+        </div>
+        <p>
+          <font size="6">August 2024</font>
+        </p>
+        <br>
+        <div class="publis-item">
+          <div class="item-thumb-list">
+            <div class="item-thumb">
+              <img src="/figures/moments/2024-08/2024-08-22-zaochayz1.jpg"
+              class="preview z-depth-1 rounded medium-zoom-image">
+            </div>
+            <div class="item-thumb">
+              <img src="/figures/moments/2024-08/2024-08-22-zaochayz2.jpg"
+              class="preview z-depth-1 rounded medium-zoom-image">
+            </div>
+            <div class="item-thumb">
+              <img src="/figures/moments/2024-08/2024-08-22-zaochayz3.jpg"
+              class="preview z-depth-1 rounded medium-zoom-image">
+            </div>
+            <div class="item-thumb">
+              <img src="/figures/moments/2024-08/2024-08-22-zaochayz4.jpg"
+              class="preview z-depth-1 rounded medium-zoom-image">
+            </div>
+            <div class="item-thumb">
+              <img src="/figures/moments/2024-08/2024-08-22-zaochayz5.jpg"
+              class="preview z-depth-1 rounded medium-zoom-image">
+            </div>
+          </div>
+          <div class="item-content">
+            <div class="item-tit">
+              <p>Morning Tea Culture in Yangzhou &#127774; &#127861; &#128523;</p>
+            </div>
+            <div class="item-desc">
+              <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/">Quyuan Teahouse</a>. Although I’m a local from Yangzhou, this is my first time officially having <i>morning tea</i> (it’s too hard for those who don’t wake up early).
+              </p>
+            </div>
+            <div class="item-periodical">
+              Aug 22, 2024
             </div>
           </div>
         </div>
@@ -112,7 +150,6 @@ date: ''
             popImg = false
           },300)
         }
-
         window.onscroll = function(){
 
           if(popImg){
@@ -125,5 +162,5 @@ date: ''
     </script>
     <ul>
     </ul>
-    </div>
-    </main>
+  </div>
+</main>
