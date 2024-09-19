@@ -155,6 +155,5 @@ date: ''
     <img src="" alt="">
   </div>
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
-
   </div>
 
