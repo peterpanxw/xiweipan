@@ -104,11 +104,35 @@ date: ''
           </div>
         </div>
       </div>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen1.JPG"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen2.JPG"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Goodbye Suzhou &#128557;</p>
+          </div>
+          <div class="item-desc">
+            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            </p>
+          </div>
+          <div class="item-periodical">
+            Jul 31, 2024
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
   <script type="text/javascript" src="/js/jq.min.js"></script>
-  <script type="text/javascript" src="/js/medium-zoom.min.js"></script>
+  <!--<script type="text/javascript" src="/js/medium-zoom.min.js"></script>-->
   <script>
     $(document).ready(function () {
       let popImg = false;
