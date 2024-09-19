@@ -1,12 +1,11 @@
 ---
-title: 'English Gallery'
-type : list-single
+title: 'English Gallery
 date: ''
 ---
+## Moments
+<link rel="stylesheet" href="./css/add.css">
 <main class="content">
   <div class="list-page">
-    <h2 id="moments">Moments</h2>
-    <link rel="stylesheet" href="./css/add.css">
     <div class="publications">
       <div class="publis-list">
         <p>
