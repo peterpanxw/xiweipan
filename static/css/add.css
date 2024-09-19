@@ -239,13 +239,11 @@ a {
 }
 
 .publis-list .item-tit {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 18px;
 }
 .publis-list .item-desc {
-    font-size: 20px;
+    font-size: 16px;
     color: #222;
-    margin-bottom: 10px;
 }
 .publis-list .item-desc em {
     font-style:normal;
@@ -334,4 +332,15 @@ a {
 }
 .publis-list .item-thumb img.pop-img-click {
     opacity: .1;
+}
+
+.item-thumb-list ~.item-content .item-tit {
+    font-size: 22px;
+}
+
+.item-thumb-list ~.item-content .item-desc {
+    font-size:18px
+}
+.item-thumb-list ~.item-content .item-periodical {
+    font-size:16px
 }
