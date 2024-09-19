@@ -30,7 +30,7 @@ date: ''
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Freeze a moment &#128518; &#127880;</p>
+            <p>Freeze a moment &#128518;&#127880;</p>
           </div>
           <div class="item-desc">
             <p>"Fear and Dreams" concert of Eason Chan at Dalian</p>
@@ -67,7 +67,7 @@ date: ''
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Morning Tea Culture in Yangzhou &#127774; &#127861; &#128523;</p>
+            <p>Yummy dim sum &#127774;&#127861;&#128523;</p>
           </div>
           <div class="item-desc">
             <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/">Quyuan Teahouse</a>. Although I’m a local from Yangzhou, this is my first time officially having <i>morning tea</i> (it’s too hard for those who don’t wake up early).
@@ -126,7 +126,6 @@ date: ''
         },200)
       })
       $('.pop-img').click(function(){
-
         if(popImg){
           clearPop()
         }else{
