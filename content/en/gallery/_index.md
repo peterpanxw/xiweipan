@@ -27,6 +27,10 @@ date: ''
             <img src="/figures/moments/2024-09/2024-09-06-easonconcert4.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-09/2024-09-06-easonconcert5.JPG"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
         </div>
         <div class="item-content">
           <div class="item-tit">
@@ -70,7 +74,7 @@ date: ''
             <p>Yummy dim sum &#127774;&#127861;&#128523;</p>
           </div>
           <div class="item-desc">
-            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><i>Quyuan Teahouse</i></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early).
+            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><i>Quyuan Teahouse</i></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early)
             </p>
           </div>
           <div class="item-periodical">
