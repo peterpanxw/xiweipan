@@ -128,7 +128,47 @@ date: ''
             <p>An unforgettable experience!</p>
           </div>
           <div class="item-desc">
-            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). Me and my senior at <i>Stanley Park</i>, Vancouver, Canada
+            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). P2: Me and my senior at <i>Stanley Park</i>, Vancouver, Canada
+            </p>
+          </div>
+          <div class="item-periodical">
+            Jul 20-27, 2024
+          </div>
+        </div>
+      </div>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-vancouverview6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>One more footprint on the map~ &#127758;</p>
+          </div>
+          <div class="item-desc">
+            <p>The beautiful scenery of Vancouver and a cool dog &#128526;
             </p>
           </div>
           <div class="item-periodical">
