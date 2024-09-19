@@ -112,6 +112,14 @@ date: ''
       </div>
     </div>
   </div>
+  </div>
+  
+<div class="pop-img pop-hide">
+  <img src="" alt="">
+</div>
+<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
+</div>
+
   <script type="text/javascript" src="./js/jq.min.js"></script>
   <script type="text/javascript" src="./js/medium-zoom.min.js"></script>
   <script>
@@ -157,10 +165,5 @@ date: ''
     }); 
   </script>
 
-</div>
-<div class="pop-img pop-hide">
-  <img src="" alt="">
-</div>
-<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
-</div>
+
 
