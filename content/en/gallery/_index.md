@@ -160,9 +160,9 @@ date: ''
         }
       }); 
     </script>
-    <ul>
-    </ul>
+
   </div>
+
 </main>
 
 <div class="pop-img pop-hide">
