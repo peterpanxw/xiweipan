@@ -3,7 +3,7 @@ title: 'English Gallery'
 date: ''
 ---
 ## Moments
-<link rel="stylesheet" href="./css/add.css">
+<link rel="stylesheet" href="/css/add.css">
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
@@ -107,8 +107,8 @@ date: ''
     </div>
   </div>
   </div>
-  <script type="text/javascript" src="./js/jq.min.js"></script>
-  <script type="text/javascript" src="./js/medium-zoom.min.js"></script>
+  <script type="text/javascript" src="/js/jq.min.js"></script>
+  <script type="text/javascript" src="/js/medium-zoom.min.js"></script>
   <script>
     $(document).ready(function () {
       let popImg = false;
