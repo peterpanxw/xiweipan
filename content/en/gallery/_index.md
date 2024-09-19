@@ -70,7 +70,7 @@ date: ''
             <p>Yummy dim sum &#127774;&#127861;&#128523;</p>
           </div>
           <div class="item-desc">
-            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/">Quyuan Teahouse</a>. Although I’m a local from Yangzhou, this is my first time officially having <i>morning tea</i> (it’s too hard for those who don’t wake up early).
+            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><i>Quyuan Teahouse</i></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early).
             </p>
           </div>
           <div class="item-periodical">
@@ -107,24 +107,32 @@ date: ''
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen1.JPG"
+            <img src="/figures/moments/2024-07/2024-07-20-portrait1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen2.JPG"
+            <img src="/figures/moments/2024-07/2024-07-20-portrait2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-portrait3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-07/2024-07-20-portrait4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Goodbye Suzhou &#128557;</p>
+            <p>An unforgettable experience!</p>
           </div>
           <div class="item-desc">
-            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). Me and my senior at <i>Stanley Park</i>, Vancouver, Canada
             </p>
           </div>
           <div class="item-periodical">
-            Jul 31, 2024
+            Jul 20-27, 2024
           </div>
         </div>
       </div>
