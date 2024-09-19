@@ -1,5 +1,6 @@
 ---
 title: 'English Gallery'
+type : list-single
 date: ''
 ---
 <main class="content">
@@ -114,7 +115,7 @@ date: ''
       </div>
     </div>
     <script type="text/javascript" src="./js/jq.min.js"></script>
-    <!-- <script type="text/javascript" src="./js/medium-zoom.min.js"></script> -->
+    <script type="text/javascript" src="./js/medium-zoom.min.js"></script>
     <script>
       $(document).ready(function () {
         let popImg = false;

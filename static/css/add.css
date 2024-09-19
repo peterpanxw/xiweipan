@@ -2,10 +2,6 @@
 a {
     text-decoration:none
 }
-p {
-    margin: 0;
-    padding:0
-}
 .navbar-brand.social {
     font-size: 1.7rem;
     float: left;
@@ -243,18 +239,20 @@ p {
 }
 
 .publis-list .item-tit {
-    font-size: 18px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 .publis-list .item-desc {
-    font-size: 16px;
+    font-size: 20px;
     color: #222;
+    margin-bottom: 10px;
 }
 .publis-list .item-desc em {
     font-style:normal;
     text-decoration:underline
 }
 .publis-list .item-periodical {
-    font-size: 14px;
+    font-size: 16px;
     color: #555;
 }
 .publis-list .item-btn {
@@ -297,7 +295,7 @@ p {
 }
 
 .list-page h2 {
-    margin: 0;
+    /* margin: 0; */
 }
 
 .pop-img {
