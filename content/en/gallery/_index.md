@@ -180,6 +180,64 @@ date: ''
           </div>
         </div>
       </div>
+      <p><font size="6">Feb 2024</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-29-tea1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-29-tea2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>It's tea time &#127861;</p>
+          </div>
+          <div class="item-desc">
+            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            </p>
+          </div>
+          <div class="item-periodical">
+            Feb 29, 2024
+          </div>
+        </div>
+      </div>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Cute puppy!!! &#128525;</p>
+          </div>
+          <div class="item-desc">
+            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            </p>
+          </div>
+          <div class="item-periodical">
+            Feb 12, 2024
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>
