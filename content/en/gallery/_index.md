@@ -198,7 +198,7 @@ date: ''
             <p>It's tea time &#127861;</p>
           </div>
           <div class="item-desc">
-            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            <p>During that time, I brewed tea almost every day to savor peaceful afternoons while reflecting on various thoughts --- it was truely relaxing. P1: My own tea set at the workstation
             </p>
           </div>
           <div class="item-periodical">
@@ -227,10 +227,10 @@ date: ''
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Cute puppy!!! &#128525;</p>
+            <p>Cute puppy “Potato”!!! &#128525;</p>
           </div>
           <div class="item-desc">
-            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            <p>The melancholy puppy I met one sunny morning while visiting <em>Lake Li</em> in Wuxi, which clearly didn't realize just how adorable it was
             </p>
           </div>
           <div class="item-periodical">
