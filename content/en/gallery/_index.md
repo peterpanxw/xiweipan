@@ -74,7 +74,7 @@ date: ''
             <p>Yummy dim sum &#127774;&#127861;&#128523;</p>
           </div>
           <div class="item-desc">
-            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><i>Quyuan Teahouse</i></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early)
+            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><em>Quyuan Teahouse</em></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early)
             </p>
           </div>
           <div class="item-periodical">
@@ -230,7 +230,7 @@ date: ''
             <p>Cute puppy “Potato”!!! &#128525;</p>
           </div>
           <div class="item-desc">
-            <p>The melancholy puppy I met one sunny morning while visiting <em>Lake Li</em> in Wuxi, which clearly didn't realize just how adorable it was
+            <p>The melancholy puppy I met one sunny morning while visiting <i>Lake Li</i> in Wuxi, which clearly didn't realize just how adorable it was
             </p>
           </div>
           <div class="item-periodical">
