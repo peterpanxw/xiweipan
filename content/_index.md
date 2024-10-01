@@ -30,7 +30,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>My first research paper was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Jun 16, 2022</p>
           </div>
