@@ -243,11 +243,11 @@ date: ''
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2023-12/2023-12-02-telecom1.jpg"
+            <img src="/figures/moments/2023-12/2023-12-02-unicom1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2023-12/2023-12-02-telecom2.jpg"
+            <img src="/figures/moments/2023-12/2023-12-02-unicom2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
