@@ -180,7 +180,7 @@ date: ''
           </div>
         </div>
       </div>
-      <p><font size="6">Feb 2024</font></p>
+      <p><font size="6">February 2024</font></p>
       <br>
       <div class="publis-item">
         <div class="item-thumb-list">
@@ -235,6 +235,32 @@ date: ''
           </div>
           <div class="item-periodical">
             Feb 12, 2024
+          </div>
+        </div>
+      </div>
+      <p><font size="6">December 2023</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2023-12/2023-12-02-telecom1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2023-12/2023-12-02-telecom2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>The 90s architecture bathed in winter twilight.</p>
+          </div>
+          <div class="item-desc">
+            <p>The Unicom Building photographed at <b>Dalian Labor Park</b>. Some buildings in China during the 1990s featured white ceramic tiles and green glass, and this tower epitomizes that era.
+            </p>
+          </div>
+          <div class="item-periodical">
+            Dec 02, 2023
           </div>
         </div>
       </div>
