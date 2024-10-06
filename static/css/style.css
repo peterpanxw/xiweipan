@@ -393,6 +393,7 @@ ol li {
 }
 
 .list-page a:hover {
+  color: #DAA520;
 }
 
 .list-page sup a {
@@ -407,6 +408,7 @@ ol li {
 }
 
 .body-text.list-text a:hover {
+  color: #DAA520;
 }
 
 .body-text.list-text sup a {
