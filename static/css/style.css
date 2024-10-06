@@ -233,7 +233,7 @@ code {
 .toc a,
 .toc a:visited {
   text-decoration: none;
-  color: #757575;
+  color: none;
 }
 
 .toc a {
