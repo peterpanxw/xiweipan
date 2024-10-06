@@ -223,11 +223,11 @@ code {
 
 /* table of contents styling. Based on the blog of Zachary Wade Betz: https://zwbetz.com/ */
 .toc {
-  border: .25rem solid #757575;
+  border: .25rem solid ;
   padding: 1rem; 
   margin-top: 1rem;
   margin-bottom: 1em;
-  color: none;
+  color: #757575;
 }
 
 .toc a,
