@@ -227,13 +227,13 @@ code {
   padding: 1rem; 
   margin-top: 1rem;
   margin-bottom: 1em;
-  color: #757575;
+  color: none;
 }
 
 .toc a,
 .toc a:visited {
   text-decoration: none;
-  color: #f9f9f9;
+  color: none;
 }
 
 .toc a {
