@@ -1,6 +1,6 @@
 baseURL = "https://xiweipan.com/"
 languageCode = "en-us"
-title = "潘玺玮: Xiwei Pan"
+title = "潘玺玮|Xiwei Pan"
 theme = "hugo-ht"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 footnotereturnlinkcontents = "↩"

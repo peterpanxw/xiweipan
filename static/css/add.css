@@ -264,7 +264,8 @@ a {
 }
 .publis-list .item-desc em {
     font-style:normal;
-    text-decoration:underline
+    color: #DAA520;
+    text-decoration:underline;
 }
 .publis-list .item-periodical {
     font-size: 16px;
