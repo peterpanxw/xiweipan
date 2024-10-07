@@ -40,7 +40,7 @@ date: ''
             <p>"Fear and Dreams" concert of Eason Chan at Dalian</p>
           </div>
           <div class="item-periodical">
-            Sep 06, 2024
+            Sep. 06, 2024
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Aug 22, 2024
+            Aug. 22, 2024
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Jul 31, 2024
+            July 31, 2024
           </div>
         </div>
       </div>
@@ -136,7 +136,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Jul 20-27, 2024
+            July 20-27, 2024
           </div>
         </div>
       </div>
@@ -176,7 +176,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Jul 20-27, 2024
+            July 20-27, 2024
           </div>
         </div>
       </div>
@@ -202,7 +202,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Feb 29, 2024
+            Feb. 29, 2024
           </div>
         </div>
       </div>
@@ -234,7 +234,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Feb 12, 2024
+            Feb. 12, 2024
           </div>
         </div>
       </div>
@@ -260,7 +260,7 @@ date: ''
             </p>
           </div>
           <div class="item-periodical">
-            Dec 02, 2023
+            Dec. 02, 2023
           </div>
         </div>
       </div>
