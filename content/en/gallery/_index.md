@@ -198,7 +198,7 @@ date: ''
             <p>It's tea time &#127861;</p>
           </div>
           <div class="item-desc">
-            <p>During that time, I brewed tea almost every day to savor peaceful afternoons while reflecting on various thoughts --- it was truely relaxing. P1: My own tea set at the workstation
+            <p>During that time, I brewed tea almost every day to savor peaceful afternoons while reflecting on various thoughts --- it was truly relaxing. P1: My own tea set at the workstation
             </p>
           </div>
           <div class="item-periodical">

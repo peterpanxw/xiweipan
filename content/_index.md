@@ -43,7 +43,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Sep 28, 2021</p>
           </div>
           <div class="item-content">
-              <p>Pre-admitted to Dalian University of Technology for master's study in Computational Mechanics.</p>
+              <p>Pre-admitted to Dalian University of Technology for master's study in <i>Computational Mechanics</i>.</p>
           </div>
       </div>
       <div class="list-item  item-hide">
@@ -59,7 +59,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Sep 01, 2018</p>
           </div>
           <div class="item-content">
-              <p>Admitted to Dalian University of Technology for undergraduate study in Engineering Mechanics.</p>
+              <p>Admitted to Dalian University of Technology for undergraduate study in <i>Engineering Mechanics</i>.</p>
           </div>
       </div>
   </div>
