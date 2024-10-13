@@ -199,9 +199,6 @@ a {
     text-decoration:none;
     border-bottom:none;
 }
-.publis-list .publis-item a:hover {
-    color: #4682B4;
-}
 .publis-list p {
     padding:0;
     margin:0;
@@ -278,14 +275,16 @@ a {
 }
 .publis-list .publis-item .item-btn a {
     color:#333;
-    border:1px solid #666;
+    border:1px solid;
     text-decoration:none;
     font-size:12px;
     padding:4px 8px;
     margin-right:5px;
     border-radius:5px;
 }
-
+.publis-list .publis-item .item-btn a:hover {
+    color: #4682B4;
+}
 
 .publis-list .item-abstract {
     display:none;
