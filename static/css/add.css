@@ -270,8 +270,11 @@ a {
     font-size: 16px;
     color: #555;
 }
-.publis-list .item-btn {
+.publis-list .item-btn a{
     margin-bottom:15px;
+}
+.publis-list .item-btn a:hover{
+    color:#4682B4
 }
 .publis-list .publis-item .item-btn a {
     color:#333;
