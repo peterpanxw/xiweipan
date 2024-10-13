@@ -200,7 +200,7 @@ a {
     border-bottom:none;
 }
 .publis-list .publis-item a:hover {
-    color:#4682B4;
+    color: #4682B4;
 }
 .publis-list p {
     padding:0;
@@ -286,7 +286,7 @@ a {
     border-radius:5px;
 }
 .publis-list .publis-item .item-btn a:hover {
-    color:#4682B4;
+    color: #4682B4;
 }
 
 .publis-list .item-abstract {
