@@ -199,6 +199,9 @@ a {
     text-decoration:none;
     border-bottom:none;
 }
+.publis-list .publis-item a:hover {
+    color:#4682B4;
+}
 .publis-list p {
     padding:0;
     margin:0;
@@ -270,11 +273,8 @@ a {
     font-size: 16px;
     color: #555;
 }
-.publis-list .item-btn a{
+.publis-list .item-btn {
     margin-bottom:15px;
-}
-.publis-list .item-btn a:hover{
-    color:#4682B4
 }
 .publis-list .publis-item .item-btn a {
     color:#333;
@@ -286,7 +286,7 @@ a {
     border-radius:5px;
 }
 .publis-list .publis-item .item-btn a:hover {
-    color:#4682B4
+    color:#4682B4;
 }
 
 .publis-list .item-abstract {
