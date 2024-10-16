@@ -275,7 +275,7 @@ a {
 }
 .publis-list .publis-item .item-btn a {
     color:#333;
-    border:1px solid #666;
+    border:1px solid;
     text-decoration:none;
     font-size:12px;
     padding:4px 8px;
