@@ -2,7 +2,7 @@
 title: 'English Gallery'
 date: ''
 ---
-<font size="7">Moments</font>
+## Moments
 <link rel="stylesheet" href="/css/add.css">
 <div class="list-page">
   <div class="publications">
