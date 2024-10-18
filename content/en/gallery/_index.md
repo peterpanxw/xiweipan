@@ -37,7 +37,7 @@ date: ''
             <p>Freeze a moment &#128518;&#127880;</p>
           </div>
           <div class="item-desc">
-            <p>"Fear and Dreams" concert of Eason Chan at Dalian</p>
+            <p>"Fear and Dreams" concert of Eason Chan @ Dalian</p>
           </div>
           <div class="item-periodical">
             Sep. 06, 2024
@@ -132,7 +132,7 @@ date: ''
             <p>An unforgettable experience!</p>
           </div>
           <div class="item-desc">
-            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). P2: Me and my senior at <i>Stanley Park</i>, Vancouver, Canada
+            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). P2: Me and my senior @ <i>Stanley Park</i>, Vancouver, Canada
             </p>
           </div>
           <div class="item-periodical">
@@ -256,7 +256,7 @@ date: ''
             <p>The 90s architecture bathed in winter twilight.</p>
           </div>
           <div class="item-desc">
-            <p>The Unicom Building photographed at <b>Dalian Labor Park</b>. Some buildings in China during the 1990s featured white ceramic tiles and green glass, and this tower epitomizes that era.
+            <p>The Unicom Building photographed @ <b>Dalian Labor Park</b>. Some buildings in China during the 1990s featured white ceramic tiles and green glass, and this tower epitomizes that era.
             </p>
           </div>
           <div class="item-periodical">
