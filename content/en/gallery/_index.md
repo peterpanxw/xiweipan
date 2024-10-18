@@ -100,7 +100,7 @@ date: ''
             <p>Goodbye Suzhou &#128557;</p>
           </div>
           <div class="item-desc">
-            <p>View from the upper floors of <b>The Gate of the Orient</b> before leaving Suzhou
+            <p>View from the upper floors of <i>The Gate of the Orient</i> before leaving Suzhou
             </p>
           </div>
           <div class="item-periodical">
@@ -256,7 +256,7 @@ date: ''
             <p>The 90s architecture bathed in winter twilight.</p>
           </div>
           <div class="item-desc">
-            <p>The Unicom Building photographed @ <b>Dalian Labor Park</b>. Some buildings in China during the 1990s featured white ceramic tiles and green glass, and this tower epitomizes that era.
+            <p>The Unicom Building photographed @ <i>Dalian Labor Park</i>. Some buildings in China during the 1990s featured white ceramic tiles and green glass, and this tower epitomizes that era.
             </p>
           </div>
           <div class="item-periodical">
