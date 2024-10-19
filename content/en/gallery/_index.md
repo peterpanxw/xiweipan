@@ -25,7 +25,7 @@ date: ''
             <p>You're really good at "Jazzing" &#128518;&#127927;</p>
           </div>
           <div class="item-desc">
-            <p>"Music for Oscars" by <b>JAZZ BIG BAND</b> @ <i>Tianjin Concert Hall</i></p>
+            <p>"Music for Oscars" by <a href="https://space.bilibili.com/3493266603379419"><em>TJ JAZZ BIG BAND</em></a> @ <i>Tianjin Concert Hall</i></p>
           </div>
           <div class="item-periodical">
             Oct. 12, 2024
