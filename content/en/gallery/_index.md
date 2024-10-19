@@ -62,7 +62,7 @@ date: ''
             <p>Freeze a moment &#127880;</p>
           </div>
           <div class="item-desc">
-            <p>"Fear and Dreams" concert of Eason Chan @ Dalian</p>
+            <p>"Fear and Dreams" concert of Eason Chan @ <i>Dalian Sports Center</i></p>
           </div>
           <div class="item-periodical">
             Sep. 06, 2024
