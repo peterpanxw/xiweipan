@@ -7,6 +7,31 @@ date: ''
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">October 2024</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-10/2024-10-12-jazz1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-10/2024-10-12-jazz2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>You're really good at "Jazzing" &#128518;&#127927;</p>
+          </div>
+          <div class="item-desc">
+            <p>"Music for Oscars" by <b>JAZZ BIG BAND</b> @ <i>Tianjin Concert Hall</i></p>
+          </div>
+          <div class="item-periodical">
+            Oct. 12, 2024
+          </div>
+        </div>
+      </div>
       <p><font size="6">September 2024</font></p>
       <br>
       <div class="publis-item">
@@ -34,7 +59,7 @@ date: ''
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Freeze a moment &#128518;&#127880;</p>
+            <p>Freeze a moment &#127880;</p>
           </div>
           <div class="item-desc">
             <p>"Fear and Dreams" concert of Eason Chan @ Dalian</p>
