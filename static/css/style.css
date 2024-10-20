@@ -163,7 +163,11 @@ div.splitbox div.right {
 }
 
 .nav-links a:hover {
-  color: #000;
+  color: #4682B4;
+}
+
+.nav-links a:hover {
+  transform: scale(1.1);
 }
 
 /*The parameter of `max-width` below controls the width of the body text. 

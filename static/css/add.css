@@ -3,14 +3,14 @@ a {
     text-decoration:none
 }
 .navbar-brand.social {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
     float: left;
     margin-top: -4px;
     margin-left: 20px;
 }
 
 .navbar-brand.social a:hover i::before {
-    color:#ff5f0f
+    color: #4682B4;
 }
 .navbar-brand.social i{
     font-style:normal;
