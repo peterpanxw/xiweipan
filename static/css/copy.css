@@ -6,7 +6,7 @@ div.highlight .copy-button {
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	border: .3px solid orange;
+	border: .5px solid orange;
 	border-radius: 1px;
 }
 
@@ -15,8 +15,8 @@ div.highlight .copy-button {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	padding: 10px;
-	color: antiquewhite;
+	padding: 16px;
+	color: Black;
 	opacity: 1;
 	transition: opacity 1s;
 }
