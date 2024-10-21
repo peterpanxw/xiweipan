@@ -24,9 +24,8 @@ Our focus here revolves around ***how* can a spatially varying microstructure be
 As is indicated by the name, the key to generate a periodic structure lies in the description of a (micro) representative cell. So, we first talk about the generation of a unit cell.
 ### Topology Description Function (TDF)
 A TDF refers to an *implicit* way to describe the configuration geometry. <font color=RoyalBlue>Positions occupied by (one) solid material are assigned with positive TDF values; while in regions occupied by air or the other kind of material, TDF gets negative.</font>
-`$$\phi(\pmb{x})\left\{\begin{matrix}\geq 0,\quad \pmb{x}\in\mathrm{\Omega}^\mathrm{s};\\
-<0,\quad \pmb{x}\in\mathrm{\Omega}\backslash\mathrm{\Omega}^\mathrm{s},
-\end{matrix}\right.$$`
+`$$\phi(\pmb{x})\left\{\begin{aligned}&\geq 0,\quad \pmb{x}\in\mathrm{\Omega}^\mathrm{s};\\
+&<0,\quad \pmb{x}\in\mathrm{\Omega}\backslash\mathrm{\Omega}^\mathrm{s},\end{aligned}\right.$$`
 where the superscript "s" is used to denote the "solid" part of the configuration. Fig. 1 shows the plot of microscopic unit cells with three different geometries generated based on TDF.
 {{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="800">}}
 
@@ -65,7 +64,7 @@ axis off;
 ```
 
 With TDF, we can go a step further to obtain more complex microstructural configurations, as demonstrated by the smiley and crying faces shown in the figure below (Fig. 2).
-{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_Faces.png" caption="Figure 2: Cells with more complex geometries or topologies." width="800">}}
+{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_Faces.png" caption="Figure 2: Cells with more complex geometries or topologies." width="500">}}
 
 Periodic structure can then be obtained by periodically arranging the micro cells along two directions in the 2D space. The plot and code are presented below.
 {{<figure src="/figures/blogFigs/codeMicrostructure/periodic_cross.png" caption="Figure 3: A periodic structure with the representative unit cell being X-shape." width="500">}}
