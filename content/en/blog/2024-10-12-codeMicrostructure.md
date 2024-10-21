@@ -32,6 +32,7 @@ where the superscript "s" is used to denote the "solid" part of the configuratio
 {{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="800">}}
 
 The corresponding MATLAB code for generating the above cells is presented here.
+
 ```matlab
 % Define the plot definition and the corresponding step
 M1 = 256; dx = 1/M1;
@@ -65,5 +66,7 @@ axis equal;
 axis off;
 ```
 
+With TDF, we can go a step further to obtain more complex microstructural configurations, as demonstrated by the smiley and crying faces shown in the figure below (Fig. 2).
+{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_Faces.png" caption="Figure 2: Cells with more complex geometries or topologies." width="800">}}
 
 [^1]: Bensoussan A, Lions JL, Papanicolau G. Asymptotic Analysis for Periodic Structures. Elsevier; 1978.
