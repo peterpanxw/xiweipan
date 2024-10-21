@@ -23,21 +23,20 @@ Our focus here revolves around ***how* can a spatially varying microstructure be
 ## Generation of Periodic Structures
 As is indicated by the name, the key to generate a periodic structure lies in the description of a (micro) representative cell. So, we first talk about the generation of a unit cell.
 ### Topology Description Function (TDF)
-A TDF refers to an *implicit* way to describe the configuration geometry. Positions occupied by (one) solid material are assigned with positive TDF values; while in regions occupied by air or the other kind of material, TDF gets negative.
-`\phi(\pmb{x})\left\{\begin{align}
+A TDF refers to an *implicit* way to describe the configuration geometry. <font color=RoyalBlue>Positions occupied by (one) solid material are assigned with positive TDF values; while in regions occupied by air or the other kind of material, TDF gets negative.</font>
+`$$\phi(\pmb{x})\left\{\begin{matrix}
 \geq 0,\quad \pmb{x}\in\mathrm{\Omega}^\mathrm{s};\\
 <0,\quad \pmb{x}\in\mathrm{\Omega}\backslash\mathrm{\Omega}^\mathrm{s},
-\end{align}`
+\end{matrix}\right.$$`
 where the superscript "s" is used to denote the "solid" part of the configuration. Fig. 1 shows the plot of microscopic unit cells with three different geometries generated based on TDF.
 {{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="800">}}
 
 The corresponding MATLAB code for generating the above cells is presented here.
-```Matlab
+```matlab
 % Define the plot definition and the corresponding step
 M1 = 256; dx = 1/M1;
 M2 = 256; dy = 1/M2;
 
-%% Generation of the matrix cell
 % Representative cell of O-shape
 R = 0.3;  % circle radius
 x0 = -1/2:dx:1/2;
