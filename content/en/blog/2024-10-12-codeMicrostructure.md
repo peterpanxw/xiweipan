@@ -27,7 +27,7 @@ A TDF refers to an *implicit* way to describe the configuration geometry. <font 
 `$$\phi(\pmb{x})\left\{\begin{aligned}&\geq 0,\quad \pmb{x}\in\mathrm{\Omega}^\mathrm{s};\\
 &<0,\quad \pmb{x}\in\mathrm{\Omega}\backslash\mathrm{\Omega}^\mathrm{s},\end{aligned}\right.$$`
 where the superscript "s" is used to denote the "solid" part of the configuration. Fig. 1 shows the plot of microscopic unit cells with three different geometries generated based on TDF.
-{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="800">}}
+{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="700">}}
 
 The corresponding MATLAB code for generating the above cells is presented here.
 ```matlab
