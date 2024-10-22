@@ -183,8 +183,13 @@ Here we give the MATLAB code for the above process.
 ```
 
 ## Closing
-This mapping-based framework can be easily extended to more complex situations, including decoration of microstructures on complex manifolds, generation of three-dimensional structures infilled with graded microstructures, the introduction of NURBS, and so on.
+This *mapping-based framework* can be easily extended to more complex situations, including decoration of microstructures on complex manifolds, generation of three-dimensional structures infilled with graded microstructures, the introduction of NURBS, and so on. <font color=Crimson>Moreover, with the graded-to-periodic mapping, analysis of these complex multiscale structures becomes possible. Methodologically, only the mapping Jacobian needed to be included in the original asymptotic homogenization framework proposed for periodic/quasi-periodic structures.</font>
 
 One more thing needs to be mentioned for the last aspect, the generation of a NURBS surface (solid) are just a mapping process from unit square (unit cubic entity) to an arbitrary physical surface (solid). By analogy, such a NURBS expression can be used as the abovementioned mapping function `$\pmb{y}=\pmb{y}(\pmb{x})$`. And one can simply adopt the approach of explicit description in the context of NURBS representation. Therefore, everything w.r.t. the generated SVM is explicit and can be compressed to control points that govern cell geometry and the corresponding macroscopic mapping function.
 
+Finally, we provide several relevant references for readers interested in further exploring this field, including topics such as the generation[^2], analysis[^3], and optimization[^4] of SVM.
+
 [^1]: Bensoussan A, Lions JL, Papanicolau G. Asymptotic Analysis for Periodic Structures. Elsevier; 1978.
+[^2]: D. Xue, Y. Zhu, X. Guo, [Generation of smoothly-varying infill configurations from a continuous menu of cell patterns and the asymptotic analysis of its mechanical behaviour](https://www.sciencedirect.com/science/article/abs/pii/S0045782520302218), Comput. Methods Appl. Mech. Engrg. 366 (2020) 113037.
+[^3]: Li S, Zhu Y, Guo X. [Optimisation of spatially varying orthotropic porous structures based on conformal mapping](https://www.sciencedirect.com/science/article/abs/pii/S0045782522000111). Comput Methods Appl Mech Eng. 2022;391:114589.
+[^4]: Chuang Ma, Jianhao Zhang, Yichao Zhu, [Performance analysis and optimisation of spatially-varying infill microstructure within CAD geometries](https://www.sciencedirect.com/science/article/abs/pii/S0045782523004978#preview-section-cited-by), Comput Methods Appl Mech Eng., 2023, 416:116373.
