@@ -66,7 +66,7 @@ The corresponding MATLAB code for generating the above cells is presented here.
 With TDF, we can go a step further to obtain more complex microstructural configurations, as demonstrated by the smiley and crying faces shown in the figure below (Fig. 2).
 {{<figure src="/figures/blogFigs/codeMicrostructure/Cell_Faces.png" caption="Figure 2: Cells with more complex geometries or topologies." width="500">}}
 
-Note also that, the unit cell geometry can be described in a totally explicit manner with the aid of **Non-Uniform Rational B-Spline (NURBS)**. In this context, both the inner and outer boundaries of unit cells have to be represented by NURBS curves or surfaces. So, the key to generating or storing representative cells is to capture control points that uniquely govern the NURBS. And one simply needs to drag these control points in order to change cell geometry/topology.
+Note also that, the unit cell geometry can be described in a totally explicit manner with the aid of **Non-Uniform Rational B-Spline (NURBS)**. In this context, both the inner and outer boundaries of unit cells have to be represented by NURBS curves or surfaces. So, the key to generating or storing representative cells is to capture control points that uniquely govern the NURBS. And one simply needs to drag these control points in order to change cell geometry/topology, which greatly enhances the design flexibility.
 
 ### Periodic Arrangement
 Periodic structure can then be obtained by periodically arranging the micro cells along two directions in the 2D space. The plot and code are presented below.
@@ -181,5 +181,10 @@ Here we give the MATLAB code for the above process.
   axis equal
   axis off
 ```
+
+## Closing
+This mapping-based framework can be easily extended to more complex situations, including decoration of microstructures on complex manifolds, generation of three-dimensional structures infilled with graded microstructures, the introduction of NURBS, and so on.
+
+One more thing needs to be mentioned for the last aspect, the generation of a NURBS surface (solid) are just a mapping process from unit square (unit cubic entity) to an arbitrary physical surface (solid). By analogy, such a NURBS expression can be used as the abovementioned mapping function `$\pmb{y}=\pmb{y}(\pmb{x})$`. And one can simply adopt the approach of explicit description in the context of NURBS representation. Therefore, everything w.r.t. the generated SVM is explicit and can be compressed to control points that govern cell geometry and the corresponding macroscopic mapping function.
 
 [^1]: Bensoussan A, Lions JL, Papanicolau G. Asymptotic Analysis for Periodic Structures. Elsevier; 1978.
