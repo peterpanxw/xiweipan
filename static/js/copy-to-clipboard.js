@@ -1,35 +1,49 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var codeBlocks = document.getElementsByTagName('code');
+(function() {
+  'use strict';
 
-  for (var i = 0; i < codeBlocks.length; i++) {
-    var codeBlock = codeBlocks[i];
+  if(!document.queryCommandSupported('copy')) {
+    return;
+  }
 
-    var button = document.createElement('button');
-    button.textContent = 'Copy';
-    button.classList.add('copy-button'); // add CSS class
-    codeBlock.parentNode.insertBefore(button, codeBlock.nextSibling);
+  function flashCopyMessage(el, msg) {
+    el.textContent = msg;
+    SetTimeout (function () {
+      El. TextContent = "Copy";
+    }, 1000);
+  }
 
-    var clipboard = new ClipboardJS(button, {
-      target: function (trigger) {
-        return trigger.previousSibling;
+  Function selectText (node) {
+    Var selection = window.GetSelection ();
+    Var range = document.CreateRange ();
+    Range.SelectNodeContents (node);
+    Selection.RemoveAllRanges ();
+    Selection.AddRange (range);
+    Return selection;
+  }
+
+  Function addCopyButton (containerEl) {
+    Var copyBtn = document.CreateElement ("button");
+    CopyBtn. ClassName = "highlight-copy-btn";
+    CopyBtn. TextContent = "Copy";
+
+    Var codeEl = containerEl. FirstElementChild;
+    CopyBtn.AddEventListener ('click', function () {
+      Try {
+        Var selection = selectText (codeEl);
+        Document.ExecCommand ('copy');
+        Selection.RemoveAllRanges ();
+
+        FlashCopyMessage (copyBtn, 'Copied!')
+      } catch (e) {
+        Console && console.Log (e);
+        FlashCopyMessage (copyBtn, 'Failed :\' (')
       }
     });
-    clipboard.on('success', function (e) {
-      e.clearSelection();
-      var notification = document.createElement('div');
-      notification.textContent = 'Copied!';
-      notification.classList.add('notification');
-      document.body.appendChild(notification);
-      setTimeout(function () {
-        notification.style.opacity = '0';
-        setTimeout(function () {
-          document.body.removeChild(notification);
-        }, 1000);
-      }, 1000);
-      // console.log('已复制到剪贴板:', e.text);
-    });
-    clipboard.on('error', function (e) {
-      console.error('复制失败:', e.action);
-    });
+
+    ContainerEl.AppendChild (copyBtn);
   }
-});
+
+  // Add copy button to code blocks
+  Var highlightBlocks = document.GetElementsByClassName ('highlight');
+  Array.Prototype.ForEach.Call (highlightBlocks, addCopyButton);
+})();
