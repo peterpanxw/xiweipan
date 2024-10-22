@@ -214,9 +214,14 @@ pre {
   /*#757575*/
 }
 
+pre {
+  white-space: pre !important;
+  overflow-y: scroll !important;
+  height: 50vh !important;
+}
+
 pre code {
   background-color: transparent;
-  overflow:auto;
   border: none;
 }
 

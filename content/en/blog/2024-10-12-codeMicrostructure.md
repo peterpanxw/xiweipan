@@ -110,16 +110,16 @@ Periodic structure can then be obtained by periodically arranging the micro cell
 ```
 
 ## Generation of SVM
-In order to generate the SVMs (as shown in Fig. 4), an intuitive idea is to start from periodic structures that can be easily obtained. Zhu et al. (2019) introduced a (continuous) macroscopic mapping function `$\pmb{y}(\pmb{x})$` to connect multiscale structures in two spaces, the physical space (`$\pmb{x}$`) and the ficticious space (`$\pmb{y}$`). The former is occupied by the SVM while the latter is occupied by the spatially-periodic structure. And there is another space (`$\bar{\pmb{\mathrm{Y}}}$`) for investigating microscopic cells. This space is obtained by further scaling up the unit cell in the `$\pmb{y}-$`space to unit size, i.e., `$\bar{\pmb{\mathrm{Y}}}=\frac{\pmb{y}}{h}$`.
-{{<figure src="/figures/blogFigs/codeMicrostructure/SVM.png" caption="Figure 4: Spatially varying microstructures with different mapping functions. " width="800">}}
+In order to generate the SVMs (as shown in Fig. 4), an intuitive idea is to start from periodic structures that can be easily obtained. Zhu et al. (2019) introduced a (continuous) macroscopic mapping function `$\pmb{y}(\pmb{x})$` to connect multiscale structures in two spaces, the physical space (`$\pmb{x}$`) and the ficticious space (`$\pmb{y}$`). The former is occupied by the SVM while the latter is occupied by the spatially-periodic structure. And there is another space (`$\bar{\pmb{\mathrm{Y}}}$`) for investigating microscopic cells. This space is obtained by further scaling up the unit cell in the `$\pmb{y}$`-space to unit size, i.e., `$\bar{\pmb{\mathrm{Y}}}=\frac{\pmb{y}}{h}$`.
+{{<figure src="/figures/blogFigs/codeMicrostructure/SVM.png" caption="Figure 4: Spatially varying microstructures with different mapping functions. " width="1000">}}
 
-Following the idea of mapping operation, TDF for an SVM measured in `$\pmb{x}-$`coordinate is actually a composite function compared to that of a unit cell (Equation `$\eqref{eq1}$`).
+Following the idea of mapping operation, TDF for an SVM measured in `$\pmb{x}$`-coordinate is actually a composite function compared to that of a unit cell (Equation `$\eqref{eq1}$`).
 `$$\phi(\pmb{x})=\phi^\mathrm{p}\left(\frac{\pmb{y}(\pmb{x})}{h}\right),$$`
 here, the supuerscript "p" indicates that the TDF is associated with a periodic structure.
 
 The main steps of the process include:
 1. Generation of the representative unit cell according to [this section](https://xiweipan.com/en/2024/10/12/generating-microstructure/#topology-description-function-tdf);
-2. Compute the corresponding value of a specific grid point in the `$\pmb{y}-$`coordinate based on the given mapping function `$\pmb{y}(\pmb{x})$`;
+2. Compute the corresponding value of a specific grid point in the `$\pmb{y}$`-coordinate based on the given mapping function `$\pmb{y}(\pmb{x})$`;
 3. Getting the position of the particular (grid) element to which each point belongs in the periodic space based on the mapped coordinates;
 4. **Interpolate** the TDF value at the point based on the TDF values of the four nodes of the element (resembling shape functions in Finite Element Analysis);
 5. Traverse each grid point and follow steps 1-4 to obtain the TDF of an SVM.
