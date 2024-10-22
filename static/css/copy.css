@@ -8,7 +8,7 @@
   border-radius: 3px;
   padding:0 10px;
   font-size: 12px;
-  background: #000;
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
   display:none;
@@ -23,4 +23,7 @@
 }
 .cnblogs-markdown pre:hover > span {
   display:block;
+}
+.cnblogs-markdown pre > .copyed {
+  background: #67c23a;
 }

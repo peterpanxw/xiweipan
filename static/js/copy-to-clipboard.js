@@ -20,7 +20,7 @@ $(function() {
             },1000);
           });
           c.on("error", function() {
-            btn.text("复制失败");
+            btn.text("Failed");
           });
         });
       }
