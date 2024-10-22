@@ -27,7 +27,7 @@ A TDF refers to an *implicit* way to describe the configuration geometry. <font 
 `$$\phi(\pmb{x})\left\{\begin{aligned}&\geq 0,\quad \pmb{x}\in\mathrm{\Omega}^\mathrm{s};\\
 &<0,\quad \pmb{x}\in\mathrm{\Omega}\backslash\mathrm{\Omega}^\mathrm{s},\end{aligned}\right. \tag{1} \label{eq1}$$`
 where the superscript "s" is used to denote the "solid" part of the configuration. Fig. 1 shows the plot of microscopic unit cells with three different geometries generated based on TDF.
-{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="650">}}
+{{<figure src="/figures/blogFigs/codeMicrostructure/Cell_OX.png" caption="Figure 1: Plot of three different microscopic unit cells. The third cell is obtained by performing an intersection operation on the negation of the first two." width="700">}}
 
 The corresponding MATLAB code for generating the above cells is presented here.
 ```matlab
@@ -110,7 +110,7 @@ Periodic structure can then be obtained by periodically arranging the micro cell
 ```
 
 ## Generation of SVM
-In order to generate the SVMs (as shown in Fig. 4), an intuitive idea is to start from periodic structures that can be easily obtained. Zhu et al. (2019) introduced a (continuous) macroscopic mapping function `$\pmb{y}(\pmb{x})$` to connect multiscale structures in two spaces, the physical space (`$\pmb{x}$`) and the ficticious space (`$\pmb{y}$`). The former is occupied by the SVM while the latter is occupied by the spatially-periodic structure. And there is another space (`$\bar{\pmb{\mathrm{Y}}$`) for investigating microscopic cells. This space is obtained by further scaling up the unit cell in the `$\pmb{y}-$`space to unit size, i.e., `$\bar{\pmb{\mathrm{Y}}=\frac{\pmb{y}}{h}$`.
+In order to generate the SVMs (as shown in Fig. 4), an intuitive idea is to start from periodic structures that can be easily obtained. Zhu et al. (2019) introduced a (continuous) macroscopic mapping function `$\pmb{y}(\pmb{x})$` to connect multiscale structures in two spaces, the physical space (`$\pmb{x}$`) and the ficticious space (`$\pmb{y}$`). The former is occupied by the SVM while the latter is occupied by the spatially-periodic structure. And there is another space (`$\bar{\pmb{\mathrm{Y}}}$`) for investigating microscopic cells. This space is obtained by further scaling up the unit cell in the `$\pmb{y}-$`space to unit size, i.e., `$\bar{\pmb{\mathrm{Y}}}=\frac{\pmb{y}}{h}$`.
 {{<figure src="/figures/blogFigs/codeMicrostructure/SVM.png" caption="Figure 4: Spatially varying microstructures with different mapping functions. " width="800">}}
 
 Following the idea of mapping operation, TDF for an SVM measured in `$\pmb{x}-$`coordinate is actually a composite function compared to that of a unit cell (Equation `$\eqref{eq1}$`).

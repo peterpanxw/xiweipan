@@ -216,6 +216,7 @@ pre {
 
 pre code {
   background-color: transparent;
+  overflow:auto;
   border: none;
 }
 
