@@ -18,7 +18,7 @@ Configurations infilled with microstructures (architected materials) achieve an 
 
 However, such periodic structures are less preferred when one needs to accommodate advanced or tailored engineering use. Therefore, *heterogeneity* has always been a theme pursued by researchers and scientists both in design community and in practical application. In contrast to periodic structures, spatially varying ones are just able to provide such heterogeneity due to aperiodic or irregular arrangement of constituent cells, which is the main reason they are currently attracting so much attention and popularity.
 
-Our focus here revolves around ***how* can a spatially varying microstructure be represented in a computer?** We will try to answer this question in the following sections.
+Our focus here revolves around ***how* can a spatially varying microstructure (SVM) be represented in a computer?** We will try to answer this question in the following sections. The main idea for the generation of SVM is based on [Zhu et al., JMPS, 2019](https://www.sciencedirect.com/science/article/abs/pii/S0022509618308408).
 
 ## Generation of Periodic Structures
 As is indicated by the name, the key to generate a periodic structure lies in the description of a (micro) representative cell. So, we first talk about the generation of a unit cell.
