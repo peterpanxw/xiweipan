@@ -7,43 +7,43 @@
 
   function flashCopyMessage(el, msg) {
     el.textContent = msg;
-    SetTimeout (function () {
-      El. TextContent = "Copy";
+    setTimeout(function() {
+      el.textContent = "Copy";
     }, 1000);
   }
 
-  Function selectText (node) {
-    Var selection = window.GetSelection ();
-    Var range = document.CreateRange ();
-    Range.SelectNodeContents (node);
-    Selection.RemoveAllRanges ();
-    Selection.AddRange (range);
-    Return selection;
+  function selectText(node) {
+    var selection = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    return selection;
   }
 
-  Function addCopyButton (containerEl) {
-    Var copyBtn = document.CreateElement ("button");
-    CopyBtn. ClassName = "highlight-copy-btn";
-    CopyBtn. TextContent = "Copy";
+  function addCopyButton(containerEl) {
+    var copyBtn = document.createElement("button");
+    copyBtn.className = "highlight-copy-btn";
+    copyBtn.textContent = "Copy";
 
-    Var codeEl = containerEl. FirstElementChild;
-    CopyBtn.AddEventListener ('click', function () {
-      Try {
-        Var selection = selectText (codeEl);
-        Document.ExecCommand ('copy');
-        Selection.RemoveAllRanges ();
+    var codeEl = containerEl.firstElementChild;
+    copyBtn.addEventListener('click', function() {
+      try {
+        var selection = selectText(codeEl);
+        document.execCommand('copy');
+        selection.removeAllRanges();
 
-        FlashCopyMessage (copyBtn, 'Copied!')
-      } catch (e) {
-        Console && console.Log (e);
-        FlashCopyMessage (copyBtn, 'Failed :\' (')
+        flashCopyMessage(copyBtn, 'Copied!')
+      } catch(e) {
+        console && console.log(e);
+        flashCopyMessage(copyBtn, 'Failed :\'(')
       }
     });
 
-    ContainerEl.AppendChild (copyBtn);
+    containerEl.appendChild(copyBtn);
   }
 
   // Add copy button to code blocks
-  Var highlightBlocks = document.GetElementsByClassName ('highlight');
-  Array.Prototype.ForEach.Call (highlightBlocks, addCopyButton);
+  var highlightBlocks = document.getElementsByClassName('highlight');
+  Array.prototype.forEach.call(highlightBlocks, addCopyButton);
 })();
