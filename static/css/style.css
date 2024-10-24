@@ -241,10 +241,10 @@ code {
 }
 
 .toc a {
-  text-decoration: underline dotted;
+  text-decoration: none;
 }
 .toc a:visited {
-  text-decoration: none;
+  text-decoration: underline dotted;
   color: #757575;
 }
 
