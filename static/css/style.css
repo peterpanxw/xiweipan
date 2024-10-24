@@ -240,9 +240,11 @@ code {
   color: #757575;
 }
 
-.toc a,
+.toc a {
+  text-decoration: underline dotted;
+}
 .toc a:visited {
-  text-decoration: underline dotted blue;
+  text-decoration: none;
   color: #757575;
 }
 
