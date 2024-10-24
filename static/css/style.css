@@ -242,7 +242,7 @@ code {
 
 .toc a,
 .toc a:visited {
-  text-decoration: none;
+  text-decoration: underline dotted blue;
   color: #757575;
 }
 
