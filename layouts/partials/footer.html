@@ -1,6 +1,11 @@
 <footer class="footer">
   {{ partial "comments.html" . }}
   {{ partial "foot_custom.html" . }}
+  <div class="container">
+    <div class="right-align">
+      {{ partial "foot_custom.html" . }}
+    </div>
+  </div>
      <ul class="footer-links">
       {{ if .IsHome }}
        <li>

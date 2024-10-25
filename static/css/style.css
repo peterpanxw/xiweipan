@@ -65,9 +65,16 @@ div.splitbox div.right {
 }
 
 /*Stylying footer text*/
+.container {
+  display: flex;
+}
+
+.right-align {
+  margin-left: auto;
+}
 
 .footer { 
-  text-align: left; font-size: 19px;
+  text-align: center; font-size: 19px;
   padding: 30px 0;
 } 
 
