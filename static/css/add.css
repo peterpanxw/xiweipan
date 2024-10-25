@@ -206,7 +206,7 @@ a {
 }
 .publis-item {
     display:flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .item-thumb-list {
     max-width: 320px;
@@ -271,7 +271,7 @@ a {
     color: #555;
 }
 .publis-list .item-btn {
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 .publis-list .publis-item .item-btn a {
     color:#333;
