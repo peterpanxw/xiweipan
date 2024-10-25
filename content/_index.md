@@ -124,7 +124,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
       </div>
   </div>
 </div>
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5cmntb6d1ma&amp;m=1&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;s=200&amp;bv=80" async="async"></script>
 <script type="text/javascript" src="/js/jq.min.js"></script>
 <script type="text/javascript" src="/js/medium-zoom.min.js"></script>
 <script>
