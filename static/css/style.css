@@ -73,7 +73,7 @@ div.splitbox div.right {
 
 .footer-links {
   list-style: none;
-  margin-top: -5px;
+  margin-top: -25px;
   padding: 0;
   color: #ccc;
   font-size: 14px;
@@ -112,7 +112,7 @@ div.splitbox div.right {
 
 .copyright-text {
   margin-top: 10px;
-  margin-bottom: -5px;
+  margin-bottom: -10px;
   color: grey;
 }
 
