@@ -64,7 +64,7 @@ div.splitbox div.right {
  margin-left: calc(50% - 50vw);
 }
 
-/*Stylying footer text*/
+/*Stylying revolveglobe position*/
 .container{
   display: flex;
 }
@@ -73,7 +73,16 @@ div.splitbox div.right {
   margin: auto;
 }
 
+/*Stylying peterpan font style*/
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
 
+/*Stylying footer text*/
 .footer { 
   text-align: center; font-size: 19px;
   padding: 30px 0;
