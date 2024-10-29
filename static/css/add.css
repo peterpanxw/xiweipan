@@ -189,6 +189,13 @@ a {
     left: -10px;
 }
 
+/*Stylying the news page*/
+html * {margin:0; padding:0}
+.layout_table {display: table; height:105px; width:100%;}
+.layout_table > div{display: table-cell;}
+.left{width:180px; background:White;}
+.right{background:White;}
+
 /* thumb */
 .publis-list {
     display:flex;
