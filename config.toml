@@ -14,35 +14,35 @@ en = "/en/:year/:month/:day/:slug/"
 [frontmatter]
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 
-[[menus.en]]
+[[menu.en]]
     name = "Home"
     url = "/"
     weight = 1
-[[menus.en]]
+[[menu.en]]
     name = "Projects"
     url = "/en/projects/"
     weight = 2
-[[menus.en]]
+[[menu.en]]
     name = "Blog"
     url = "/en/blog/"
     weight = 3
-[[menus.en]]
+[[menu.en]]
     name = "Gallery"
     url = "/en/gallery/"
     weight = 4
-[[menus.en]]
+[[menu.en]]
     name = "中文"
     url = "/cn/blog/"
     weight = 5
-[[menus.cn]]
+[[menu.cn]]
     name = "关于"
     url = "/cn/about/"
     weight = 1
-[[menus.cn]]
+[[menu.cn]]
     name = "博客"
     url = "/cn/blog/"
     weight = 2
-[[menus.cn]]
+[[menu.cn]]
     name = "English"
     url = "/"
     weight = 3
