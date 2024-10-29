@@ -66,14 +66,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK.</p>
           </div>
       </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>Sep 01, 2018</p>
-          </div>
-          <div class="item-content">
-              <p>Admitted to Dalian University of Technology for undergraduate study in <i>Engineering Mechanics</i>.</p>
-          </div>
-      </div>
   </div>
 
 
