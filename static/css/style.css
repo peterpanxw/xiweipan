@@ -84,9 +84,9 @@ div.splitbox div.right {
 
 /*Stylying the news page*/
 html * {margin:0; padding:0}
-.layout_table {display: table; height:100px; width:100%;}
+.layout_table {display: table; height:160px; width:100%;}
 .layout_table > div{display: table-cell;}
-.left{width:300px; background:Gainsboro;}
+.left{width:150px; background:Cornsilk;}
 .right{background:White;}
 
 /*Stylying footer text*/
