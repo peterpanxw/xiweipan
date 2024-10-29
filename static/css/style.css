@@ -86,8 +86,8 @@ div.splitbox div.right {
 html * {margin:0; padding:0}
 .layout_table {display: table; height:100px; width:100%;}
 .layout_table > div{display: table-cell;}
-.left{width:300px; background:lightblue;}
-.right{background:lightgreen;}
+.left{width:300px; background:Gainsboro;}
+.right{background:White;}
 
 /*Stylying footer text*/
 .footer { 
