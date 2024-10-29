@@ -82,6 +82,13 @@ div.splitbox div.right {
   user-select: none;
 }
 
+/*Stylying the news page*/
+html * {margin:0; padding:0}
+.layout_table {display: table; height:100px; width:100%;}
+.layout_table > div{display: table-cell;}
+.left{width:300px; background:lightblue;}
+.right{background:lightgreen;}
+
 /*Stylying footer text*/
 .footer { 
   text-align: center; font-size: 19px;
