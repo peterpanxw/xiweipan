@@ -1,7 +1,7 @@
 ---
 title: Home
 ---
-<div style="text-align: center; width: 110px;"
+<div style="text-align: center; width: 110px;">
   <img
     src="/figures/peterpan_font.png"
     alt="PeterPan Calligraphic Font"
