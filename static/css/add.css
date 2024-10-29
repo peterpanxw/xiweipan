@@ -190,7 +190,6 @@ a {
 }
 
 /*Stylying the news page*/
-
 .layout_table {display: table; height:105px; width:100%;}
 .layout_table > div{display: table-cell;}
 .left{width:180px; background:White;}
