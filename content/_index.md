@@ -1,12 +1,12 @@
 ---
-title: Home
+title:
 ---
 <div class="container">
   <div class="center">
     <img
       src="/figures/peterpan_font.png"
       alt="PeterPan Calligraphic Font"
-      width="110"
+      width="100"
       class="unselectable"
       draggable="false"
       oncontextmenu="return false;"
@@ -23,7 +23,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 - I am actively seeking possible (fall 2025) Ph.D. opportunities in **multiscale structure analysis/design and AI4Science**, here is my [<i class="fa fa-address-card" aria-hidden="true"></i> Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 - Beyond research, I enjoy playing table tennis, swimming, and working out (both physically and mentally).
 
-## **News**
+## [**News**](https://xiweipan.com/news/)
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
     <div class="list-item">
@@ -77,7 +77,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   </div>
 
 
-## [**Selected Publications**](https://xiweipan.vercel.app/en/projects/)
+## [**Selected Publications**](https://xiweipan.com/en/projects/)
 <div class="publications">
   <div class="publis-list">
       <div class="publis-item">
