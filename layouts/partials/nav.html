@@ -34,6 +34,7 @@
         {{ end }}
         {{ else }}
         {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
+        {{ range (default .Site.Menus.main (news .Site.Menus $.Section)) }}
         <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end }}
         {{ end }}

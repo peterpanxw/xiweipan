@@ -1,6 +1,6 @@
 ---
 title: News
-type : nolisting
+type: nolisting
 slug: news
 ---
 <article class="layout_table">
