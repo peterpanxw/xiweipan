@@ -1,14 +1,16 @@
 ---
 title: Home
 ---
-<img
-  src="/figures/peterpan_font.png"
-  alt="PeterPan Calligraphic Font"
-  width="100"
-  class="unselectable"
-  draggable="false"
-  oncontextmenu="return false;"
- />
+<div style="text-align: center; width: 110px;"
+  <img
+    src="/figures/peterpan_font.png"
+    alt="PeterPan Calligraphic Font"
+    style="display: inline-block;
+    class="unselectable"
+    draggable="false"
+    oncontextmenu="return false;"
+   />
+</div>
 
 {{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
 
