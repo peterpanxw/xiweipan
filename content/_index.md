@@ -1,5 +1,5 @@
 ---
-title:
+title: Home
 ---
 <div class="container">
   <div class="center">
@@ -28,13 +28,21 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   <div class="list-page news-list-page">
     <div class="list-item">
           <div class="item-time">
+              <p>Sep 20, 2024</p>
+          </div>
+          <div class="item-content">
+              <p>Rated as the <i>Outstanding Graduate Student of DUT</i>.</p>
+          </div>
+      </div>
+    <div class="list-item">
+          <div class="item-time">
               <p>Jul 21, 2024</p>
           </div>
           <div class="item-content">
               <p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) @ Vancouver, Canada.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Sep 16, 2023</p>
           </div>
@@ -56,14 +64,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
           </div>
           <div class="item-content">
               <p>Pre-admitted to Dalian University of Technology for master's study in <i>Computational Mechanics</i>.</p>
-          </div>
-      </div>
-      <div class="list-item  item-hide">
-          <div class="item-time">
-              <p>Jul 20, 2019</p>
-          </div>
-          <div class="item-content">
-              <p>Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK.</p>
           </div>
       </div>
   </div>
