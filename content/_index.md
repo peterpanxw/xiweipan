@@ -5,7 +5,7 @@ title: Home
   <img
     src="/figures/peterpan_font.png"
     alt="PeterPan Calligraphic Font"
-    style="display: inline-block;"
+    style="margin: 0 auto"
     class="unselectable"
     draggable="false"
     oncontextmenu="return false;"
