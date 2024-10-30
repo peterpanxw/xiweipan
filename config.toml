@@ -46,6 +46,9 @@ en = "/en/:year/:month/:day/:slug/"
     name = "English"
     url = "/"
     weight = 3
+[[menu.en]]
+    name = "News"
+    url = "/en/news/"
 
 [params]
     description = "Peronal Website of Xiwei Pan"
