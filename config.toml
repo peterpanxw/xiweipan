@@ -48,7 +48,7 @@ en = "/en/:year/:month/:day/:slug/"
     weight = 3
 
 [params]
-    description = "Peronal website of Xiwei Pan"
+    description = "Peronal Website of Xiwei Pan"
     homeText = "Xiwei Pan's Personal Website"
     # Please make sure `blogDirNmae` matches the name used in `menu` above:
     blogDirName = "blog"
