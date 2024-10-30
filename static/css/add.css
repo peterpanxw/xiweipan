@@ -165,8 +165,6 @@ a {
     left: -5px;
 }
 
-
-
 .list-item:hover .item-time:before,
 .list-item.item-active .item-time:before{
     width: 14px;
@@ -190,7 +188,7 @@ a {
 }
 
 /*Stylying the news page*/
-.layout_table {display: table; height:100px; width:100%;}
+.layout_table {display: table; height:95px; width:100%;}
 .layout_table > div{display: table-cell;}
 .left{width:180px; background:White;}
 .right{background:White;}

@@ -39,7 +39,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Jul 21, 2024</p>
           </div>
           <div class="item-content">
-              <p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) @ Vancouver, Canada.</p>
+              <p>Attend the 16th World Congress on Computational Mechanics (<a href="https://www.wccm2024.org/">WCCM 2024</a>) @ Vancouver, Canada.</p>
           </div>
       </div>
       <div class="list-item item-hide">
