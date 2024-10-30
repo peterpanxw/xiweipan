@@ -23,7 +23,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 - I am actively seeking possible (fall 2025) Ph.D. opportunities in **multiscale structure analysis/design and AI4Science**, here is my [<i class="fa fa-address-card" aria-hidden="true"></i> Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).
 - Beyond research, I enjoy playing table tennis, swimming, and working out (both physically and mentally).
 
-## [**News**](https://xiweipan.com/news/)
+## [**News**](/news/)
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
     <div class="list-item">
