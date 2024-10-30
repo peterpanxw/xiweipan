@@ -2,8 +2,9 @@
 title: "News"
 type : nolisting
 date: ''
-slug: news
 ---
+
+## News
 <article class="layout_table">
   <div class="left">
   	<b>Sep 20, 2024</b>
