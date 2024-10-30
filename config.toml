@@ -47,7 +47,6 @@ en = "/en/:year/:month/:day/:slug/"
     url = "/"
     weight = 3
 [[menu.en]]
-    name = "News"
     url = "/en/news/"
 
 [params]
