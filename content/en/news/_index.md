@@ -1,5 +1,6 @@
 ---
-title: 'News'
+title: "News"
+type : nolisting
 date: ''
 slug: news
 ---
