@@ -6,7 +6,7 @@ title: Home
     <img
       src="/figures/peterpan_font.png"
       alt="PeterPan Calligraphic Font"
-      width="100"
+      width="120"
       class="unselectable"
       draggable="false"
       oncontextmenu="return false;"
