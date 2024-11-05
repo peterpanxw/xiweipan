@@ -1,10 +1,16 @@
 <nav class="nav">
+ <div class="container">
+   <div class="center">
       <a href="{{ "/" | relURL }}" class="nav-logo">
         <img src="{{ print "" .Site.Params.logo.url | relURL }}"
         width="{{ .Site.Params.logo.width }}"
         height="{{ .Site.Params.logo.height }}"
-        alt="{{ .Site.Params.logo.alt }}">
+        alt="{{ .Site.Params.logo.alt }}"
+        draggable="false"
+        oncontextmenu="return false;">
     </a>
+   </div>
+  </div>
 
     <div class="navbar-brand social"> 
         <a href="mailto:pxw2042086943@mail.dlut.edu.cn"
