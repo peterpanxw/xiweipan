@@ -126,7 +126,6 @@ div.splitbox div.right {
 
 /* navigation bar positioning */
 .nav {
-  position: fixed;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 15px;
@@ -196,7 +195,7 @@ Customize as you prefer*/
 
 .header {
   padding: 20px 0;
-  position: relative;
+  position: fixed;
   background: #f5f5f5;
   border-bottom: 1px solid #eaeaea;
 }
