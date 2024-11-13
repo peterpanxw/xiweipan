@@ -190,7 +190,7 @@ Customize as you prefer*/
 
 .wrapper {
   overflow: hidden;
-  position: relative;
+  position: fixed;
 }
 
 .header {
@@ -202,7 +202,6 @@ Customize as you prefer*/
 
 .header-anchor:hover,
 .header-anchor:focus {
-  position: fixed;
   background-color: none;
 }
 
