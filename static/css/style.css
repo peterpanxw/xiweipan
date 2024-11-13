@@ -196,8 +196,8 @@ Customize as you prefer*/
 }
 
 .header {
-  position: sticky;
   padding: 20px 0;
+  position: sticky;
   background: #f5f5f5;
   border-bottom: 1px solid #eaeaea;
 }
