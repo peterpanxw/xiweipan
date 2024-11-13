@@ -195,13 +195,14 @@ Customize as you prefer*/
 
 .header {
   padding: 20px 0;
-  position: fixed;
+  position: relative;
   background: #f5f5f5;
   border-bottom: 1px solid #eaeaea;
 }
 
 .header-anchor:hover,
 .header-anchor:focus {
+  position: fixed;
   background-color: none;
 }
 
