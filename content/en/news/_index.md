@@ -19,7 +19,7 @@ date: ''
   	<b>Jul 21, 2024</b>
   </div>
   <div class="right">
-  	<p>Attend the 16th World Congress on Computational Mechanics (<a href="https://www.wccm2024.org/">WCCM 2024</a>) @ Vancouver, Canada.</p>
+  	<p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) @ Vancouver, Canada.</p>
   </div>
 </article>
 
