@@ -14,7 +14,7 @@ title: Home
   </div>
 </div>
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Fuguo Park in Dalian, Summer 2023 (Credit goes to Jiayi)" width="420">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
 
 <font size="5">Welcome to my homepage!</font> My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a graduate student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm). I am very interested in multiscale modeling/design of complex systems, with a focus on homogenization methods for spatially varying architectures and the corresponding machine learning techniques.
 
