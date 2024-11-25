@@ -15,6 +15,8 @@ tags:
 ## Preface
 **Gradient descent** is a first-order iterative algorithm widely used for unconstrained mathematical optimization. It plays a key role in training machine learning models and neural networks, highlighting the importance of the "gradient" in these fields. Generally, there are four approaches to compute the *gradient* of a certain function: <u>(a) Manual Differentiation, (b) Numerical Differentiation, (c) Symbolic Differentiation, and (d) Automatic Differentiation.</u> In this blog, we will cover the basics, pros, and cons of these four approaches, with the goal of gaining a deeper and more systematic understanding through this organization.
 
+For detailed information, one can refer to the paper [Automatic differentiation in machine learning: a survey](https://dl.acm.org/doi/pdf/10.5555/3122009.3242010).
+
 ## Manual Differentiation
 For a given **differentiable** function, manual differentiation involves applying basic rules of differentiation (such as *power rule, constant rule, sum rule, product rule, quotient rule, and chain rule*) to find the rate of change of a function with respect to one of its variables.
 
@@ -25,5 +27,10 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*. It is not difficult to implement, but the drawback lies in the `$\mathcal{O}(n)$` [time complexity](https://en.wikipedia.org/wiki/Time_complexity) associated with evaluating `$\nabla f$` in `$n$` dimensional space, as well as the careful selection of step size `$h$`.
 
-<blockquote><h3>Numerical approximations of derivatives are inherently ill-conditioned and unstable,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg</h3></blockquote>
+> Numerical approximations of derivatives are inherently *ill-conditioned and unstable*,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg
 
+Here, the term *ill-conditioned and unstable* refers to two cardinal sins in numerical analysis: "thou shalt not add small numbers to big numbers", and "thou shalt not subtract numbers which are approximately equal". The **truncation and round-off errors** should be responsible for the drawbacks of numerical approximation. Truncation error approaches zero as `$h\to 0$`. However, as `$h$` decreases, round-off error increases and eventually becomes the dominant factor.
+
+The *center difference approximation* is employed to partially mitigate the aforementioned errors:
+`$$\frac{\partial f(\pmb{x})}{\partial x_i}=\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x}-h\pmb{e}_i)}{2h}+O{h^2}, \tag{2} \label{eq2}$$`
+this method provides an approximation with `$O(h^2)$` accuracy, which is one order higher than Equation `$\eqref{eq1}$`. However, it does not avoid either of the cardinal sins and remains highly inaccurate due to truncation.
