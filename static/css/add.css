@@ -367,7 +367,7 @@ a {
 }
 
 /*Styling the quotation*/
-blockquoteqq {
+blockquote {
 border:none;
 font-family:Georgia, "Times New Roman", Times, serif;
 margin-bottom:-30px;
@@ -377,11 +377,11 @@ max-width: 550px;
     padding-left: 0.4em; 
 }
 
-blockquoteqq h3 {
+blockquote h3 {
     font-size:20px;
 }
 
-blockquoteqq h3:before { 
+blockquote h3:before { 
     content: "\201C";
     font-weight: bold;
     font-size:100px;
@@ -391,7 +391,7 @@ blockquoteqq h3:before {
     left: -0.5em; 
     font-family: 'Georgia'; 
 } 
-blockquoteqq h3:after { 
+blockquote h3:after { 
     content: "\201D";
     font-weight: bold;
     font-size:100px;

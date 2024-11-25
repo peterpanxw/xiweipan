@@ -25,5 +25,5 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*. It is not difficult to implement, but the drawback lies in the `$\mathcal{O}(n)$` [time complexity](https://en.wikipedia.org/wiki/Time_complexity) associated with evaluating `$\nabla f$` in `$n$` dimensional space, as well as the careful selection of step size `$h$`.
 
-<blockquoteqq><h3>Numerical approximations of derivatives are inherently ill-conditioned and unstable,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg</h3></blockquoteqq>
+<blockquote><h3>Numerical approximations of derivatives are inherently ill-conditioned and unstable,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg</h3></blockquote>
 
