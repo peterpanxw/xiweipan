@@ -266,11 +266,45 @@ code {
 img, iframe, video { max-width: 100%; }
 
 blockquote {
-  background: #fff;
+  background: #f9f9f9;
   margin: 1em 0;
   padding: 0 2em;
   border-left: 3px solid #ddd;
   font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
+}
+
+/*Styling the quotation*/
+blockquote h3 {
+border:none;
+font-family:Georgia, "Times New Roman", Times, serif;
+margin-bottom:-30px;
+position: relative; 
+max-width: 550px; 
+    margin: 0 auto; 
+    padding-left: 0.4em; 
+    font-size:20px;
+}
+
+
+blockquote h3:before { 
+    content: "\201C";
+    font-weight: bold;
+    font-size:100px;
+    color:#889c0b;
+    position: absolute; 
+    top: -0.2em;
+    left: -0.5em; 
+    font-family: 'Georgia'; 
+} 
+blockquote h3:after { 
+    content: "\201D";
+    font-weight: bold;
+    font-size:100px;
+    color:#889c0b;
+    position: absolute; 
+    bottom: -0.6em;
+    right: 0; 
+    font-family: 'Georgia'; 
 }
 
 /*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
