@@ -365,3 +365,39 @@ a {
 .item-thumb-list ~.item-content .item-periodical {
     font-size:16px
 }
+
+/*Styling the quotation*/
+blockquote {
+border:none;
+font-family:Georgia, "Times New Roman", Times, serif;
+margin-bottom:-30px;
+position: relative; 
+max-width: 400px; 
+    margin: 0 auto; 
+    padding-left: 0.4em; 
+}
+
+blockquote h3 {
+    font-size:21px;
+}
+
+blockquote h3:before { 
+    content: "\201C";
+    font-weight: bold;
+    font-size:100px;
+    color:#889c0b;
+    position: absolute; 
+    top: -0.2em;
+    left: -0.5em; 
+    font-family: 'Georgia'; 
+} 
+blockquote h3:after { 
+    content: "\201D";
+    font-weight: bold;
+    font-size:100px;
+    color:#889c0b;
+    position: absolute; 
+    bottom: -0.6em;
+    right: 0; 
+    font-family: 'Georgia'; 
+}
