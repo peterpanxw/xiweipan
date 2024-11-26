@@ -267,7 +267,6 @@ img, iframe, video { max-width: 100%; }
 
 blockquote {
   background: #f9f9f9;
-  position: relative;
   margin: 1em 0;
   padding: 0 2em;
   /*border-left: 3px solid #ddd;*/
@@ -282,8 +281,8 @@ blockquote :before {
     font-weight: bold;
     font-size:100px;
     color:#FF5F05;
-    position: absolute; 
-    top: -0.2em;
+    position: relative; 
+    top: -0.5em;
     left: -0.5em; 
     font-family: 'Georgia'; 
 } 
