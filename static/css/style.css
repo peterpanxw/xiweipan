@@ -269,9 +269,24 @@ blockquote {
   background: #f9f9f9;
   margin: 1em 0;
   padding: 0 2em;
-  border-left: 3px solid #ddd;
+  /*border-left: 3px solid #ddd;*/
   font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
 }
+
+blockquote {
+    font-size:21px;
+}
+
+blockquote :before { 
+    content: "\201C";
+    font-weight: bold;
+    font-size:100px;
+    color:#FF5F05;
+    position: absolute; 
+    top: -0.2em;
+    left: -0.5em; 
+    font-family: 'Georgia'; 
+} 
 
 /*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
   https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css */
