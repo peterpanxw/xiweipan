@@ -265,14 +265,9 @@ code {
 /* misc elements */
 img, iframe, video { max-width: 100%; }
 
-blockquote {
-  background: #f9f9f9;
-  margin: 1em 0;
-  padding: 0 2em;
-  font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
-}
 
-blockquote h3:before {
+
+blockquote :before {
     content: "\201C";
     font-weight: bold;
     font-size:100px;
@@ -282,6 +277,13 @@ blockquote h3:before {
     left: -0.5em; 
     font-family: 'Georgia'; 
 } 
+
+blockquote {
+  background: #f9f9f9;
+  margin: 1em 0;
+  padding: 0 2em;
+  font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
+}
 
 /*Styling Custome blocks. based on Yihui Xie's Bookdown book's CSS: 
   https://github.com/rstudio/bookdown/blob/master/inst/examples/css/style.css */
