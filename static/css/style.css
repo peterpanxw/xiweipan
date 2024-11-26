@@ -273,7 +273,7 @@ blockquote {
   font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
   max-width: 600px; 
     margin: 0 auto; 
-    padding-left: 0.4em; 
+    padding-left: 0.8em; 
 }
 
 blockquote h3:before {
