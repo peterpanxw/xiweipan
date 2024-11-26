@@ -267,6 +267,7 @@ img, iframe, video { max-width: 100%; }
 
 blockquote {
   background: #f9f9f9;
+  position: relative; 
   margin: 1em 0;
   padding: 0 2em;
   /*border-left: 3px solid #ddd;*/
@@ -276,7 +277,7 @@ blockquote {
     padding-left: 0.4em; 
 }
 
-blockquote :before {
+blockquote h3:before {
     content: "\201C";
     font-weight: bold;
     font-size:100px;
