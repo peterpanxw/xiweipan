@@ -266,6 +266,7 @@ code {
 img, iframe, video { max-width: 100%; }
 
 blockquote {
+  border: solid;
   background: #f9f9f9;
   position: relative; 
   margin: 1em 0;

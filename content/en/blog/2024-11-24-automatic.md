@@ -27,7 +27,7 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*.
 
-> Numerical approximations of derivatives are inherently *ill-conditioned and unstable*,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg
+<blockquote><h3>Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg</h3></blockquote>
 
 Here, the term *ill-conditioned and unstable* refers to two cardinal sins in numerical analysis: "thou shalt not add small numbers to big numbers", and "thou shalt not subtract numbers which are approximately equal". The **truncation and round-off errors** should be responsible for the drawbacks of numerical approximation. Truncation error approaches zero as `$h\to 0$`. However, as `$h$` decreases, round-off error increases and eventually becomes the dominant factor.
 
@@ -49,7 +49,7 @@ The investigated function is decomposed into a sequence of elementary arithmetic
 ## Automatic Differentiation (Autodiff)
 Both classical methods --- whether numerical or symbolic --- face challenges when computing *higher derivatives*, as complexity and errors increase. And they tend to be *slow* when computing partial derivatives w.r.t. multiple inputs, which is essential for gradient-based optimization algorithms. **Autodiff solves all of these problems.**
 
-> All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through *accumulation of (intermediate) values* during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>. --- By [this paper](https://dl.acm.org/doi/pdf/10.5555/3122009.3242010)
+<blockquote><h3>All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through *accumulation of (intermediate) values* during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>. --- By <a href="https://dl.acm.org/doi/pdf/10.5555/3122009.3242010">this paper</a></h3></blockquote>
 
 There are two primary ways that autodiff is typically implemented: **forward mode** and **reverse mode**.
 
