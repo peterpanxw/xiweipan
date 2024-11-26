@@ -270,11 +270,8 @@ blockquote {
   margin: 1em 0;
   padding: 0 2em;
   /*border-left: 3px solid #ddd;*/
+  font-size:21px;
   font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
-}
-
-blockquote {
-    font-size:21px;
 }
 
 blockquote :before { 
