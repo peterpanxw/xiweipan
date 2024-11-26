@@ -63,7 +63,7 @@ en = "/en/:year/:month/:day/:slug/"
     # Edit by yourself:
     GithubEdit = "https://github.com/peterpanxw/xiweipan/edit/main/content/"
     copyright = "&copy;"
-    copyrightYear = "2020-2024"
+    copyrightYear = "2023-2024"
     # Edit by yourself:
     GithubRepo = "https://github.com/peterpanxw/xiweipan"
     # Edit by yourself:

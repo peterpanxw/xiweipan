@@ -1,6 +1,6 @@
 ---
 title: "Automatic Differentiation"
-date: 2024-11-15T20:19:22+08:00
+date: 2024-11-24T20:19:22+08:00
 type: list-single
 author: Xiwei Pan
 slug: automatic-differentiation
@@ -41,7 +41,17 @@ this method provides an approximation with `$O(h^2)$` accuracy, which is one ord
 Symbolic differentiation is the automatic manipulation of mathematical expressions to obtain derivative expressions. It involves systematically applying the rules of differentiation (like the power rule, product rule, chain rule, etc.) to generate a new **symbolic expression** that represents the derivative of the original function.
 
 The investigated function is decomposed into a sequence of elementary arithmetic operations (addition, multiplication, etc.) and elementary functions. With basic rules of differentiation (like chain rule, etc.), partial derivatives of each elementary part with respect to a specific variable can be symbolically represented, as shown in Figure 1.
-{{<figure src="/figures/blogFigs/autodiff/symbolic_diff.png" caption="Figure 1: The process of symbolic differentiation of function f(x,y)=xy+6, this figure shows the partial derivative with respect to variable x." width="800">}}
+{{<figure src="/figures/blogFigs/autodiff/symbolic_diff.png" caption="Figure 1: The process of symbolic differentiation of function f(x,y)=xy+6, this figure shows the partial derivative with respect to variable x." width="700">}}
 
 - **Pros**: In optimization, symbolic derivatives offer valuable insights into the *structure* of the problem domain. In certain cases, they can yield analytical solutions for extrema (e.g., like solving `$f^\prime (x)=0$`), eliminating the need for numerical derivative calculations entirely.
 - **Cons**: It faces the difficulty of translating a computer program into *a single mathematical expression*, often resulting in inefficient code. Symbolic derivatives can grow <u>exponentially</u> in size compared to the original expression they represent, leading to increased complexity (known as ***expression swell***).
+
+## Automatic Differentiation (Autodiff)
+Both classical methods --- whether numerical or symbolic --- face challenges when computing *higher derivatives*, as complexity and errors increase. And they tend to be *slow* when computing partial derivatives w.r.t. multiple inputs, which is essential for gradient-based optimization algorithms. **Autodiff solves all of these problems.**
+
+> All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through *accumulation of (intermediate) values* during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>. --- By [this paper](https://dl.acm.org/doi/pdf/10.5555/3122009.3242010)
+
+There are two primary ways that autodiff is typically implemented: **forward mode** and **reverse mode**.
+
+### Forward Mode
+In forward-mode autodiff, the process begins by fixing the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression.
