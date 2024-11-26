@@ -273,7 +273,7 @@ blockquote {
   font-family: 'Optima', 'STKaiti', 'Kai', 'Kaiti SC', 'KaiTi', 'KaiTi_GB2312', '楷体';
 }
 
-blockquote h3:before { 
+blockquote:before { 
     content: "\201C";
     font-weight: bold;
     font-size:100px;
