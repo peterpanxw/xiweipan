@@ -282,7 +282,7 @@ blockquote h3:before {
     font-weight: bold;
     font-size:100px;
     color:#FF5F05;
-    position: relative; 
+    position: absolute; 
     top: -0.5em;
     left: -0.5em; 
     font-family: 'Georgia'; 
