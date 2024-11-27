@@ -1,18 +1,6 @@
 ---
 title: Home
 ---
-<div class="container">
-  <div class="center">
-    <img
-      src="/figures/peterpan_font.png"
-      alt="PeterPan Calligraphic Font"
-      width="140"
-      class="unselectable"
-      draggable="false"
-      oncontextmenu="return false;"
-    />
-  </div>
-</div>
 
 {{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
 
@@ -126,11 +114,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               </div>
           </div>
       </div>
-  </div>
-</div>
-<div class="container">
-  <div class="center">
-    <script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5o32l9lrwuo&amp;m=2&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;s=200&amp;bv=80" async="async"></script>
   </div>
 </div>
 <script type="text/javascript" src="/js/jq.min.js"></script>
