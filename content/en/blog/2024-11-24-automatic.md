@@ -56,4 +56,4 @@ Autodiff can differentiate not only *closed-form expressions* in classical sense
 There are two primary ways that autodiff is typically implemented: **forward mode** and **reverse mode**.
 
 ### Forward Mode
-In forward-mode autodiff, the process begins by fixing the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression.
+In forward-mode autodiff, the process begins by **fixing** the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression.
