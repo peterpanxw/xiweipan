@@ -1,6 +1,9 @@
-<footer class="footer">
-  {{ partial "comments.html" . }}
-  {{ partial "foot_custom.html" . }}
+
+  <div class="comments">
+    {{ partial "comments.html" . }}
+    {{ partial "foot_custom.html" . }}
+  </div>
+  <footer class="footer">
     <div class="container">
       <div class="center">
         <img
@@ -127,5 +130,8 @@
       display: flex;
       align-items: center;
       gap: 25px;
+    }
+    .comments {
+      
     }
 </style>
