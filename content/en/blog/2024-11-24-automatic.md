@@ -27,7 +27,7 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*.
 
-<blockquote><h3>Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions. --- Bengt Fornberg</h3></blockquote>
+<blockquote><h3><p align="left">Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions.</p><br><p align="right">--- Bengt Fornberg</p></h3></blockquote>
 
 Here, the term *ill-conditioned and unstable* refers to two cardinal sins in numerical analysis: "thou shalt not add small numbers to big numbers", and "thou shalt not subtract numbers which are approximately equal". The **truncation and round-off errors** should be responsible for the drawbacks of numerical approximation. Truncation error approaches zero as `$h\to 0$`. However, as `$h$` decreases, round-off error increases and eventually becomes the dominant factor.
 
@@ -40,7 +40,7 @@ this method provides an approximation with `$O(h^2)$` accuracy, which is one ord
 ## Symbolic Differentiation
 Symbolic differentiation is the automatic manipulation of mathematical expressions to obtain derivative expressions. It involves systematically applying the rules of differentiation (like the power rule, product rule, chain rule, etc.) to generate a new **symbolic expression** that represents the derivative of the original function.
 
-The investigated function is decomposed into a sequence of elementary arithmetic operations (addition, multiplication, etc.) and elementary functions. With basic rules of differentiation (like chain rule, etc.), partial derivatives of each elementary part with respect to a specific variable can be symbolically represented, as shown in Figure 1.
+The investigated function ([closed-form expression](https://en.wikipedia.org/wiki/Closed-form_expression)) can be decomposed into a sequence of elementary arithmetic operations (addition, multiplication, etc.) and elementary functions. With basic rules of differentiation (like chain rule, etc.), partial derivatives of each elementary part with respect to a specific variable can be symbolically represented, as shown in Figure 1.
 {{<figure src="/figures/blogFigs/autodiff/symbolic_diff.png" caption="Figure 1: The process of symbolic differentiation of function f(x,y)=xy+6, this figure shows the partial derivative with respect to variable x." width="700">}}
 
 - **Pros**: In optimization, symbolic derivatives offer valuable insights into the *structure* of the problem domain. In certain cases, they can yield analytical solutions for extrema (e.g., like solving `$f^\prime (x)=0$`), eliminating the need for numerical derivative calculations entirely.
@@ -49,7 +49,9 @@ The investigated function is decomposed into a sequence of elementary arithmetic
 ## Automatic Differentiation (Autodiff)
 Both classical methods --- whether numerical or symbolic --- face challenges when computing *higher derivatives*, as complexity and errors increase. And they tend to be *slow* when computing partial derivatives w.r.t. multiple inputs, which is essential for gradient-based optimization algorithms. **Autodiff solves all of these problems.**
 
-<blockquote><h3>All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through <i>accumulation of (intermediate) values</i> during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>. --- By <a href="https://dl.acm.org/doi/pdf/10.5555/3122009.3242010">this paper</a></h3></blockquote>
+<blockquote><h3><p align="left">All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through <i>accumulation of (intermediate) values</i> during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>.</p><br><p align="right">--- By <a href="https://dl.acm.org/doi/pdf/10.5555/3122009.3242010">this paper</a></p></h3></blockquote>
+
+Autodiff can differentiate not only *closed-form expressions* in classical sense, but also algorithms involve control flow constructs such as braching, loops, recursion, and procedure calls, giving it a significant advantage over symbolic differentiation. <u>Autodiff is blind to any operations, including control flow statements, that do not directly affect numeric values (input, intermediate, output).</u>
 
 There are two primary ways that autodiff is typically implemented: **forward mode** and **reverse mode**.
 
