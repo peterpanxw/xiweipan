@@ -1,74 +1,74 @@
 <footer class="footer">
   <!-- {{ partial "comments.html" . }}
   {{ partial "foot_custom.html" . }} -->
-  <div class="container">
-    <div class="center">
-      <img
-        src="/figures/peterpan_font.png"
-        alt="PeterPan Calligraphic Font"
-        width="140"
-        class="unselectable"
-        draggable="false"
-        oncontextmenu="return false;"
-      />
+    <div class="container">
+      <div class="center">
+        <img
+          src="/figures/peterpan_font.png"
+          alt="PeterPan Calligraphic Font"
+          width="140"
+          class="unselectable"
+          draggable="false"
+          oncontextmenu="return false;"
+        />
+      </div>
+      <div class="navbar-brand social"> 
+        <a href="mailto:pxw2042086943@mail.dlut.edu.cn"
+        title="email" rel="external nofollow noopener"
+        target="_blank"><i class="nav-icon-solid nav-icon-envelope"></i></a> 
+        <a
+        href="https://orcid.org/0009-0002-8474-4498" title="ORCID" rel="external nofollow noopener"
+        target="_blank"><i class="nav-icon nav-icon-orcid"></i></a> 
+        <a
+        href="https://scholar.google.com/" title="Google Scholar"
+        rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-google-scholar"></i></a> 
+        <a
+        href="https://www.researchgate.net/profile/Xiwei-Pan" title="ResearchGate"
+        rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-researchgate"></i></a> 
+        <a
+        href="https://github.com/peterpanxw" title="GitHub" rel="external nofollow noopener"
+        target="_blank"><i class="nav-icon-brands nav-icon-github"></i></a> 
+        <a
+        href="https://cn.linkedin.com/in/xiwei-pan-b65a23319" title="LinkedIn" rel="external nofollow noopener"
+        target="_blank"><i class="nav-icon-brands nav-icon-linkedin"></i></a> 
+      </div> 
+       <ul class="footer-links">
+        {{ if .IsHome }}
+         <li>
+          <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>
+         </li>
+         {{ with .Site.Params.GithubRepo}}
+         <li>
+          <a href='{{ . }}' class="footer-links-kudos" target="_blank"> 
+            {{ default (index $.Site.Params.Lang.sourceCode $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
+            <i class="fa fa-github" style="font-size: 24px"></i>
+          </a>
+         </li>
+         {{ end }}
+         {{ end }}
+         {{ if not .IsHome }}
+         {{ with .Site.Params.singleLang }}
+         <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
+         {{ else }}
+         {{ with .Section }}
+         <li><a href="/{{ . }}/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
+         {{ default "Subscribe" (index $.Site.Params.lang.subscribe $.Section) }} </a>
+         </li>
+         {{ end }}
+         {{ end }}
+         <li>
+         {{ if eq .Section "cn"}}
+         <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">
+         {{ else }}
+          <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+         {{ end }}
+          {{ default (index $.Site.Params.Lang.license $.Site.Params.defaultLang) (index $.Site.Params.lang.license $.Section) }}
+          <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
+          </a>
+         </li>
+         {{ end }}
+       </ul>
     </div>
-  </div>
-  <div class="navbar-brand social"> 
-    <a href="mailto:pxw2042086943@mail.dlut.edu.cn"
-    title="email" rel="external nofollow noopener"
-    target="_blank"><i class="nav-icon-solid nav-icon-envelope"></i></a> 
-    <a
-    href="https://orcid.org/0009-0002-8474-4498" title="ORCID" rel="external nofollow noopener"
-    target="_blank"><i class="nav-icon nav-icon-orcid"></i></a> 
-    <a
-    href="https://scholar.google.com/" title="Google Scholar"
-    rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-google-scholar"></i></a> 
-    <a
-    href="https://www.researchgate.net/profile/Xiwei-Pan" title="ResearchGate"
-    rel="external nofollow noopener" target="_blank"><i class="nav-icon nav-icon-researchgate"></i></a> 
-    <a
-    href="https://github.com/peterpanxw" title="GitHub" rel="external nofollow noopener"
-    target="_blank"><i class="nav-icon-brands nav-icon-github"></i></a> 
-    <a
-    href="https://cn.linkedin.com/in/xiwei-pan-b65a23319" title="LinkedIn" rel="external nofollow noopener"
-    target="_blank"><i class="nav-icon-brands nav-icon-linkedin"></i></a> 
-  </div> 
-     <ul class="footer-links">
-      {{ if .IsHome }}
-       <li>
-        <a href="https://gohugo.io/" class="footer-links-kudos" target="_blank">Made with <img src="/media/hugo-logo.png" width="22" height="22"></a>
-       </li>
-       {{ with .Site.Params.GithubRepo}}
-       <li>
-        <a href='{{ . }}' class="footer-links-kudos" target="_blank"> 
-          {{ default (index $.Site.Params.Lang.sourceCode $.Site.Params.defaultLang) (index $.Site.Params.lang.sourceCode $.Section) }} 
-          <i class="fa fa-github" style="font-size: 24px"></i>
-        </a>
-       </li>
-       {{ end }}
-       {{ end }}
-       {{ if not .IsHome }}
-       {{ with .Site.Params.singleLang }}
-       <li><a href="/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
-       {{ else }}
-       {{ with .Section }}
-       <li><a href="/{{ . }}/{{ $.Site.Params.blogDirName }}/index.xml" type="application/rss+xml" title="RSS feed">
-       {{ default "Subscribe" (index $.Site.Params.lang.subscribe $.Section) }} </a>
-       </li>
-       {{ end }}
-       {{ end }}
-       <li>
-       {{ if eq .Section "cn"}}
-       <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">
-       {{ else }}
-        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
-       {{ end }}
-        {{ default (index $.Site.Params.Lang.license $.Site.Params.defaultLang) (index $.Site.Params.lang.license $.Section) }}
-        <i class="fa fa-cc" aria-hidden="true" title="Attribution-NonCommercial-ShareAlike 4.0 International"></i> 
-        </a>
-       </li>
-       {{ end }}
-     </ul>
      <div class="copyright-content">       
        <div class="copyright-text">
               {{ with .Site.Params.copyright }}
@@ -89,3 +89,31 @@
      </div>
 
 </footer>
+
+<style type="text/css">
+    footer.footer .content {
+        display: flex;
+        justify-content: center; 
+        gap: 40px;
+        max-width: 1000px;
+    }
+    footer.footer .content .center{
+        margin: 0;
+    }
+    footer.footer .content .footer-links{
+        margin-bottom: 0;
+        margin: 0;
+        display: flex;
+        padding: 0;
+        line-height: 49px;
+    }
+    footer.footer .copyright-main {
+      display: flex; 
+      justify-content: center; 
+      gap: 20px; 
+      margin-top: 20px;
+    }
+    footer.footer .copyright-main .copyright-text {
+      margin: 0;
+    }
+</style>
