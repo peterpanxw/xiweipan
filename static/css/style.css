@@ -11,7 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
   image-rendering: -webkit-optimize-contrast;
-} 
+}
 
 /* Two columns */
 div.splitbox {

@@ -4,7 +4,9 @@ title: Home
 
 {{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
 
-<font size="5">Welcome to my homepage!</font> My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a graduate student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm).
+<font size="6">Welcome!</font>
+
+My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a graduate student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm).
 
 Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in mathematics, mechanics, and computer science.
 
@@ -165,7 +167,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   </div>
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
   </div>
-<!-- <script>
+<script>
     $(document).ready(function () { 
         // medium_zoom = mediumZoom("[data-zoomable]", 
         // { background: 'rgba(1,1,1,0)'})
@@ -186,7 +188,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
             }
         })    
       }); 
-</script> -->
+</script>
 <script>
     const windowHeight = window.innerHeight;
     const navHeadBigImg = document.querySelector('.header-bigbg');
