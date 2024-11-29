@@ -189,6 +189,14 @@ Customize as you prefer*/
   line-height: 1.7;
 }
 
+.contentproject {
+  max-width: 950px; 
+  margin: 60px auto auto auto;
+  padding: 0 15px;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
 .wrapper {
   overflow: hidden;
   position: relative;
