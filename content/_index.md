@@ -119,29 +119,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 <script type="text/javascript" src="/js/jq.min.js"></script>
 <script type="text/javascript" src="/js/medium-zoom.min.js"></script>
 <script>
-    $(document).ready(function () { 
-        medium_zoom = mediumZoom("[data-zoomable]", 
-        { background: 'rgba(1,1,1,0)'})         
-        $('.item-ctrl').click(function(){
-            let absDom = $(this).parents('.item-content').find('.item-abstract');
-            if(absDom.hasClass('item-show')){
-                absDom.removeClass('item-show')
-            }else{
-                absDom.addClass('item-show')
-            }
-        })
-        // timeline
-        $('.list-item').click(function(){
-            if($(this).hasClass('item-hide')){
-                $(this).removeClass('item-hide')
-            }else{
-                $(this).addClass('item-hide')
-            }
-        })    
-      }); 
-</script>
-
-<script>
     const windowHeight = window.innerHeight;
     const navHeadBigImg = document.querySelector('.header-bigbg');
     const mainDom = document.querySelector('.wrapper');
@@ -164,4 +141,26 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
             window.addEventListener('scroll', scrollFun);
         },300)
     });
+</script>
+<script>
+    $(document).ready(function () { 
+        medium_zoom = mediumZoom("[data-zoomable]", 
+        { background: 'rgba(1,1,1,0)'})         
+        $('.item-ctrl').click(function(){
+            let absDom = $(this).parents('.item-content').find('.item-abstract');
+            if(absDom.hasClass('item-show')){
+                absDom.removeClass('item-show')
+            }else{
+                absDom.addClass('item-show')
+            }
+        })
+        // timeline
+        $('.list-item').click(function(){
+            if($(this).hasClass('item-hide')){
+                $(this).removeClass('item-hide')
+            }else{
+                $(this).addClass('item-hide')
+            }
+        })    
+      }); 
 </script>
