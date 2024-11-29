@@ -165,7 +165,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   </div>
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
   </div>
-<script>
+<!-- <script>
     $(document).ready(function () { 
         // medium_zoom = mediumZoom("[data-zoomable]", 
         // { background: 'rgba(1,1,1,0)'})
@@ -186,7 +186,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
             }
         })    
       }); 
-</script>
+</script> -->
 <script>
     const windowHeight = window.innerHeight;
     const navHeadBigImg = document.querySelector('.header-bigbg');
