@@ -1,6 +1,7 @@
 ---
 title: 'English Gallery'
 date: ''
+type: list-gallery
 ---
 ## Moments
 <link rel="stylesheet" href="/css/add.css">

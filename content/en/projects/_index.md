@@ -1,7 +1,7 @@
 ---
 title: 'English Projects'
 date: ''
-type: list-menu
+type: list-projects
 ---
 
 <font size="6">**This section will cover specific details of my previous research work, and is currently under construction, soon to be launched ...**</font>

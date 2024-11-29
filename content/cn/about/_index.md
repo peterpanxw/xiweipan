@@ -1,6 +1,6 @@
 ---
 title: "关于"
-type : list-single
+type : list-about
 toc: false
 ---
 ## 我是？
