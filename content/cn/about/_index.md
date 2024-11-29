@@ -1,5 +1,5 @@
 ---
-title: "关于"
+title: ""
 type : list-about
 toc: false
 ---
