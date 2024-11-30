@@ -127,7 +127,7 @@ div.splitbox div.right {
 /* navigation bar positioning */
 .nav {
   position: relative;
-  max-width: 1000px;
+/*  max-width: 1000px;*/
   margin: 0 auto;
   padding: 0 85px;
   text-align: right;
