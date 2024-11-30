@@ -14,6 +14,7 @@
   </head>
   
   <body>
+    {{ if .IsHome }}
     <div class="header-bigbg">
         <div class="header-info">
             <h3><b>Xiwei Pan</b></h3>
@@ -100,6 +101,7 @@
             max-width: unset;
         }
     </style>
+    {{ end }}
     <div class="wrapper">
       <header class="header">
         {{ partial "nav.html" . }}
