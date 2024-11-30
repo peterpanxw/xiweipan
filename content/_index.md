@@ -121,7 +121,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 <!-- thumbnail zoom js -->
 <script type="text/javascript" src="/js/jq.min.js"></script>
 <!-- <script type="text/javascript" src="/js/medium-zoom.min.js"></script> -->
-<script>
+<!-- <script>
     $(document).ready(function () {
       let popImg = false;
       $('.item-thumb').click(function(e){
@@ -160,8 +160,8 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
           return false
         }
       }
-    }); 
-  </script>
+    });
+  </script> -->
 
   <div class="pop-img pop-hide">
     <img src="" alt="">
@@ -169,7 +169,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
   </div>
 <!-- button click js -->
-<script>
+<!-- <script>
     $(document).ready(function () { 
         // medium_zoom = mediumZoom("[data-zoomable]", 
         // { background: 'rgba(1,1,1,0)'})
@@ -188,11 +188,12 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
             }else{
                 $(this).addClass('item-hide')
             }
-        })    
-      }); 
-</script>
+        })
+      });
+</script> -->
+
 <!-- home background image scroll js -->
-<script>
+<!-- <script>
     const windowHeight = window.innerHeight;
     const navHeadBigImg = document.querySelector('.header-bigbg');
     const mainDom = document.querySelector('.wrapper');
@@ -215,10 +216,10 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
             window.addEventListener('scroll', scrollFun);
         },300)
     });
-</script>
+</script> -->
 
 <!-- scroll down arrow js -->
-<script>
+<!-- <script>
   const windowHeight = window.innerHeight;
   const navHeadBigBg = document.querySelector('.header-bigbg');
   const navHeadBigImg = document.querySelector('.header-bigbg img');
@@ -252,12 +253,12 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
       window.addEventListener('scroll', scrollFun);
     },300)
     navHeadArrow.addEventListener('click',function(){
-      
+
       window.scrollTo({
         top: windowHeight,
         left: 0,
         behavior: 'smooth'
       });
     })
-  });    
-</script>
+  });
+</script> -->
