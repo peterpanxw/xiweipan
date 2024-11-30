@@ -93,9 +93,9 @@ type: list-projects
     </div>
   </div>
   </div>
-  <script type="text/javascript" src="/js/jq.min.js"></script>
+  <!-- <script type="text/javascript" src="/js/jq.min.js"></script> -->
   <!--<script type="text/javascript" src="/js/medium-zoom.min.js"></script>-->
-  <script>
+  <!-- <script>
     $(document).ready(function () {
       let popImg = false;
       $('.item-thumb').click(function(e){
@@ -163,4 +163,4 @@ type: list-projects
             }
         })    
       }); 
-</script>
+</script> -->
