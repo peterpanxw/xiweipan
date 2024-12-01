@@ -145,7 +145,7 @@ en = "/en/:year/:month/:day/:slug/"
     tabWidth = 4
 
   [markup.tableOfContents]
-  endLevel = 3
+  endLevel = 4
   ordered = true
   startLevel = 2
 

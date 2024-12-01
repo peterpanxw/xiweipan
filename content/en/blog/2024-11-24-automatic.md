@@ -60,7 +60,7 @@ In forward mode AD, the process begins by **fixing** the independent variable w.
 {{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="800">}}
 
 When computing the Jacobian of a function `$f: \mathbb{R}^n\to\mathbb{R}^m$` with `$n$` independent variables `$x_i$` and `$m$` dependent outputs `$y_j$`, each forward pass of AD can be initialized as setting `$\dot{\pmb{x}}=\pmb{e}_i$`, where `$\pmb{e}_i$` is the `$i$`-th unit vector. Running the code with specific inputs `$\pmb{x}=\pmb{a}$` gives one column of the Jacobian
-`$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right\|_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
+`$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right|_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
 Additionally, by initializing with `$\dot{\pmb{x}}=\pmb{r}$`, one can compute Jacobian-vector products in an efficient and matrix-free manner using forward mode AD
 `$$\pmb{J}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
 
