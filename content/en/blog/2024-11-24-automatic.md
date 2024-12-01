@@ -40,20 +40,33 @@ this method provides an approximation with `$O(h^2)$` accuracy, which is one ord
 ## Symbolic Differentiation
 Symbolic differentiation is the automatic manipulation of mathematical expressions to obtain derivative expressions. It involves systematically applying the rules of differentiation (like the power rule, product rule, chain rule, etc.) to generate a new **symbolic expression** that represents the derivative of the original function.
 
-The investigated function ([closed-form expression](https://en.wikipedia.org/wiki/Closed-form_expression)) can be decomposed into a sequence of elementary arithmetic operations (addition, multiplication, etc.) and elementary functions. With basic rules of differentiation (like chain rule, etc.), partial derivatives of each elementary part with respect to a specific variable can be symbolically represented, as shown in Figure 1.
+The investigated function ([closed-form expression](https://en.wikipedia.org/wiki/Closed-form_expression)) can be decomposed into a sequence of elementary arithmetic operations (addition, multiplication, etc.) and elementary functions. With basic rules of differentiation (like chain rule, etc.), partial derivatives of each elementary part with respect to a specific variable can be symbolically represented, as shown in Fig. 1.
 {{<figure src="/figures/blogFigs/autodiff/symbolic_diff.png" caption="Figure 1: The process of symbolic differentiation of function f(x,y)=xy+6, this figure shows the partial derivative with respect to variable x." width="700">}}
 
 - **Pros**: In optimization, symbolic derivatives offer valuable insights into the *structure* of the problem domain. In certain cases, they can yield analytical solutions for extrema (e.g., like solving `$f^\prime (x)=0$`), eliminating the need for numerical derivative calculations entirely.
 - **Cons**: It faces the difficulty of translating a computer program into *a single mathematical expression*, often resulting in inefficient code. Symbolic derivatives can grow <u>exponentially</u> in size compared to the original expression they represent, leading to increased complexity (known as ***expression swell***).
 
-## Automatic Differentiation (Autodiff)
-Both classical methods --- whether numerical or symbolic --- face challenges when computing *higher derivatives*, as complexity and errors increase. And they tend to be *slow* when computing partial derivatives w.r.t. multiple inputs, which is essential for gradient-based optimization algorithms. **Autodiff solves all of these problems.**
+## Automatic Differentiation (AD)
+Both classical methods --- whether numerical or symbolic --- face challenges when computing *higher derivatives*, as complexity and errors increase. And they tend to be *slow* when computing partial derivatives w.r.t. multiple inputs, which is essential for gradient-based optimization algorithms. **AD solves all of these problems.**
 
-<blockquote><h3><p align="left">All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. Autodiff refers to a specific family of techniques that compute derivatives through <i>accumulation of (intermediate) values</i> during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>.</p><p align="right">--- By <a href="https://dl.acm.org/doi/pdf/10.5555/3122009.3242010">this paper</a></p></h3></blockquote>
+<blockquote><h3><p align="left">All numerical computations are ultimately compositions of a finite set of elementary operations for which derivatives are known. AD refers to a specific family of techniques that compute derivatives through <i>accumulation of (intermediate) values</i> during code execution to generate numerical derivative evaluations rather than derivative expressions. This allows <font color=Crimson>accurate evaluation of derivatives at machine precision with only a small constant factor of overhead and ideal asymptotic efficiency</font>.</p><p align="right">--- By <a href="https://dl.acm.org/doi/pdf/10.5555/3122009.3242010">this paper</a></p></h3></blockquote>
 
-Autodiff can differentiate not only *closed-form expressions* in classical sense, but also algorithms involve control flow constructs such as braching, loops, recursion, and procedure calls, giving it a significant advantage over symbolic differentiation. <u>Autodiff is blind to any operations, including control flow statements, that do not directly affect numeric values (input, intermediate, output).</u>
+AD can differentiate not only *closed-form expressions* in classical sense, but also algorithms involve control flow constructs such as braching, loops, recursion, and procedure calls, giving it a significant advantage over symbolic differentiation. <u>AD is blind to any operations, including control flow statements, that do not directly affect numeric values (input, intermediate, output).</u>
 
-There are two primary ways that autodiff is typically implemented: **forward mode** and **reverse mode**.
+There are two primary ways that AD is typically implemented: **forward mode** and **reverse mode**.
 
-### Forward Mode
-In forward-mode autodiff, the process begins by **fixing** the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression.
+### Forward Accumulation Mode
+In forward mode AD, the process begins by **fixing** the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression. A typical forward mode AD example is the representation of computing `$y=f(x_1,x_2)=ln(x_1)+x_1x_2-\sin(x_2)$` as an *evaluation trace* of elementary operations shown in Fig. 2.
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="700">}}
+
+When computing the Jacobian of a function `$f: \mathbb{R}^n\to\mathbb{R}^m$` with `$n$` independent variables `$x_i$` and `$m$` dependent outputs `$y_j$`, each forward pass of AD can be initialized as setting `$\dot{\pmb{x}}=\pmb{e}_i$`, where `$\pmb{e}_i$` is the `$i$`-th unit vector. Running the code with specific inputs `$\pmb{x}=\pmb{a}$` gives one column of the Jacobian
+`$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
+Additionally, by initializing with `$\dot{\pmb{x}}=\pmb{r}$`, one can compute Jacobian-vector products in an efficient and matrix-free manner using forward mode AD
+`$$\pmb{J}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
+
+Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\to\mathbb{R}^m$`, as all derivatives `$\frac{\mathrm{d}y_i}{\mathrm{d}x}$` can be computed in a single forward pass. Conversely, for functions `$f: \mathbb{R}^n\to\mathbb{R}$`, forward mode AD requires `$n$` evaluations to compute the gradient
+`$$\nabla f=\left(\frac{\partial y}{\partial x_1},\cdots,\frac{\partial y}{\partial x_n}\right).$$`
+
+<font color=Crimson>In summary, for cases `$f: \mathbb{R}^n\to\mathbb{R}^m$` where `$n\gg m$`, a different technique known as the [*reverse accumulation mode*](https://xiweipan.com/en/2024/11/24/automatic-differentiation/#reverse-accumulation-mode) is often preferred.</font>
+
+## Reverse Accumulation Mode
