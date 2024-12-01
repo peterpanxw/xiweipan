@@ -57,10 +57,10 @@ There are two primary ways that AD is typically implemented: **forward mode** an
 
 ### Forward Accumulation Mode
 In forward mode AD, the process begins by **fixing** the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression. A typical forward mode AD example is the representation of computing `$y=f(x_1,x_2)=ln(x_1)+x_1x_2-\sin(x_2)$` as an *evaluation trace* of elementary operations shown in Fig. 2.
-{{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="700">}}
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="800">}}
 
 When computing the Jacobian of a function `$f: \mathbb{R}^n\to\mathbb{R}^m$` with `$n$` independent variables `$x_i$` and `$m$` dependent outputs `$y_j$`, each forward pass of AD can be initialized as setting `$\dot{\pmb{x}}=\pmb{e}_i$`, where `$\pmb{e}_i$` is the `$i$`-th unit vector. Running the code with specific inputs `$\pmb{x}=\pmb{a}$` gives one column of the Jacobian
-`$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
+`$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right\|_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
 Additionally, by initializing with `$\dot{\pmb{x}}=\pmb{r}$`, one can compute Jacobian-vector products in an efficient and matrix-free manner using forward mode AD
 `$$\pmb{J}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
 
@@ -69,4 +69,6 @@ Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\t
 
 <font color=Crimson>In summary, for cases `$f: \mathbb{R}^n\to\mathbb{R}^m$` where `$n\gg m$`, a different technique known as the [*reverse accumulation mode*](https://xiweipan.com/en/2024/11/24/automatic-differentiation/#reverse-accumulation-mode) is often preferred.</font>
 
-## Reverse Accumulation Mode
+#### Dual Numbers
+
+### Reverse Accumulation Mode
