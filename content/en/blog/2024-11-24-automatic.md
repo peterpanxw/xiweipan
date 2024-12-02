@@ -27,7 +27,7 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*.
 
-<blockquote><h3><p align="left">Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>,with the exception of complex variable methods that are applicable to a limited set of holomorphic functions.</p><p align="right">--- Bengt Fornberg</p></h3></blockquote>
+<blockquote><h3><p align="left">Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>, with the exception of complex variable methods that are applicable to a limited set of holomorphic functions.</p><p align="right">--- Bengt Fornberg</p></h3></blockquote>
 
 Here, the term *ill-conditioned and unstable* refers to two cardinal sins in numerical analysis: "thou shalt not add small numbers to big numbers", and "thou shalt not subtract numbers which are approximately equal". The **truncation and round-off errors** should be responsible for the drawbacks of numerical approximation. Truncation error approaches zero as `$h\to 0$`. However, as `$h$` decreases, round-off error increases and eventually becomes the dominant factor.
 
@@ -57,12 +57,12 @@ There are two primary ways that AD is typically implemented: **forward mode** an
 
 ### Forward Accumulation Mode
 In forward mode AD, the process begins by **fixing** the independent variable w.r.t. which differentiation is performed, and then recursively computing the derivatives of each sub-expression. A typical forward mode AD example is the representation of computing `$y=f(x_1,x_2)=ln(x_1)+x_1x_2-\sin(x_2)$` as an *evaluation trace* of elementary operations shown in Fig. 2.
-{{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="800">}}
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_trace.png" caption="Figure 2: Evaluation trace of forward primal and forward derivative w.r.t. x1. (Baydin et al., 2018)." width="850">}}
 
 When computing the Jacobian of a function `$f: \mathbb{R}^n\to\mathbb{R}^m$` with `$n$` independent variables `$x_i$` and `$m$` dependent outputs `$y_j$`, each forward pass of AD can be initialized as setting `$\dot{\pmb{x}}=\pmb{e}_i$`, where `$\pmb{e}_i$` is the `$i$`-th unit vector. Running the code with specific inputs `$\pmb{x}=\pmb{a}$` gives one column of the Jacobian
 `$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right|_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
 Additionally, by initializing with `$\dot{\pmb{x}}=\pmb{r}$`, one can compute Jacobian-vector products in an efficient and matrix-free manner using forward mode AD
-`$$\pmb{J}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
+`$$\mathrm{\pmb{J}}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
 
 Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\to\mathbb{R}^m$`, as all derivatives `$\frac{\mathrm{d}y_i}{\mathrm{d}x}$` can be computed in a single forward pass. Conversely, for functions `$f: \mathbb{R}^n\to\mathbb{R}$`, forward mode AD requires `$n$` evaluations to compute the gradient
 `$$\nabla f=\left(\frac{\partial y}{\partial x_1},\cdots,\frac{\partial y}{\partial x_n}\right).$$`
@@ -70,5 +70,25 @@ Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\t
 <font color=Crimson>In summary, for cases `$f: \mathbb{R}^n\to\mathbb{R}^m$` where `$n\gg m$`, a different technique known as the [*reverse accumulation mode*](https://xiweipan.com/en/2024/11/24/automatic-differentiation/#reverse-accumulation-mode) is often preferred.</font>
 
 #### Dual Numbers
+Mathematically, forward mode AD can be understood from the perspective of [dual numbers](https://en.wikipedia.org/wiki/Dual_number), which are a hypercomplex number system defined as truncated Taylor series: `$v+\dot{v}\epsilon$`. Here `$v, \dot{v}\in\mathbb{R}$` and `$\epsilon$` is a nilpotent number satisfying `$\epsilon^2=0, \epsilon\neq 0$`. In this way, we have
+`\begin{align}
+(v+\dot{v}\epsilon)+(u+\dot{u}\epsilon)&=(v+u)+(\dot{v}+\dot{u})\epsilon;\\
+(v+\dot{v}\epsilon)(u+\dot{u}\epsilon)&=(vu)+(v\dot{u}+\dot{v}u)\epsilon,
+\end{align}`
+note that, the coefficients of `$\epsilon$` exactly correspond to the symbolic differentiation rules. Any polynomial `$P(x)=p_0+p_1x+\cdots+p_nx^n$` with real coefficients can be extended to a function of a dual-number-valued argument
+`\begin{align}P(v+\dot{v}\epsilon)&=p_0+p_1v+\cdots+p_nv^n+p_1\dot{v}\epsilon+2p_2v\dot{v}\epsilon+\cdots+np_nv^{n-1}\dot{v}\epsilon\\
+&=P(v)+P^\prime(v)\dot{v}\epsilon,
+\end{align}`
+where `$P^\prime$` is the derivative of `$P$`. More generally, any (analytic) real function can be extended to dual numbers via its Taylor series expansion
+`$$f(v+\dot{v}\epsilon)=\sum_{n=0}^\inf\frac{f^{(n)}(v)\dot{v}^n\epsilon^n}{n!}=f(v)+f^\prime(v)\dot{v}\epsilon. \tag{3} \label{eq3}$$`
+
+The chain rule works as expected on composite functions based on Equation `$\eqref{eq3}$`
+`$$f(g(v+\dot{v}\epsilon))=f(g(v))+f^\prime(g(v))g^\prime(v)\dot{v}\epsilon,$$`
+this equation indicates that **we can actually extract the derivative of a function by interpreting any non-dual number `$v$` as `$v+0\epsilon$` and evaluating the function in this non-standard way with an initial input, using a coefficient 1 for `$\epsilon$`**:
+`$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=v}=\mathrm{epsilon coefficient}\left(f(v+1\cdot\epsilon)\right),$$`
+one can refer to the example shown in Fig. 3, which illustrates the computation of the partial derivative `$\partial f/\partial x$` at point `$(3,2)$`.
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="700">}}
+
+The perspective of *dual number* enables the simultaneous computation of both the function and its derivative.
 
 ### Reverse Accumulation Mode
