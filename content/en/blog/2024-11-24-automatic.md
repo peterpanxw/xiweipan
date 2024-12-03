@@ -62,9 +62,9 @@ In forward mode AD, the process begins by **fixing** the independent variable w.
 When computing the Jacobian of a function `$f: \mathbb{R}^n\to\mathbb{R}^m$` with `$n$` independent variables `$x_i$` and `$m$` dependent outputs `$y_j$`, each forward pass of AD can be initialized as setting `$\dot{\pmb{x}}=\pmb{e}_i$`, where `$\pmb{e}_i$` is the `$i$`-th unit vector. Running the code with specific inputs `$\pmb{x}=\pmb{a}$` gives one column of the Jacobian
 `$$\dot{y}_j=\left.\frac{\partial y_j}{\partial x_i}\right|_{\pmb{x}=\pmb{a}},\quad j=1,\cdots,m.$$`
 Additionally, by initializing with `$\dot{\pmb{x}}=\pmb{r}$`, one can compute Jacobian-vector products in an efficient and matrix-free manner using forward mode AD
-`$$\mathrm{\pmb{J}}_f\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}.$$`
+`$$\mathrm{\pmb{J}}_f\pmb{r}=\left[\frac{\partial y_i}{\partial x_j}\right]\left\{\pmb{r}\right\}_{n\times 1},\quad i=1,\cdots,m,\ j=1,\cdots,n. \tag{3} \label{eq3}$$`
 
-Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\to\mathbb{R}^m$`, as all derivatives `$\frac{\mathrm{d}y_i}{\mathrm{d}x}$` can be computed in a single forward pass. Conversely, for functions `$f: \mathbb{R}^n\to\mathbb{R}$`, forward mode AD requires `$n$` evaluations to compute the gradient
+Forward mode AD is efficient and straightforward for functions `$f: \mathbb{R}\to\mathbb{R}^m$`, as all derivatives `$\frac{\mathrm{d}y_i}{\mathrm{d}x}$` can be computed in **a single forward pass**. Conversely, for functions `$f: \mathbb{R}^n\to\mathbb{R}$`, forward mode AD requires **`$n$` evaluations** to compute the gradient
 `$$\nabla f=\left(\frac{\partial y}{\partial x_1},\cdots,\frac{\partial y}{\partial x_n}\right).$$`
 
 <font color=Crimson>In summary, for cases `$f: \mathbb{R}^n\to\mathbb{R}^m$` where `$n\gg m$`, a different technique known as the [*reverse accumulation mode*](https://xiweipan.com/en/2024/11/24/automatic-differentiation/#reverse-accumulation-mode) is often preferred.</font>
@@ -80,15 +80,33 @@ note that, the coefficients of `$\epsilon$` exactly correspond to the symbolic d
 &=P(v)+P^\prime(v)\dot{v}\epsilon,
 \end{align}`
 where `$P^\prime$` is the derivative of `$P$`. More generally, any (analytic) real function can be extended to dual numbers via its Taylor series expansion
-`$$f(v+\dot{v}\epsilon)=\sum_{n=0}^\inf\frac{f^{(n)}(v)\dot{v}^n\epsilon^n}{n!}=f(v)+f^\prime(v)\dot{v}\epsilon. \tag{3} \label{eq3}$$`
+`$$f(v+\dot{v}\epsilon)=\sum_{n=0}^\infty\frac{f^{(n)}(v)\dot{v}^n\epsilon^n}{n!}=f(v)+f^\prime(v)\dot{v}\epsilon. \tag{4} \label{eq4}$$`
 
-The chain rule works as expected on composite functions based on Equation `$\eqref{eq3}$`
+The chain rule works as expected on composite functions based on Equation `$\eqref{eq4}$`
 `$$f(g(v+\dot{v}\epsilon))=f(g(v))+f^\prime(g(v))g^\prime(v)\dot{v}\epsilon,$$`
 this equation indicates that **we can actually extract the derivative of a function by interpreting any non-dual number `$v$` as `$v+0\epsilon$` and evaluating the function in this non-standard way with an initial input, using a coefficient 1 for `$\epsilon$`**:
 `$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=v}=\mathrm{epsilon coefficient}\left(f(v+1\cdot\epsilon)\right),$$`
 one can refer to the example shown in Fig. 3, which illustrates the computation of the partial derivative `$\partial f/\partial x$` at point `$(3,2)$`.
-{{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="700">}}
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="500">}}
 
-The perspective of *dual number* enables the simultaneous computation of both the function and its derivative.
+The perspective of dual number enables the *simultaneous* computation of both the function and its derivative.
 
 ### Reverse Accumulation Mode
+Reverse accumulation mode (generalized backpropagation algorithm) computes the gradients of a function w.r.t. its inputs by **first evaluating the function** and **then backpropagating the gradients** through the computation graph in reverse order. <font color=Crimson>This mode is particularly efficient when there are many inputs but relatively few outputs, i.e., `$n\gg m$` (as is often the case in machine learning, especially for loss functions and neural networks).</font>
+
+In this mode, the quantity of interest is termed as an "adjoint", which represents the sensitivity of a considered dependent variable `$y_j$` w.r.t. changes in `$v_i$`
+`$$\bar{v}_i=\frac{\partial y_j}{\partial v_i}=\sum_{j\in\left\{\mathrm{successors of i}\right\}}\bar{v}_j\frac{\partial v_j}{\partial v_i},$$`
+moreover, for backpropagation, `$y$` should be a scalar corresponding to the network error `$E$`.
+
+So how exactly does reverse accumulation work? The corresponding two-step process is outlined below:
+1. (**Function Evaluation**) The original function code is run forward, populating intermediate variables `$v_i$` and recording the dependencies in the computational graph through a bookkeeping procedure;
+2. (**Gradient Computation**) Derivatives are calculated by propagating adjoints `$\bar{v}_i$` in *reverse*, from the outputs back to the inputs.
+
+An example of reverse mode AD can be found in Fig. 4, where the function and derivative values of `$y=f(x_1,x_2)=ln(x_1)+x_1x_2-\sin(x_2)$` are obtained through both a forward and a backward pass. Taking the node `$v_0$` as an example, it can only affect the final output through affecting `$v_2$` and `$v_3$`, so its adjoint `$\bar{v}_0$` is given by
+`$$\frac{\partial y}{\partial v_0}=\frac{\partial y}{\partial v_2}\frac{\partial v_2}{\partial v_0}+\frac{\partial y}{\partial v_3}\frac{\partial v_3}{\partial v_0}.$$`
+{{<figure src="/figures/blogFigs/autodiff/reverse_mode_trace.png" caption="Figure 4: Evaluation trace of forward primal and reverse adjoint derivative (Baydin et al., 2018)." width="850">}}
+
+Similar to the matrix-free computation of Jacobian-vector product with forward mode AD (Equation `$\eqref{eq3}$`), by initializing the reverse phase with `$\bar{\pmb{y}}=\pmb{r}$`, the reverse one can be used for computing the *transposed* Jacobian-vector product
+`$$\mathrm{\pmb{J}}_f^\mathrm{T}\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}_{m\times 1}\quad i=1,\cdots,n,\ j=1,\cdots,m.$$`
+
+One more point to note is that the advantages of reverse mode AD come at the cost of **increased storage requirements**, which can grow in proportion to the number of operations in the evaluated function.
