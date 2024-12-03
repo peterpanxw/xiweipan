@@ -87,7 +87,7 @@ The chain rule works as expected on composite functions based on Equation `$\eqr
 this equation indicates that **we can actually extract the derivative of a function by interpreting any non-dual number `$v$` as `$v+0\epsilon$` and evaluating the function in this non-standard way with an initial input, using a coefficient 1 for `$\epsilon$`**:
 `$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=v}=\mathrm{epsilon coefficient}\left(f(v+1\cdot\epsilon)\right),$$`
 one can refer to the example shown in Fig. 3, which illustrates the computation of the partial derivative `$\partial f/\partial x$` at point `$(3,2)$`.
-{{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="500">}}
+{{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="450">}}
 
 The perspective of dual number enables the *simultaneous* computation of both the function and its derivative.
 
@@ -95,10 +95,10 @@ The perspective of dual number enables the *simultaneous* computation of both th
 Reverse accumulation mode (generalized backpropagation algorithm) computes the gradients of a function w.r.t. its inputs by **first evaluating the function** and **then backpropagating the gradients** through the computation graph in reverse order. <font color=Crimson>This mode is particularly efficient when there are many inputs but relatively few outputs, i.e., `$n\gg m$` (as is often the case in machine learning, especially for loss functions and neural networks).</font>
 
 In this mode, the quantity of interest is termed as an "adjoint", which represents the sensitivity of a considered dependent variable `$y_j$` w.r.t. changes in `$v_i$`
-`$$\bar{v}_i=\frac{\partial y_j}{\partial v_i}=\sum_{j\in\left\{\mathrm{successors of i}\right\}}\bar{v}_j\frac{\partial v_j}{\partial v_i},$$`
-moreover, for backpropagation, `$y$` should be a scalar corresponding to the network error `$E$`.
+`$$\bar{v}_i=\frac{\partial y_j}{\partial v_i}=\sum_{j\in\left\{\mathrm{successors\ of\ i}\right\}}\bar{v}_j\frac{\partial v_j}{\partial v_i},$$`
+moreover, for backpropagation, `$y$` should be a scalar corresponding to the network error.
 
-So how exactly does reverse accumulation work? The corresponding two-step process is outlined below:
+<u>So how exactly does reverse accumulation work?</u> The corresponding two-step process is outlined below:
 1. (**Function Evaluation**) The original function code is run forward, populating intermediate variables `$v_i$` and recording the dependencies in the computational graph through a bookkeeping procedure;
 2. (**Gradient Computation**) Derivatives are calculated by propagating adjoints `$\bar{v}_i$` in *reverse*, from the outputs back to the inputs.
 
@@ -106,7 +106,10 @@ An example of reverse mode AD can be found in Fig. 4, where the function and der
 `$$\frac{\partial y}{\partial v_0}=\frac{\partial y}{\partial v_2}\frac{\partial v_2}{\partial v_0}+\frac{\partial y}{\partial v_3}\frac{\partial v_3}{\partial v_0}.$$`
 {{<figure src="/figures/blogFigs/autodiff/reverse_mode_trace.png" caption="Figure 4: Evaluation trace of forward primal and reverse adjoint derivative (Baydin et al., 2018)." width="850">}}
 
+Here, we also present an intuitive illustration of how reverse mode AD compute the partial derivatives of function `$y=\sin(x_1)+x_1x_2$` through backpropagation (see Fig. 5).
+{{<figure src="/figures/blogFigs/autodiff/backpropagation_derivative.png" caption="Figure 5: Computational graph of reverse accumulation mode AD." width="700">}}
+
 Similar to the matrix-free computation of Jacobian-vector product with forward mode AD (Equation `$\eqref{eq3}$`), by initializing the reverse phase with `$\bar{\pmb{y}}=\pmb{r}$`, the reverse one can be used for computing the *transposed* Jacobian-vector product
-`$$\mathrm{\pmb{J}}_f^\mathrm{T}\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}_{m\times 1}\quad i=1,\cdots,n,\ j=1,\cdots,m.$$`
+`$$\mathrm{\pmb{J}}_f^\mathrm{T}\pmb{r}=\left[\frac{\partial y_j}{\partial x_i}\right]\left\{\pmb{r}\right\}_{m\times 1},\quad i=1,\cdots,n,\ j=1,\cdots,m.$$`
 
 One more point to note is that the advantages of reverse mode AD come at the cost of **increased storage requirements**, which can grow in proportion to the number of operations in the evaluated function.
