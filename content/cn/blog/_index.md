@@ -1,5 +1,5 @@
 ---
-title: '中文博客'
+title: ''
 date: ''
 type: list-blogcn
 ---
