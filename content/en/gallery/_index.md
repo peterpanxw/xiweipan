@@ -8,6 +8,31 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">December 2024</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-04-teaset1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-04-teaset2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>New tea set, new vibe!</p>
+          </div>
+          <div class="item-desc">
+            <p>The design on the blue and white porcelain lidded bowl features magpies perched on a plum blossom branch, known as '喜上眉梢', symbolizing a joyful mood.</p>
+          </div>
+          <div class="item-periodical">
+            Dec. 04, 2024
+          </div>
+        </div>
+      </div>
       <p><font size="6">October 2024</font></p>
       <br>
       <div class="publis-item">
