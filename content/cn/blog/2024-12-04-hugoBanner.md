@@ -11,14 +11,14 @@ tags:
   - 网页制作
   - Hugo
 ---
-我之前根据[这个文档](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)初步构建了自己的个人网站，网站结构是[Hugo](https://github.com/hongtaoh/hugo-ht)，主题默认为[Hugo-ht](https://github.com/hongtaoh/hugo-ht)。为了让个人网站更具个人风格，我随后又在这个基础上做了一些修改，这篇博客我想介绍一下如何在我当前这个主题下添加Banner来进一步美化网站页面（效果如图1所示）。
-{{<figure src="/figures/blogFigs/chinese_blog/2024-12-04-banner.png" title="图1：Banner样式效果" width="800">}}
+我之前根据[这个文档](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)初步构建了自己的个人网站，网站结构是[Hugo](https://github.com/hongtaoh/hugo-ht)，主题默认为[Hugo-ht](https://github.com/hongtaoh/hugo-ht)。为了让个人网站更具个人风格，我随后又在这个基础上做了一些修改，这篇博客我想介绍一下如何在当前这个主题下添加Banner来进一步美化网站页面（效果如图1所示）。
+{{<figure src="/figures/blogFigs/chinese_blog/2024-12-04-banner.png" title="图1：Banner样式效果" width="900">}}
 
-我希望达成的修改效果是只在每个顶部导航栏链接到的页面（除首页外）添加对应主题的Banner，其位置应该在顶部导航栏和正文之间。因为希望只在特定的页面（Projects, Blogs, Gallery, 关于，我的博客）修改主题，所以我们不能在`/layouts/partials/header.html`文件中的`</header>`之后做修改，这样会影响到每一个页面。另外，我们希望的是Banner格式最终位于网页源码的`<header class="header">...</header>`和`<main class="content">...</main>`之间，所以也不能单纯地在这些页面的内容文件（例如`/content/cn/blog/_index.md`）里修改。文件`style.css`规定了`class="content"`部分的最大宽度`max-width: 750px;`，那样的修改最终会让Banner部分的格式代码包含于`class="content"`中，导致Banner最大宽度受限。
+我希望达成的修改效果是只在每个顶部导航栏链接到的页面（除首页外）添加对应主题的Banner，其位置应该在顶部导航栏和正文之间。因为希望只在特定的页面修改主题，所以我们不能在`/layouts/partials/header.html`文件中的`</header>`之后做修改，这样会影响到每一个页面。另外，我们希望的是Banner格式最终位于网页源码的`<header class="header">...</header>`和`<main class="content">...</main>`之间，所以也不能单纯地在这些页面的内容文件（例如`/content/cn/blog/_index.md`）里修改。文件`style.css`规定了`class="content"`部分的最大宽度`max-width: 750px;`，那样的修改最终会让Banner部分的格式代码包含于`class="content"`中，导致Banner最大宽度受限。
 
 根据[Hugo中文文档](https://hugo.opendocs.io/templates/lists/),由于部分列表和分类列表（不包括分类术语列表）在模板上都是*列表*,它们在查找顺序中都有相同的默认值`/layouts/_default/list.html`或`themes/hugo-ht/layouts/_default/list.html`。由于在Hugo-ht主题中这些列表页面的内容文件`_index.md`一开始并未指定该页面的type，于是均为默认的`list.html`。因此一个自然的想法是为每一个希望修改主题的页面创建一个对应的格式文件`list.html`，并基于默认格式进行调整。下面是具体的解决方法：
 1. 在`/layouts/`下创建一个文件夹，自定义一个命名，例如：list-blogcn；
-2. 在`/layouts/list-blogcn/`下创建`list.html`，具体`$\textit{HTML}$`代码参考文末；
+2. 在`/layouts/list-blogcn/`下创建`list.html`，具体`$\texttt{HTML}$`代码参考文末；
 3. 在希望修改页面的内容文件（例如`/content/cn/blog/_index.md`）中添加`type: list-blogcn`即可。
 
 ```html
