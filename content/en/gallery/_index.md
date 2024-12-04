@@ -51,7 +51,7 @@ type: list-gallery
             <p>You're really good at "Jazzing" &#128518;&#127927;</p>
           </div>
           <div class="item-desc">
-            <p>"Music for Oscars" by <a href="https://space.bilibili.com/3493266603379419"><em>TJ JAZZ BIG BAND</em></a> @ <i>Tianjin Concert Hall</i></p>
+            <p>"Music for Oscars" by <a href="https://space.bilibili.com/3493266603379419"><em>TJ JAZZ BIG BAND</em></a> @ <i>Tianjin Concert Hall.</i></p>
           </div>
           <div class="item-periodical">
             Oct. 12, 2024
@@ -88,7 +88,7 @@ type: list-gallery
             <p>Freeze a moment &#127880;</p>
           </div>
           <div class="item-desc">
-            <p>"Fear and Dreams" concert of Eason Chan @ <i>Dalian Sports Center</i></p>
+            <p>"Fear and Dreams" concert of Eason Chan @ <i>Dalian Sports Center</i>.</p>
           </div>
           <div class="item-periodical">
             Sep. 06, 2024
@@ -125,7 +125,7 @@ type: list-gallery
             <p>Yummy dim sum &#127774;&#127861;&#128523;</p>
           </div>
           <div class="item-desc">
-            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><em>Quyuan Teahouse</em></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early)
+            <p>Morning Tea Culture in Yangzhou, <a href="https://www.instagram.com/explore/locations/328974301193704/qu-yuan-teahouse/"><em>Quyuan Teahouse</em></a>. Although I’m a local from Yangzhou, this is my first time officially having morning tea (it’s too hard for those who don’t wake up early).
             </p>
           </div>
           <div class="item-periodical">
@@ -148,10 +148,10 @@ type: list-gallery
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Goodbye Suzhou &#128557;</p>
+            <p>Goodbye Suzhou</p>
           </div>
           <div class="item-desc">
-            <p>View from the upper floors of <i>The Gate of the Orient</i> before leaving Suzhou
+            <p>View from the upper floors of <i>The Gate of the Orient</i> before leaving Suzhou.
             </p>
           </div>
           <div class="item-periodical">
@@ -183,7 +183,7 @@ type: list-gallery
             <p>An unforgettable experience!</p>
           </div>
           <div class="item-desc">
-            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). P2: Me and my senior @ <i>Stanley Park</i>, Vancouver, Canada
+            <p>Presentation on the 16th World Congress on Computational Mechanics (WCCM 2024). P2: Me and my senior @ <i>Stanley Park</i>, Vancouver, Canada.
             </p>
           </div>
           <div class="item-periodical">
@@ -249,7 +249,7 @@ type: list-gallery
             <p>It's tea time &#127861;</p>
           </div>
           <div class="item-desc">
-            <p>During that time, I brewed tea almost every day to savor peaceful afternoons while reflecting on various thoughts --- it was truly relaxing. P1: My own tea set at the workstation
+            <p>During that time, I brewed tea almost every day to savor peaceful afternoons while reflecting on various thoughts --- it was truly relaxing. P1: My own tea set at the workstation.
             </p>
           </div>
           <div class="item-periodical">
@@ -281,7 +281,7 @@ type: list-gallery
             <p>Cute puppy “Potato”!!! &#128525;</p>
           </div>
           <div class="item-desc">
-            <p>The melancholy puppy I met one sunny morning while visiting <i>Lake Li</i> in Wuxi, which clearly didn't realize just how adorable it was
+            <p>The melancholy puppy I met one sunny morning while visiting <i>Lake Li</i> in Wuxi, which clearly didn't realize just how adorable it was.
             </p>
           </div>
           <div class="item-periodical">
@@ -319,52 +319,9 @@ type: list-gallery
   </div>
   </div>
   <script type="text/javascript" src="/js/jq.min.js"></script>
-  <!--<script type="text/javascript" src="/js/medium-zoom.min.js"></script>-->
-<!--   <script>
-    $(document).ready(function () {
-      let popImg = false;
-      $('.item-thumb').click(function(e){
-        if(popImg){
-          return false
-        }
-        popImg = true;
-        $(this).find('img').addClass('pop-img-click')
-        $('.pop-img img').attr('src',$(this).find('img').attr('src'))
-        $('.pop-hide').css({top:e.clientY,left:e.clientX})
-        setTimeout(function(){
-          $('.pop-img').removeClass('pop-hide')
-          $('.pop-img').addClass('pop-show')
-        },200)
-      })
-      $('.pop-img').click(function(){
-        if(popImg){
-          clearPop()
-        }else{
-          return false
-        }
-      })
-      function clearPop(){
-        $('.pop-img').addClass('pop-hide');
-        $('.pop-img').removeClass('pop-show')
-        setTimeout(function(){
-          $('.pop-img img').attr('src','')
-          $('.medium-zoom-image').removeClass('pop-img-click')
-          popImg = false
-        },300)
-      }
-      window.onscroll = function(){
-        if(popImg){
-          clearPop()
-        }else{
-          return false
-        }
-      }
-    });
-  </script> -->
 
   <div class="pop-img pop-hide">
     <img src="" alt="">
   </div>
   <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
   </div>
-
