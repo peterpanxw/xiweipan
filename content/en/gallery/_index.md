@@ -17,7 +17,7 @@ type: list-gallery
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-04-teaset2.jpg"
+            <img src="/figures/moments/2024-12/2024-12-04-teaset2.png"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
