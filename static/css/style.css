@@ -275,10 +275,6 @@ code {
 /* misc elements */
 img, iframe, video { max-width: 100%; }
 
-.img:focus {
-  border:dashed 1px;
-}
-
 blockquote {
   border: 1px solid;
   background: #f9f9f9;
