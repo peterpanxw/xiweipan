@@ -4,10 +4,7 @@ title: Home
 
 {{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
 
-<p class="serif"><font size="6">Welcome!</font></p>
-<style>
-p.serif{font-family:"华文行楷",Times,serif;}
-</style>
+<p class="serif"><font size="7">Welcome!</font></p>
 
 My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a graduate student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm).
 
@@ -130,3 +127,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
 </div>
 <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
 </div>
+<style>
+p.serif{font-family:"华文行楷",Times,serif;}
+</style>
