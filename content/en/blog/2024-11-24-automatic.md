@@ -9,7 +9,6 @@ toc: true
 categories:
   - learning
 tags:
-  - knowledge acquisition
   - machine learning
 ---
 ## Preface
