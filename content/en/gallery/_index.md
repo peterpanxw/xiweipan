@@ -26,7 +26,7 @@ type: list-gallery
             <p>New tea set, new vibe!</p>
           </div>
           <div class="item-desc">
-            <p>The design on the blue and white porcelain lidded bowl features magpies perched on a plum blossom branch, known as '喜上眉梢', symbolizing a joyful mood.</p>
+            <p>The design on the blue and white porcelain lidded bowl features magpies perched on a plum blossom branch, known as "喜上眉梢", symbolizing a joyful mood.</p>
           </div>
           <div class="item-periodical">
             Dec. 04, 2024
