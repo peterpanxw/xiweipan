@@ -18,7 +18,7 @@ tags:
 
 根据 [Hugo中文文档](https://hugo.opendocs.io/templates/lists/),由于部分列表和分类列表（不包括分类术语列表）在模板上都是*列表*,它们在查找顺序中都有相同的默认值`/layouts/_default/list.html`或`themes/hugo-ht/layouts/_default/list.html`。由于在Hugo-ht主题中这些列表页面的内容文件`_index.md`一开始并未指定该页面的type，于是均为默认的`list.html`。因此一个自然的想法是为每一个希望修改主题的页面创建一个对应的格式文件`list.html`，并基于默认格式进行调整。下面是具体的解决方法：
 1. 在`/layouts/`下创建一个文件夹，自定义一个命名，例如：list-blogcn；
-2. 在`/layouts/list-blogcn/`下创建`list.html`，具体`$\texttt{HTML}$`代码参考文末；
+2. 在`/layouts/list-blogcn/`下创建`list.html`，具体的 `$\texttt{HTML}$` 代码参考文末；
 3. 在希望修改页面的内容文件（例如`/content/cn/blog/_index.md`）中添加`type: list-blogcn`即可。
 
 ```html
