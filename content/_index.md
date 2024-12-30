@@ -21,10 +21,18 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
               <p>Sep 20, 2024</p>
           </div>
           <div class="item-content">
-              <p>Rated as the <i>Outstanding Graduate Student of DUT</i>.</p>
+              <p>Recommended as an <i>Outstanding Graduate of the 2025 Class at DUT</i> and an <i>Outstanding Graduate of the 2025 Class of Liaoning Province</i>.</p>
           </div>
       </div>
     <div class="list-item">
+          <div class="item-time">
+              <p>Sep 20, 2024</p>
+          </div>
+          <div class="item-content">
+              <p>Rated as the <i>Outstanding Graduate Student of DUT</i>.</p>
+          </div>
+      </div>
+    <div class="list-item item-hide">
           <div class="item-time">
               <p>Jul 21, 2024</p>
           </div>
@@ -46,14 +54,6 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
           </div>
           <div class="item-content">
               <p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
-          </div>
-      </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>Sep 28, 2021</p>
-          </div>
-          <div class="item-content">
-              <p>Pre-admitted to Dalian University of Technology for master's study in <i>Computational Mechanics</i>.</p>
           </div>
       </div>
   </div>
