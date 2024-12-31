@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Credit goes to Jiayi)" width="420">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Lianhua Hill in Dalian, Eve of 2025 (Credit goes to Jiayi)" width="420" class="unselectable" draggable="false" oncontextmenu="return false;">}}
 
 <p class="serif"><font size="7">Welcome!</font></p>
 

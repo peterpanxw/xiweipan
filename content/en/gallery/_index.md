@@ -13,6 +13,45 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Happy New Year! &#127879;</p>
+          </div>
+          <div class="item-desc">
+            <p>Hiking up Lianhua Mountain in Dalian on the eve of 2025. The scenery along the way was so breathtaking, and life felt truly wonderful.</p>
+          </div>
+          <div class="item-periodical">
+            Dec. 31, 2024
+          </div>
+        </div>
+      </div>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
             <img src="/figures/moments/2024-12/2024-12-04-teaset1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
@@ -138,30 +177,6 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen1.JPG"
-            class="preview z-depth-1 rounded medium-zoom-image">
-          </div>
-          <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-31-dongfangzhimen2.JPG"
-            class="preview z-depth-1 rounded medium-zoom-image">
-          </div>
-        </div>
-        <div class="item-content">
-          <div class="item-tit">
-            <p>Goodbye Suzhou</p>
-          </div>
-          <div class="item-desc">
-            <p>View from the upper floors of <i>The Gate of the Orient</i> before leaving Suzhou.
-            </p>
-          </div>
-          <div class="item-periodical">
-            July 31, 2024
-          </div>
-        </div>
-      </div>
-      <div class="publis-item">
-        <div class="item-thumb-list">
-          <div class="item-thumb">
             <img src="/figures/moments/2024-07/2024-07-20-portrait1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
@@ -278,7 +293,7 @@ type: list-gallery
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Cute puppy “Potato”!!! &#128525;</p>
+            <p>Cute puppy “Potato”!!! &#128054;</p>
           </div>
           <div class="item-desc">
             <p>The melancholy puppy I met one sunny morning while visiting <i>Lake Li</i> in Wuxi, which clearly didn't realize just how adorable it was.
