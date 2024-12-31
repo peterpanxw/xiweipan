@@ -42,7 +42,7 @@ type: list-gallery
             <p>Happy New Year! &#127879;</p>
           </div>
           <div class="item-desc">
-            <p>Hiking up Lianhua Mountain in Dalian on the eve of 2025. The scenery along the way was so breathtaking, and life felt truly wonderful.</p>
+            <p>Hiking up Lianhua Hill in Dalian on the eve of 2025. The scenery along the way was so breathtaking, and life felt truly wonderful.</p>
           </div>
           <div class="item-periodical">
             Dec. 31, 2024
