@@ -84,7 +84,7 @@ where `$P^\prime$` is the derivative of `$P$`. More generally, any (analytic) re
 The chain rule works as expected on composite functions based on Equation `$\eqref{eq4}$`
 `$$f(g(v+\dot{v}\epsilon))=f(g(v))+f^\prime(g(v))g^\prime(v)\dot{v}\epsilon,$$`
 this equation indicates that **we can actually extract the derivative of a function by interpreting any non-dual number `$v$` as `$v+0\epsilon$` and evaluating the function in this non-standard way with an initial input, using a coefficient 1 for `$\epsilon$`**:
-`$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=v}=\mathrm{epsilon coefficient}\left(f(v+1\cdot\epsilon)\right),$$`
+`$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=v}=\mathrm{epsilon\ coefficient}\left(f(v+1\cdot\epsilon)\right),$$`
 one can refer to the example shown in Fig. 3, which illustrates the computation of the partial derivative `$\partial f/\partial x$` at point `$(3,2)$`.
 {{<figure src="/figures/blogFigs/autodiff/forward_mode_dual.png" caption="Figure 3: Forward mode autodiff implementation through dual numbers." width="450">}}
 
