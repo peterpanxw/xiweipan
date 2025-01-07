@@ -1,10 +1,10 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="toc" content="true">
-<meta name="draft" content="false">
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Xiwei Pan">
+<meta name="slug" content="vector-analysis">
 <meta name="type" content="list-single">
-<meta name="categories" content="">
 <meta name="date" content="2025-01-06T13:41:12+08:00">
-<meta name="author" content="Xiwei Pan">
-<meta name="slug" content="vector-analysis"><style>body {
+<meta name="toc" content="true">
+<meta name="categories" content="">
+<meta name="draft" content="false"><style>body {
   max-width: 980px;
   margin: 16px auto;
 }
@@ -1137,17 +1137,63 @@ here, <code>$\mathrm{d}\pmb{S}$</code> can be adopted as a shorthand for <code>$
 <p>Take fluid dynamics as an example, let&rsquo;s consider a fluid flowing through a given volume. The divergence of the velocity field indicates whether the fluid is expanding or contracting at different points within the volume. The Gauss&rsquo;s Theorem tells us that the total amount of fluid flowing out of the surface enclosing the volume is equal to the total rate at which the fluid is &ldquo;created&rdquo; or &ldquo;lost&rdquo; inside the volume.</p>
 <h2 id="curl">Curl<a class="headerlink" href="#curl" title="Permanent link"></a></h2>
 <h3 id="coordinate-free-definition_2">Coordinate-free Definition<a class="headerlink" href="#coordinate-free-definition_2" title="Permanent link"></a></h3>
-<p>In vector calculus, the <strong>curl</strong> identifies a differential operator that maps <code>$C^k$</code> functions (<code>$\pmb{F}_1: \mathbb{R}^3\to\mathbb{R}^3$</code>) to <code>$C^{k-1}$</code> functions (<code>$\pmb{F}_2: \mathbb{R}^3\to\mathbb{R}^3$</code>), denoted <code>$\nabla\times\pmb{F}$</code> or <code>$\mathrm{curl}\pmb{F}$</code>. It describes the infinitesimal <em>circulation</em> (local &ldquo;spinning&rdquo; or &ldquo;twisting&rdquo; motion) of a vector field around a particular point in three-dimensional Euclidean space.</p>
+<p>In vector calculus, the <strong>curl</strong> identifies a differential operator that maps <code>$C^k$</code> functions (<code>$\pmb{F}_1: \mathbb{R}^3\to\mathbb{R}^3$</code>) to <code>$C^{k-1}$</code> functions (<code>$\pmb{F}_2: \mathbb{R}^3\to\mathbb{R}^3$</code>), denoted <code>$\nabla\times\pmb{F}$</code> or <code>$\mathrm{curl}\,\pmb{F}$</code>. It describes the infinitesimal <em>circulation</em> (local &ldquo;spinning&rdquo; or &ldquo;twisting&rdquo; motion) of a vector field around a particular point in three-dimensional Euclidean space.</p>
 <p>A nonzero curl tells us whether the vector field (such as flow) is rotating around a point, and if so,in which direction (clockwise or counterclockwise). In contrast, if the curl is zero, the field has no local rotation at that point.</p>
-<p>The &ldquo;curl&rdquo; of a vector field <code>$\pmb{F}$</code> at point <code>$p$</code> is interpreted as the circulation density at that point of the field, that is,
+<p>The &ldquo;curl&rdquo; of a vector field <code>$\pmb{F}$</code> at point <code>$p$</code> is interpreted as the <strong>circulation density</strong> at that point of the field, that is,
 <code>$$\left(\nabla\times\pmb{F}\right)(p)\cdot\pmb{n}\triangleq\lim_{A\to 0}\frac{1}{|A|}\oint_C\pmb{F}\cdot\mathrm{d}\pmb{r}, \tag{8} \label{eq8}$$</code>
 where <code>$A$</code> is a small area with <code>$n$</code> as its normal vector, and the orientation of the closed curve <code>$C$</code> bounding <code>$A$</code> should follow the <a href="https://en.wikipedia.org/wiki/Right-hand_rule">right-hand rule</a> with respect to <code>$n$</code>. <code>$|A|$</code> is the area magnitude. <code>$\oint_C\pmb{F}\cdot\mathrm{d}\pmb{r}$</code> represents the circulation of <code>$\pmb{F}$</code> along the boundary <code>$C$</code> enclosing point <code>$p$</code>.</p>
 <h3 id="representation-in-cartesian-coordinates_2">Representation in Cartesian Coordinates<a class="headerlink" href="#representation-in-cartesian-coordinates_2" title="Permanent link"></a></h3>
-<p>From equation <code>$\eqref{eq8}$</code>, we can find that <font color=Crimson>by setting the normal vector <code>$\pmb{n}$</code> to be <code>$\pmb{i},\pmb{j},\pmb{k}$</code> in turn&mdash;the three orthonormal basis vectors corresponding to the Cartesian coordinate axes&mdash;we obtain the expression for <code>$\mathrm{curl}\pmb{F}$</code> in Cartesian coordinates.</font> Therefore, we calculate the <code>$k$</code>-component of the curl by taking <code>$\pmb{n}=\pmb{k}$</code> as an example.</p>
-<p>Here, a rectangular path parallel to the <code>$xOy$</code> plane with dimensions <code>$\Delta x$</code> and <code>$\Delta y$</code> is chosen to calculate the line integral <code>$\oint_C\pmb{F}\cdot\pmb{t}\,\mathrm{d}r$</code>. As <code>$A\to 0$</code>, the line integral for each segment can be approximated by the value of <code>$\pmb{F}\cdot\pmb{t}$</code> at the center of the segment, multiplied by its length. So we have
+<p>From equation <code>$\eqref{eq8}$</code>, we can find that <font color=Crimson>by setting the normal vector <code>$\pmb{n}$</code> to be <code>$\pmb{i},\pmb{j},\pmb{k}$</code> in turn&mdash;the three orthonormal basis vectors corresponding to the Cartesian coordinate axes&mdash;we obtain the expression for <code>$\mathrm{curl}\,\pmb{F}$</code> in Cartesian coordinates.</font> Therefore, we calculate the <code>$\pmb{k}$</code>-component of the curl by taking <code>$\pmb{n}=\pmb{k}$</code> as an example (the schematic diagram is provided in Fig. 2).</p>
+<p>{{<figure src="/figures/blogFigs/vectorCalculus/Curl_LineIntegral.png" caption="Figure 2: An infinitesimal rectangle with dimensions Δx and Δy, parallel to the xOy-plane, has its center at (x,y,z). The closed path is composed of four line segments parallel to the coordinate axes, oriented as shown by the arrows in the figure. The 'hat' symbol is used here to distinguish the projection path from the real integration path." width="600">}}</p>
+<p>Here, a rectangular path parallel to the <code>$xOy$</code>-plane with dimensions <code>$\Delta x$</code> and <code>$\Delta y$</code> is chosen to calculate the line integral <code>$\oint_\hat{C}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r$</code>. As <code>$\hat{A}\to 0$</code>, the line integral for each segment can be approximated by the value of <code>$\pmb{F}\cdot\pmb{t}$</code> at the center of the segment, multiplied by its length. So we have
 <code>\begin{align}
-\int_{C_\mathrm{B}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;=\int_{C_\mathrm{B}}F_x\,\mathrm{d}x\approx F_x\left(x,y-\frac{\Delta y}{2},z\right)\Delta x; \tag{9} \label{eq9}\\
-\int_{C_\mathrm{T}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;=\int_{C_\mathrm{T}}F_x\,\mathrm{d}x\approx -F_x\left(x,y+\frac{\Delta y}{2},z\right)\Delta x, \tag{10} \label{eq10}
+\int_{\hat{C}_\mathrm{B}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;=\int_{\hat{C}_\mathrm{B}}F_x\,\mathrm{d}x\approx F_x\left(x,y-\frac{\Delta y}{2},z\right)\Delta x; \tag{9} \label{eq9}\\
+\int_{\hat{C}_\mathrm{T}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;=\int_{\hat{C}_\mathrm{T}}F_x\,\mathrm{d}x\approx -F_x\left(x,y+\frac{\Delta y}{2},z\right)\Delta x, \tag{10} \label{eq10}
 \end{align}</code>
-then we add equations <code>$\eqref{eq9}$</code> and <code>$\eqref{eq10}$</code>, which gives the line integral on segment <code>$C_\mathrm{T}+C_\mathrm{B}$</code></p>
-<h3 id="greens-theorem-and-stokes-theorem">Green&rsquo;s Theorem and Stokes&rsquo; Theorem<a class="headerlink" href="#greens-theorem-and-stokes-theorem" title="Permanent link"></a></h3></article></body></html>
+then we add equations <code>$\eqref{eq9}$</code> and <code>$\eqref{eq10}$</code>, which gives the line integral on segment <code>$\hat{C}_\mathrm{T}+\hat{C}_\mathrm{B}$</code>. Similarly, that on segment <code>$\hat{C}_\mathrm{L}+\hat{C}_\mathrm{R}$</code> can also be obtained. That is,
+<code>\begin{align}
+\frac{1}{|\hat{A}|}\int_{\hat{C}_\mathrm{T}+\hat{C}_\mathrm{B}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;\approx -\frac{F_x\left(x,y+\frac{\Delta y}{2},z\right)-F_x\left(x,y-\frac{\Delta y}{2},z\right)}{\Delta y}; \tag{11} \label{eq11}\\
+\frac{1}{|\hat{A}|}\int_{\hat{C}_\mathrm{L}+\hat{C}_\mathrm{R}}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r&amp;\approx -\frac{F_x\left(x+\frac{\Delta x}{2},y,z\right)-F_x\left(x-\frac{\Delta x}{2},y,z\right)}{\Delta x}. \tag{12} \label{eq12}
+\end{align}</code></p>
+<p>Taking limit <code>$A\to 0$</code> and incorporating equations <code>$\eqref{eq11}$</code> and <code>$\eqref{eq12}$</code> finally gives the <code>$\pmb{k}$</code> component of <code>$\mathrm{curl}\,\pmb{F}$</code>
+<code>$$\left(\nabla\times\pmb{F}\right)_z\lim_{\hat{A}\to 0}\frac{1}{|\hat{A}|}\oint_\hat{C}\pmb{F}\cdot\pmb{t}\,\mathrm{d}r=\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}. \tag{13} \label{eq13}$$</code>
+We can also obtain components of the curl with respect to the other two basis vectors. Ultimately, the curl in Cartesian coordinates can be expressed as
+<code>$$\nabla\times\pmb{F}\triangleq\mathrm{curl}\,\pmb{F}=\left|\begin{array}{c}
+\pmb{i} &amp; \pmb{j} &amp; \pmb{k}\\
+\partial/\partial x &amp; \partial/\partial y &amp; \partial/\partial z\\
+F_x &amp; F_y &amp; F_z\\
+\end{array}\right|. \tag{14} \label{eq14}$$</code></p>
+<p>However, there is a question regarding the above process: <font color=Crimson>if the chosen path is an arbitrary planar curve that is not parallel to the <code>$xOy$</code>-plane, will our conclusion still hold?</font></p>
+<p>The answer is yes. First, we can prove that the conclusion holds for a right-angled triangular path. Any closed curve on the <code>$xOy$</code>-plane can be approximated by a polygon, and the area enclosed by the polygon can be fully divided using rectangles and right-angled triangles. Therefore, the line integral (circulation) around a polygon, in the limit as the number of small regions <code>$N\to\infty$</code>, will converge to the line integral around the closed curve <code>$\hat{C}$</code>. Finally, when the area enclosed by <code>$\hat{C}$</code> shrinks to zero, the result gives the <code>$z$</code>-component of the curl, which can be shown to be consistent with equation <code>$\eqref{eq13}$</code>.</p>
+<p>Furthermore, although we always assume that the region enclosed by the integration path is a plane, this is not a necessity. Since the definition of curl requires that the closed curve around a point shrinks to that point, in the limit, the surface will eventually approach the plane. Therefore, the conclusion previously stated still holds.</p>
+<h3 id="greens-theorem-and-stokes-theorem">Green&rsquo;s Theorem and Stokes&rsquo; Theorem<a class="headerlink" href="#greens-theorem-and-stokes-theorem" title="Permanent link"></a></h3>
+<p>Two important theorems are associated with the concept of &ldquo;curl&rdquo;. Green&rsquo;s Theorem <u>relates a line integral round a closed curve <code>$C$</code> to an area integral over the <font color=RoyalBlue>plane region</font> <code>$A$</code> enclosed by <code>$C$</code>.</u> The general form is given by
+<code>$$\oint_C\pmb{F}\cdot\,\mathrm{d}\pmb{r}=\iint_A\left(\nabla\times\pmb{F}\right)\cdot\,\mathrm{d}\pmb{A}. \tag{15} \label{eq15}$$</code></p>
+<p>In Cartesian coordinate systems, we have <code>$\pmb{F}=F_x\pmb{i}+F_y\pmb{j}$</code> and <code>$\mathrm{d}\pmb{r}=\mathrm{d}x\pmb{i}+\mathrm{d}y\pmb{j}$</code>. Hence, equation <code>$\eqref{eq15}$</code> take the form
+<code>$$\oint_CF_x\,\mathrm{d}x+F_y\,\mathrm{d}y=\iint_A\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\,\mathrm{d}x\mathrm{d}y. \tag{16} \label{eq16}$$</code></p>
+<p>Stokes&rsquo; Theorem <u>relates a line integral round a closed curve <code>$C$</code> to a surface integral over the <font color=RoyalBlue>surface</font> <code>$S$</code> enclosed by <code>$C$</code>.</u> Let <code>$S$</code> be a smooth oriented surface in <code>$\mathbb{R}^3$</code> bouned by a closed curve <code>$C$</code>. If the vector-valued function <code>$\pmb{F}$</code> is first-order differentiable on a neighborhood of <code>$S$</code>, this theorem can be expressed as follows
+<code>$$\oint_C\pmb{F}\cdot\,\mathrm{d}\pmb{r}=\iint_S\left(\nabla\times\pmb{F}\right)\cdot\,\mathrm{d}\pmb{S}. \tag{17} \label{eq17}$$</code></p>
+<p>In Cartesian coordinate systems, we have <code>$\pmb{F}=F_x\pmb{i}+F_y\pmb{j}+F_z\pmb{k}$</code> and <code>$\mathrm{d}\pmb{r}=\mathrm{d}x\pmb{i}+\mathrm{d}y\pmb{j}+\mathrm{d}z\pmb{k}$</code>. Hence, equation <code>$\eqref{eq17}$</code> can be expressed more explicitly as
+<code>$$\oint_CF_x\,\mathrm{d}x+F_y\,\mathrm{d}y+F_z\,\mathrm{d}z=\iint_S\left(\frac{\partial F_z}{\partial y}-\frac{\partial F_y}{\partial z}\right)\,\mathrm{d}y\mathrm{d}z+\left(\frac{\partial F_x}{\partial z}-\frac{\partial F_z}{\partial x}\right)\,\mathrm{d}x\mathrm{d}z+\left(\frac{\partial F_y}{\partial x}-\frac{\partial F_x}{\partial y}\right)\,\mathrm{d}x\mathrm{d}y. \tag{18} \label{eq18}$$</code></p>
+<p>Note that, Green&rsquo;s Theorem applies to the conversion between a plane and its boundary. It is the two-dimensional special case of Stokes&rsquo; Theorem (surface in <code>$\mathrm{R}^3$</code>). More generally, Green&rsquo;s Theorem is equivalent to the Newton–Lebniz formula in one dimensional case and Gauss&rsquo;s Theorem in three dimensional case. Therefore, a higher-dimensional (general) expression of these theorems can be concluded here
+<code>$$\int_\Omega\nabla\cdot\partial\pmb{F}(\pmb{r})\,\mathrm{d}\pmb{r}=\int_{\Gamma}\pmb{F}(\pmb{r})n_i\,\mathrm{d}\Gamma, \tag{19} \label{eq19}$$</code>
+where <code>$\Omega$</code> represents a generalized region, which could be represent a line, an area, or a volume. <code>$\Gamma=\partial\Omega$</code> denotes the generalized boundary of that region, which could correspond to vertices, a closed curve, or a closed surface. Specifically,</p>
+<table>
+<thead>
+<tr>
+<th align="center">Dimension</th>
+<th align="center"><code>$\nabla\cdot\pmb{F}$</code></th>
+<th align="center"><code>$$</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>For 1D line segement, <code>$\nabla\cdot\pmb{F}$</code> reduces to <code>$\frac{\mathrm{d}F}{\mathrm{d}x}$</code></li>
+</ul></article></body></html>
