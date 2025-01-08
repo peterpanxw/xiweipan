@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Lianhua Hill in Dalian, Eve of 2025 (Credit goes to Jiayi)" width="420">}}
+{{<figure src="/figures/Xiwei_Portrait.jpg" title="Me at Lianhua Hill in Dalian, Eve of 2025 (Credit goes to Jiayi)" width="420">}}
 
 <p class="serif"><font size="7">Welcome!</font></p>
 
