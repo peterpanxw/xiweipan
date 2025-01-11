@@ -5,7 +5,7 @@ date: ''
 ---
 <article class="layout_table">
   <div class="left">
-    <b>Dec 30, 2024</b>
+    <b>Dec 29, 2024</b>
   </div>
   <div class="right">
     <p>Recommended as an <i>Outstanding Graduate of the 2025 Class at DUT</i> and an <i>Outstanding Graduate of the 2025 Class of Liaoning Province</i>.</p>

@@ -18,7 +18,7 @@ Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechan
   <div class="list-page news-list-page">
     <div class="list-item">
           <div class="item-time">
-              <p>Sep 20, 2024</p>
+              <p>Dec 29, 2024</p>
           </div>
           <div class="item-content">
               <p>Recommended as an <i>Outstanding Graduate of the 2025 Class at DUT</i> and an <i>Outstanding Graduate of the 2025 Class of Liaoning Province</i>.</p>
