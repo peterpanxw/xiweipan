@@ -64,14 +64,6 @@ div.splitbox div.right {
  margin-left: calc(50% - 50vw);
 }
 
-.hljs {
-    display: block;
-    overflow-x: fixed;
-    padding: .5em;
-    color: #333;
-    background: #f8f8f8
-}
-
 /*Stylying revolveglobe position*/
 .container{
   display: flex;
