@@ -62,7 +62,7 @@ date: ''
   	<b>Jul 20, 2019</b>
   </div>
   <div class="right">
-  	<p>Attended the ACE Sustainable Civil Engineering Summer School at Cardiff University, UK.</p>
+  	<p>Attended the ACE Sustainable Civil Engineering Summer School at <a href="https://www.cardiff.ac.uk/">Cardiff University</a>, UK.</p>
   </div>
 </article>
 
