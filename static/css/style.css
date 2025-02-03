@@ -69,11 +69,13 @@ div.splitbox div.right {
   display: flex;
 }
 
-.center{
+.center img{
   margin: auto;
 }
 
-.center: focus{border: 2px dashed firebrick;}
+.center img: focus{
+  border: 2px dashed firebrick;
+}
 
 /*Stylying footer text*/
 .footer { 
