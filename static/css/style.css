@@ -69,12 +69,12 @@ div.splitbox div.right {
   display: flex;
 }
 
-.container: hover{
-  border: 1px dashed firebrick;
-}
-
 .center{
   margin: auto;
+}
+
+.center: hover{
+  border: 1px dashed firebrick;
 }
 
 /*Stylying footer text*/
