@@ -73,8 +73,7 @@ div.splitbox div.right {
   margin: auto;
 }
 
-.center img {border: none;}
-.center img: focus{border: 2px dashed firebrick;}
+.center: focus{border: 2px dashed firebrick;}
 
 /*Stylying footer text*/
 .footer { 
