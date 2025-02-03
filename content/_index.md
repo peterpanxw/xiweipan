@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jingjiang in Jiangsu Province, Chinese New Year 2025" width="420">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jingjiang in Jiangsu, Chinese New Year 2025" width="420">}}
 
 <p class="serif"><font size="7">Welcome!</font></p>
 

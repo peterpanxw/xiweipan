@@ -73,9 +73,9 @@ div.splitbox div.right {
   margin: auto;
 }
 
-.center: hover{
-  border: 1px dashed firebrick;
-}
+.center img{border: none;}
+
+.center img: hover{border: 1px dashed firebrick;}
 
 /*Stylying footer text*/
 .footer { 
