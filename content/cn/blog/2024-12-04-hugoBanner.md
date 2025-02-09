@@ -11,8 +11,8 @@ tags:
   - 个人网站
   - Hugo
 ---
-我之前根据 [这个文档](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)初步构建了自己的个人网站，网站结构是 [Hugo](https://github.com/hongtaoh/hugo-ht)，主题默认为 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。为了让个人网站更具个人风格，我随后又在这个基础上做了一些修改，这篇博客我想介绍一下如何在当前这个主题下添加Banner来进一步美化网站页面（效果如图1所示）。
-{{<figure src="/figures/blogFigs/chinese_blog/2024-12-04-banner.png" title="图1：Banner样式效果" width="900">}}
+我之前根据 [这个文档](https://hongtaoh.com/cn/2021/03/02/personal-website-tutorial/)初步构建了自己的个人网站，网站结构是 [Hugo](https://github.com/hongtaoh/hugo-ht)，主题默认为 [Hugo-ht](https://github.com/hongtaoh/hugo-ht)。为了让个人网站更具个人风格，我随后又在这个基础上做了一些修改，这篇博客我想介绍一下如何在当前这个主题下添加Banner来进一步美化网站页面（效果如图 1 所示）。
+{{<figure src="/figures/blogFigs/chinese_blog/2024-12-04-banner.png" title="图 1：Banner样式效果" width="900">}}
 
 我希望达成的修改效果是只在每个顶部导航栏链接到的页面（除首页外）添加对应主题的Banner，其位置应该在顶部导航栏和正文之间，具体来说，Banner格式最终位于网页源码的`<header class="header">...</header>`和`<main class="content">...</main>`之间。因为希望只在特定的页面修改主题，所以我们不能在`/layouts/partials/header.html`文件中的`</header>`之后做修改，这样会影响到每一个页面。另外，由于样式文件`style.css`规定了页面内容`class="content"`部分的最大宽度`max-width: 750px;`，所以也不能单纯地修改这些页面的内容文件（例如`/content/cn/blog/_index.md`），那样的修改最终会让Banner部分的格式代码包含于`class="content"`中，导致Banner最大宽度受限。
 
