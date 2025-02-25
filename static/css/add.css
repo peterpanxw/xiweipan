@@ -10,7 +10,7 @@ a {
 }
 
 .navbar-brand.social a:hover i::before {
-    color: #4682B4;
+    color: #959595;
 }
 .navbar-brand.social i{
     font-style:normal;

@@ -291,7 +291,7 @@ blockquote h3:before {
     content: "\201C";
     font-weight: bold;
     font-size:100px;
-    color:#FF5F05;
+    color:#6083a0;
     position: absolute; 
     top: -0.3em;
     left: -0.5em; 
@@ -436,10 +436,11 @@ ol li {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid;
+  transition: color 0.25s ease-in-out;
 }
 
 .list-page a:hover {
-  color: #4682B4;
+  color: #F15D22;
 }
 
 .list-page sup a {
@@ -451,10 +452,11 @@ ol li {
   text-decoration: none;
   padding-bottom: 2px;
   border-bottom: 1px solid;
+  transition: color 0.25s ease-in-out;
 }
 
 .body-text.list-text a:hover {
-  color: #4682B4;
+  color: #F15D22;
 }
 
 .body-text.list-text sup a {
