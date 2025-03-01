@@ -8,6 +8,35 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">March 2025</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-03/2025-03-01-skiing1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-03/2025-03-01-skiing2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-03/2025-03-01-skiing3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Catch the tail end of the snow season</p>
+          </div>
+          <div class="item-desc">
+            <p>Back on the skis again, hoping to venture into the world of snowboarding next time!</p>
+          </div>
+          <div class="item-periodical">
+            Mar. 01, 2025
+          </div>
+        </div>
+      </div>
       <p><font size="6">December 2024</font></p>
       <br>
       <div class="publis-item">
