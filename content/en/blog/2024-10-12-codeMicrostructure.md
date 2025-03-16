@@ -10,7 +10,7 @@ categories:
   - learning
 tags:
   - microstructures
-  - mapping
+  - mechanics
   - MATLAB
 ---
 ## Preface
