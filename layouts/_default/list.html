@@ -1,7 +1,4 @@
-<div class="wrapper">
-      <header class="header">
-        {{ partial "nav.html" . }}
-      </header>
+{{ partial "nav.html" . }}
 
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
