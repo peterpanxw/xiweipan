@@ -1,5 +1,7 @@
-{{ partial "header.html" . }}
-{{ partial "nav.html" . }}
+<div class="wrapper">
+      <header class="header">
+        {{ partial "nav.html" . }}
+      </header>
 
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
