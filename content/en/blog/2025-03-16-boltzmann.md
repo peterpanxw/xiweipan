@@ -56,4 +56,9 @@ where, for simplicity, we reformulate the problem of maximizing `$W$` as an equi
 then, taking the logarithm of Equation `$\eqref{eq2}$` and applying Stirling's approximation, we obtain
 `$$\ln W\approx N\ln N-N-\sum_l\left(a_l\ln a_l-a_l\right)+\sum_la_l\ln g_l. \tag{6} \label{eq6}$$`
 
+For the constrained optimization problem given by the equality in Equation `$\eqref{eq4}$`, we first construct the Lagrangian function `$mathcal{L}$`
+`$$\mathcal{L}=-\ln W\left(\left\{a_l\right\}\right)+\alpha\left(\sum_la_l-N\right)+\beta\left(\sum_la_l\varepsilon_l-U\right), \tag{7} \label{eq7}$$`
+here, the undetermined parameters `$\alpha$` and `$\beta$` are the Lagrange multipliers. According to the method of Lagrange multipliers, for all energy levels `$l$`, we have `$\partial\mathcal{L}/\partial a_l=0$`. This leads to the following result
+`$$a_l=g_l\cdot e^{-\alpha-\beta\varepsilon_l},\quad l=1,2,\cdots, \tag{8} \label{eq8}$$`
+
 ## (Boltzmann) Statistical Entropy
