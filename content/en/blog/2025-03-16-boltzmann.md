@@ -40,7 +40,7 @@ The distribution of particles across different energy levels is clearly a combin
 Now, I want to discuss Equation `$\eqref{eq1}$` and the underlying concept with a simple example. Consider a box that is evenly divided into two sections, filled with gas. The left half contains `$M$` gas molecules, while the right half contains `$N$` gas molecules. Each molecule can be in either the left or the right part of the box. Here, we ignore the effect of degeneracy, i.e., `$g_l=1,\text{ for }l=1,2,\cdots$`, meaning the number of microstates `$W$` is simply the number of ways to distribute `$M+N$` gas molecules between the left and right halves of the box, as shown in Fig. 1, where we have `$M$` molecules on the left and `$N$` on the right
 `$$W=C_{M+N}^M=\frac{(M+N)!}{M!N!}, \tag{3} \label{eq3}$$`
 
-<img src="/figures/blogFigs/boltzmannDistribution/combinatorial_problem.svg" caption="A combinatorial problem defined by distributing M+N gas molecules between the two halves of the box, with M molecules on the left and N on the right." alt="SVG Image" width="400">
+{{<figure src="/figures/blogFigs/boltzmannDistribution/combinatorial_problem.png" caption="Figure 1: A combinatorial problem defined by distributing M+N gas molecules between the two halves of the box, with M molecules on the left and N on the right." width="400">}}
 
 As mentioned earlier, the equilibrium state maximizes `$W$`. In this case, Equation `$\eqref{eq3}$` reaches its maximum when `$M=N$`. This conclusion is intuitive: during the process of reaching equilibrium, the gas molecules gradually diffuse and spread uniformly to fill the entire space. When the system is in equilibrium, the left and right halves of the box must contain an equal number of gas molecules.
 
@@ -56,9 +56,22 @@ where, for simplicity, we reformulate the problem of maximizing `$W$` as an equi
 then, taking the logarithm of Equation `$\eqref{eq2}$` and applying Stirling's approximation, we obtain
 `$$\ln W\approx N\ln N-N-\sum_l\left(a_l\ln a_l-a_l\right)+\sum_la_l\ln g_l. \tag{6} \label{eq6}$$`
 
-For the constrained optimization problem given by the equality in Equation `$\eqref{eq4}$`, we first construct the Lagrangian function `$mathcal{L}$`
+For the constrained optimization problem given by the equality in Equation `$\eqref{eq4}$`, we first construct the Lagrangian function `$\mathcal{L}$`
 `$$\mathcal{L}=-\ln W\left(\left\{a_l\right\}\right)+\alpha\left(\sum_la_l-N\right)+\beta\left(\sum_la_l\varepsilon_l-U\right), \tag{7} \label{eq7}$$`
-here, the undetermined parameters `$\alpha$` and `$\beta$` are the Lagrange multipliers. According to the method of Lagrange multipliers, for all energy levels `$l$`, we have `$\partial\mathcal{L}/\partial a_l=0$`. This leads to the following result
+here, the undetermined parameters `$\alpha$` and `$\beta$` are the Lagrange multipliers. According to [the method of Lagrange multipliers](https://en.wikipedia.org/wiki/Lagrange_multiplier), for all energy levels `$l$`, we have `$\partial\mathcal{L}/\partial a_l=0$`. This leads to the following result
 `$$a_l=g_l\cdot e^{-\alpha-\beta\varepsilon_l},\quad l=1,2,\cdots, \tag{8} \label{eq8}$$`
+this is called the **Maxwell-Boltzmann distribution**, which represents the most probable number of particles at energy level `$l$`, that is, the MPD of particles.
+
+Based on the conservation of particle number in an isolated system, `$\alpha$` can be further expressed in terms of `$\beta$`, allowing Equation `$\eqref{eq8}$` to be rewritten as
+`$$a_l=N\frac{g_l\cdot e^{-\beta\varepsilon_l}}{Z},\quad Z=\sum_kg_k\cdot e^{-\beta\varepsilon_k}, \tag{9} \label{eq9}$$`
+where, `$Z$` is called the **[partition function](https://en.wikipedia.org/wiki/Partition_function_(statistical_mechanics))**, and `$\alpha=\ln(Z/N)$`. Dividing both sides of the above equation by `$N$`, we obtain the Boltzmann distribution we want
+`$$p_l=\frac{1}{Z}g_l\cdot e^{-\beta\varepsilon_l}. \tag{10} \label{eq10}$$`
+
+We have arrived at the very original form of the Boltzmann distribution, but still with a multiplier `$\beta$` to be determined. Next, we will further derive the expression for statistical entropy and determine the specific value of `$\beta$` in the process.
 
 ## (Boltzmann) Statistical Entropy
+From the conservation of system energy, the internal energy `$U$` can be related to the partition function `$Z$` through
+`$$U=e^{-\alpha}\sum_lg_l\varepsilon_l\cdot e^{-\beta\varepsilon_l}=-\frac{N}{Z}\frac{\partial Z}{\partial\beta}=-N\frac{\partial\ln Z}{\partial\beta}, \tag{11} \label{eq11}$$`
+which is generally known as the statistical form of system's internal energy.
+
+Earlier, we derived the Maxwell-Boltzmann distribution for a system of distinguishable particles assuming it was isolated (Equation `$\eqref{eq8}$`). However, for a thermodynamic system that is not isolated, we need to take into account the effect of external parameters `$y$` (which remain unchanged by the system's internal state and are determined by external conditions). When these external parameters change, the surroundings do work on the system, increasing its internal energy.
