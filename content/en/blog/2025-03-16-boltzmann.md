@@ -32,12 +32,28 @@ Boltzmann proposed two important hypotheses for the equilibrium state of a syste
 
 The equiprobability principle states that, *in thermodynamic equilibrium, all possible microscopic states of an isolated system within the same energy range are equally probable*. Therefore, the probability that the particles of a system are in a particular distribution `$\left\{a_l\right\}$` is actually proportional to the number of microstates satisfying that distribution. That is, `$P\left(\left\{a_l\right\}\right)\propto W\left(\left\{a_l\right\}\right)$`, where `$W$` represents the number of possible microstates that correspond to distribution `$\left\{a_l\right\}$`.
 
-The most probable hypothesis further states that, *when a system reaches thermodynamic equilibrium, the distribution of its microstates will be the most probable, i.e., it corresponds to the distribution with the highest probability*. Since the equiprobability principle ensures that all microstates are equally likely, the equilibrium state corresponds to the distribution that **maximizes** the number of microstates `$W$`. Therefore, our focus shifts to determining the most likely number of particles at each energy level, i.e., the most probable distribution `$\left\{a_l\right\}$`.
+The most probable hypothesis further states that, *when a system reaches thermodynamic equilibrium, the distribution of its microstates will be the most probable, i.e., it corresponds to the distribution with the highest probability*. Since the equiprobability principle ensures that all microstates are equally likely, the equilibrium state corresponds to the distribution that **maximizes** the number of microstates `$W$`. Therefore, our focus shifts to determining the most likely number of particles at each energy level, i.e., the most probable distribution (MPD) `$\left\{a_l\right\}$`.
 
 The distribution of particles across different energy levels is clearly a combinatorial problem, where we need to distribute `$N$` particles according to the numbers `$a_1,a_2,\cdots$`. Moreover, considering the degeneracy of the energy levels, a single particle at energy level `$\varepsilon_l$` can actually occupy `$g_l$` different quantum states. Thus, all the particles at this energy level can be arranged in `$g_l^{a_l}$` ways, which further increases the value of `$W$`. In this way, **the total number of possible microstates of the system** can be expressed as
 `$$W=C_N^{a_1}C_{N-a_1}^{a_2}\cdots\prod_l g_l^{a_l}=\frac{N!}{\prod_l a_l!}\prod_l g_l^{a_l}. \tag{2} \label{eq2}$$`
 
+Now, I want to discuss Equation `$\eqref{eq1}$` and the underlying concept with a simple example. Consider a box that is evenly divided into two sections, filled with gas. The left half contains `$M$` gas molecules, while the right half contains `$N$` gas molecules. Each molecule can be in either the left or the right part of the box. Here, we ignore the effect of degeneracy, i.e., `$g_l=1,\text{ for }l=1,2,\cdots$`, meaning the number of microstates `$W$` is simply the number of ways to distribute `$M+N$` gas molecules between the left and right halves of the box, as shown in Fig. 1, where we have `$M$` molecules on the left and `$N$` on the right
+`$$W=C_{M+N}^M=\frac{(M+N)!}{M!N!}, \tag{3} \label{eq3}$$`
+
+<img src="/figures/blogFigs/boltzmannDistribution/combinatorial_problem.svg" caption="A combinatorial problem defined by distributing M+N gas molecules between the two halves of the box, with M molecules on the left and N on the right." alt="SVG Image" width="400">
+
+As mentioned earlier, the equilibrium state maximizes `$W$`. In this case, Equation `$\eqref{eq3}$` reaches its maximum when `$M=N$`. This conclusion is intuitive: during the process of reaching equilibrium, the gas molecules gradually diffuse and spread uniformly to fill the entire space. When the system is in equilibrium, the left and right halves of the box must contain an equal number of gas molecules.
 
 ## Derivation of the Boltzmann Distribution
+Referring back to the expression for the microstates number given by Equation `$\eqref{eq2}$`, we aim to determine the MPD of particles. At the thermodynamic equilibrium, `$W$` is maximum, but the corresponding distribution `$\left\{a_l\right\}$` should still satisfy Equation `$\eqref{eq1}$`. This forms a constrained optimization problem
+`\begin{align}
+\min_{\left\{a_l\right\}}\quad &-\ln W\left(\left\{a_l\right\}\right)\\
+\mathrm{s.t.}\quad &\sum_l a_l-N=0\\
+&\sum_l a_l\varepsilon_l-U=0, \tag{4} \label{eq4}
+\end{align}` 
+where, for simplicity, we reformulate the problem of maximizing `$W$` as an equivalent problem of minimizing its negative logarithm. Note that, the number of particles `$N$` contained in real systems is sufficiently large, allowing us to further simplify the complex factorial operations using **Stirling's approximation**:
+`$$\ln n!\approx n\left(\ln n-1\right),\quad n\gg 1, \tag{5} \label{eq5}$$`
+then, taking the logarithm of Equation `$\eqref{eq2}$` and applying Stirling's approximation, we obtain
+`$$\ln W\approx N\ln N-N-\sum_l\left(a_l\ln a_l-a_l\right)+\sum_la_l\ln g_l. \tag{6} \label{eq6}$$`
 
 ## (Boltzmann) Statistical Entropy
