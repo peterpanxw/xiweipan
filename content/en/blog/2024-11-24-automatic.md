@@ -26,7 +26,7 @@ Numerical differentiation is the process of approximating derivatives using **fi
 `$$\frac{\partial f(\pmb{x})}{\partial x_i}\approx\frac{f(\pmb{x}+h\pmb{e}_i)-f(\pmb{x})}{h}, \tag{1} \label{eq1}$$`
 where `$h$` denotes the step size and `$\pmb{e}_i$` is the `$i$`-th unit vector corresponding to variable `$x_i$`. Equation `$\eqref{eq1}$` is also known as the *forward difference approximation*.
 
-<blockquote><h3><p align="left">Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>, with the exception of complex variable methods that are applicable to a limited set of holomorphic functions.</p><p align="right">--- Bengt Fornberg</p></h3></blockquote>
+<blockquote><h3><p align="left">Numerical approximations of derivatives are inherently <i>ill-conditioned and unstable</i>, with the exception of complex variable methods that are applicable to a limited set of <a href="https://en.wikipedia.org/wiki/Holomorphic_function">holomorphic functions</a>.</p><p align="right">--- Bengt Fornberg</p></h3></blockquote>
 
 Here, the term *ill-conditioned and unstable* refers to two cardinal sins in numerical analysis: "thou shalt not add small numbers to big numbers", and "thou shalt not subtract numbers which are approximately equal". The **truncation and round-off errors** should be responsible for the drawbacks of numerical approximation. Truncation error approaches zero as `$h\to 0$`. However, as `$h$` decreases, round-off error increases and eventually becomes the dominant factor.
 
