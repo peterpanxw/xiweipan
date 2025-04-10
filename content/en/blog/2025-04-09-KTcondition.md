@@ -118,10 +118,10 @@ this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT cond
 > `\begin{align}
 \left\{
 	\begin{aligned}
-	&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0,\quad i=1,2,\,\cdots,n\ (\text{Saddle Point});\\
-	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m\ (\text{Complementarity});\\
-	&h_j\leq0\ (\text{Constraints});\\
-	&\lambda_j\geq0\ (\text{Non-negativity}).
+	&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0,\quad i=1,2,\,\cdots,n;\ \ (\text{Saddle Point})\\
+	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m;\ \ (\text{Complementarity})\\
+	&h_j\leq0;\ \ (\text{Constraints})\\
+	&\lambda_j\geq0.\ \ (\text{Non-negativity})
 	\end{aligned}
 \right. \tag{15} \label{eq15}
 \end{align}`
@@ -146,7 +146,7 @@ and for simplicity, it is initially assumed that `$\mathbb{K}$` is convex, altho
 
 For all `$\pmb{X}\in\Gamma$`, the admissible deformation `$\pmb{x}=\varphi(\pmb{X},t)$` satisfies:
 `\begin{align}
-&h(\pmx{x})\leq0; \tag{16} \label{eq16}\\
+&h(\pmb{x})\leq0; \tag{16} \label{eq16}\\
 &t_N=-\pmb{n}(\pmb{x})\cdot\pmb{PN}; \tag{17} \label{eq17}\\
 &t_N(\pmb{x})h(\pmb{x})=0; \tag{18} \label{eq18}\\
 &\pmb{t}_T=\pmb{PN}+t_N\pmb{n}=\pmb{0}, \tag{19} \label{eq19}
