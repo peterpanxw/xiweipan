@@ -10,6 +10,7 @@ categories:
   - learning
 tags:
   - optimization
+  - contact mechanics
 ---
 ## Preface
 The general formulation of contact problems aligns closely with the structure of the [Kuhn-Tucker (KT) conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions). So, I take this opportunity to revisit the derivation of the KT conditions in order to deepen my understanding of both topics.
@@ -114,13 +115,13 @@ Combine Equations `$\eqref{eq12}$` and `$\eqref{eq14}$`, the introduced relaxati
 &\text{If} h_j=0,\ \text{then }s_j=0,\ \lambda_j\geq0,
 \end{align}`
 this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT conditions</mark>:
-`\begin{align}
+> `\begin{align}
 \left\{
 	\begin{aligned}
-	&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0,\quad i=1,2,\,\cdots,n;\\
-	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m;\\
-	&h_j\leq0;\\
-	&\lambda_j\geq0.
+	&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0,\quad i=1,2,\,\cdots,n\ (\text{Saddle Point});\\
+	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m\ (\text{Complementarity});\\
+	&h_j\leq0\ (\text{Constraints});\\
+	&\lambda_j\geq0\ (\text{Non-negativity}).
 	\end{aligned}
 \right. \tag{15} \label{eq15}
 \end{align}`
@@ -132,6 +133,24 @@ Some remarks regarding Equation `$\eqref{eq15}$` should be made here. For the op
 Based on Equation `$\eqref{eq15}$`, the physical interpretation of the KT conditions is that <font color=Crimson>the negative gradient of the objective function at the optimal point should be a linear combination of all gradients of active constraints with non-negative coefficients.</font>
 
 ## Contact Formulation
-As we mentioned before, the KT conditions align closely with the contact formulation, which can be investigated through the rigid obstacle problem
+As mentioned previously, the KT conditions closely align with the contact formulation, which can be proposed through the rigid obstacle problem illustrated in Fig. 1. Consider the problem of finite deformation of a continuum body constrained by the presence of a rigid obstacle. A material point `$\pmb{X}$` in the reference configuration `$\Omega$` is mapped to the corresponding one in the current configuration by `$\pmb{x}=\varphi(\pmb{X})$`, where `$\det\left(D_\varphi(\pmb{X},t)\right)>0$` holds for all time `$t$`. `$\Gamma$` denotes a section of `$\partial\Omega$`, which should include all possible points of contact. `$\gamma$` is the image of `$\Gamma$` over `$\varphi$`. Here, `$\mathbb{K}$` is defined as a (time-invariant) open subset of the ambient space which together with `$\partial\mathbb{K}$` comprises the admissible region for the motion of `$\Omega$`. The remainder of `$\mathbb{K}$` is assumed to be occupied by the obstacle.
+{{<figure src="/figures/blogFigs/KT_Contact/contact_notation.png" caption="Figure 1: Notation for the obstacle problem in finite deformations (J. C. SIMO and T. A. LAURSEN, 1990)" width="450">}}
 
-{{<figure src="/figures/blogFigs/KT_Contact/contact_notation.png" caption="Figure 1: Notation for the obstacle problem in finite deformations (J. C. Simo, 1990)" width="450">}}
+Define a *scalar-valued gauge function* `$h$` satisfying
+`\begin{align}
+&h<0\quad\text{in }\mathbb{K}\\
+&h=0\quad\text{on }\partial\mathbb{K}\\
+&h>0\quad\text{outside }\mathbb{K},
+\end{align}`
+and for simplicity, it is initially assumed that `$\mathbb{K}$` is convex, although this is not a necessary restriction. The contact conditions can, therefore, be stated as follows:
+
+For all `$\pmb{X}\in\Gamma$`, the admissible deformation `$\pmb{x}=\varphi(\pmb{X},t)$` satisfies:
+`\begin{align}
+&h(\pmx{x})\leq0; \tag{16} \label{eq16}\\
+&t_N=-\pmb{n}(\pmb{x})\cdot\pmb{PN}; \tag{17} \label{eq17}\\
+&t_N(\pmb{x})h(\pmb{x})=0; \tag{18} \label{eq18}\\
+&\pmb{t}_T=\pmb{PN}+t_N\pmb{n}=\pmb{0}, \tag{19} \label{eq19}
+\end{align}`
+where `$\pmb{P}$` is the [first Piola-Kirchhoff stress tensor](https://en.wikipedia.org/wiki/Piola%E2%80%93Kirchhoff_stress_tensors), `$\pmb{n}$` and `$\pmb{N}$` represent the outward normal in the current and reference configuration, respectively. Further explanations regarding the above equations are needed. Equation `$\eqref{eq16}$` represents the impermeability of the rigid obstacle to the investigated body; Equation `$\eqref{eq17}$` indicates that the surface traction should be compressive; Equation `$\eqref{eq18}$` is a contact-detection condition ensuring `$t_N\neq0$` only when `$h(\pmb{x})=0$`; and the frictionless contact is ensured by Equation `$\eqref{eq19}$`.
+
+It can be seen that Equations `$\eqref{eq16}$`-`$\eqref{eq18}$` are exactly in the same form as the 'Constraint', 'Non-negativity', and 'Complementarity' conditions in the Kuhn-Tucker conditions (see the last three equations `$\eqref{eq15}$`). Further theoretical details related to contact mechanics will be added to this blog in the future when time permits.
