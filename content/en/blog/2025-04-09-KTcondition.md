@@ -111,8 +111,8 @@ note that, Equation `$\eqref{eq13}$` constitutes an extremum problem with a lowe
 
 Combine Equations `$\eqref{eq12}$` and `$\eqref{eq14}$`, the introduced relaxation variables `$s_j$` can be eliminated:
 `\begin{align}
-&\text{If} h_j<0,\ \text{then }s_j>0,\ \lambda_j=0;\\
-&\text{If} h_j=0,\ \text{then }s_j=0,\ \lambda_j\geq0,
+&\text{If } h_j<0,\ \text{then }s_j>0,\ \lambda_j=0;\\
+&\text{If } h_j=0,\ \text{then }s_j=0,\ \lambda_j\geq0,
 \end{align}`
 this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT conditions</mark>:
 > `\begin{align}
@@ -144,13 +144,14 @@ Define a *scalar-valued gauge function* `$h$` satisfying
 \end{align}`
 and for simplicity, it is initially assumed that `$\mathbb{K}$` is convex, although this is not a necessary restriction. The contact conditions can, therefore, be stated as follows:
 
-For all `$\pmb{X}\in\Gamma$`, the admissible deformation `$\pmb{x}=\varphi(\pmb{X},t)$` satisfies:
+> For all `$\pmb{X}\in\Gamma$`, the admissible deformation `$\pmb{x}=\varphi(\pmb{X},t)$` satisfies:
 `\begin{align}
 &h(\pmb{x})\leq0; \tag{16} \label{eq16}\\
-&t_N=-\pmb{n}(\pmb{x})\cdot\pmb{PN}; \tag{17} \label{eq17}\\
+&t_N=-\pmb{n}(\pmb{x})\cdot\pmb{PN}\geq0; \tag{17} \label{eq17}\\
 &t_N(\pmb{x})h(\pmb{x})=0; \tag{18} \label{eq18}\\
 &\pmb{t}_T=\pmb{PN}+t_N\pmb{n}=\pmb{0}, \tag{19} \label{eq19}
 \end{align}`
+
 where `$\pmb{P}$` is the [first Piola-Kirchhoff stress tensor](https://en.wikipedia.org/wiki/Piola%E2%80%93Kirchhoff_stress_tensors), `$\pmb{n}$` and `$\pmb{N}$` represent the outward normal in the current and reference configuration, respectively. Further explanations regarding the above equations are needed. Equation `$\eqref{eq16}$` represents the impermeability of the rigid obstacle to the investigated body; Equation `$\eqref{eq17}$` indicates that the surface traction should be compressive; Equation `$\eqref{eq18}$` is a contact-detection condition ensuring `$t_N\neq0$` only when `$h(\pmb{x})=0$`; and the frictionless contact is ensured by Equation `$\eqref{eq19}$`.
 
 It can be seen that Equations `$\eqref{eq16}$`-`$\eqref{eq18}$` are exactly in the same form as the 'Constraint', 'Non-negativity', and 'Complementarity' conditions in the Kuhn-Tucker conditions (see the last three equations `$\eqref{eq15}$`). Further theoretical details related to contact mechanics will be added to this blog in the future when time permits.
