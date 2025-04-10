@@ -128,6 +128,10 @@ this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT cond
 Some remarks regarding Equation `$\eqref{eq15}$` should be made here. For the optimal point `$x^\ast$`, if
 - `$h_j(x^\ast)<0$`, then `$\lambda_j=0$`, the constraint gradient terms `$\partial h_j/\partial x_i$` are deactivated (passive constraints);
 - `$h_j(x^\ast)=0$`, then `$\lambda_j\geq0$`, the terms `$\partial h_j/\partial x_i$` are active (active constraints).
+
 Based on Equation `$\eqref{eq15}$`, the physical interpretation of the KT conditions is that <font color=Crimson>the negative gradient of the objective function at the optimal point should be a linear combination of all gradients of active constraints with non-negative coefficients.</font>
 
 ## Contact Formulation
+As we mentioned before, the KT conditions align closely with the contact formulation, which can be investigated through the rigid obstacle problem
+
+{{<figure src="/figures/blogFigs/KT_Contact/contact_notation.png" caption="Figure 1: Notation for the obstacle problem in finite deformations (J. C. Simo, 1990)" width="450">}}
