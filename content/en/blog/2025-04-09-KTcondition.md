@@ -17,38 +17,38 @@ The general formulation of contact problems aligns closely with the structure of
 ## Kuhn-Tucker Conditions
 In this section, we will provide a detailed trace of deriving the well-known Kuhn-Tucker conditions.
 ### Unconstrained Optimization of Univariate Functions
-$$\min\quad f(x),\quad -\infty\leq x\leq\infty$$
+`$$\min\ f(x),\quad -\infty\leq x\leq\infty$$`
 
 The *necessary condition* for a global minimum is given by:
-$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=x^\ast}=0, \tag{1}$$
+`$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=x^\ast}=0, \tag{1}$$`
 and the sufficient condition is
-$$\left.\frac{\mathrm{d}^2f(x)}{\mathrm{d}x^2}\right|_{x=x^\ast}>0, \tag{2}$$
+`$$\left.\frac{\mathrm{d}^2f(x)}{\mathrm{d}x^2}\right|_{x=x^\ast}>0, \tag{2}$$`
 which indicates the function considered is *convex*.
 
 ### Unconstrained Optimization of Multivariate Functions
-$$\min\quad f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\ -\infty\leq x_i\leq\infty$$
+`$$\min\ f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\ -\infty\leq x_i\leq\infty$$`
 
-The directional derivative of `$f(\pmb{x})$` is defined as `$\nabla_{\pmv{v}}f=\nabla f\cdot\pmb{v}$`, where
-$$\nabla f=\left\{\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\,\cdots,\frac{\partial f}{\partial x_n}\right\}^\mathrm{T} \tag{3}$$
+The directional derivative of `$f(\pmb{x})$` is defined as `$\nabla_{\pmb{v}}f=\nabla f\cdot\pmb{v}$`, where
+`$$\nabla f=\left\{\frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\,\cdots,\frac{\partial f}{\partial x_n}\right\}^\mathrm{T} \tag{3}$$`
 is called the *gradient* of function `$f(\pmb{x})$`.
 
 The *necessary condition* for a global minimum in this case is given by
-$$\nabla f(\pmb{x}^\ast)=\boldsymbol{0}, \tag{4}$$
+`$$\nabla f(\pmb{x}^\ast)=\boldsymbol{0}, \tag{4}$$`
 while the *sufficient condition* is stated as the Hessian Matrix `$H$` should be [positive definite](https://en.wikipedia.org/wiki/Definite_matrix), i.e., we have `$\pmb{y}^\mathrm{T}H\pmb{y}>0$` for all `$\pmb{y}\neq\pmb{0}$`. Here the Hessian Matrix takes the form:
-$$H=\nabla^2 f=\left[\mpd{f}{x_i}{x_j}\right].$$
+`$$H=\nabla^2 f=\left[\frac{\partial^2 f}{\partial x_i}{\partial x_j}\right].$$`
 
 ### Optimization of Multivariate Functions with Equality Constraints
 `\begin{align}
-&\min\quad f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\\
-&\mathrm{s.t.}\quad h_j(\pmb{x})=0,\quad j=1,2,\,\cdots,m.
+\min\quad &f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\\
+\mathrm{s.t.}\quad &h_j(\pmb{x})=0,\quad j=1,2,\,\cdots,m.
 \end{align}`
 
 For this kind of optimization problem, we use the Lagrange Multiplier method to incorporate the original constraint terms into the objective function, thus yielding an unconstrained extremum problem. The Lagrangian reads:
-$$\mathcal{L}=f(\pmb{x})+\sum_{j=1}^m\lambda_j h_j(\pmb{x}). \tag{5}$$
+`$$\mathcal{L}=f(\pmb{x})+\sum_{j=1}^m\lambda_j h_j(\pmb{x}). \tag{5}$$`
 
 The *necessary conditions* for an extremum should satisfy:
 `\begin{align}
-&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0 \rightarrow \nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{lambda}\cdot\nabla^\mathrm{T}\pmb{h}=\boldsymbol{0}; \tag{6} \label{eq6}\\
+&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0 \rightarrow \nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}=\boldsymbol{0}; \tag{6} \label{eq6}\\
 &\frac{\partial\mathcal{L}}{\lambda_j}=h_j(\pmb{x})=0 \rightarrow \pmb{h}=\boldsymbol{0}, \tag{7} \label{eq7}
 \end{align}`
 where `$\nabla^\mathrm{T}\pmb{h}=\left[\nabla h_1,\,\cdots,\nabla h_m\right]$`. Note that, the Einstein summation rule is not adopted here. Equations `$\eqref{eq6}$` and `$\eqref{eq7}$` actually states that <font color=Crimson>`$-\partial f/\partial x_i$` should be the linear combination of the constraint gradient vectors `$\partial h_j/\partial x_i\ (j=1,2,\,\cdots,m)$`.</font>
@@ -89,4 +89,9 @@ For a multivariate function `$f(\pmb{x})$` (differentiable in `$D=\left\{\pmb{x}
 &\mathrm{s.t.}\quad h_j(\pmb{x})\leq0,\quad j=1,2,\,\cdots,m.
 \end{align}`
 
-We now introduce a set of relaxation variables `$s_j$`, which satisfy the conditions `$h_j+s_j=0$` and `$s_j\geq0$`.
+We now introduce a set of relaxation variables `$s_j$`, which satisfy the conditions `$h_j+s_j=0$` and `$s_j\geq0$`. The Lagrangian is written as `$\mathcal{L}\left(\pmb{x},\pmb{\lambda},\pmb{s}\right)=f(\pmb{x})+\sum\lambda_j(h_j+s_j)$`. Therefore, the original optimization problem with inequality constraints is converted into an unconstrained one, i.e.,
+`\begin{align}
+&\frac{\partial\mathcal{L}}{\partialx_i}=\frac{\partial f}{\partial x_i}+\sum\lambda_j\frac{\partial h_j}{\partial x_i},\ i=1,2,\,\cdots,n; \tag{10} \label{eq10}\\
+&\frac{\partial\mathcal{L}}{\partial\lambda_j}=h_j+s_j=0; \tag{11} \label{eq11}\\
+&\frac{\partial\mathcal{L}}{\partial s_j}=\lambda_j (s_j\geq0), \tag{12} \label{eq12}
+\end{align}`
