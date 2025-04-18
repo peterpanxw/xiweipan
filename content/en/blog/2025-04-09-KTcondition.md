@@ -16,13 +16,13 @@ tags:
 The general formulation of contact problems aligns closely with the structure of the [Kuhn-Tucker (KT) conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions). So, I take this opportunity to revisit the derivation of the KT conditions in order to deepen my understanding of both topics.
 
 ## Kuhn-Tucker Conditions
-In this section, we will provide a detailed trace of deriving the well-known Kuhn-Tucker conditions.
+In this section, we will provide a detailed trace of deriving the well-known Kuhn-Tucker conditions, which serve as the 'first-order necessary conditions' for extremum.
 ### Unconstrained Optimization of Univariate Functions
 `$$\min\ f(x),\quad -\infty\leq x\leq\infty$$`
 
 The *necessary condition* for a global minimum is given by:
 `$$\left.\frac{\mathrm{d}f(x)}{\mathrm{d}x}\right|_{x=x^\ast}=0, \tag{1}$$`
-and the sufficient condition is
+and the *sufficient condition* is
 `$$\left.\frac{\mathrm{d}^2f(x)}{\mathrm{d}x^2}\right|_{x=x^\ast}>0, \tag{2}$$`
 which indicates the function considered is *convex*.
 
@@ -38,7 +38,7 @@ The *necessary condition* for a global minimum in this case is given by
 while the *sufficient condition* is stated as the Hessian Matrix `$H$` should be [positive definite](https://en.wikipedia.org/wiki/Definite_matrix), i.e., we have `$\pmb{y}^\mathrm{T}H\pmb{y}>0$` for all `$\pmb{y}\neq\pmb{0}$`. Here the Hessian Matrix takes the form:
 `$$H=\nabla^2 f=\left[\frac{\partial^2 f}{\partial x_i}{\partial x_j}\right].$$`
 
-### Optimization of Multivariate Functions with Equality Constraints
+### Equality Constrained Optimization of Multivariate Functions
 `\begin{align}
 \min\quad &f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\\
 \mathrm{s.t.}\quad &h_j(\pmb{x})=0,\quad j=1,2,\,\cdots,m.
@@ -47,12 +47,12 @@ while the *sufficient condition* is stated as the Hessian Matrix `$H$` should be
 For this kind of optimization problem, we use the Lagrange Multiplier method to incorporate the original constraint terms into the objective function, thus yielding an unconstrained extremum problem. The Lagrangian reads:
 `$$\mathcal{L}=f(\pmb{x})+\sum_{j=1}^m\lambda_j h_j(\pmb{x}). \tag{5}$$`
 
-The *necessary conditions* for an extremum should satisfy:
+The *optimality conditions* for a locally optimal solution should satisfy:
 `\begin{align}
 &\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0 \rightarrow \nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}=\boldsymbol{0}; \tag{6} \label{eq6}\\
 &\frac{\partial\mathcal{L}}{\lambda_j}=h_j(\pmb{x})=0 \rightarrow \pmb{h}=\boldsymbol{0}, \tag{7} \label{eq7}
 \end{align}`
-where `$\nabla^\mathrm{T}\pmb{h}=\left[\nabla h_1,\,\cdots,\nabla h_m\right]$`. Note that, the Einstein summation rule is not adopted here. Equations `$\eqref{eq6}$` and `$\eqref{eq7}$` actually states that <font color=Crimson>`$-\partial f/\partial x_i$` should be the linear combination of the constraint gradient vectors `$\partial h_j/\partial x_i\ (j=1,2,\,\cdots,m)$`.</font>
+where `$\nabla^\mathrm{T}\pmb{h}=\left[\nabla h_1,\,\cdots,\nabla h_m\right]$`, and the operation `$\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}$` is expressed in the context of *tensor*. Note that, the Einstein summation rule is not adopted here. Equations `$\eqref{eq6}$` and `$\eqref{eq7}$` actually states that <font color=Crimson>`$-\partial f/\partial x_i$` should be the linear combination of the constraint gradient vectors `$\partial h_j/\partial x_i\ (j=1,2,\,\cdots,m)$`.</font>
 
 ### Optimization of Functions in Closed Intervals
 Consider a univariate function `$f(x)$`, which is differentiable on the interval `$[a,b]$`, and let the minimum be denoted by `$x^\ast$`. We have the following three situations in all:
@@ -94,7 +94,7 @@ When there is only a lower bound, e.g., `$x_i\geq a_i$`, the conditions can be f
 \right. \tag{10} \label{eq10}
 \end{align}`
 
-### Optimization of Multivariate Functions with Inequality Constraints
+### Inequality Constrained Optimization of Multivariate Functions
 `\begin{align}
 &\min\quad f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\\
 &\mathrm{s.t.}\quad h_j(\pmb{x})\leq0,\quad j=1,2,\,\cdots,m.
@@ -119,7 +119,7 @@ this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT cond
 \left\{
 	\begin{aligned}
 	&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0,\quad i=1,2,\,\cdots,n;\ \ (\text{Saddle Point})\\
-	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m;\ \ (\text{Complementarity})\\
+	&\lambda_j h_j=0,\quad j=1,2,\,\cdots,m;\ \ (\text{Complementary Slackness})\\
 	&h_j\leq0;\ \ (\text{Constraints})\\
 	&\lambda_j\geq0.\ \ (\text{Non-negativity})
 	\end{aligned}
