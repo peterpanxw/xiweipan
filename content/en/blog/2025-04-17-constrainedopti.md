@@ -18,23 +18,20 @@ For constrained optimization problems, we typically have two types of approaches
 This blog will focus on one such approach within the second category, namely the transformation to unconstrained optimization problems, discussing Lagrange multipliers, penalty methods, the augmented Lagrangian method, and the issue of ill-conditioning in penalty methods.
 
 ## The Method of Lagrange Multipliers
-### Equality Constrained Optimization Problem
 Let `$f:\mathbb{R}^n\to\mathbb{R}$` be the objective function, while `$\pmb{h}:\mathbb{R}^n\to\mathbb{R}^{m_1}$` and `$\pmb{g}:\mathbb{R}^n\to\mathbb{R}^{m_2}$` represent the inequality and equality constraint functions, respectively. Here, `$f,\pmb{g},\pmb{h}\in\mathcal{C}^1$`, meaning that their first-order derivatives are continuous. Consider a *general type* optimization problem with equality and inequality constraints:
-> `\begin{align}
+`\begin{align}
 \min\quad &f(\pmb{x}),\quad \pmb{x}=\left\{x_1,x_2,\,\cdots,x_n\right\}^\mathrm{T},\\
-\mathrm{s.t.}\quad &\pmb{h}(\pmb{x})\leq\pmb{0};\\
+\mathrm{s.t.}\quad &\pmb{h}(\pmb{x})\leq\pmb{0}; \tag{1} \label{eq1}\\
 &\pmb{g}(\pmb{x})=\pmb{0}.
-\tag{1} \label{eq1}
 \end{align}`
 
 Based on the method of Lagrange multipliers (for equalities) and its generalization to inequalities, i.e., [the Kuhn-Tucker conditions](https://xiweipan.com/en/2025/04/09/kuhn-tucker-conditions/#mjx-eqn-eq15), the Lagrangian of Problem `$\eqref{eq1}$` is expressed by
 `$$\mathcal{L}(\pmb{x},\pmb{\lambda},\pmb{\mu})=f(\pmb{x})+\pmb{\lambda}\cdot\pmb{h}(\pmb{x})+\pmb{\mu}\cdot\pmb{g}(\pmb{x}), \tag{2} \label{eq2}$$`
 where `$\pmb{\lambda}=\left(\lambda_1,\,\cdots,\lambda_{m_1}\right)^\mathrm{T}$` and `$\pmb{\mu}=\left(\mu_1,\,\cdots,\mu_{m_2}\right)^\mathrm{T}$`. Therefore, the original extremum problem is equivalent to finding the *stationary point* of `$\mathcal{L}$`, treated as a function of `$\pmb{x}$`, `$\pmb{\lambda}$` and `$\pmb{\mu}$`, i.e., the optimality conditions to Problem `$\eqref{eq1}$` are
 `\begin{align}
-&\nabla_\pmb{x}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}+\pmb{\mu}\cdot\nabla^\mathrm{T}\pmb{g}=\pmb{0};\\
-&\pmb{\lambda}\cdot\pmb{h}=0,\ \pmb{h}\leq\pmb{0},\ \pmb{\lambda}\geq\pmb{0}\quad\text{KT conditions};\\
-&\pmb{g}=\pmb{0}\quad\text{Lagrange multiplier},
-\tag{3} \label{eq3}
+&\nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}+\pmb{\mu}\cdot\nabla^\mathrm{T}\pmb{g}=\pmb{0};\\
+&\pmb{\lambda}\cdot\pmb{h}=0,\ \pmb{h}\leq\pmb{0},\ \pmb{\lambda}\geq\pmb{0}\quad\text{(KT conditions)}; \tag{3} \label{eq3}\\
+&\pmb{g}=\pmb{0}\quad\text{(Lagrange multiplier)},
 \end{align}`
 which, as we can see, is a straightforward outcome of combining the optimality conditions for both equality and inequality constraints.
 
@@ -89,5 +86,7 @@ If we further assume the eigenvalues of the (`$n\times n$` positive-definite) He
 the inequality shows the necessary condition for the algorithm to converge. According to Equation `$\eqref{eq13}$`, `$\delta<2/\lambda_n$`, so we could take `$\delta=c/\lambda_n\ (0<c<2)$`. Finally, the rate of convergence is expressed by
 `$$\|\pmb{I}-\delta\mathcal{H}\|=\max_j |1-\delta\lambda_j|=|1-c\frac{\lambda_1}{\lambda_n}|, \tag{14} \label{eq14}$$`
 note that, the term `$\frac{\lambda_1}{\lambda_n}$` is the reciprocal of `$\kappa(\mathcal{H})$`. <font color=Crimson>Thus, the rate of convergence for the steepest descent method is directly related to the condition number of the Hessian, and, in particular, to the eigenvalues of the Hessian.</font>
+
+As `$(r_k,t_k)\to\infty$` (for penalty methods) or `$r_k\to 0$` (for barrier methods), the penalty terms dominate the objective function, leading to a loss of balance between eigenvalues associated with constraint gradients and `$\nabla^2 f$`. Specifically, the limit behavior of the penalty parameters causes a drastic increase in the eigenvalue associated with the constraint normal, while the eigenvalues corresponding to other directions remain smaller, resulting in a very large condition number `$\kappa(\mathcal{H})$`. From Equation `$\eqref{eq14}$`, we find that the rate of convergence approaches 1 as the penalty parameters tend to infinity. This implies that the gradient descent algorithm becomes increasingly inefficient and struggles to converge near the optimality, facing significant efficiency issues.
 
 ## Augmented Lagrangian Method
