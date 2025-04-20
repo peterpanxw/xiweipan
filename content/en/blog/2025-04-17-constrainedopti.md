@@ -91,9 +91,9 @@ note that, the term `$\frac{\lambda_1}{\lambda_n}$` is the reciprocal of `$\kapp
 As `$(r_k,t_k)\to\infty$` (for penalty methods) or `$r_k\to 0$` (for barrier methods), the penalty terms dominate the objective function, leading to a loss of balance between eigenvalues associated with constraint gradients and `$\nabla^2 f$`. Specifically, the limit behavior of the penalty parameters causes a drastic increase in the eigenvalue associated with the constraint normal, while the eigenvalues corresponding to other directions remain smaller, resulting in a very large condition number `$\kappa(\mathcal{H})$`. From Equation `$\eqref{eq14}$`, we find that the rate of convergence approaches 1 as the penalty parameters tend to infinity (*sublinear convergence*). This implies that the gradient descent algorithm becomes increasingly inefficient and struggles to converge near the optimality, facing significant efficiency issues.
 
 #### Newton's Method in Optimization
-To address the above efficiency issues, one can resort to the [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization) for much faster convergence rate, which is **quadratically** fast near the optimal solution. For the optimization of (twice continuously differentiable) objective function `$\varphi$`, the Newton's method can be used to approximate the solution to equation `$\nalba\varphi(\pmb{x}^\ast)=0$`. Consider the Taylor expansion of `$\varphi$` at the initial point `$\pmb{x}_0$`:
+To address the above efficiency issues, one can resort to the [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization) for much faster convergence rate, which is **quadratically** fast near the optimal solution. For the optimization of (twice continuously differentiable) objective function `$\varphi$`, the Newton's method can be used to approximate the solution to equation `$\nabla\varphi(\pmb{x}^\ast)=0$`. Consider the second-order Taylor expansion of `$\varphi$` at the initial point `$\pmb{x}_0$` (omitting higher-order remainders):
 `$$\varphi(\pmb{x})=\varphi(\pmb{x}_0)+\nabla\varphi(\pmb{x}_0)^\mathrm{T}(\pmb{x}-\pmb{x}_0)+\frac{1}{2}(\pmb{x}-\pmb{x}_0)^\mathrm{T}\nabla^2\varphi(\pmb{x}_0)(\pmb{x}-\pmb{x}_0)+o\left((\pmb{x}-\pmb{x}_0)^2\right), \tag{15} \label{eq15}$$`
-according to the stationary point condition, and by omitting higher-order remainders, the Newton's formulation for optimization is obtained:
+according to the stationary point condition, the Newton's formulation for optimization is obtained:
 `$$\pmb{x}_{k+1}=\pmb{x}_k-\left[\nabla^2\varphi(\pmb{x}_k)\right]^{-1}\nabla\varphi(\pmb{x}_k)=\pmb{x}_k-\mathcal{H(\pmb{x}_k)}^{-1}\nabla\varphi(\pmb{x}_k). \tag{16} \label{eq16}$$`
 
 Next, we will prove the local convergence of Newton's method. It is reasonable to assume the *strong convexity* of `$\varphi$` and the [*Lipschitz-continuity*](https://en.wikipedia.org/wiki/Lipschitz_continuity) of gradients near the optimal point. If `$\varphi$` is strongly convex, there exists `$\mu>0$` such that `$\mathcal{H}(\pmb{x})=\nabla^2\varphi(\pmb{x})\succeq\mu\pmb{I},\ \forall\ \pmb{x}\in\mathrm{dom}(f)$`, where '`$\succeq$`' represents '`$\geq$`' in an elementwise sense. This condition implies that the minimum eigenvalue of its Hessian satisfies `$\lambda_\mathrm{min}\left(\mathcal{H}\right)\geq\mu$`. Thus, the `$L^2$` norm of the inverse Hessian satisfies the following relation:
@@ -107,20 +107,20 @@ Subtracting `$\pmb{x}^\ast$` from both sides of Equation `$\eqref{eq16}$`, we ge
 let `$g(k)=\nabla\varphi(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))$`, then,
 `\begin{align}
 \nabla\varphi(\pmb{x}^\ast)-\nabla\varphi(\pmb{x}_k)&=g(1)-g(0)=\int_0^1 g^\prime(k)\,\mathrm{d}k\\
-&=\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{20} \label{eq20}
+&=\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-\tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{20} \label{eq20}
 \end{align}`
 Substituting Equation `$\eqref{eq20}$` into Equation `$\eqref{eq19}$` gives
 `\begin{align}
-\tilde{\pmb{x}}_{k+1}&=\tilde{\pmb{x}}_k+\mathcal{H}(\pmb{x}_k)^{-1}\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-tilde{\pmb{x}}_k)\,\mathrm{d}k\\
-&=\mathcal{H(\pmb{x}_k)}^{-1}\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{21} \label{eq21}
+\tilde{\pmb{x}}_{k+1}&=\tilde{\pmb{x}}_k+\mathcal{H}(\pmb{x}_k)^{-1}\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-\tilde{\pmb{x}}_k)\,\mathrm{d}k\\
+&=\mathcal{H(\pmb{x}_k)}^{-1}\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-\tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{21} \label{eq21}
 \end{align}`
 
 Taking the norm on both sides of Equation `$\eqref{eq21}$` yields:
 `\begin{align}
-\|\tilde{\pmb{x}}_{k+1}\|&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\,\mathrm{d}k\|\\
-&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\|\,\mathrm{d}k\\
-&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\cdot\|-tilde{\pmb{x}}_k\|\,\mathrm{d}k\\
-&=\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|-tilde{\pmb{x}}_k\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\,\mathrm{d}k, \tag{22} \label{eq22}
+\|\tilde{\pmb{x}}_{k+1}\|&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-\tilde{\pmb{x}}_k)\,\mathrm{d}k\|\\
+&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-\tilde{\pmb{x}}_k)\|\,\mathrm{d}k\\
+&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\cdot\|-\tilde{\pmb{x}}_k\|\,\mathrm{d}k\\
+&=\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|-\tilde{\pmb{x}}_k\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\,\mathrm{d}k, \tag{22} \label{eq22}
 \end{align}`
 with the strong convexity and Lipschitz continuity conditions (Equations `$\eqref{eq17}$` and `$\eqref{eq18}$`), Equation `$\eqref{eq22}$` is further simplified to:
 `$$\|\tilde{\pmb{x}}_{k+1}\|=\|\pmb{x}_{k+1}-\pmb{x}^\ast\|\leq\frac{L}{2\mu}\|\pmb{x}^\ast-\pmb{x}_k\|^2\rightarrow\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|^2}\leq\frac{L}{2\mu}. \tag{23} \label{eq23}$$`
@@ -133,7 +133,7 @@ As can be seen, the otherwise simple and intuitive penalty/barrier methods are g
 
 
 ## References
-[Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)
-[Ill-conditioning and condition number 2](https://www.cnblogs.com/sddai/p/5933995.html)
-[Rate of convergence](https://zhuanlan.zhihu.com/p/278151142)
-[Local convergence of the Newton's method](https://zhuanlan.zhihu.com/p/293951317)
+1. [Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)
+2. [Ill-conditioning and condition number 2](https://www.cnblogs.com/sddai/p/5933995.html)
+3. [Rate of convergence](https://zhuanlan.zhihu.com/p/278151142)
+4. [Local convergence of the Newton's method](https://zhuanlan.zhihu.com/p/293951317)
