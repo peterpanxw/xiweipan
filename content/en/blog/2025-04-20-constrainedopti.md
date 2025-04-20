@@ -1,6 +1,6 @@
 ---
 title: "Lagrange Multiplier, Penalty Methods, Ill-conditioning, and Augmented Lagrangian"
-date: 2025-04-17T20:43:21+08:00
+date: 2025-04-20T20:43:21+08:00
 type : list-single
 author: Xiwei Pan
 slug: constrained-optimization-methods
