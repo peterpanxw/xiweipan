@@ -59,27 +59,28 @@ The advantage of the barrier function method lies in the fact that the intermedi
 ### Ill-conditioning
 Both of the aforementioned methods can provide approximating optimal solutions through the intuitive addition of violation-preventing terms. However, they both **face the inherent contradiction between ensuring the satisfaction of constraints and avoiding ill-conditioning**. We will, in this subsection, try to explain how this issue haunts the application of penalty/barrier methods.
 
-Firstly, we investigate the influence of [condition number](https://en.wikipedia.org/wiki/Condition_number) of the Hessian matrix `$\mathcal{H}$` on a type of unconstrained optimization method that explicitly relies on gradients, e.g., the steepest descent method. The basic gradient descent formulation is given by
-`$$\pmb{x}^{(k+1)}=\pmb{x}^{(k)}-\delta\nabla\pmb{F}, \tag{6} \label{eq6}$$`
-the step size `$\delta$` can be determined through [line search](https://en.wikipedia.org/wiki/Line_search). The taylor expansion of a multivariate function `$\pmb{F}(\pmb{x})$` at the optimal point `$\pmb{x}^\ast$` is written as
-`$$\pmb{F}(\pmb{x})=\pmb{F}(\pmb{x}^\ast)+\frac{1}{2}\tilde{\pmb{x}}^\mathrm{T}\mathcal{H}\tilde{\pmb{x}}+\mathcal{O}\left(\tilde{\pmb{x}}^3\right), \tag{7} \label{eq7}$$`
+#### Steepest Descent Method
+We first investigate the influence of [condition number](https://en.wikipedia.org/wiki/Condition_number) of the Hessian matrix `$\mathcal{H}$` on a type of unconstrained optimization method that explicitly relies on gradients, e.g., the steepest descent method. The basic gradient descent formulation is given by
+`$$\pmb{x}_{k+1}=\pmb{x}_k-\delta\nabla\pmb{F}, \tag{6} \label{eq6}$$`
+the step size `$\delta$` can be determined through [line search](https://en.wikipedia.org/wiki/Line_search). The Taylor expansion of a multivariate function `$\pmb{F}(\pmb{x})$` at the optimal point `$\pmb{x}^\ast$` is written as
+`$$\pmb{F}(\pmb{x})=\pmb{F}(\pmb{x}^\ast)+\frac{1}{2}\tilde{\pmb{x}}^\mathrm{T}\mathcal{H}\tilde{\pmb{x}}+o\left(\tilde{\pmb{x}}^3\right), \tag{7} \label{eq7}$$`
 where `$\tilde{\pmb{x}}=\pmb{x}-\pmb{x}^\ast$`, and `$\nabla\pmb{F}(\pmb{x}^\ast)=\pmb{0}$` is used to yield Equation `$\eqref{eq7}$`.
 
 Assume that, after multiple iterations (`$k\to\infty$`), the current solution is near the optimal point. Therefore, the gradient of `$\pmb{F}$` near the minimum can be approximated by
-`$$\nabla\pmb{F}(\pmb{x})=\mathcal{H}\tilde{\pmb{x}}, \tag{8} \label{eq8}$$`
-note that the higher-order remainder `$\mathcal{O}(\|\tilde{\pmb{x}}\|^2)$` vanishes as `$\tilde{\pmb{x}}$` approaches zero. Substituting Equation `$\eqref{eq8}$` into Equation `$\eqref{eq6}$` and subtracting `$\pmb{x}^\ast$` from both ends, we have
-`$$\tilde{\pmb{x}}^{(k+1)}=\left(\pmb{I}-\delta\mathcal{H}\right)\tilde{\pmb{x}}^{k}, \tag{9} \label{eq9}$$`
+`$$\nabla\pmb{F}(\pmb{x})\approx\mathcal{H}\tilde{\pmb{x}}, \tag{8} \label{eq8}$$`
+note that the higher-order remainder `$o(\tilde{\pmb{x}}^2)$` vanishes as `$\tilde{\pmb{x}}$` approaches zero. Substituting Equation `$\eqref{eq8}$` into Equation `$\eqref{eq6}$` and subtracting `$\pmb{x}^\ast$` from both ends, we have
+`$$\tilde{\pmb{x}}_{k+1}\approx\left(\pmb{I}-\delta\mathcal{H}\right)\tilde{\pmb{x}}^{k}, \tag{9} \label{eq9}$$`
 which relates the current solution error (step `$k$`) to that of the next interation (step `$(k+1)$`). The [rate of convergence](https://en.wikipedia.org/wiki/Rate_of_convergence) can be expressed by
-`$$\lim_{k\to\infty}\frac{\|\pmb{x}^{(k+1)}-\pmb{x}^\ast\|}{\|\pmb{x}^{(k)}-\pmb{x}^\ast\|}=\|\pmb{I}-\delta\mathcal{H}\|, \tag{10} \label{eq10}$$`
-here `$\|\bullet\|$` represnts a norm, typically chosen to be the `$L^2$` norm.
+`$$\lim_{k\to\infty}\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|}=\|\pmb{I}-\delta\mathcal{H}\|, \tag{10} \label{eq10}$$`
+here `$\|\bullet\|$` represnts a norm, typically chosen to be the `$L^2$` norm (spectral norm).
 
-<font color=Crimson>For a [normal matrix](https://en.wikipedia.org/wiki/Normal_matrix) `$A$` satisfying `$A^\mathrm{H}A=AA^\mathrm{H}$`, where `$A^\mathrm{H}$` is the Hermitian transpose (or conjugate transpose) of `$A$`, it can be diagonalized using a [unitary matrix](https://en.wikipedia.org/wiki/Unitary_matrix), i.e., `$U^{-1}AU=\Lambda$`.</font> In this case, the condition number of the matrix can be further related to its eigenvalues, i.e.
+<font color=Crimson>For a [normal matrix](https://en.wikipedia.org/wiki/Normal_matrix) `$A$` satisfying `$A^\mathrm{H}A=AA^\mathrm{H}$`, where `$A^\mathrm{H}$` is the Hermitian transpose (or conjugate transpose) of `$A$`, it can be diagonalized using a [unitary matrix](https://en.wikipedia.org/wiki/Unitary_matrix), i.e., `$U^{-1}AU=\Lambda$`.</font> In this case, the condition number of the matrix can be further related to its eigenvalues, i.e.,
 
-`$$\kappa(A)=\|A\|\cdot\|A^{-1}\|=\sqrt{\lambda_\mathrm{max}\left(A^\mathrm{T}A\right)}\cdot \sqrt{\lambda_\mathrm{max}\left(A^\mathrm{-T}A^{-1}\right)}=\frac{\lambda_\mathrm{max}}{\lambda_\mathrm{min}}, \tag{11} \label{eq11}$$`
+`$$\kappa(A)=\|A\|\cdot\|A^{-1}\|=\sqrt{\lambda_\mathrm{max}\left(A^\mathrm{H}A\right)}\cdot \sqrt{\lambda_\mathrm{max}\left(A^\mathrm{-H}A^{-1}\right)}=\frac{\lambda_\mathrm{max}}{\lambda_\mathrm{min}}, \tag{11} \label{eq11}$$`
 where `$\lambda_\mathrm{max}$` and `$\lambda_\mathrm{min}$` are the maximum and minimum eigenvalues of `$A$`, respectively.
 
 Normal matrices include diagonal matrices, real (anti-)symmetric matrices, (anti-)hermitian matrices, orthogonal matrices, and unitary matrices, etc. Therefore, as a special case, the real symmetric matrix `$\pmb{I}-\delta\mathcal{H}$` can also be diagonalized by a unitary matrix, or more specifically, an orthogonal matrix `$P$`. This gives the relation
-`$$P^\mathrm{T}(\pmb{I}-\delta\mathcal{H})P=P^\mathrm{T}\pmb{H}P=\Lambda. \tag{12} \label{eq12}$$`
+`$$P^\mathrm{T}(\pmb{I}-\delta\mathcal{H})P:=P^\mathrm{T}\pmb{H}P=\Lambda. \tag{12} \label{eq12}$$`
 
 If we further assume the eigenvalues of the (`$n\times n$` positive-definite) Hessian to be `$0<\lambda_1<\,\cdots<\lambda_n$`, `$\Lambda=[1-\delta\lambda_1,\,\cdots,1-\delta\lambda_n]$`, and Equation `$\eqref{eq10}$` becomes:
 `$$\|\pmb{I}-\delta\mathcal{H}\|=\sqrt{\lambda_\mathrm{max}\left(\pmb{H}^\mathrm{T}\pmb{H}\right)}=\max_j |1-\delta\lambda_j|<1, \tag{13} \label{eq13}$$`
@@ -87,6 +88,52 @@ the inequality shows the necessary condition for the algorithm to converge. Acco
 `$$\|\pmb{I}-\delta\mathcal{H}\|=\max_j |1-\delta\lambda_j|=|1-c\frac{\lambda_1}{\lambda_n}|, \tag{14} \label{eq14}$$`
 note that, the term `$\frac{\lambda_1}{\lambda_n}$` is the reciprocal of `$\kappa(\mathcal{H})$`. <font color=Crimson>Thus, the rate of convergence for the steepest descent method is directly related to the condition number of the Hessian, and, in particular, to the eigenvalues of the Hessian.</font>
 
-As `$(r_k,t_k)\to\infty$` (for penalty methods) or `$r_k\to 0$` (for barrier methods), the penalty terms dominate the objective function, leading to a loss of balance between eigenvalues associated with constraint gradients and `$\nabla^2 f$`. Specifically, the limit behavior of the penalty parameters causes a drastic increase in the eigenvalue associated with the constraint normal, while the eigenvalues corresponding to other directions remain smaller, resulting in a very large condition number `$\kappa(\mathcal{H})$`. From Equation `$\eqref{eq14}$`, we find that the rate of convergence approaches 1 as the penalty parameters tend to infinity. This implies that the gradient descent algorithm becomes increasingly inefficient and struggles to converge near the optimality, facing significant efficiency issues.
+As `$(r_k,t_k)\to\infty$` (for penalty methods) or `$r_k\to 0$` (for barrier methods), the penalty terms dominate the objective function, leading to a loss of balance between eigenvalues associated with constraint gradients and `$\nabla^2 f$`. Specifically, the limit behavior of the penalty parameters causes a drastic increase in the eigenvalue associated with the constraint normal, while the eigenvalues corresponding to other directions remain smaller, resulting in a very large condition number `$\kappa(\mathcal{H})$`. From Equation `$\eqref{eq14}$`, we find that the rate of convergence approaches 1 as the penalty parameters tend to infinity (*sublinear convergence*). This implies that the gradient descent algorithm becomes increasingly inefficient and struggles to converge near the optimality, facing significant efficiency issues.
+
+#### Newton's Method in Optimization
+To address the above efficiency issues, one can resort to the [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization) for much faster convergence rate, which is **quadratically** fast near the optimal solution. For the optimization of (twice continuously differentiable) objective function `$\varphi$`, the Newton's method can be used to approximate the solution to equation `$\nalba\varphi(\pmb{x}^\ast)=0$`. Consider the Taylor expansion of `$\varphi$` at the initial point `$\pmb{x}_0$`:
+`$$\varphi(\pmb{x})=\varphi(\pmb{x}_0)+\nabla\varphi(\pmb{x}_0)^\mathrm{T}(\pmb{x}-\pmb{x}_0)+\frac{1}{2}(\pmb{x}-\pmb{x}_0)^\mathrm{T}\nabla^2\varphi(\pmb{x}_0)(\pmb{x}-\pmb{x}_0)+o\left((\pmb{x}-\pmb{x}_0)^2\right), \tag{15} \label{eq15}$$`
+according to the stationary point condition, and by omitting higher-order remainders, the Newton's formulation for optimization is obtained:
+`$$\pmb{x}_{k+1}=\pmb{x}_k-\left[\nabla^2\varphi(\pmb{x}_k)\right]^{-1}\nabla\varphi(\pmb{x}_k)=\pmb{x}_k-\mathcal{H(\pmb{x}_k)}^{-1}\nabla\varphi(\pmb{x}_k). \tag{16} \label{eq16}$$`
+
+Next, we will prove the local convergence of Newton's method. It is reasonable to assume the *strong convexity* of `$\varphi$` and the [*Lipschitz-continuity*](https://en.wikipedia.org/wiki/Lipschitz_continuity) of gradients near the optimal point. If `$\varphi$` is strongly convex, there exists `$\mu>0$` such that `$\mathcal{H}(\pmb{x})=\nabla^2\varphi(\pmb{x})\succeq\mu\pmb{I},\ \forall\ \pmb{x}\in\mathrm{dom}(f)$`, where '`$\succeq$`' represents '`$\geq$`' in an elementwise sense. This condition implies that the minimum eigenvalue of its Hessian satisfies `$\lambda_\mathrm{min}\left(\mathcal{H}\right)\geq\mu$`. Thus, the `$L^2$` norm of the inverse Hessian satisfies the following relation:
+`$$\|\mathcal{H}^{-1}\|=\frac{1}{\lambda_\mathrm{min}(\mathcal{H}(\pmb{x}))}\leq\frac{1}{\mu}. \tag{17} \label{eq17}$$`
+
+The Lipschitz continuity states that, if `$\mathcal{H}(\pmb{x})$` is Lipschitz continuous, then there exists a real constant `$L>0$` such that for all real `$\pmb{x}$` and `$\pmb{y}$`, the inequality holds:
+`$$\|\mathcal{H}(\pmb{x})-\mathcal{H}(\pmb{y})\|\leq L\|\pmb{x}-\pmb{y}\|,\ \forall\ \pmb{x},\pmb{y}\in\mathrm{dom}(f). \tag{18} \label{eq18}$$`
+
+Subtracting `$\pmb{x}^\ast$` from both sides of Equation `$\eqref{eq16}$`, we get
+`$$\tilde{\pmb{x}}_{k+1}=\tilde{\pmb{x}}_k+\mathcal{H}(\pmb{x}_k)^{-1}\left(\nabla\varphi(\pmb{x}^\ast)-\nabla\varphi(\pmb{x}_k)\right), \tag{19} \label{eq19}$$`
+let `$g(k)=\nabla\varphi(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))$`, then,
+`\begin{align}
+\nabla\varphi(\pmb{x}^\ast)-\nabla\varphi(\pmb{x}_k)&=g(1)-g(0)=\int_0^1 g^\prime(k)\,\mathrm{d}k\\
+&=\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{20} \label{eq20}
+\end{align}`
+Substituting Equation `$\eqref{eq20}$` into Equation `$\eqref{eq19}$` gives
+`\begin{align}
+\tilde{\pmb{x}}_{k+1}&=\tilde{\pmb{x}}_k+\mathcal{H}(\pmb{x}_k)^{-1}\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-tilde{\pmb{x}}_k)\,\mathrm{d}k\\
+&=\mathcal{H(\pmb{x}_k)}^{-1}\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{21} \label{eq21}
+\end{align}`
+
+Taking the norm on both sides of Equation `$\eqref{eq21}$` yields:
+`\begin{align}
+\|\tilde{\pmb{x}}_{k+1}\|&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\,\mathrm{d}k\|\\
+&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-tilde{\pmb{x}}_k)\|\,\mathrm{d}k\\
+&\leq\|\mathcal{H}(\pmb{x}_k)^{-1}\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\cdot\|-tilde{\pmb{x}}_k\|\,\mathrm{d}k\\
+&=\|\mathcal{H}(\pmb{x}_k)^{-1}\|\cdot\|-tilde{\pmb{x}}_k\|\int_0^1\|\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)\|\,\mathrm{d}k, \tag{22} \label{eq22}
+\end{align}`
+with the strong convexity and Lipschitz continuity conditions (Equations `$\eqref{eq17}$` and `$\eqref{eq18}$`), Equation `$\eqref{eq22}$` is further simplified to:
+`$$\|\tilde{\pmb{x}}_{k+1}\|=\|\pmb{x}_{k+1}-\pmb{x}^\ast\|\leq\frac{L}{2\mu}\|\pmb{x}^\ast-\pmb{x}_k\|^2\rightarrow\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|^2}\leq\frac{L}{2\mu}. \tag{23} \label{eq23}$$`
+<font color=Crimson>Therefore, Newton's method is shown to exhibit local quadratic convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413v1) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
+
+Although Newton's method excels the steepest descent method in terms of convergence, it *requires the calculation of the inverse Hessian*, which can also be problematic when dealing with ill-conditioned Hessians, leading to inaccurate or unstable results.
 
 ## Augmented Lagrangian Method
+As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers) comes to the rescue.
+
+
+## References
+[Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)
+[Ill-conditioning and condition number 2](https://www.cnblogs.com/sddai/p/5933995.html)
+[Rate of convergence](https://zhuanlan.zhihu.com/p/278151142)
+[Local convergence of the Newton's method](https://zhuanlan.zhihu.com/p/293951317)
