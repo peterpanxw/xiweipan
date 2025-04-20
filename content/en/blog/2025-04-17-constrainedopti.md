@@ -129,7 +129,7 @@ with the strong convexity and Lipschitz continuity conditions (Equations `$\eqre
 Although Newton's method excels the steepest descent method in terms of convergence, it *requires the calculation of the inverse Hessian*, which can also be problematic when dealing with ill-conditioned Hessians, leading to inaccurate or unstable results.
 
 ## Augmented Lagrangian Method
-As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers) comes to the rescue.
+As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers) comes to the rescue, which is more robust than the traditional penalty methods. It combines both the Lagrangian term and the penalty term, and handles the dual variables separately.
 
 
 ## References
