@@ -29,7 +29,7 @@ Based on the method of Lagrange multipliers (for equalities) and its generalizat
 `$$\mathcal{L}(\pmb{x},\pmb{\lambda},\pmb{\mu})=f(\pmb{x})+\pmb{\lambda}\cdot\pmb{h}(\pmb{x})+\pmb{\mu}\cdot\pmb{g}(\pmb{x}), \tag{2} \label{eq2}$$`
 where `$\pmb{\lambda}=\left(\lambda_1,\,\cdots,\lambda_{m_1}\right)^\mathrm{T}$` and `$\pmb{\mu}=\left(\mu_1,\,\cdots,\mu_{m_2}\right)^\mathrm{T}$`. Therefore, the original extremum problem is equivalent to finding the *stationary point* of `$\mathcal{L}$`, treated as a function of `$\pmb{x}$`, `$\pmb{\lambda}$` and `$\pmb{\mu}$`, i.e., the optimality conditions to Problem `$\eqref{eq1}$` are
 `\begin{align}
-&\nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}+\pmb{\mu}\cdot\nabla^\mathrm{T}\pmb{g}=\pmb{0};\\
+&\nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla\pmb{h}+\pmb{\mu}\cdot\nabla\pmb{g}=\pmb{0};\\
 &\pmb{\lambda}\cdot\pmb{h}=0,\ \pmb{h}\leq\pmb{0},\ \pmb{\lambda}\geq\pmb{0}\quad\text{(KT conditions)}; \tag{3} \label{eq3}\\
 &\pmb{g}=\pmb{0}\quad\text{(Lagrange multiplier)},
 \end{align}`
@@ -92,11 +92,11 @@ As `$(r_k,t_k)\to\infty$` (for penalty methods) or `$r_k\to 0$` (for barrier met
 
 #### Newton's Method in Optimization
 To address the above efficiency issues, one can resort to the [Newton's method](https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization) for much faster convergence rate, which is **quadratically** fast near the optimal solution. For the optimization of (twice continuously differentiable) objective function `$\varphi$`, the Newton's method can be used to approximate the solution to equation `$\nabla\varphi(\pmb{x}^\ast)=0$`. Consider the second-order Taylor expansion of `$\varphi$` at the initial point `$\pmb{x}_0$` (omitting higher-order remainders):
-`$$\varphi(\pmb{x})=\varphi(\pmb{x}_0)+\nabla\varphi(\pmb{x}_0)^\mathrm{T}(\pmb{x}-\pmb{x}_0)+\frac{1}{2}(\pmb{x}-\pmb{x}_0)^\mathrm{T}\nabla^2\varphi(\pmb{x}_0)(\pmb{x}-\pmb{x}_0)+o\left((\pmb{x}-\pmb{x}_0)^2\right), \tag{15} \label{eq15}$$`
+`$$\varphi(\pmb{x})\approx\varphi(\pmb{x}_0)+\nabla\varphi(\pmb{x}_0)^\mathrm{T}(\pmb{x}-\pmb{x}_0)+\frac{1}{2}(\pmb{x}-\pmb{x}_0)^\mathrm{T}\nabla^2\varphi(\pmb{x}_0)(\pmb{x}-\pmb{x}_0), \tag{15} \label{eq15}$$`
 according to the stationary point condition, the Newton's formulation for optimization is obtained:
 `$$\pmb{x}_{k+1}=\pmb{x}_k-\left[\nabla^2\varphi(\pmb{x}_k)\right]^{-1}\nabla\varphi(\pmb{x}_k)=\pmb{x}_k-\mathcal{H(\pmb{x}_k)}^{-1}\nabla\varphi(\pmb{x}_k). \tag{16} \label{eq16}$$`
 
-Next, we will prove the local convergence of Newton's method. It is reasonable to assume the *strong convexity* of `$\varphi$` and the [*Lipschitz-continuity*](https://en.wikipedia.org/wiki/Lipschitz_continuity) of gradients near the optimal point. If `$\varphi$` is strongly convex, there exists `$\mu>0$` such that `$\mathcal{H}(\pmb{x})=\nabla^2\varphi(\pmb{x})\succeq\mu\pmb{I},\ \forall\ \pmb{x}\in\mathrm{dom}(f)$`, where '`$\succeq$`' represents '`$\geq$`' in an elementwise sense. This condition implies that the minimum eigenvalue of its Hessian satisfies `$\lambda_\mathrm{min}\left(\mathcal{H}\right)\geq\mu$`. Thus, the `$L^2$` norm of the inverse Hessian satisfies the following relation:
+Next, we will prove the **local convergence** of Newton's method. It is reasonable to assume the *strong convexity* of `$\varphi$` and the [*Lipschitz-continuity*](https://en.wikipedia.org/wiki/Lipschitz_continuity) of gradients near the optimal point. If `$\varphi$` is strongly convex, there exists `$\mu>0$` such that `$\mathcal{H}(\pmb{x})=\nabla^2\varphi(\pmb{x})\succeq\mu\pmb{I},\ \forall\ \pmb{x}\in\mathrm{dom}(f)$`, where '`$\succeq$`' represents '`$\geq$`' in an elementwise sense. This condition implies that the minimum eigenvalue of its Hessian satisfies `$\lambda_\mathrm{min}\left(\mathcal{H}\right)\geq\mu$`. Thus, the `$L^2$` norm of the inverse Hessian satisfies the following relation:
 `$$\|\mathcal{H}^{-1}\|=\frac{1}{\lambda_\mathrm{min}(\mathcal{H}(\pmb{x}))}\leq\frac{1}{\mu}. \tag{17} \label{eq17}$$`
 
 The Lipschitz continuity states that, if `$\mathcal{H}(\pmb{x})$` is Lipschitz continuous, then there exists a real constant `$L>0$` such that for all real `$\pmb{x}$` and `$\pmb{y}$`, the inequality holds:
@@ -109,7 +109,7 @@ let `$g(k)=\nabla\varphi(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))$`, then,
 \nabla\varphi(\pmb{x}^\ast)-\nabla\varphi(\pmb{x}_k)&=g(1)-g(0)=\int_0^1 g^\prime(k)\,\mathrm{d}k\\
 &=\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-\tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{20} \label{eq20}
 \end{align}`
-Substituting Equation `$\eqref{eq20}$` into Equation `$\eqref{eq19}$` gives
+Substituting Equation `$\eqref{eq20}$` into Equation `$\eqref{eq19}$` gives:
 `\begin{align}
 \tilde{\pmb{x}}_{k+1}&=\tilde{\pmb{x}}_k+\mathcal{H}(\pmb{x}_k)^{-1}\int_0^1\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))(-\tilde{\pmb{x}}_k)\,\mathrm{d}k\\
 &=\mathcal{H(\pmb{x}_k)}^{-1}\int_0^1\left(\mathcal{H}(\pmb{x}_k+k(\pmb{x}^\ast-\pmb{x}_k))-\mathcal{H}(\pmb{x}_k)\right)(-\tilde{\pmb{x}}_k)\,\mathrm{d}k. \tag{21} \label{eq21}
@@ -124,13 +124,30 @@ Taking the norm on both sides of Equation `$\eqref{eq21}$` yields:
 \end{align}`
 with the strong convexity and Lipschitz continuity conditions (Equations `$\eqref{eq17}$` and `$\eqref{eq18}$`), Equation `$\eqref{eq22}$` is further simplified to:
 `$$\|\tilde{\pmb{x}}_{k+1}\|=\|\pmb{x}_{k+1}-\pmb{x}^\ast\|\leq\frac{L}{2\mu}\|\pmb{x}^\ast-\pmb{x}_k\|^2\rightarrow\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|^2}\leq\frac{L}{2\mu}. \tag{23} \label{eq23}$$`
-<font color=Crimson>Therefore, Newton's method is shown to exhibit local quadratic convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413v1) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
+<font color=Crimson>Therefore, Newton's method is shown to exhibit local <b>quadratic</b> convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413v1) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
 
 Although Newton's method excels the steepest descent method in terms of convergence, it *requires the calculation of the inverse Hessian*, which can also be problematic when dealing with ill-conditioned Hessians, leading to inaccurate or unstable results.
 
 ## Augmented Lagrangian Method
-As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers) comes to the rescue, which is more robust than the traditional penalty methods. It combines both the Lagrangian term and the penalty term, and handles the dual variables separately.
+As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers, proposed by Hestenes and Powell in 1969) comes to the rescue, which is more robust than traditional penalty methods.
 
+For simplicity, we here consider the case of equality constraints `$\pmb{g}:\mathbb{R}^n\to\mathbb{R}^m$`. The augmented Lagrangian is defined as follows:
+`$$\mathcal{L}_\rho(\pmb{x},\pmb{\lambda},\rho_k)=f(\pmb{x})+\pmb{\lambda}^\mathrm{T}\pmb{g}(\pmb{x})+\frac{\rho_k}{2}\pmb{g}^\mathrm{T}(\pmb{x})\pmb{g}(\pmb{x}), \tag{24} \label{eq24}$$`
+as can be seen, the new Lagrangian incorporates penalty term into the original Lagrangian term, allowing this method to approximate the solution effectively with a **moderate** penalty parameter `$\rho_k$`. This leads to a reasonably conditioned problem, balancing the trade-off between constraint satisfaction and numerical stability.
+
+Having obtained an estimate `$\lambda_k$` of `$\lambda$`, we select `$\pmb{x}_k$` to minimize the augmented Lagrangian `$\mathcal{L}_\rho$`. The stationary condition for Equation `$\eqref{eq24}$` gives:
+`$$\nabla\mathcal{L}_\rho(\pmb{x}_k,\pmb{\lambda}_k,\rho_k)=\nabla f(\pmb{x}_k)+\left(\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_k)\right)\cdot\nabla\pmb{g}(\pmb{x}_k)=\pmb{0}. \tag{25} \label{eq25}$$`
+
+Comparing Equation `$\eqref{eq25}$` with the optimality condition given by the method of Lagrange multipliers `$\nabla\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla\pmb{g}$`, the update rule for multiplier `$\pmb{\lambda}$` can be chosen as
+`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}), \tag{26} \label{eq26}$$`
+where the penalty parameter `$\rho_k$` can be selected to either increase or, more simply, be **fixed** in order to penalize constraint violations. <font color=Crimson>However, unlike (pure) penalty methods, where the value of the penalty parameter is directly linked with the accuracy of the problem, the penalty paramter here does <b>not</b> need to be pushed to infinity. Instead, it should only be large enough to enforce the positive definiteness of the Hessian of the Lagrangian `$\mathcal{L}_\rho$` (i.e., to counteract negative eigenvalues in the original Lagrangian's Hessian `$\nabla^2\mathcal{L}$`).</font>
+
+With the update rule (Equation `$\eqref{eq26}$`), Equation `$\eqref{eq25}$` changes to the form that is exactly consistent to the optimality condition of the original Lagrangian (with equality constraints). In summary, there goes three steps to run the augmented Lagrangian algorithm:
+- Primal Step. Minimize the augmented Lagrangian with respect to `$\pmb{x}$`:
+`$$\pmb{x}_{k+1}=\arg\min\limits_\pmb{x}\mathcal{L}_\rho(\pmb{x},\pmb{\lambda}_k,\rho_k).$$`
+- Dual Update. Update the Lagrange multiplier `$\pmb{\lambda}$` through Equation `$\eqref{eq26}$`:
+`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}).$$`
+- Optionally, the penalty parameter `$\rho_k$` can be increased to enforce the constraints more strictly, or it can be simply selected as a (large) constant to ensure the positive definiteness of `$\nabla^2\mathcal{L}_\rho$`.
 
 ## References
 1. [Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)

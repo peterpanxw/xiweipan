@@ -49,10 +49,10 @@ For this kind of optimization problem, we use the Lagrange Multiplier method to 
 
 The *optimality conditions* for a locally optimal solution should satisfy:
 `\begin{align}
-&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0 \rightarrow \nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}=\boldsymbol{0}; \tag{6} \label{eq6}\\
+&\frac{\partial\mathcal{L}}{\partial x_i}=\frac{\partial f}{\partial x_i}+\sum_{j=1}^m\lambda_j\frac{\partial h_j}{\partial x_i}=0 \rightarrow \nabla_{\pmb{x}}\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla\pmb{h}=\boldsymbol{0}; \tag{6} \label{eq6}\\
 &\frac{\partial\mathcal{L}}{\lambda_j}=h_j(\pmb{x})=0 \rightarrow \pmb{h}=\boldsymbol{0}, \tag{7} \label{eq7}
 \end{align}`
-where `$\nabla^\mathrm{T}\pmb{h}=\left[\nabla h_1,\,\cdots,\nabla h_m\right]$`, and the operation `$\pmb{\lambda}\cdot\nabla^\mathrm{T}\pmb{h}$` is expressed in the context of *tensor*. Note that, the Einstein summation rule is not adopted here. Equations `$\eqref{eq6}$` and `$\eqref{eq7}$` actually states that <font color=Crimson>`$-\partial f/\partial x_i$` should be the linear combination of the constraint gradient vectors `$\partial h_j/\partial x_i\ (j=1,2,\,\cdots,m)$`.</font>
+where `$\nabla\pmb{h}=\left[\nabla h_1,\,\cdots,\nabla h_m\right]^\mathrm{T}$`, and the operation `$\pmb{\lambda}\cdot\nabla\pmb{h}$` is expressed in the context of *tensor* or `$\nabla^\mathrm{T}\pmb{h}\pmb{\lambda}$` in matrix form. Note that, the Einstein summation rule is not adopted here. Equations `$\eqref{eq6}$` and `$\eqref{eq7}$` actually states that <font color=Crimson>`$-\partial f/\partial x_i$` should be the linear combination of the constraint gradient vectors `$\partial h_j/\partial x_i\ (j=1,2,\,\cdots,m)$`.</font>
 
 ### Optimization of Functions in Closed Intervals
 Consider a univariate function `$f(x)$`, which is differentiable on the interval `$[a,b]$`, and let the minimum be denoted by `$x^\ast$`. We have the following three situations in all:
