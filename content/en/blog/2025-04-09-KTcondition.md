@@ -35,8 +35,8 @@ is called the *gradient* of function `$f(\pmb{x})$`.
 
 The *necessary condition* for a global minimum in this case is given by
 `$$\nabla f(\pmb{x}^\ast)=\boldsymbol{0}, \tag{4}$$`
-while the *sufficient condition* is stated as the Hessian Matrix `$H$` should be [positive definite](https://en.wikipedia.org/wiki/Definite_matrix), i.e., we have `$\pmb{y}^\mathrm{T}H\pmb{y}>0$` for all `$\pmb{y}\neq\pmb{0}$`. Here the Hessian Matrix takes the form:
-`$$H=\nabla^2 f=\left[\frac{\partial^2 f}{\partial x_i}{\partial x_j}\right].$$`
+while the *sufficient condition* is stated as the Hessian Matrix `$\mathcal{H}$` should be [positive definite](https://en.wikipedia.org/wiki/Definite_matrix), i.e., we have `$\pmb{y}^\mathrm{T}\mathcal{H}\pmb{y}>0$` for all `$\pmb{y}\neq\pmb{0}$`. Here the Hessian Matrix takes the form:
+`$$\mathcal{H}=\nabla^2 f=\left[\frac{\partial^2 f}{\partial x_i\partial x_j}\right].$$`
 
 ### Equality Constrained Optimization of Multivariate Functions
 `\begin{align}
