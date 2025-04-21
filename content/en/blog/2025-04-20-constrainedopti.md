@@ -144,13 +144,14 @@ where the penalty parameter `$\rho_k$` can be selected to either increase or, mo
 
 With the update rule (Equation `$\eqref{eq26}$`), Equation `$\eqref{eq25}$` changes to the form that is exactly consistent to the optimality condition of the original Lagrangian (with equality constraints). In summary, there goes three steps to run the augmented Lagrangian algorithm:
 - Primal Step. Minimize the augmented Lagrangian with respect to `$\pmb{x}$`:
-`$$\pmb{x}_{k+1}=\arg\min\limits_\pmb{x}\mathcal{L}_\rho(\pmb{x},\pmb{\lambda}_k,\rho_k).$$`
+`$$\pmb{x}_{k+1}=\arg\min\limits_{\pmb{x}}\mathcal{L}_\rho(\pmb{x},\pmb{\lambda}_k,\rho_k).$$`
 - Dual Update. Update the Lagrange multiplier `$\pmb{\lambda}$` through Equation `$\eqref{eq26}$`:
 `$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}).$$`
 - Optionally, the penalty parameter `$\rho_k$` can be increased to enforce the constraints more strictly, or it can be simply selected as a (large) constant to ensure the positive definiteness of `$\nabla^2\mathcal{L}_\rho$`.
 
 ## References
-1. [Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)
-2. [Ill-conditioning and condition number 2](https://www.cnblogs.com/sddai/p/5933995.html)
-3. [Rate of convergence](https://zhuanlan.zhihu.com/p/278151142)
-4. [Local convergence of the Newton's method](https://zhuanlan.zhihu.com/p/293951317)
+1. [Optimization Related](https://www2.isye.gatech.edu/~nemirovs/OPTIIILN2024Spring.pdf)
+2. [Ill-conditioning and condition number 1](https://www.cnblogs.com/RyanXing/p/ill-posed.html)
+3. [Ill-conditioning and condition number 2](https://www.cnblogs.com/sddai/p/5933995.html)
+4. [Rate of convergence](https://zhuanlan.zhihu.com/p/278151142)
+5. [Local convergence of the Newton's method](https://zhuanlan.zhihu.com/p/293951317)
