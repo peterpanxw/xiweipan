@@ -126,6 +126,12 @@ with the strong convexity and Lipschitz continuity conditions (Equations `$\eqre
 `$$\|\tilde{\pmb{x}}_{k+1}\|=\|\pmb{x}_{k+1}-\pmb{x}^\ast\|\leq\frac{L}{2\mu}\|\pmb{x}^\ast-\pmb{x}_k\|^2\rightarrow\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|^2}\leq\frac{L}{2\mu}. \tag{23} \label{eq23}$$`
 <font color=Crimson>Therefore, Newton's method is shown to exhibit local <b>quadratic</b> convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413v1) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
 
+In particular, for any quadratic function that is positive definite, e.g., `$\varphi(\pmb{x})=\frac{1}{2}\pmb{x}^\mathrm{T}A\pmb{x}+B^\mathrm{T}\pmb{x}+C$`, Newton's method can achieve the optimal solution with just one iteration. Assume the initial point is `$\pmb{x}_0$`, and the iteration process is listed below:
+```mermaid
+graph LR
+A("$$\nabla\varphi(\pmb{x}_0)=A\pmb{x}_0+B$$") --> B("$$\nabla^2\varphi(\pmb{x}_0)=A$$") --> C("$$\pmb{d}_0=-\left[\nabla^2\varphi(\pmb{x}_0)\right]^{-1}\nabla\varphi(\pmb{x}_0)=-\pmb{x}_0-A^{-1}B$$") --> D("$$\pmb{x}_1=\pmb{x}_0+\pmb{d}_0=-A^{-1}B$$") --> E("$$\nabla\varphi(\pmb{x}_1)=0$$") --> F(End)
+```
+
 Although Newton's method excels the steepest descent method in terms of convergence, it *requires the calculation of the inverse Hessian*, which can also be problematic when dealing with ill-conditioned Hessians, leading to inaccurate or unstable results.
 
 ## Augmented Lagrangian Method
