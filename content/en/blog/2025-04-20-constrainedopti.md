@@ -128,7 +128,7 @@ with the strong convexity and Lipschitz continuity conditions (Equations `$\eqre
 
 In particular, for any quadratic function that is positive definite, e.g., `$\varphi(\pmb{x})=\frac{1}{2}\pmb{x}^\mathrm{T}A\pmb{x}+B^\mathrm{T}\pmb{x}+C$`, Newton's method can achieve the optimal solution with just one iteration. Assume the initial point is `$\pmb{x}_0$`, and the iteration process is listed below:
 ```mermaid
-graph TB
+graph LR
 A("$$\nabla\varphi(\pmb{x}_0)=A\pmb{x}_0+B$$") --> B("$$\nabla^2\varphi(\pmb{x}_0)=A$$") --> C("$$\pmb{d}_0=-\left[\nabla^2\varphi(\pmb{x}_0)\right]^{-1}\nabla\varphi(\pmb{x}_0)=-\pmb{x}_0-A^{-1}B$$") --> D("$$\pmb{x}_1=\pmb{x}_0+\pmb{d}_0=-A^{-1}B$$") --> E("$$\nabla\varphi(\pmb{x}_1)=0$$") --> F(End)
 ```
 
