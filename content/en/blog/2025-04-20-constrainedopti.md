@@ -39,10 +39,9 @@ which, as we can see, is a straightforward outcome of combining the optimality c
 ### Penalty Methods
 In the penalty methods, we seek to replace the original problem with an unconstrained one by adding *penalties* for the violation of the involved constraints. Unlike the method of Lagrange multiplier, which is theoretically accurate and can provide exact optimality point for simpler problems, the penalty methods discussed here are a type of 'intrinsically approximating' method. For the general type problem `$\eqref{eq1}$`, the penalty methods suggest that the corresponding 'combined objective' function should take the following form:
 `\begin{align}
-\varphi\left(\pmb{x},r_k,t_k\right)=f(\pmb{x})+\frac{r_k}{2}\sum_{i=1}^{m_1}\max\left(0,h_i(\pmb{x})\right)^2+\frac{t_k}{2}\sum_{j=1}^{m_2}g_j^2(\pmb{x}), \tag{4} \label{eq4}
+\varphi\left(\pmb{x},r_k,t_k\right)=f(\pmb{x})+\frac{r_k}{2}\sum_{i=1}^{m_1}\left\langle h_i(\pmb{x})\right\rangle^2+\frac{t_k}{2}\sum_{j=1}^{m_2}g_j^2(\pmb{x}), \tag{4} \label{eq4}
 \end{align}`
-
-The above penalty parameters `$r_k,t_k$` are taken as two *progressively increasing positive sequences* to continuously strengthen the effect of the penalty term, thereby gradually guiding the minimum point of `$\varphi$` to the optimal point `$\pmb{x}^\ast$`. In this way, the unconstrained local/global minimizers are exactly the constrained local, respectively, global minimizers of `$f$` only if `$r_k,t_k\to\infty$`.
+where `$\left\langle\bullet\right\rangle$` is called the *Macauley bracket*, defined as `$\left\langle h_i(\pmb{x})\right\rangle=\frac{1}{2}\left(h_i(\pmb{x})+|h_i(\pmb{x})|\right)$`. It serves a similar purpose to `$\max\left(0,h_i(\pmb{x})\right)$` in some sense. The above penalty parameters `$r_k,t_k$` are taken as two *progressively increasing positive sequences* to continuously strengthen the effect of the penalty term, thereby gradually guiding the minimum point of `$\varphi$` to the optimal point `$\pmb{x}^\ast$`. In this way, the unconstrained local/global minimizers are exactly the constrained local, respectively, global minimizers of `$f$` only if `$r_k,t_k\to\infty$`.
 
 ### Barrier Methods
 A special type of penalty arises when the current minimizer lies within the feasible domain, ensuring that the constraints are not violated **from inside out**. That is, when the design point is about to cross the constraint boundary, the corresponding penalty term blows up to infinity, forming a '*barrier*' to prevent it from moving outside the feasible domain. This 'interior penalty' method, or simply the 'barrier' method can **only** be used in the case of inequality constrained problems (`$h_j(\pmb{x})\leq 0$`, `$j=1,2,\,\cdots,m$`), and the combined objective function is formulated as follows:
@@ -137,7 +136,7 @@ Although Newton's method excels the steepest descent method in terms of converge
 ## Augmented Lagrangian Method
 As can be seen, the otherwise simple and intuitive penalty/barrier methods are generally haunted by the ill-conditioning of the Hessian. Moreover, the constraints are only strictly satisfied as this ill-conditioning becomes increasingly severe. To address such a contradiction, augmented Lagrangian method (a.k.a. method of multipliers, proposed by Hestenes and Powell in 1969) comes to the rescue, which is more robust than traditional penalty methods.
 
-For simplicity, we here consider the case of equality constraints `$\pmb{g}:\mathbb{R}^n\to\mathbb{R}^m$`. The augmented Lagrangian is defined as follows:
+For simplicity, we here consider the case of equality constraints `$\pmb{g}:\mathbb{R}^n\to\mathbb{R}^{m_2}$`. The augmented Lagrangian is defined as follows:
 `$$\mathcal{L}_\rho(\pmb{x},\pmb{\lambda},\rho_k)=f(\pmb{x})+\pmb{\lambda}^\mathrm{T}\pmb{g}(\pmb{x})+\frac{\rho_k}{2}\pmb{g}^\mathrm{T}(\pmb{x})\pmb{g}(\pmb{x}), \tag{24} \label{eq24}$$`
 as can be seen, the new Lagrangian incorporates penalty term into the original Lagrangian term, allowing this method to approximate the solution effectively with a **moderate** penalty parameter `$\rho_k$`. This leads to a reasonably conditioned problem, balancing the trade-off between constraint satisfaction and numerical stability.
 
@@ -154,6 +153,10 @@ With the update rule (Equation `$\eqref{eq26}$`), Equation `$\eqref{eq25}$` chan
 - Dual Update. Update the Lagrange multiplier `$\pmb{\lambda}$` through Equation `$\eqref{eq26}$`:
 `$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}).$$`
 - Optionally, the penalty parameter `$\rho_k$` can be increased to enforce the constraints more strictly, or it can be simply selected as a (large) constant to ensure the positive definiteness of `$\nabla^2\mathcal{L}_\rho$`.
+
+By analogy with the derivation of Equation `$\eqref{eq26}$`, for the case of inequality constraints `$\pmb{h}:\mathbb{R}^n\to\mathbb{R}^{m_1}$`, we can use the Macauley bracket to formulate the update rule for the multipliers, that is,
+`$$\pmb{\lambda}_{k+1}=\left\langle\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1})\right\rangle, \tag{27} \label{eq27}$$`
+and for vectors `$\pmb{x}$`, the Macauley bracket is defined as `$\left\langle\pmb{x}\right\rangle=[\left\langle x_1\right\rangle,\left\langle x_2\right\rangle,\,\cdots,\left\langle x_{m_1}\right\rangle]^\mathrm{T}$`.
 
 ## References
 1. [Optimization Related](https://www2.isye.gatech.edu/~nemirovs/OPTIIILN2024Spring.pdf)
