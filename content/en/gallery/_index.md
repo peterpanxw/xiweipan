@@ -8,6 +8,39 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">May 2025</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-05/2025-05-18-spiderman1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-05/2025-05-18-spiderman2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-05/2025-05-18-spiderman3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img src="/figures/moments/2025-05/2025-05-18-spiderman4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Your Friendly Neighborhood Spider-Man &#128376;</p>
+          </div>
+          <div class="item-desc">
+            <p>Finally got my hands on the Hot Toys Spider-Man, it looks so real!</p>
+          </div>
+          <div class="item-periodical">
+            May 18, 2025
+          </div>
+        </div>
+      </div>
       <p><font size="6">March 2025</font></p>
       <br>
       <div class="publis-item">
