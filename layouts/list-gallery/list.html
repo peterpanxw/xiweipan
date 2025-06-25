@@ -1,5 +1,8 @@
 {{ partial "header.html" . }}
 
+{{ template "_internal/pagination.html" . }}
+paginate = 6
+
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
@@ -58,6 +61,8 @@
   </style>
 </div>
 
+{{ range .Paginator.Pages }}
+
 <main class = "content">
 
 <div class="list-page">
@@ -85,5 +90,9 @@
 {{ end }}
 </div>
 </main>
+
+{{end}}
+
+{{partial "pagination.html" .}}  
 
 {{ partial "footer.html" . }} 

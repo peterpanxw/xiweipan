@@ -6,17 +6,25 @@ title: Home
 
 <p class="serif"><font size="7">Hi There!</font></p>
 
-My name is **Xiwei (Peter) Pan**, a native of the beautiful city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I'm currently a graduate student at [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/) working with Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm).
+My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am an incoming Ph.D. student at [Princeton University](https://www.princeton.edu/), where I will be working with Prof. [Liuchi Li](https://www.liuchili.info/) starting this August. My research interests lie in frictional contact mechanics, nonlinear problems, asymptotic analysis, shell and plate theories, and the application of machine learning methods to these areas.
 
-Prior to my graduate journey, I earned a bachelor's degree in Engineering Mechanics (*Qian Lingxi Excellence in Education Program*) from DUT. There, I gained a strong foundation in mathematics, mechanics, and computer science.
+Prior to that, I earned a master's degree in Mechanics (advised by Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm)) and a bachelor's degree in Engineering Mechanics through the *Qian Lingxi Excellence in Education Program*, both from [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/).
 
 <!-- - I am actively seeking possible (fall 2025) Ph.D. opportunities in **machine learning-assisted mechanical analysis/design and AI4Science**, here is my [<i class="fa fa-address-card" aria-hidden="true"></i> Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).-->
-Beyond research, I enjoy playing table tennis, badminton, swimming, and working out (both physically and mentally).
+Beyond research, I enjoy playing badminton, swimming, photography, and staying active (both physically and mentally).
 
 ## [**News**](/en/news/)
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
-    <div class="list-item">
+      <div class="list-item">
+          <div class="item-time">
+              <p>Jun 11, 2025</p>
+          </div>
+          <div class="item-content">
+              <p>Graduated with a master's degree from DUT and received the <i>Outstanding Master's Thesis Award</i>.</p>
+          </div>
+      </div>
+      <div class="list-item">
           <div class="item-time">
               <p>Dec 29, 2024</p>
           </div>
@@ -24,7 +32,7 @@ Beyond research, I enjoy playing table tennis, badminton, swimming, and working 
               <p>Recommended as an <i>Outstanding Graduate of the 2025 Class at DUT</i> and an <i>Outstanding Graduate of the 2025 Class of Liaoning Province</i>.</p>
           </div>
       </div>
-    <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Sep 20, 2024</p>
           </div>
@@ -32,7 +40,7 @@ Beyond research, I enjoy playing table tennis, badminton, swimming, and working 
               <p>Rated as the <i>Outstanding Graduate Student of DUT</i>.</p>
           </div>
       </div>
-    <div class="list-item item-hide">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Jul 21, 2024</p>
           </div>
@@ -46,14 +54,6 @@ Beyond research, I enjoy playing table tennis, badminton, swimming, and working 
           </div>
           <div class="item-content">
               <p>My first research paper was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
-          </div>
-      </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>Jun 16, 2022</p>
-          </div>
-          <div class="item-content">
-              <p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
           </div>
       </div>
   </div>

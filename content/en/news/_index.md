@@ -5,6 +5,15 @@ date: ''
 ---
 <article class="layout_table">
   <div class="left">
+    <b>Jun 11, 2025</b>
+  </div>
+  <div class="right">
+    <p>Graduated with a master's degree from DUT and received the <i>Outstanding Master's Thesis Award</i>.</p>
+  </div>
+</article>
+
+<article class="layout_table">
+  <div class="left">
     <b>Dec 29, 2024</b>
   </div>
   <div class="right">
@@ -44,7 +53,7 @@ date: ''
   	<b>Jun 16, 2022</b>
   </div>
   <div class="right">
-  	<p>Graduated with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
+  	<p>Graduated with a bachelor's degree with the honor of <em>Outstanding Graduates of DUT, Class of 2022</em>.</p>
   </div>
 </article>
 
