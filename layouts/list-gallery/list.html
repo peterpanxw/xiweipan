@@ -1,7 +1,6 @@
 {{ partial "header.html" . }}
 
 {{ template "_internal/pagination.html" . }}
-paginate = 6
 
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
