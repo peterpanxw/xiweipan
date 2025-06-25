@@ -61,8 +61,6 @@ paginate = 6
   </style>
 </div>
 
-{{ range .Paginator.Pages }}
-
 <main class = "content">
 
 <div class="list-page">
@@ -91,6 +89,8 @@ paginate = 6
 </div>
 </main>
 
+{{ range .Paginator.Pages }}
+{{ .Content }}
 {{end}}
 
 {{partial "pagination.html" .}}  
