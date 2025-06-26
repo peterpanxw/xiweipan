@@ -67,7 +67,7 @@
       {{ range .Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
       {{ range .Pages.GroupByDate "2006-01-02" }}
-      {{ range .Pages }}
+      {{ range .Paginator.Pages }}
       <p>
         <span class="date">
           {{ .Date.Format "2006-01-02" }}
@@ -81,7 +81,7 @@
       {{ end }}
     </ul>
     {{ end }}
-    
+    {{ partial "pagination.html" . }}
   </div>
 </main>
 

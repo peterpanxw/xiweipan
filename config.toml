@@ -153,4 +153,4 @@ en = "/en/:year/:month/:day/:slug/"
 quality = 100
 
 [pagination]
-paginate = 3
+pagerSize = 3
