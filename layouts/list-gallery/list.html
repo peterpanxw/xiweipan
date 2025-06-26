@@ -62,6 +62,8 @@
   <div class="list-page">
     {{range .Paginator.Pages }}
     {{ .Content }}
+    {{ end }}
+    {{ partial "pagination" .}}
 
     {{if not .IsHome}}
     <ul>
@@ -82,8 +84,7 @@
       {{ end }}
     </ul>
     {{ end }}
-    {{ end }}
-    {{ partial "pagination" .}}
+    
   </div>
 </main>
 
