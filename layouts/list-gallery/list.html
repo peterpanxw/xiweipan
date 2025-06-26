@@ -1,5 +1,8 @@
 {{ partial "header.html" . }}
 
+<!-- Hugo's default pagination template. -->
+{{ template "_internal/pagination.html" . }}
+
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
@@ -90,8 +93,6 @@
 </main>
 
 {{ end }}
-<!-- Hugo's default pagination template. -->
-{{ template "_internal/pagination.html" . }}
 
 {{ partial "pagination.html" . }}
 
