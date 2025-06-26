@@ -8,6 +8,7 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      {{ range .Paginator.Pages }}
       <p><font size="6">May 2025</font></p>
       <br>
       <div class="publis-item">
@@ -392,6 +393,8 @@ type: list-gallery
           </div>
         </div>
       </div>
+      {{ end }}
+      {{ partial "pagination.html" . }}
     </div>
   </div>
 </div>
