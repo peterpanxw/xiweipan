@@ -58,7 +58,7 @@
   </style>
 </div>
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "en/gallery") }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "en") }}
 {{ range $paginator.Pages }}
 
 <main class = "content">
@@ -93,6 +93,6 @@
 <!-- Hugo's default pagination template. -->
 {{ template "_internal/pagination.html" . }}
 
-{{partial "pagination.html" .}}
+{{ partial "pagination.html" . }}
 
 {{ partial "footer.html" . }} 
