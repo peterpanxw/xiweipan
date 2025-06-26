@@ -59,18 +59,17 @@
 </div>
 
 <main class = "content">
+  {{ $pages := where site.RegularPages "Type" "en" }}
+  {{ $paginator := .Paginate $pages.ByTitle 4 }}
   <div class="list-page">
-    {{range .Paginator.Pages }}
     {{ .Content }}
-    {{ end }}
-    {{ partial "pagination" .}}
 
     {{if not .IsHome}}
     <ul>
       {{ range .Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
       {{ range .Pages.GroupByDate "2006-01-02" }}
-      {{ range .Paginator.Pages }}
+      {{ range $paginator.Pages }}
       <p>
         <span class="date">
           {{ .Date.Format "2006-01-02" }}
@@ -80,6 +79,7 @@
         </a>
       </p>
       {{ end }}
+      {{ partial "pagination.html" . }}
       {{ end }}
       {{ end }}
     </ul>
