@@ -59,12 +59,9 @@
 </div>
 
 <main class = "content">
-
+{{ range .Paginator.Pages }}
   <div class="list-page">
-    {{ range .Paginator.Pages }}
-
     {{ .Content }}
-
 
     {{if not .IsHome}}
     <ul>
@@ -86,9 +83,9 @@
     </ul>
     {{ end }}
 
-    {{ end }}
-    {{ partial "pagination" .}}
   </div>
+{{ end }}
+{{ partial "pagination" .}}
 </main>
 
 {{ partial "footer.html" . }} 
