@@ -5,7 +5,6 @@ type: list-gallery
 ---
 
 <link rel="stylesheet" href="/css/add.css">
-{{ range .Paginator.Pages }}
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
@@ -396,8 +395,6 @@ type: list-gallery
     </div>
   </div>
 </div>
-{{ end }}
-{{ partial "pagination" .}}
 
 <script type="text/javascript" src="/js/jq.min.js"></script>
 

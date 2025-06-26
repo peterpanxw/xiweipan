@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 
+{{ range .Paginator.Pages }}
+
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
@@ -84,5 +86,8 @@
 
   </div>
 </main>
+
+{{ end }}
+{{ partial "pagination" .}}
 
 {{ partial "footer.html" . }} 
