@@ -61,8 +61,7 @@
   </style>
 </div>
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "en") }}
-{{ range $paginator.Pages }}
+{{ range .Paginator.Pages }}
 
 <main class = "content">
 
