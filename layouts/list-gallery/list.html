@@ -59,8 +59,6 @@
 </div>
 
 <main class = "content">
-  {{ $pages := where site.RegularPages "Type" "en" }}
-  {{ $paginator := .Paginate $pages.ByTitle 4 }}
   <div class="list-page">
     {{ .Content }}
 
@@ -69,7 +67,7 @@
       {{ range .Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
       {{ range .Pages.GroupByDate "2006-01-02" }}
-      {{ range $paginator.Pages }}
+      {{ range .Paginator.Pages }}
       <p>
         <span class="date">
           {{ .Date.Format "2006-01-02" }}
