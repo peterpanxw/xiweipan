@@ -365,18 +365,6 @@ a {
 }
 
 /*Pagination*/
-body {
-    color: #212121;
-    background: #FAFAFA;
-    font: normal 16px/1.5 "Open Sans", Helvetica, sans-serif;
-}
-
-h2 {
-    font-weight: 500;
-    padding: 0 15px;
-    span { color: red;}
-}
-
 /*************************************************/
 /* USE THE FOLLOWING CSS TO STYLE YOUR PAGINATOR */
 /*************************************************/

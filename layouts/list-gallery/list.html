@@ -59,7 +59,6 @@
 </div>
 
 <main class = "content">
-{{ range .Paginator.Pages }}
   <div class="list-page">
     {{ .Content }}
 
@@ -84,8 +83,6 @@
     {{ end }}
 
   </div>
-{{ end }}
-{{ partial "pagination" .}}
 </main>
 
 {{ partial "footer.html" . }} 

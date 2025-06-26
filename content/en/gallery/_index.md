@@ -5,6 +5,7 @@ type: list-gallery
 ---
 
 <link rel="stylesheet" href="/css/add.css">
+{{ range .Paginator.Pages }}
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
@@ -394,11 +395,14 @@ type: list-gallery
       </div>
     </div>
   </div>
-  </div>
-  <script type="text/javascript" src="/js/jq.min.js"></script>
+</div>
+{{ end }}
+{{ partial "pagination" .}}
 
-  <div class="pop-img pop-hide">
-    <img src="" alt="">
-  </div>
-  <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
-  </div>
+<script type="text/javascript" src="/js/jq.min.js"></script>
+
+<div class="pop-img pop-hide">
+  <img src="" alt="">
+</div>
+<div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
+</div>
