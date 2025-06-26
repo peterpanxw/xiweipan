@@ -68,7 +68,6 @@ en = "/en/:year/:month/:day/:slug/"
     GithubRepo = "https://github.com/peterpanxw/xiweipan"
     # Edit by yourself:
     ContentSource = "https://raw.githubusercontent.com/peterpanxw/xiweipan/main/content/"
-    paginate = 2
 
 [params.logo]
   # Change the logo picture as you prefer:
