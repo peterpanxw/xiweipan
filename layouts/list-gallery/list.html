@@ -63,12 +63,12 @@
     {{ .Content }}
 
     {{if not .IsHome}}
-    {{ $paginator := .Paginate (where .Pages "Type" "moments") }}
+    {{ $paginator := .Paginate (where .Pages "Type" "figures/moments") }}
     <ul>
       {{ range $paginator.Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
-      {{ range .Pages.GroupByDate "2006-01-02" }}
-      {{ range .Pages }}
+      {{ range $paginator.Pages.GroupByDate "2006-01-02" }}
+      {{ range $paginator.Pages }}
       <p>
         <span class="date">
           {{ .Date.Format "2006-01-02" }}
@@ -106,3 +106,4 @@
 </main>
 
 {{ partial "footer.html" . }} 
+{{ partial "pagination" . }}
