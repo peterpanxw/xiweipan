@@ -64,9 +64,9 @@
 
     {{if not .IsHome}}
     <ul>
-      {{ range .Pages.GroupByDate "2006" }}
+      {{ range .Paginator.Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
-      {{ range .Pages.GroupByDate "2006-01-02" }}
+      {{ range .Paginator.Pages.GroupByDate "2006-01-02" }}
       {{ range .Paginator.Pages }}
       <p>
         <span class="date">
@@ -77,9 +77,9 @@
         </a>
       </p>
       {{ end }}
+      {{ end }}
+      {{ end }}
       {{ partial "pagination" .}}
-      {{ end }}
-      {{ end }}
     </ul>
     {{ end }}
 
