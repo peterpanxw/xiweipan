@@ -63,12 +63,11 @@
     {{ .Content }}
 
     {{if not .IsHome}}
-    {{ $paginator := .Paginate (where .Pages "Type" "figures/moments") }}
     <ul>
-      {{ range $paginator.Pages.GroupByDate "2006" }}
+      {{ range .Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
-      {{ range $paginator.Pages.GroupByDate "2006-01-02" }}
-      {{ range $paginator.Pages }}
+      {{ range .Pages.GroupByDate "2006-01-02" }}
+      {{ range .Pages }}
       <p>
         <span class="date">
           {{ .Date.Format "2006-01-02" }}
@@ -82,28 +81,8 @@
       {{ end }}
     </ul>
 
-<!-- Pagination Navigation -->
-<div class="pagination">
-  {{ if $paginator.HasPrev }}
-  <a href="{{ $paginator.Prev.URL }}">← Previous</a>
-  {{ end }}
-
-  {{ range $paginator.Pagers }}
-  {{ if eq . $paginator }}
-  <strong>{{ .PageNumber }}</strong>
-  {{ else }}
-  <a href="{{ .URL }}">{{ .PageNumber }}</a>
-  {{ end }}
-  {{ end }}
-
-  {{ if $paginator.HasNext }}
-  <a href="{{ $paginator.Next.URL }}">Next →</a>
-  {{ end }}
-</div>
-
     {{ end }}
   </div>
 </main>
 
-{{ partial "footer.html" . }} 
-{{ partial "pagination" . }}
+{{ partial "footer.html" . }}
