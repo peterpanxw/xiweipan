@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
 
-{{ range .Paginator.Pages }}
-
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
 {{ end }}
+
+{{ range .Paginator.Pages }}
 
 <div class="page-header-bigbg">
   <div class="header-info">
