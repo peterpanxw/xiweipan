@@ -63,7 +63,7 @@
     {{ .Content }}
 
     {{if not .IsHome}}
-    {{ $paginator := .Paginate (where .Pages "Type" "post") }}
+    {{ $paginator := .Paginate (where .Pages "Type" "moments") }}
     <ul>
       {{ range $paginator.Pages.GroupByDate "2006" }}
       <h2 style="text-align: left;">{{ .Key }}</h2>
@@ -100,7 +100,7 @@
   <a href="{{ $paginator.Next.URL }}">Next →</a>
   {{ end }}
 </div>
-    
+
     {{ end }}
   </div>
 </main>
