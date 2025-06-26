@@ -58,37 +58,37 @@
   </style>
 </div>
 
-{{ range .Paginator.Pages }}
-
 <main class = "content">
 
-<div class="list-page">
-{{ .Content }}
+  <div class="list-page">
+    {{ range .Paginator.Pages }}
+
+    {{ .Content }}
 
 
-{{if not .IsHome}}
-<ul>
-  {{ range .Pages.GroupByDate "2006" }}
-  <h2 style="text-align: left;">{{ .Key }}</h2>
-  {{ range .Pages.GroupByDate "2006-01-02" }}
-  {{ range .Pages }}
-  <p>
-    <span class="date">
-    {{ .Date.Format "2006-01-02" }}
-    </span>
-    <a href="{{ .RelPermalink }}">
-    {{ .Title }}
-    </a>
-  </p>
-  {{ end }}
-  {{ end }}
-  {{ end }}
-</ul>
-{{ end }}
-</div>
+    {{if not .IsHome}}
+    <ul>
+      {{ range .Pages.GroupByDate "2006" }}
+      <h2 style="text-align: left;">{{ .Key }}</h2>
+      {{ range .Pages.GroupByDate "2006-01-02" }}
+      {{ range .Pages }}
+      <p>
+        <span class="date">
+          {{ .Date.Format "2006-01-02" }}
+        </span>
+        <a href="{{ .RelPermalink }}">
+          {{ .Title }}
+        </a>
+      </p>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+    </ul>
+    {{ end }}
+
+    {{ end }}
+    {{ partial "pagination" .}}
+  </div>
 </main>
-
-{{ end }}
-{{ partial "pagination" .}}
 
 {{ partial "footer.html" . }} 
