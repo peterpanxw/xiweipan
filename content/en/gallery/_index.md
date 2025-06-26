@@ -13,19 +13,19 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2025-05/2025-05-18-spiderman1.jpg"
+            <img data-src="/figures/moments/2025-05/2025-05-18-spiderman1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2025-05/2025-05-18-spiderman2.jpg"
+            <img data-src="/figures/moments/2025-05/2025-05-18-spiderman2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2025-05/2025-05-18-spiderman3.jpg"
+            <img data-src="/figures/moments/2025-05/2025-05-18-spiderman3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2025-05/2025-05-18-spiderman4.jpg"
+            <img data-src="/figures/moments/2025-05/2025-05-18-spiderman4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -46,15 +46,15 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2025-03/2025-03-01-skiing1.jpg"
+            <img data-src="/figures/moments/2025-03/2025-03-01-skiing1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2025-03/2025-03-01-skiing2.jpg"
+            <img data-src="/figures/moments/2025-03/2025-03-01-skiing2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2025-03/2025-03-01-skiing3.jpg"
+            <img data-src="/figures/moments/2025-03/2025-03-01-skiing3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -75,27 +75,27 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan1.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan2.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan3.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan4.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan5.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan5.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-31-lianhuashan6.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-31-lianhuashan6.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -114,11 +114,11 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-04-teaset1.jpg"
+            <img data-src="/figures/moments/2024-12/2024-12-04-teaset1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-12/2024-12-04-teaset2.png"
+            <img data-src="/figures/moments/2024-12/2024-12-04-teaset2.png"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -139,11 +139,11 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-10/2024-10-12-jazz1.jpg"
+            <img data-src="/figures/moments/2024-10/2024-10-12-jazz1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-10/2024-10-12-jazz2.jpg"
+            <img data-src="/figures/moments/2024-10/2024-10-12-jazz2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -164,23 +164,23 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-09/2024-09-06-easonconcert1.JPG"
+            <img data-src="/figures/moments/2024-09/2024-09-06-easonconcert1.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-09/2024-09-06-easonconcert2.JPG"
+            <img data-src="/figures/moments/2024-09/2024-09-06-easonconcert2.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-09/2024-09-06-easonconcert3.JPG"
+            <img data-src="/figures/moments/2024-09/2024-09-06-easonconcert3.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-09/2024-09-06-easonconcert4.JPG"
+            <img data-src="/figures/moments/2024-09/2024-09-06-easonconcert4.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-09/2024-09-06-easonconcert5.JPG"
+            <img data-src="/figures/moments/2024-09/2024-09-06-easonconcert5.JPG"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -201,23 +201,23 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-08/2024-08-22-zaochayz1.jpg"
+            <img data-src="/figures/moments/2024-08/2024-08-22-zaochayz1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-08/2024-08-22-zaochayz2.jpg"
+            <img data-src="/figures/moments/2024-08/2024-08-22-zaochayz2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-08/2024-08-22-zaochayz3.jpg"
+            <img data-src="/figures/moments/2024-08/2024-08-22-zaochayz3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-08/2024-08-22-zaochayz4.jpg"
+            <img data-src="/figures/moments/2024-08/2024-08-22-zaochayz4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-08/2024-08-22-zaochayz5.jpg"
+            <img data-src="/figures/moments/2024-08/2024-08-22-zaochayz5.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -239,19 +239,19 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-portrait1.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-portrait1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-portrait2.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-portrait2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-portrait3.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-portrait3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-portrait4.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-portrait4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -271,27 +271,27 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview1.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview2.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview3.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview4.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview5.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview5.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-07/2024-07-20-vancouverview6.jpg"
+            <img data-src="/figures/moments/2024-07/2024-07-20-vancouverview6.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -313,11 +313,11 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-29-tea1.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-29-tea1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-29-tea2.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-29-tea2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -337,19 +337,19 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip1.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-12-wuxitrip1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip2.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-12-wuxitrip2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip3.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-12-wuxitrip3.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2024-02/2024-02-12-wuxitrip4.jpg"
+            <img data-src="/figures/moments/2024-02/2024-02-12-wuxitrip4.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -371,11 +371,11 @@ type: list-gallery
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/moments/2023-12/2023-12-02-unicom1.jpg"
+            <img data-src="/figures/moments/2023-12/2023-12-02-unicom1.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/moments/2023-12/2023-12-02-unicom2.jpg"
+            <img data-src="/figures/moments/2023-12/2023-12-02-unicom2.jpg"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
         </div>
@@ -397,9 +397,10 @@ type: list-gallery
 </div>
 
 <script type="text/javascript" src="/js/jq.min.js"></script>
+<script type="text/javascript" src="/js/lazyload.js"></script>
 
 <div class="pop-img pop-hide">
-  <img src="" alt="">
+  <img data-src="" alt="">
 </div>
 <div style="text-align: center; color: gray; margin-top: -20px; font-size: 19px;margin-bottom: 10px">
 </div>
