@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
 
-{{ template "_internal/pagination.html" . }}
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
@@ -78,6 +77,7 @@
         </a>
       </p>
       {{ end }}
+      {{ template "_internal/pagination.html" . }}
       {{ partial "pagination" .}}
       {{ end }}
       {{ end }}
