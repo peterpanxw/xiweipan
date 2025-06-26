@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
 
-{{ template "_internal/pagination.html" . }}
+{{ $paginator := .Paginate (where .Data.Pages "Type" "en/gallery") }}
+{{ range $paginator.Pages }}
 
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
@@ -88,10 +89,8 @@
 </div>
 </main>
 
-{{ range .Paginator.Pages }}
-{{ .Content }}
-{{end}}
-
-{{partial "pagination.html" .}}  
+{{ end }}
+<!-- Hugo's default pagination template. -->
+{{ template "_internal/pagination.html" . }}
 
 {{ partial "footer.html" . }} 
