@@ -1,8 +1,5 @@
 {{ partial "header.html" . }}
 
-{{ $paginator := .Paginate (where .Data.Pages "Type" "en/gallery") }}
-{{ range $paginator.Pages }}
-
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}
 <h1>#{{ .Title | markdownify }}</h1>
@@ -61,6 +58,9 @@
   </style>
 </div>
 
+{{ $paginator := .Paginate (where .Data.Pages "Type" "en/gallery") }}
+{{ range $paginator.Pages }}
+
 <main class = "content">
 
 <div class="list-page">
@@ -92,5 +92,7 @@
 {{ end }}
 <!-- Hugo's default pagination template. -->
 {{ template "_internal/pagination.html" . }}
+
+{{partial "pagination.html" .}}
 
 {{ partial "footer.html" . }} 
