@@ -5,8 +5,6 @@
 <h1>#{{ .Title | markdownify }}</h1>
 {{ end }}
 
-{{ range .Paginator.Pages }}
-
 <div class="page-header-bigbg">
   <div class="header-info">
     <h3>Moments</h3>
@@ -59,6 +57,8 @@
     }
   </style>
 </div>
+
+{{ range .Paginator.Pages }}
 
 <main class = "content">
   <div class="list-page">
