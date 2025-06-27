@@ -151,5 +151,3 @@ en = "/en/:year/:month/:day/:slug/"
 
 [imaging]
 quality = 100
-
-paginate = 3
