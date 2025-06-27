@@ -1,4 +1,47 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--     <script src="https://d3js.org/d3.v6.min.js"></script> -->
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "/css/add.css" | relURL }}" />
+    <link rel="stylesheet" type="text/css" href="{{ "/css/copy.css" | relURL }}" />
+    {{ partial "head_custom.html" . }}
+  </head>
+  
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+          <a href="{{ "/" | relURL }}" class="nav-logo">
+            <div class="container">
+              <img data-src="{{ print "" .Site.Params.logo.url | relURL }}"
+              width="{{ .Site.Params.logo.width }}"
+              height="{{ .Site.Params.logo.height }}"
+              alt="{{ .Site.Params.logo.alt }}"
+              draggable="false"
+              oncontextmenu="return false;">
+            </div>
+          </a>
+
+          <ul class="nav-links" >
+            {{ if .IsHome }}
+            {{ range .Site.Menus.en }}
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end }}
+            {{ else }}
+            {{ range (default .Site.Menus.main (index .Site.Menus $.Section)) }}
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end }}
+            {{ end }}
+          </ul>
+        </nav>
+      </header>
+
 
 {{ $name := .Data.Plural -}}
 {{ if eq $name "tags" -}}

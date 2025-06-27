@@ -1,7 +1,7 @@
 <nav class="nav">
     <a href="{{ "/" | relURL }}" class="nav-logo">
       <div class="container">
-        <img data-src="{{ print "" .Site.Params.logo.url | relURL }}"
+        <img src="{{ print "" .Site.Params.logo.url | relURL }}"
         width="{{ .Site.Params.logo.width }}"
         height="{{ .Site.Params.logo.height }}"
         alt="{{ .Site.Params.logo.alt }}"
@@ -22,5 +22,3 @@
         {{ end }}
     </ul>
 </nav>
-
-<script type="text/javascript" src="/js/lazyload.js"></script>
