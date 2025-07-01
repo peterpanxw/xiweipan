@@ -8,12 +8,12 @@ type: list-projects
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
-      <p><font size="6">Preprints</font></p>
+      <p><font size="6">Journal Papers</font></p>
       <br>
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
-            <img src="/figures/projectFigs/Asymptotic_Shell/model.png"
+            <img src="/figures/projectFigs/Asymptotic_Shell/classification.png"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
@@ -21,7 +21,7 @@ type: list-projects
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/projectFigs/Asymptotic_Shell/spherical_contour.png"
+            <img src="/figures/projectFigs/Asymptotic_Shell/cylindrical_contour.png"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
@@ -37,7 +37,7 @@ type: list-projects
                   <p><em>Xiwei Pan</em>, Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>arXiv:2407.21021</em>, 2024 
+                  <em>International Journal of Engineering Science</em>, 2025
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
@@ -49,8 +49,6 @@ type: list-projects
               </div>
           </div>
       </div>
-      <p><font size="6">Journal Papers</font></p>
-      <br>
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
@@ -78,7 +76,7 @@ type: list-projects
                   <p><em>Xiwei Pan</em>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>International Journal for Numerical Methods in Engineering</em>, 2024 
+                  <em>International Journal for Numerical Methods in Engineering</em>, 2024
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>

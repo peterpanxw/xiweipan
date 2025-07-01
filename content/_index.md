@@ -16,6 +16,14 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
 ## [**News**](/en/news/)
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
+    <div class="list-item">
+          <div class="item-time">
+              <p>Jul 01, 2025</p>
+          </div>
+          <div class="item-content">
+              <p>My second research paper got accepted by <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
+          </div>
+      </div>
       <div class="list-item">
           <div class="item-time">
               <p>Jun 11, 2025</p>
@@ -24,7 +32,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
               <p>Graduated with a master's degree from DUT and received the <i>Outstanding Master's Thesis Award</i>.</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Dec 29, 2024</p>
           </div>
@@ -48,14 +56,6 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
               <p>Attend the 16th World Congress on Computational Mechanics (<a href="https://www.wccm2024.org/">WCCM 2024</a>) @ Vancouver, Canada.</p>
           </div>
       </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>Sep 16, 2023</p>
-          </div>
-          <div class="item-content">
-              <p>My first research paper was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
-          </div>
-      </div>
   </div>
 
 
@@ -77,7 +77,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
                   <p><em>Xiwei Pan</em>, Zhengcheng Zhou, Chuang Ma, Shaoshuai Li, and Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>International Journal for Numerical Methods in Engineering</em>, 2024 
+                  <em>International Journal for Numerical Methods in Engineering</em>, 2024
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
@@ -104,7 +104,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
                   <p><em>Xiwei Pan</em>, Yichao Zhu</p>
               </div>
               <div class="item-periodical">
-                  <em>arXiv:2407.21021</em>, 2024 
+                  <em>International Journal of Engineering Science</em>, 2025
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>

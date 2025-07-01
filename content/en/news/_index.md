@@ -5,6 +5,15 @@ date: ''
 ---
 <article class="layout_table">
   <div class="left">
+    <b>Jul 01, 2025</b>
+  </div>
+  <div class="right">
+    <p>My second research paper got accepted by <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
+  </div>
+</article>
+
+<article class="layout_table">
+  <div class="left">
     <b>Jun 11, 2025</b>
   </div>
   <div class="right">
@@ -44,7 +53,7 @@ date: ''
   	<b>Sep 16, 2023</b>
   </div>
   <div class="right">
-  	<p>My first research paper was accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
+  	<p>My first research paper got accepted by the <a href="https://onlinelibrary.wiley.com/journal/10970207"><em>International Journal for Numerical Methods in Engineering</em></a>!</p>
   </div>
 </article>
 
