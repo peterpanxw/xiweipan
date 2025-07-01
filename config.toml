@@ -110,12 +110,6 @@ en = "/en/:year/:month/:day/:slug/"
       en = "License"
       cn = "版权"
 
-[params.busuanzi]  # count web traffic by busuanzi
-  enable = true
-  siteUV = true
-  sitePV = true
-  pagePV = true
-
 
 [markup]
  defaultMarkdownHandler = "goldmark"
