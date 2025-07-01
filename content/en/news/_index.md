@@ -8,7 +8,7 @@ date: ''
     <b>Jul 01, 2025</b>
   </div>
   <div class="right">
-    <p>My second research paper got accepted by <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
+    <p>My second research paper got accepted by the <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
   </div>
 </article>
 

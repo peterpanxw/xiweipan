@@ -21,7 +21,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
               <p>Jul 01, 2025</p>
           </div>
           <div class="item-content">
-              <p>My second research paper got accepted by <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
+              <p>My second research paper got accepted by the <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
           </div>
       </div>
       <div class="list-item">
