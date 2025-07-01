@@ -89,6 +89,6 @@ date: ''
   	<b>Sep 01, 2018</b>
   </div>
   <div class="right">
-  	<p>Admitted to Dalian University of Technology for undergraduate study in <i>Engineering Mechanics</i>.</p>
+  	<p>Admitted to the Dalian University of Technology for undergraduate studies in <i>Engineering Mechanics</i>.</p>
   </div>
 </article>
