@@ -35,6 +35,8 @@ where `$\pmb{\lambda}=\left(\lambda_1,\,\cdots,\lambda_{m_1}\right)^\mathrm{T}$`
 \end{align}`
 which, as we can see, is a straightforward outcome of combining the optimality conditions for both equality and inequality constraints.
 
+The constrained-to-unconstrained transformation is achieved at the cost of introducing additional variables and an **indefinite structure** of the resulting matrix problem.
+
 ## Penalty and Barrier Methods
 ### Penalty Methods
 In the penalty methods, we seek to replace the original problem with an unconstrained one by adding *penalties* for the violation of the involved constraints. Unlike the method of Lagrange multiplier, which is theoretically accurate and can provide exact optimality point for simpler problems, the penalty methods discussed here are a type of 'intrinsically approximating' method. For the general type problem `$\eqref{eq1}$`, the penalty methods suggest that the corresponding 'combined objective' function should take the following form:
@@ -68,7 +70,7 @@ where `$\tilde{\pmb{x}}=\pmb{x}-\pmb{x}^\ast$`, and `$\nabla\pmb{F}(\pmb{x}^\ast
 Assume that, after multiple iterations (`$k\to\infty$`), the current solution is near the optimal point. Therefore, the gradient of `$\pmb{F}$` near the minimum can be approximated by
 `$$\nabla\pmb{F}(\pmb{x})\approx\mathcal{H}\tilde{\pmb{x}}, \tag{8} \label{eq8}$$`
 note that the higher-order remainder `$o(\tilde{\pmb{x}}^2)$` vanishes as `$\tilde{\pmb{x}}$` approaches zero. Substituting Equation `$\eqref{eq8}$` into Equation `$\eqref{eq6}$` and subtracting `$\pmb{x}^\ast$` from both ends, we have
-`$$\tilde{\pmb{x}}_{k+1}\approx\left(\pmb{I}-\delta\mathcal{H}\right)\tilde{\pmb{x}}^{k}, \tag{9} \label{eq9}$$`
+`$$\tilde{\pmb{x}}_{k+1}\approx\left(\pmb{I}-\delta\mathcal{H}\right)\tilde{\pmb{x}}_k, \tag{9} \label{eq9}$$`
 which relates the current solution error (step `$k$`) to that of the next interation (step `$(k+1)$`). The [rate of convergence](https://en.wikipedia.org/wiki/Rate_of_convergence) can be expressed by
 `$$\lim_{k\to\infty}\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|}=\|\pmb{I}-\delta\mathcal{H}\|, \tag{10} \label{eq10}$$`
 here `$\|\bullet\|$` represnts a norm, typically chosen to be the `$L^2$` norm (spectral norm).
@@ -123,7 +125,7 @@ Taking the norm on both sides of Equation `$\eqref{eq21}$` yields:
 \end{align}`
 with the strong convexity and Lipschitz continuity conditions (Equations `$\eqref{eq17}$` and `$\eqref{eq18}$`), Equation `$\eqref{eq22}$` is further simplified to:
 `$$\|\tilde{\pmb{x}}_{k+1}\|=\|\pmb{x}_{k+1}-\pmb{x}^\ast\|\leq\frac{L}{2\mu}\|\pmb{x}^\ast-\pmb{x}_k\|^2\rightarrow\frac{\|\pmb{x}_{k+1}-\pmb{x}^\ast\|}{\|\pmb{x}_k-\pmb{x}^\ast\|^2}\leq\frac{L}{2\mu}. \tag{23} \label{eq23}$$`
-<font color=Crimson>Therefore, Newton's method is shown to exhibit local <b>quadratic</b> convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413v1) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
+<font color=Crimson>Therefore, Newton's method is shown to exhibit local <b>quadratic</b> convergence near the optimal solution if the function is strongly convex and its gradients are Lipschitz continuous. This offers faster convergence compared to gradient descent methods, which converge sublinearly around the minimum.</font> It is also worth mentioning that [this paper](https://arxiv.org/pdf/1806.00413) proved **the global linear convergence of Newton's method**, without requiring prior assumptions about the strong convexity of function or Lipschitz gradients.
 
 In particular, for any quadratic function that is positive definite, e.g., `$\varphi(\pmb{x})=\frac{1}{2}\pmb{x}^\mathrm{T}A\pmb{x}+B^\mathrm{T}\pmb{x}+C$`, Newton's method can achieve the optimal solution with just one iteration. Assume the initial point is `$\pmb{x}_0$`, and the iteration process is listed below:
 ```mermaid
@@ -144,18 +146,18 @@ Having obtained an estimate `$\lambda_k$` of `$\lambda$`, we select `$\pmb{x}_k$
 `$$\nabla\mathcal{L}_\rho(\pmb{x}_k,\pmb{\lambda}_k,\rho_k)=\nabla f(\pmb{x}_k)+\left(\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_k)\right)\cdot\nabla\pmb{g}(\pmb{x}_k)=\pmb{0}. \tag{25} \label{eq25}$$`
 
 Comparing Equation `$\eqref{eq25}$` with the optimality condition given by the method of Lagrange multipliers `$\nabla\mathcal{L}=\nabla f+\pmb{\lambda}\cdot\nabla\pmb{g}$`, the update rule for multiplier `$\pmb{\lambda}$` can be chosen as
-`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}), \tag{26} \label{eq26}$$`
+`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_k), \tag{26} \label{eq26}$$`
 where the penalty parameter `$\rho_k$` can be selected to either increase or, more simply, be **fixed** in order to penalize constraint violations. <font color=Crimson>However, unlike (pure) penalty methods, where the value of the penalty parameter is directly linked with the accuracy of the problem, the penalty paramter here does <b>not</b> need to be pushed to infinity. Instead, it should only be large enough to enforce the positive definiteness of the Hessian of the Lagrangian `$\mathcal{L}_\rho$` (i.e., to counteract negative eigenvalues in the original Lagrangian's Hessian `$\nabla^2\mathcal{L}$`).</font>
 
 With the update rule (Equation `$\eqref{eq26}$`), Equation `$\eqref{eq25}$` changes to the form that is exactly consistent to the optimality condition of the original Lagrangian (with equality constraints). In summary, there goes three steps to run the augmented Lagrangian algorithm:
 - Primal Step. Minimize the augmented Lagrangian with respect to `$\pmb{x}$`:
-`$$\pmb{x}_{k+1}=\arg\min\limits_{\pmb{x}}\mathcal{L}_\rho(\pmb{x},\pmb{\lambda}_k,\rho_k).$$`
+`$$\pmb{x}_k=\arg\min\limits_{\pmb{x}}\mathcal{L}_\rho(\pmb{x},\pmb{\lambda}_k,\rho_k).$$`
 - Dual Update. Update the Lagrange multiplier `$\pmb{\lambda}$` through Equation `$\eqref{eq26}$`:
-`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1}).$$`
+`$$\pmb{\lambda}_{k+1}=\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_k).$$`
 - Optionally, the penalty parameter `$\rho_k$` can be increased to enforce the constraints more strictly, or it can be simply selected as a (large) constant to ensure the positive definiteness of `$\nabla^2\mathcal{L}_\rho$`.
 
 By analogy with the derivation of Equation `$\eqref{eq26}$`, for the case of inequality constraints `$\pmb{h}:\mathbb{R}^n\to\mathbb{R}^{m_1}$`, we can use the Macauley bracket to formulate the update rule for the multipliers, that is,
-`$$\pmb{\lambda}_{k+1}=\left\langle\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_{k+1})\right\rangle, \tag{27} \label{eq27}$$`
+`$$\pmb{\lambda}_{k+1}=\left\langle\pmb{\lambda}_k+\rho_k\pmb{g}(\pmb{x}_k)\right\rangle, \tag{27} \label{eq27}$$`
 and for vectors `$\pmb{x}$`, the Macauley bracket is defined as `$\left\langle\pmb{x}\right\rangle=[\left\langle x_1\right\rangle,\left\langle x_2\right\rangle,\,\cdots,\left\langle x_{m_1}\right\rangle]^\mathrm{T}$`.
 
 ## References
