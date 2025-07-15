@@ -1,6 +1,6 @@
 ---
 title: "Functional Analysis Series: Contractions and Fixed-Point Iteration"
-date: 2025-07-15T14:03:54+08:00
+date: 2025-07-15T15:03:54+08:00
 type : list-single
 author: Xiwei Pan
 slug: functional-contraction-mapping
@@ -92,7 +92,7 @@ Using the first two linear terms as an approximation, we derive the iterative fo
 To verify the convergence of the Newton–Raphson method, two conditions must be checked: *invariance of interval* and *contraction*. Both necessitate detailed analysis of the function `$f(x)$`, whose derivative is given by
 `$$f^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\left(x-\frac{F(x)}{F^\prime(x)}\right)=\frac{F(x)F^{\prime\prime}(x)}{\left[F^\prime(x)\right]^2}. \tag{17} \label{eq17}$$`
 In a small neighborhood `$I=[\tilde{x}-\delta,\tilde{x}+\delta]\subset [a,b]$` around the solution `$\tilde{x}$`, we have `$|F^\prime(x)|\geq m>0$` and `$|F^{\prime\prime}(x)|\leq M$`. Again, with the Mean Value Theorem, for any `$x\in I$`, there exists some `$\xi$` such that
-`$$|F(x)-F(\tilde{x})|=|F^\prime(\xi)||x-\tilde{x}|\leq L|x-\tilde{x}|\leq L\delta,\quad L=\max_{x\in I}|F^\prime(x)|. \tag{18} \label{eq18}$$`
+`$$|F(x)-F(\tilde{x})|=|F^\prime(\xi)|\cdot|x-\tilde{x}|\leq L|x-\tilde{x}|\leq L\delta,\quad L=\max_{x\in I}|F^\prime(x)|. \tag{18} \label{eq18}$$`
 In this way, `$|f^\prime(x)|$` can be bounded based on Equation `$\eqref{eq17}$`:
 `$$|f^\prime(x)|\leq\frac{ML\delta}{m^2}, \tag{19} \label{eq19}$$`
 for relativelty small `$\delta$`, specifically, `$\delta<m^2/(ML)$`, `$|f^\prime(x)|<1$`. Therefore, `$f$` is a contraction on `$I$`.
@@ -106,7 +106,9 @@ We also need `$f$` to map `$I$` to itself. For any `$x\in I\ (|x-\tilde{x}|\leq\
 \end{align}`
 where `$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$`. If we choose `$\delta\leq 2m(1-\epsilon)/M$`, then
 `$$\left|f(x)-\tilde{x}\right|\leq\delta\Longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
-meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`.
+meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`. In conclusion, if
+`$$\delta=\min\left\{\frac{m^2}{ML},\frac{2m(1-\epsilon)}{M}\right\},$$`
+the *invariance of interval* and *contraction* conditions (Equations `$\eqref{eq19}$` and `$\eqref{eq20}$`) can be satisfied simultaneously, and the Newton's method can effectively capture the fixed point of the original nonlinear equation.
 
 It is worth noting that our previous proof of the convergence of Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
 
@@ -117,9 +119,9 @@ where `$q(t)\in\mathcal{C}^1\left[0,T\right]$` and `$q(0)=q_0$`. The function `$
 `$$\left|F(t,q_1)-F(t,q_2)\right|\leq M|q_1(t)-q_2(t)|,\quad\forall t\in [0,T]. \tag{23} \label{eq23}$$`
 The continuity of `$F(t,q)$` on a bounded domain implies the existence of another constant `$\tau>0$` and a bounded set containing `$(0,q_0)$` such that `$\left|F(t,q)\right|\leq\tau$`.
 
-Choose a time interval `$[0,T]$` such that `$TM<1$`, and consider the doman defined by `$|t|<T$` and `$|q-q_0|\leq\tau T$` (a small neighborhood around `$q_0$`). Let `$\tilde{\mathcal{C}}$` denote the space of continuous functions on `$|t|<T$` satisfying `$|q(t)-q_0|\leq\tau T$`, equipped with the supremum distance: `$d\left(\phi_1,\phi_2\right)=\max_{t\in [0,T]}\left|\phi_1(t)-\phi_2(t)\right|$`. Note that the space `$\tilde{\mathcal{C}}\subset\mathcal{C}[0,T]$` is a *complete* metric space.
+Choose a time interval `$[0,T]$` such that `$TM<1$`, and consider the doman defined by `$|t|\leq T$` and `$|q-q_0|\leq\tau T$` (a small neighborhood around `$q_0$`). Let `$\tilde{\mathcal{C}}$` denote the space of continuous functions on `$|t|\leq T$` satisfying `$|q(t)-q_0|\leq\tau T$`, equipped with the supremum distance: `$d\left(\phi_1,\phi_2\right)=\max_{t\in [0,T]}\left|\phi_1(t)-\phi_2(t)\right|$`. Note that the space `$\tilde{\mathcal{C}}\subset\mathcal{C}[0,T]$` is a *complete* metric space.
 
-> <i class="fa fa-thumb-tack" style="color:red"></i> Distinguish between space `$\mathcal{C}$` and `$\tilde{\mathcal{C}}$`.
+> <i class="fa fa-thumb-tack" style="color:red"></i> Distinguishing between the Spaces `$\mathcal{C}$` and `$\tilde{\mathcal{C}}$`.
 > 
 > `$\mathcal{C}[0,T]$`: The complete metric space of all continuous functions on the interval `$[0,T]$`;
 > 
@@ -131,7 +133,7 @@ Define an iterative sequence:
 `$$q_0(t)=q_0,\ q_{k+1}=q_0+\int_0^t F\left[\xi,q_k(\xi)\right]\,\mathrm{d}\xi,\quad k=0,1,2,\cdots. \tag{25} \label{eq25}$$`
 This iterative process for solving such nonlinear differential equations is known as [Picard's method](https://en.wikipedia.org/wiki/Picard%E2%80%93Lindel%C3%B6f_theorem). If the mapping is a *contraction*, the sequence will converge to the unique solution of the original differential equation.
 
-Now we show that the mapping is indeed a *contraction*. Define for `$q\in\tilde{\mathcal{C}}$` and `$|t|<T$`,
+Now we show that the mapping is indeed a *contraction*. Define for `$q\in\tilde{\mathcal{C}}$` and `$|t|\leq T$`,
 `$$\phi(t)=q_0+\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi, \tag{26} \label{eq26}$$`
 then,
 `$$\left|\phi(t)-q_0\right|=\left|\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi\right|\leq\int_0^t\left|F\left[\xi,q(\xi)\right]\right|\,\mathrm{d}\xi\leq\tau T, \tag{27} \label{eq27}$$`
