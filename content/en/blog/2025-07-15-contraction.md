@@ -19,7 +19,6 @@ The solution `$\tilde{x}$` to Equation `$\eqref{eq1}$` is defined as a [*fixed p
 
 ## Contractions and the Contraction Theorem
 > **Definition 1 (Contraction).**
-> 
 > Given a metric space `$\left(X,d\right)$`. Then a mapping `$T: X\mapsto X$` is called a ***contraction*** if `$\exists \alpha\in (0,1)$` such that
 > `$$d\left(T(x),T(y)\right)\leq\alpha d\left(x,y\right),\ \forall x,y\in X. \tag{2} \label{eq2}$$`
 
@@ -28,7 +27,6 @@ Geometrically, this means that the images `$T(x)$` and `$T(y)$` are closer under
 For any given `$\varepsilon>0$`, there exists `$\delta(\varepsilon)=\varepsilon/\alpha>0$` such that `$\forall x,y\in X$`, if `$d\left(x,y\right)<\delta$`, then `$d\left(T(x),T(y)\right)\leq\alpha d\left(x,y\right)=\frac{\varepsilon}{\delta}d\left(x,y\right)<\varepsilon$`. Since `$\delta=\varepsilon/\alpha$` is independent of `$x$`, the *contraction* is [uniform continuous](https://en.wikipedia.org/wiki/Uniform_continuity).
 
 > **Theorem 1 (Banach Fixed-Point Theorem or Contraction Theorem).**
-> 
 > Let `$\left(X,d\right)$` be a *complete* metric space with a contraction mapping `$T: X\mapsto X$`. Then `$T$` admits a ***unique*** fixed point `$\tilde{x}\in X$`, and for any `$x\in X$`, the sequence
 > `$$x,T(x),T^2(x),\cdots,T^k(x),\cdots$$`
 > converges to the fixed point `$\tilde{x}$`; that is,
@@ -79,7 +77,7 @@ From the above proof, we can further derive the <font color=Crimson><b>error bou
 ## Applications of the Contraction Theorem
 The abovementioned Banach Fixed-Point Theorem states sufficient conditions for the existence and uniqueness of a fixed point, which constitutes the foundation for justifying the iterative solution of a broad class of equations. Below, we will discuss in detail the specific applications of this theorem in finding the roots of (nonlinear) algebraic and differential equations.
 
-### The Existence and Uniqueness of Nonlinear Algebraic Equations
+### Existence and Uniqueness of Solutions to Nonlinear Algebraic Equations
 Let `$f: [a,b]\mapsto [a,b]$` be a mapping, differentiable on the open interval `$(a,b)$`, and suppose that for all `$x\in (a,b)$`, `$|f^\prime(x)|\leq\alpha<1$`. By the [Mean Value Theorem](https://en.wikipedia.org/wiki/Mean_value_theorem), for any `$x,y\in [a,b]$`, there exists some `$\xi$` between `$x$` and `$y$` such that
 `$$f(x)-f(y)=f^\prime(\xi)(x-y). \tag{13} \label{eq13}$$`
 We equip the real space `$[a,b]$` with a metric `$d\left(x,y\right)=|x-y|$`. Then, the equation
@@ -93,26 +91,56 @@ Using the first two linear terms as an approximation, we derive the iterative fo
 
 To verify the convergence of the Newton–Raphson method, two conditions must be checked: *invariance of interval* and *contraction*. Both necessitate detailed analysis of the function `$f(x)$`, whose derivative is given by
 `$$f^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\left(x-\frac{F(x)}{F^\prime(x)}\right)=\frac{F(x)F^{\prime\prime}(x)}{\left[F^\prime(x)\right]^2}. \tag{17} \label{eq17}$$`
-In a small neighborhood `$I=[\tilde{x}-\delta,\tilde{x}+\delta]\subset [a,b]$` around the solution `$\tilde{x}$`, we have `$|F^\prime(x)|\geq m>0$` and `$|F^{\prime\prime}\leq M|$`. Again, with the Mean Value Theorem, for any `$x\in I$`, there exists some `$\xi$` such that
-`$$|F(x)-F(\tilde{x})|=|F^\prime(\xi)||x-\tilde{x}|\leq L|x-\tilde{x}|\leq L\delta,\quad L=\max_{x\in I}|F^\prime(x)|. tag{18} \label{eq18}$$`
-In this way, `$|f^\prime(x)|$` can be bounded:
+In a small neighborhood `$I=[\tilde{x}-\delta,\tilde{x}+\delta]\subset [a,b]$` around the solution `$\tilde{x}$`, we have `$|F^\prime(x)|\geq m>0$` and `$|F^{\prime\prime}(x)|\leq M$`. Again, with the Mean Value Theorem, for any `$x\in I$`, there exists some `$\xi$` such that
+`$$|F(x)-F(\tilde{x})|=|F^\prime(\xi)||x-\tilde{x}|\leq L|x-\tilde{x}|\leq L\delta,\quad L=\max_{x\in I}|F^\prime(x)|. \tag{18} \label{eq18}$$`
+In this way, `$|f^\prime(x)|$` can be bounded based on Equation `$\eqref{eq17}$`:
 `$$|f^\prime(x)|\leq\frac{ML\delta}{m^2}, \tag{19} \label{eq19}$$`
 for relativelty small `$\delta$`, specifically, `$\delta<m^2/(ML)$`, `$|f^\prime(x)|<1$`. Therefore, `$f$` is a contraction on `$I$`.
 
 We also need `$f$` to map `$I$` to itself. For any `$x\in I\ (|x-\tilde{x}|\leq\delta)$`,
 `\begin{align}
-|f(x)-\tilde{x}|&=|x-\tilde{x}-\frac{F(x)}{F^\prime(x)}|\\
-&=|x-\tilde{x}-\frac{F^\prime(\tilde{x})(x-\tilde{x})+\frac{1}{2}F^{\prime\prime}(\xi)(x-\tilde{x})^2}{F^\prime(x)}|\\
+\left|f(x)-\tilde{x}\right|&=\left|x-\tilde{x}-\frac{F(x)}{F^\prime(x)}\right|\\
+&=\left|x-\tilde{x}-\frac{F^\prime(\tilde{x})(x-\tilde{x})+\frac{1}{2}F^{\prime\prime}(\xi)(x-\tilde{x})^2}{F^\prime(x)}\right|\\
 &\leq |x-\tilde{x}|\cdot \left|1-\frac{F^\prime(\tilde{x})}{F^\prime(x)}\right|+\frac{1}{2}\cdot\left|\frac{F^{\prime\prime}(\xi)}{F^\prime(x)}\right|\left(x-\tilde{x}\right)^2\\
 &\leq \epsilon\delta+\frac{M\delta^2}{2m}, \tag{20} \label{eq20}
 \end{align}`
 where `$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$`. If we choose `$\delta\leq 2m(1-\epsilon)/M$`, then
-`$$|f(x)-\tilde{x}|\leq\delta\longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
+`$$\left|f(x)-\tilde{x}\right|\leq\delta\Longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
 meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`.
 
 It is worth noting that our previous proof of the convergence of Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
 
-### The Existence and Uniqueness of ODE
-Consider a nonlinear ordinary differential equation (ODE) of the form
+### Existence and Uniqueness of Solutions to Nonlinear ODEs
+Consider a nonlinear ordinary differential equation (ODE) of the form:
 `$$\frac{\mathrm{d}q(t)}{\mathrm{d}t}=F\left[t,q(t)\right],\quad 0<t\leq T, \tag{22} \label{eq22}$$`
-where `$q(t)\in\mathcal{C}^1\left[0,T\right]$` and `$q(0)=q_0$`.
+where `$q(t)\in\mathcal{C}^1\left[0,T\right]$` and `$q(0)=q_0$`. The function `$F(t,q)$` is continuous in `$t$` and `$q$`, and is Lipschitz continuous in the variable `$q$`. That is, there exists a constant `$M>0$` such that
+`$$\left|F(t,q_1)-F(t,q_2)\right|\leq M|q_1(t)-q_2(t)|,\quad\forall t\in [0,T]. \tag{23} \label{eq23}$$`
+The continuity of `$F(t,q)$` on a bounded domain implies the existence of another constant `$\tau>0$` and a bounded set containing `$(0,q_0)$` such that `$\left|F(t,q)\right|\leq\tau$`.
+
+Choose a time interval `$[0,T]$` such that `$TM<1$`, and consider the doman defined by `$|t|<T$` and `$|q-q_0|\leq\tau T$` (a small neighborhood around `$q_0$`). Let `$\tilde{\mathcal{C}}$` denote the space of continuous functions on `$|t|<T$` satisfying `$|q(t)-q_0|\leq\tau T$`, equipped with the supremum distance: `$d\left(\phi_1,\phi_2\right)=\max_{t\in [0,T]}\left|\phi_1(t)-\phi_2(t)\right|$`. Note that the space `$\tilde{\mathcal{C}}\subset\mathcal{C}[0,T]$` is a *complete* metric space.
+
+> <i class="fa fa-thumb-tack" style="color:red"></i> Distinguish between space `$\mathcal{C}$` and `$\tilde{\mathcal{C}}$`.
+> 
+> `$\mathcal{C}[0,T]$`: The complete metric space of all continuous functions on the interval `$[0,T]$`;
+> 
+> `$\tilde{\mathcal{C}}$`: A closed subspace of `$\mathcal{C}[0,T]$`, consisting of continuous functions satisfying the uniform bound `$|q(t)-q_0|\leq\tau T$`.
+
+Transforming the original ODE into the equivalent integral equation to form a fixed-point problem, we get
+`$$q(t)=q_0+\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi. \tag{24} \label{eq24}$$`
+Define an iterative sequence:
+`$$q_0(t)=q_0,\ q_{k+1}=q_0+\int_0^t F\left[\xi,q_k(\xi)\right]\,\mathrm{d}\xi,\quad k=0,1,2,\cdots. \tag{25} \label{eq25}$$`
+This iterative process for solving such nonlinear differential equations is known as [Picard's method](https://en.wikipedia.org/wiki/Picard%E2%80%93Lindel%C3%B6f_theorem). If the mapping is a *contraction*, the sequence will converge to the unique solution of the original differential equation.
+
+Now we show that the mapping is indeed a *contraction*. Define for `$q\in\tilde{\mathcal{C}}$` and `$|t|<T$`,
+`$$\phi(t)=q_0+\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi, \tag{26} \label{eq26}$$`
+then,
+`$$\left|\phi(t)-q_0\right|=\left|\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi\right|\leq\int_0^t\left|F\left[\xi,q(\xi)\right]\right|\,\mathrm{d}\xi\leq\tau T, \tag{27} \label{eq27}$$`
+so that `$\phi(\tilde{\mathcal{C}})\subset\tilde{\mathcal{C}}$`. Furthermore, since `$F(t,q)$` satisfies the Lipschitz condition in `$q$`, we have
+`\begin{align}
+\left|\phi_1(t)-\phi_2(t)\right|&\leq\int_0^t\left|F\left[\xi,q_1(\xi)\right]-F\left[\xi,q_2(\xi)\right]\right|\,\mathrm{d}\xi\\
+&\leq\int_0^t M\left|q_1(\xi)-q_2(\xi)\right|\,\mathrm{d}\xi. \tag{28} \label{eq28}
+\end{align}`
+
+Taking the supremum over `$t\in [0,T]$`, we obtain
+`$$d\left(\phi_1,\phi_2\right)\leq MT\cdot d\left(q_1,q_2\right). \tag{29} \label{eq29}$$`
+Since `$MT<1$`, the mapping `$\phi$` is a *contraction* on the complete metric space `$\tilde{\mathcal{C}}$`. By the Banach Fixed-Point Theorem, the integral equation (and hence the original ODE) has a unique solution in `$\tilde{\mathcal{C}}$`.

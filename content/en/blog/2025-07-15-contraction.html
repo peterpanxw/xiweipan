@@ -1093,15 +1093,15 @@ tags:
 The solution <code>$\tilde{x}$</code> to Equation <code>$\eqref{eq1}$</code> is defined as a <a href="https://en.wikipedia.org/wiki/Fixed_point_(mathematics)"><em>fixed point</em></a> of <code>$f$</code>, indicating that the point is mapped to itself by <code>$f$</code>, i.e., <code>$f(\tilde{x})=\tilde{x}$</code>. Therefore, solving <code>$F(x) = 0$</code> is equivalent to using the <em>fixed-point iteration</em> <code>$x_{k+1}=f(x_k)$</code> to find a fixed point of a suitably defined <code>$f$</code>.</p>
 <h2 id="contractions-and-the-contraction-theorem">Contractions and the Contraction Theorem<a class="headerlink" href="#contractions-and-the-contraction-theorem" title="Permanent link"></a></h2>
 <blockquote>
-<p><strong>Definition 1 (Contraction).</strong></p>
-<p>Given a metric space <code>$\left(X,d\right)$</code>. Then a mapping <code>$T: X\mapsto X$</code> is called a <strong><em>contraction</em></strong> if <code>$\exists \alpha\in (0,1)$</code> such that
+<p><strong>Definition 1 (Contraction).</strong>
+Given a metric space <code>$\left(X,d\right)$</code>. Then a mapping <code>$T: X\mapsto X$</code> is called a <strong><em>contraction</em></strong> if <code>$\exists \alpha\in (0,1)$</code> such that
 <code>$$d\left(T(x),T(y)\right)\leq\alpha d\left(x,y\right),\ \forall x,y\in X. \tag{2} \label{eq2}$$</code></p>
 </blockquote>
 <p>Geometrically, this means that the images <code>$T(x)$</code> and <code>$T(y)$</code> are closer under the metric <code>$d$</code> together than the points <code>$x$</code> and <code>$y$</code>.</p>
 <p>For any given <code>$\varepsilon&gt;0$</code>, there exists <code>$\delta(\varepsilon)=\varepsilon/\alpha&gt;0$</code> such that <code>$\forall x,y\in X$</code>, if <code>$d\left(x,y\right)&lt;\delta$</code>, then <code>$d\left(T(x),T(y)\right)\leq\alpha d\left(x,y\right)=\frac{\varepsilon}{\delta}d\left(x,y\right)&lt;\varepsilon$</code>. Since <code>$\delta=\varepsilon/\alpha$</code> is independent of <code>$x$</code>, the <em>contraction</em> is <a href="https://en.wikipedia.org/wiki/Uniform_continuity">uniform continuous</a>.</p>
 <blockquote>
-<p><strong>Theorem 1 (Banach Fixed-Point Theorem or Contraction Theorem).</strong></p>
-<p>Let <code>$\left(X,d\right)$</code> be a <em>complete</em> metric space with a contraction mapping <code>$T: X\mapsto X$</code>. Then <code>$T$</code> admits a <strong><em>unique</em></strong> fixed point <code>$\tilde{x}\in X$</code>, and for any <code>$x\in X$</code>, the sequence
+<p><strong>Theorem 1 (Banach Fixed-Point Theorem or Contraction Theorem).</strong>
+Let <code>$\left(X,d\right)$</code> be a <em>complete</em> metric space with a contraction mapping <code>$T: X\mapsto X$</code>. Then <code>$T$</code> admits a <strong><em>unique</em></strong> fixed point <code>$\tilde{x}\in X$</code>, and for any <code>$x\in X$</code>, the sequence
 <code>$$x,T(x),T^2(x),\cdots,T^k(x),\cdots$$</code>
 converges to the fixed point <code>$\tilde{x}$</code>; that is,
 <code>$$\lim_{k\to\infty}T^k(x)=\tilde{x}. \tag{3} \label{eq3}$$</code></p>
@@ -1144,20 +1144,60 @@ demonstrates that the limit <code>$\tilde{x}$</code> satisfies <code>$\tilde{x}=
 <code>$$e_n=\lim_{m\to\infty}d\left(x_n,x_m\right)=d\left(x_n,\tilde{x}\right)\leq\frac{\alpha^n}{1-\alpha}d\left(x_0,T(x_0)\right). \tag{12} \label{eq12}$$</code></p>
 <h2 id="applications-of-the-contraction-theorem">Applications of the Contraction Theorem<a class="headerlink" href="#applications-of-the-contraction-theorem" title="Permanent link"></a></h2>
 <p>The abovementioned Banach Fixed-Point Theorem states sufficient conditions for the existence and uniqueness of a fixed point, which constitutes the foundation for justifying the iterative solution of a broad class of equations. Below, we will discuss in detail the specific applications of this theorem in finding the roots of (nonlinear) algebraic and differential equations.</p>
-<h3 id="the-existence-and-uniqueness-of-nonlinear-algebraic-equations">The Existence and Uniqueness of Nonlinear Algebraic Equations<a class="headerlink" href="#the-existence-and-uniqueness-of-nonlinear-algebraic-equations" title="Permanent link"></a></h3>
+<h3 id="existence-and-uniqueness-of-solutions-to-nonlinear-algebraic-equations">Existence and Uniqueness of Solutions to Nonlinear Algebraic Equations<a class="headerlink" href="#existence-and-uniqueness-of-solutions-to-nonlinear-algebraic-equations" title="Permanent link"></a></h3>
 <p>Let <code>$f: [a,b]\mapsto [a,b]$</code> be a mapping, differentiable on the open interval <code>$(a,b)$</code>, and suppose that for all <code>$x\in (a,b)$</code>, <code>$|f^\prime(x)|\leq\alpha&lt;1$</code>. By the <a href="https://en.wikipedia.org/wiki/Mean_value_theorem">Mean Value Theorem</a>, for any <code>$x,y\in [a,b]$</code>, there exists some <code>$\xi$</code> between <code>$x$</code> and <code>$y$</code> such that
 <code>$$f(x)-f(y)=f^\prime(\xi)(x-y). \tag{13} \label{eq13}$$</code>
 We equip the real space <code>$[a,b]$</code> with a metric <code>$d\left(x,y\right)=|x-y|$</code>. Then, the equation
 <code>$$|f(x)-f(y)|=|f^\prime(\xi)||x-y|\leq\alpha d\left(x,y\right) \tag{14} \label{eq14}$$</code>
 shows that <code>$f$</code> is a contraction in <code>$[a,b]$</code>. Based on the Contraction Theorem (Theorem 1), there exists a unique fixed point <code>$\tilde{x}\in [a,b]$</code>, i.e., <code>$f(\tilde{x})=\tilde{x}$</code>.</p>
-<p>Let <code>$F: [a,b]\mapsto\mathbb{R}$</code> be twice differentiable, and suppose <code>$F(\tilde{x})=0$</code> for some <code>$\tilde{x}\in (a,b)$</code> with <code>$F^\prime(\tilde{x})\neq 0$</code>. For a nonlinear equation <code>$F(x)=0$</code>, the <a href="https://en.wikipedia.org/wiki/Newton%27s_method">Newton-Raphson method</a> provides a means of linearization to iteratively approximate its roots. The Taylor expansion of <code>$F(x)$</code> about a point <code>$x_0$</code> is given by
+<p>Let <code>$F: [a,b]\mapsto\mathbb{R}$</code> be twice continuously differentiable, and suppose <code>$F(\tilde{x})=0$</code> for some <code>$\tilde{x}\in (a,b)$</code> with <code>$F^\prime(\tilde{x})\neq 0$</code>. For a nonlinear equation <code>$F(x)=0$</code>, the <a href="https://en.wikipedia.org/wiki/Newton%27s_method"><em>Newton-Raphson method</em></a> provides a means of linearization to iteratively approximate its roots. The Taylor expansion of <code>$F(x)$</code> about a point <code>$x_0$</code> is given by
 <code>$$F(x)=F(x_0)+F^\prime(x_0)(x-x_0)+\frac{F^{\prime\prime}}{2!}(x-x_0)^2+\mathcal{O}\left((x-x_0)^3\right). \tag{15} \label{eq15}$$</code>
 Using the first two linear terms as an approximation, we derive the iterative formula of Newton&rsquo;s method, i.e.,
 <code>$$x_{k+1}=x_k-\frac{F(x_k)}{F^\prime(x_k)}:=f(x_k),\quad k=0,1,\cdots. \tag{16} \label{eq16}$$</code></p>
-<p>In a small neighborhood <code>$I=[\tilde{x}-\delta,\tilde{x}+\delta]\subset [a,b]$</code> around the solution <code>$\tilde{x}$</code>,</p>
-<p>To verify the convergence of the Newton–Raphson method, two conditions must be checked: self-mapping and contraction. Both call a study of the function <code>$f(x)$</code>, whose derivative is given by
-<code>$$f^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\left(x-\frac{F(x)}{F^\prime(x)}\right)=\frac{F(x)F^{\prime\prime}(x)}{\left[F^\prime(x)\right]^2}. \tag{17} \label{eq17}$$</code></p>
-<h3 id="the-existence-and-uniqueness-of-ode">The Existence and Uniqueness of ODE<a class="headerlink" href="#the-existence-and-uniqueness-of-ode" title="Permanent link"></a></h3>
-<p>Consider a nonlinear ordinary differential equation (ODE) of the form
-<code>$$\frac{\mathrm{d}q(t)}{\mathrm{d}t}=F\left[t,q(t)\right],\quad 0&lt;t\leq T, \tag{} \label{}$$</code>
-where <code>$q(t)\in\mathcal{C}^1\left[0,T\right]$</code> and <code>$q(0)=q_0$</code>.</p></article></body></html>
+<p>To verify the convergence of the Newton–Raphson method, two conditions must be checked: <em>invariance of interval</em> and <em>contraction</em>. Both necessitate detailed analysis of the function <code>$f(x)$</code>, whose derivative is given by
+<code>$$f^\prime(x)=\frac{\mathrm{d}}{\mathrm{d}x}\left(x-\frac{F(x)}{F^\prime(x)}\right)=\frac{F(x)F^{\prime\prime}(x)}{\left[F^\prime(x)\right]^2}. \tag{17} \label{eq17}$$</code>
+In a small neighborhood <code>$I=[\tilde{x}-\delta,\tilde{x}+\delta]\subset [a,b]$</code> around the solution <code>$\tilde{x}$</code>, we have <code>$|F^\prime(x)|\geq m&gt;0$</code> and <code>$|F^{\prime\prime}(x)|\leq M$</code>. Again, with the Mean Value Theorem, for any <code>$x\in I$</code>, there exists some <code>$\xi$</code> such that
+<code>$$|F(x)-F(\tilde{x})|=|F^\prime(\xi)||x-\tilde{x}|\leq L|x-\tilde{x}|\leq L\delta,\quad L=\max_{x\in I}|F^\prime(x)|. \tag{18} \label{eq18}$$</code>
+In this way, <code>$|f^\prime(x)|$</code> can be bounded based on Equation <code>$\eqref{eq17}$</code>:
+<code>$$|f^\prime(x)|\leq\frac{ML\delta}{m^2}, \tag{19} \label{eq19}$$</code>
+for relativelty small <code>$\delta$</code>, specifically, <code>$\delta&lt;m^2/(ML)$</code>, <code>$|f^\prime(x)|&lt;1$</code>. Therefore, <code>$f$</code> is a contraction on <code>$I$</code>.</p>
+<p>We also need <code>$f$</code> to map <code>$I$</code> to itself. For any <code>$x\in I\ (|x-\tilde{x}|\leq\delta)$</code>,
+<code>\begin{align}
+\left|f(x)-\tilde{x}\right|&amp;=\left|x-\tilde{x}-\frac{F(x)}{F^\prime(x)}\right|\\
+&amp;=\left|x-\tilde{x}-\frac{F^\prime(\tilde{x})(x-\tilde{x})+\frac{1}{2}F^{\prime\prime}(\xi)(x-\tilde{x})^2}{F^\prime(x)}\right|\\
+&amp;\leq |x-\tilde{x}|\cdot \left|1-\frac{F^\prime(\tilde{x})}{F^\prime(x)}\right|+\frac{1}{2}\cdot\left|\frac{F^{\prime\prime}(\xi)}{F^\prime(x)}\right|\left(x-\tilde{x}\right)^2\\
+&amp;\leq \epsilon\delta+\frac{M\delta^2}{2m}, \tag{20} \label{eq20}
+\end{align}</code>
+where <code>$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$</code>. If we choose <code>$\delta\leq 2m(1-\epsilon)/M$</code>, then
+<code>$$\left|f(x)-\tilde{x}\right|\leq\delta\Longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$</code>
+meaning that <code>$f$</code> satisfies the <em>invariance of interval</em> condition on <code>$I=[\tilde{x}-\delta,\tilde{x}+\delta]$</code>.</p>
+<p>It is worth noting that our previous proof of the convergence of Newton method was established within a small neighborhood <code>$[\tilde{x}-\delta,\tilde{x}+\delta]$</code> around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the <em>local</em> nature of the Newton-Raphson method: the initial point <code>$x_0$</code> must be sufficiently close to the solution <code>$\tilde{x}$</code>, otherwise the iteration may diverge.</font></p>
+<h3 id="existence-and-uniqueness-of-solutions-to-nonlinear-odes">Existence and Uniqueness of Solutions to Nonlinear ODEs<a class="headerlink" href="#existence-and-uniqueness-of-solutions-to-nonlinear-odes" title="Permanent link"></a></h3>
+<p>Consider a nonlinear ordinary differential equation (ODE) of the form:
+<code>$$\frac{\mathrm{d}q(t)}{\mathrm{d}t}=F\left[t,q(t)\right],\quad 0&lt;t\leq T, \tag{22} \label{eq22}$$</code>
+where <code>$q(t)\in\mathcal{C}^1\left[0,T\right]$</code> and <code>$q(0)=q_0$</code>. The function <code>$F(t,q)$</code> is continuous in <code>$t$</code> and <code>$q$</code>, and is Lipschitz continuous in the variable <code>$q$</code>. That is, there exists a constant <code>$M&gt;0$</code> such that
+<code>$$\left|F(t,q_1)-F(t,q_2)\right|\leq M|q_1(t)-q_2(t)|,\quad\forall t\in [0,T]. \tag{23} \label{eq23}$$</code>
+The continuity of <code>$F(t,q)$</code> on a bounded domain implies the existence of another constant <code>$\tau&gt;0$</code> and a bounded set containing <code>$(0,q_0)$</code> such that <code>$\left|F(t,q)\right|\leq\tau$</code>.</p>
+<p>Choose a time interval <code>$[0,T]$</code> such that <code>$TM&lt;1$</code>, and consider the doman defined by <code>$|t|&lt;T$</code> and <code>$|q-q_0|\leq\tau T$</code> (a small neighborhood around <code>$q_0$</code>). Let <code>$\tilde{\mathcal{C}}$</code> denote the space of continuous functions on <code>$|t|&lt;T$</code> satisfying <code>$|q(t)-q_0|\leq\tau T$</code>, equipped with the supremum distance: <code>$d\left(\phi_1,\phi_2\right)=\max_{t\in [0,T]}\left|\phi_1(t)-\phi_2(t)\right|$</code>. Note that the space <code>$\tilde{\mathcal{C}}\subset\mathcal{C}[0,T]$</code> is a <em>complete</em> metric space.</p>
+<blockquote>
+<p><i class="fa fa-thumb-tack" style="color:red"></i> Distinguish between space <code>$\mathcal{C}$</code> and <code>$\tilde{\mathcal{C}}$</code>.</p>
+<p><code>$\mathcal{C}[0,T]$</code>: The complete metric space of all continuous functions on the interval <code>$[0,T]$</code>;</p>
+<p><code>$\tilde{\mathcal{C}}\subset\mathcal{C}$</code>: </p>
+</blockquote>
+<p>Transforming the original ODE into the equivalent integral equation to form a fixed-point problem, we get
+<code>$$q(t)=q_0+\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi. \tag{24} \label{eq24}$$</code>
+Define an iterative sequence:
+<code>$$q_0(t)=q_0,\ q_{k+1}=q_0+\int_0^t F\left[\xi,q_k(\xi)\right]\,\mathrm{d}\xi,\quad k=0,1,2,\cdots. \tag{25} \label{eq25}$$</code>
+This iterative process for solving such nonlinear differential equations is known as <a href="https://en.wikipedia.org/wiki/Picard%E2%80%93Lindel%C3%B6f_theorem">Picard&rsquo;s method</a>. If the mapping is a <em>contraction</em>, the sequence will converge to the unique solution of the original differential equation.</p>
+<p>Now we show that the mapping is indeed a <em>contraction</em>. Define for <code>$q\in\tilde{\mathcal{C}}$</code> and <code>$|t|&lt;T$</code>,
+<code>$$\phi(t)=q_0+\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi, \tag{26} \label{eq26}$$</code>
+then,
+<code>$$\left|\phi(t)-q_0\right|=\left|\int_0^t F\left[\xi,q(\xi)\right]\,\mathrm{d}\xi\right|\leq\int_0^t\left|F\left[\xi,q(\xi)\right]\right|\,\mathrm{d}\xi\leq\tau T, \tag{27} \label{eq27}$$</code>
+so that <code>$\phi(\tilde{\mathcal{C}})\subset\tilde{\mathcal{C}}$</code>. Furthermore, since <code>$F(t,q)$</code> satisfies the Lipschitz condition in <code>$q$</code>, we have
+<code>\begin{align}
+\left|\phi_1(t)-\phi_2(t)\right|&amp;\leq\int_0^t\left|F\left[\xi,q_1(\xi)\right]-F\left[\xi,q_2(\xi)\right]\right|\,\mathrm{d}\xi\\
+&amp;\leq\int_0^t M\left|q_1(\xi)-q_2(\xi)\right|\,\mathrm{d}\xi. \tag{28} \label{eq28}
+\end{align}</code></p>
+<p>Taking the supremum over <code>$t\in [0,T]$</code>, we obtain
+<code>$$d\left(\phi_1,\phi_2\right)\leq MT\cdot d\left(q_1,q_2\right). \tag{29} \label{eq29}$$</code>
+Since <code>$MT&lt;1$</code>, the mapping <code>$\phi$</code> is a <em>contraction</em> on the complete metric space <code>$\tilde{\mathcal{C}}$</code>. By the Banach Fixed-Point Theorem, the integral equation (and hence the original ODE) has a unique solution in <code>$\tilde{\mathcal{C}}$</code>.</p></article></body></html>
