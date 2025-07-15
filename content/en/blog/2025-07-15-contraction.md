@@ -110,7 +110,7 @@ where `$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$`.
 `$$|f(x)-\tilde{x}|\leq\delta\longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
 meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`.
 
-It is worth noting that our previous proof of the convergence of the Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
+It is worth noting that our previous proof of the convergence of Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
 
 ### The Existence and Uniqueness of ODE
 Consider a nonlinear ordinary differential equation (ODE) of the form
