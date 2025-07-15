@@ -7,7 +7,7 @@ slug: constrained-optimization-methods
 draft: false
 toc: true
 categories:
-  - reading
+  - learning
 tags:
   - optimization
   - mathematics
