@@ -110,9 +110,9 @@ where `$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$`.
 `$$|f(x)-\tilde{x}|\leq\delta\longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
 meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`.
 
-It is worth noting that our previous proof of the convergence of the Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.
+It is worth noting that our previous proof of the convergence of the Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
 
 ### The Existence and Uniqueness of ODE
 Consider a nonlinear ordinary differential equation (ODE) of the form
-`$$\frac{\mathrm{d}q(t)}{\mathrm{d}t}=F\left[t,q(t)\right],\quad 0<t\leq T, \tag{} \label{}$$`
+`$$\frac{\mathrm{d}q(t)}{\mathrm{d}t}=F\left[t,q(t)\right],\quad 0<t\leq T, \tag{22} \label{eq22}$$`
 where `$q(t)\in\mathcal{C}^1\left[0,T\right]$` and `$q(0)=q_0$`.
