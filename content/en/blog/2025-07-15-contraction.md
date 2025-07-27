@@ -108,7 +108,7 @@ where `$\epsilon:=\max_{x\in I}\left|1-F^\prime(\tilde{x})/F^\prime(x)\right|$`.
 `$$\left|f(x)-\tilde{x}\right|\leq\delta\Longrightarrow f(I)\subset I, \tag{21} \label{eq21}$$`
 meaning that `$f$` satisfies the *invariance of interval* condition on `$I=[\tilde{x}-\delta,\tilde{x}+\delta]$`. In conclusion, if
 `$$\delta<\min\left\{\frac{m^2}{ML},\frac{2m(1-\epsilon)}{M}\right\},$$`
-the *invariance of interval* and *contraction* conditions (Equations `$\eqref{eq19}$` and `$\eqref{eq20}$`) can be satisfied simultaneously, and the Newton's method can effectively capture the fixed point of the original nonlinear equation.
+the *invariance of interval* and *contraction* conditions (Equations `$\eqref{eq19}$` and `$\eqref{eq21}$`) can be satisfied simultaneously, and the Newton's method can effectively capture the fixed point of the original nonlinear equation.
 
 It is worth noting that our previous proof of the convergence of Newton method was established within a small neighborhood `$[\tilde{x}-\delta,\tilde{x}+\delta]$` around the fixed point, rather than over the entire space. <font color=Crimson>This highlights the *local* nature of the Newton-Raphson method: the initial point `$x_0$` must be sufficiently close to the solution `$\tilde{x}$`, otherwise the iteration may diverge.</font>
 

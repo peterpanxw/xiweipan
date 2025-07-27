@@ -6,7 +6,7 @@ title: Home
 
 <p class="serif"><font size="7">Hi There!</font></p>
 
-My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am an incoming Ph.D. student at [Princeton University](https://www.princeton.edu/), where I will be working with Prof. [Liuchi Li](https://www.liuchili.info/) starting this August. My research interests lie in frictional contact mechanics, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
+My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am an incoming Ph.D. student at [Princeton University](https://www.princeton.edu/), where I will be working with Prof. [Liuchi Li](https://www.liuchili.info/) starting this August. My research interests lie in multibody frictional contact, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
 
 Prior to that, I earned a master's degree in Mechanics (advised by Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm)) and a bachelor's degree in Engineering Mechanics through the *Qian Lingxi Excellence in Education Program*, both from [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/).
 
@@ -108,7 +108,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
-                  <a href="https://arxiv.org/abs/2407.21021" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020722525001351" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
                   <a href="https://arxiv.org/pdf/2407.21021" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">

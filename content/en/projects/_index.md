@@ -41,7 +41,7 @@ type: list-projects
               </div>
               <div class="item-btn">
                   <a class="item-ctrl" href="javascript:;">ABS</a>
-                  <a href="https://arxiv.org/abs/2407.21021" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
+                  <a href="https://www.sciencedirect.com/science/article/abs/pii/S0020722525001351" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
                   <a href="https://arxiv.org/pdf/2407.21021" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
               </div>
               <div class="item-abstract">
