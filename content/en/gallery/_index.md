@@ -39,10 +39,13 @@ type: list-gallery
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>The Magic City</p>
+            <p>The Magic City &#128153;</p>
           </div>
           <div class="item-desc">
-            <p>Took the opportunity to attend the Welcome Reception hosted by <i>Princeton Alumni Association of Shanghai (PAAS)</i> and once again explore the charm of this vibrant city. P1-5: Shot with Nikon Z6III + NIKKOR 24-70mm f/4S. P6: Courtesy of the PAAS.</p>
+            <p>Took the opportunity to attend the Welcome Reception hosted by <i>Princeton Alumni Association of Shanghai (PAAS)</i> and once again explore the charm of this vibrant city.</p>
+          </div>
+          <div class="item-desc">
+            <p>P1-5: Shot with Nikon Z6III + NIKKOR 24-70mm f/4S. P6: Courtesy of the PAAS.</p>
           </div>
           <div class="item-periodical">
             June 20-25, 2025
