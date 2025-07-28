@@ -8,6 +8,47 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">Jun 2025</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-shanghai6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>The Magic City</p>
+          </div>
+          <div class="item-desc">
+            <p>Took the opportunity to attend the Welcome Reception hosted by <i>Princeton Alumni Association of Shanghai (PAAS)</i> and once again explore the charm of this vibrant city. P1-5: Shot with Nikon Z6III + NIKKOR 24-70mm f/4S. P6: Courtesy of the PAAS.</p>
+          </div>
+          <div class="item-periodical">
+            June 20-25, 2025
+          </div>
+        </div>
+      </div>
       <p><font size="6">May 2025</font></p>
       <br>
       <div class="publis-item">
@@ -38,35 +79,6 @@ type: list-gallery
           </div>
           <div class="item-periodical">
             May 18, 2025
-          </div>
-        </div>
-      </div>
-      <p><font size="6">March 2025</font></p>
-      <br>
-      <div class="publis-item">
-        <div class="item-thumb-list">
-          <div class="item-thumb">
-            <img data-src="/figures/moments/2025-03/2025-03-01-skiing1.jpg"
-            class="preview z-depth-1 rounded medium-zoom-image">
-          </div>
-          <div class="item-thumb">
-            <img data-src="/figures/moments/2025-03/2025-03-01-skiing2.jpg"
-            class="preview z-depth-1 rounded medium-zoom-image">
-          </div>
-          <div class="item-thumb">
-            <img data-src="/figures/moments/2025-03/2025-03-01-skiing3.jpg"
-            class="preview z-depth-1 rounded medium-zoom-image">
-          </div>
-        </div>
-        <div class="item-content">
-          <div class="item-tit">
-            <p>Catch the tail end of the snow season</p>
-          </div>
-          <div class="item-desc">
-            <p>Back on the skis again, hoping to venture into the world of snowboarding next time!</p>
-          </div>
-          <div class="item-periodical">
-            Mar. 01, 2025
           </div>
         </div>
       </div>
