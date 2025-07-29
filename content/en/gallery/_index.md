@@ -83,10 +83,10 @@ type: list-gallery
         </div>
         <div class="item-content">
           <div class="item-tit">
-            <p>Art that Touches the Heart</p>
+            <p>Art that Touches the Heart~</p>
           </div>
           <div class="item-desc">
-            <p>Exhibitions @ the Museum of Art Pudong (MAP), <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=166&&preview=true"><em>Paths to Modernity: Masterpieces from the Musée d’Orsay, Paris</em></a> (P1-5) and <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=165"><em>CHEN YIFEI</em></a> (P6).</p>
+            <p>Exhibitions @ the <i>Museum of Art Pudong (MAP)</i>, <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=166&&preview=true"><em>Paths to Modernity: Masterpieces from the Musée d’Orsay, Paris</em></a> (P1-5) and <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=165"><em>CHEN YIFEI: A RETROSPECTIVE ON ART AND LEGACY</em></a> (P6).</p>
           </div>
           <div class="item-periodical">
             June 20, 2025

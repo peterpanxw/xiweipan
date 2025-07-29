@@ -320,7 +320,7 @@ a {
     background:rgba(1,1,1,0);
     z-index:555;
     cursor: pointer;
-        transition: all .3s  ;
+        transition: all .4s  ;
 }
 .pop-img.pop-hide{
     width:0;
