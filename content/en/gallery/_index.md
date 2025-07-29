@@ -8,8 +8,91 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
+      <p><font size="6">Jul 2025</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-07/2025-07-16-chengdu6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>A City of Everyday Living &#128060;</p>
+          </div>
+          <div class="item-desc">
+            <p>Views from People's Park and the iconic panda sculpture atop the Chengdu IFS building.</p>
+          </div>
+          <div class="item-desc">
+            <p>Shot with Nikon Z6III + NIKKOR 24-70mm f/4S.</p>
+          </div>
+          <div class="item-periodical">
+            July 16-21, 2025
+          </div>
+        </div>
+      </div>
       <p><font size="6">Jun 2025</font></p>
       <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-06/2025-06-20-map6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Art that Touches the Heart</p>
+          </div>
+          <div class="item-desc">
+            <p>Exhibitions @ the Museum of Art Pudong (MAP), <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=166&&preview=true"><em>Paths to Modernity: Masterpieces from the Musée d’Orsay, Paris</em></a> (P1-5) and <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=165"><em>CHEN YIFEI</em></a> (P6).</p>
+          </div>
+          <div class="item-periodical">
+            June 20, 2025
+          </div>
+        </div>
+      </div>
       <div class="publis-item">
         <div class="item-thumb-list">
           <div class="item-thumb">
@@ -42,7 +125,7 @@ type: list-gallery
             <p>The Magic City &#128153;</p>
           </div>
           <div class="item-desc">
-            <p>Took the opportunity to attend the Welcome Reception hosted by <i>Princeton Alumni Association of Shanghai (PAAS)</i> and once again explore the charm of this vibrant city.</p>
+            <p>Took the opportunity to attend the Welcome Reception hosted by the <i>Princeton Alumni Association of Shanghai (PAAS)</i> and once again explore the charm of this vibrant city.</p>
           </div>
           <div class="item-desc">
             <p>P1-5: Shot with Nikon Z6III + NIKKOR 24-70mm f/4S. P6: Courtesy of the PAAS.</p>
