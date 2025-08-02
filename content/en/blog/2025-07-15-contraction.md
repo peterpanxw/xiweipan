@@ -81,7 +81,7 @@ The abovementioned Banach Fixed-Point Theorem states sufficient conditions for t
 Let `$f: [a,b]\mapsto [a,b]$` be a mapping, differentiable on the open interval `$(a,b)$`, and suppose that for all `$x\in (a,b)$`, `$|f^\prime(x)|\leq\alpha<1$`. By the [Mean Value Theorem](https://en.wikipedia.org/wiki/Mean_value_theorem), for any `$x,y\in [a,b]$`, there exists some `$\xi$` between `$x$` and `$y$` such that
 `$$f(x)-f(y)=f^\prime(\xi)(x-y). \tag{13} \label{eq13}$$`
 We equip the real space `$[a,b]$` with a metric `$d\left(x,y\right)=|x-y|$`. Then, the equation
-`$$|f(x)-f(y)|=|f^\prime(\xi)||x-y|\leq\alpha d\left(x,y\right) \tag{14} \label{eq14}$$`
+`$$|f(x)-f(y)|=|f^\prime(\xi)|\cdot |x-y|\leq\alpha d\left(x,y\right) \tag{14} \label{eq14}$$`
 shows that `$f$` is a contraction in `$[a,b]$`. Based on the Contraction Theorem (Theorem 1), there exists a unique fixed point `$\tilde{x}\in [a,b]$`, i.e., `$f(\tilde{x})=\tilde{x}$`.
 
 Let `$F: [a,b]\mapsto\mathbb{R}$` be twice continuously differentiable, and suppose `$F(\tilde{x})=0$` for some `$\tilde{x}\in (a,b)$` with `$F^\prime(\tilde{x})\neq 0$`. For a nonlinear equation `$F(x)=0$`, the [*Newton-Raphson method*](https://en.wikipedia.org/wiki/Newton%27s_method) provides a means of linearization to iteratively approximate its roots. The Taylor expansion of `$F(x)$` about a point `$x_0$` is given by

@@ -60,7 +60,7 @@ type: list-projects
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
-            <img src="/figures/projectFigs/Local_BL/aperiodic.png"
+            <img src="/figures/BL.png"
             class="preview z-depth-1 rounded medium-zoom-image">
           </div>
           <div class="item-thumb">
