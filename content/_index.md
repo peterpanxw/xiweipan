@@ -6,12 +6,12 @@ title: Home
 
 <p class="serif"><font size="7">Hi There!</font></p>
 
-My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am an incoming Ph.D. student at [Princeton University](https://www.princeton.edu/), where I will be working with Prof. [Liuchi Li](https://www.liuchili.info/) starting this August. My research interests lie in multibody frictional contact, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
+My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am a first-year Ph.D. student at [Princeton University](https://www.princeton.edu/), where I will be working with Prof. [Liuchi Li](https://www.liuchili.info/). My research interests lie in multibody frictional contact, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
 
 Prior to that, I earned a master's degree in Mechanics (advised by Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm)) and a bachelor's degree in Engineering Mechanics through the *Qian Lingxi Excellence in Education Program*, both from [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/).
 
 <!-- - I am actively seeking possible (fall 2025) Ph.D. opportunities in **machine learning-assisted mechanical analysis/design and AI4Science**, here is my [<i class="fa fa-address-card" aria-hidden="true"></i> Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).-->
-Beyond research, I enjoy playing badminton, swimming, photography, and staying active (both physically and mentally).
+Beyond research, I enjoy playing tennis, swimming, photography, and staying active (both physically and mentally).
 
 ## [**News**](/en/news/)
 <link rel="stylesheet" href="/css/add.css">
@@ -53,7 +53,7 @@ Beyond research, I enjoy playing badminton, swimming, photography, and staying a
               <p>Jul 21, 2024</p>
           </div>
           <div class="item-content">
-              <p>Attend the 16th World Congress on Computational Mechanics (<a href="https://www.wccm2024.org/">WCCM 2024</a>) @ Vancouver, Canada.</p>
+              <p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) @ Vancouver, Canada.</p>
           </div>
       </div>
   </div>
