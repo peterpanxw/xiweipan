@@ -8,7 +8,48 @@ type: list-gallery
 <div class="list-page">
   <div class="publications">
     <div class="publis-list">
-      <p><font size="6">Jul 2025</font></p>
+      <p><font size="6">October 2025</font></p>
+      <br>
+      <div class="publis-item">
+        <div class="item-thumb-list">
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures1.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures2.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures3.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures4.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures5.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+          <div class="item-thumb">
+            <img data-src="/figures/moments/2025-10/2025-10-26-creatures6.jpg"
+            class="preview z-depth-1 rounded medium-zoom-image">
+          </div>
+        </div>
+        <div class="item-content">
+          <div class="item-tit">
+            <p>Beautiful Creatures at Princeton</p>
+          </div>
+          <div class="item-desc">
+            <p>The geese, squirrels, deer, foxes—and of course, the lovely people—along with all the beautiful scenery, never fail to soothe the stress of each passing day.</p>
+          </div>
+          <div class="item-periodical">
+            Oct. 26, 2025
+          </div>
+        </div>
+      </div>
+      <p><font size="6">July 2025</font></p>
       <br>
       <div class="publis-item">
         <div class="item-thumb-list">
@@ -48,11 +89,11 @@ type: list-gallery
             <p>Shot with Nikon Z6III + NIKKOR 24-70mm f/4S.</p>
           </div>
           <div class="item-periodical">
-            July 16-21, 2025
+            Jul. 16-21, 2025
           </div>
         </div>
       </div>
-      <p><font size="6">Jun 2025</font></p>
+      <p><font size="6">June 2025</font></p>
       <br>
       <div class="publis-item">
         <div class="item-thumb-list">
@@ -89,7 +130,7 @@ type: list-gallery
             <p>Exhibitions @ the <i>Museum of Art Pudong (MAP)</i>, <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=166&&preview=true"><em>Paths to Modernity: Masterpieces from the Musée d’Orsay, Paris</em></a> (P1-5) and <a href="https://www.museumofartpd.org.cn/en/exhibitiondetail?id=165"><em>CHEN YIFEI: A RETROSPECTIVE ON ART AND LEGACY</em></a> (P6).</p>
           </div>
           <div class="item-periodical">
-            June 20, 2025
+            Jun. 20, 2025
           </div>
         </div>
       </div>
@@ -131,7 +172,7 @@ type: list-gallery
             <p>P1-5: Shot with Nikon Z6III + NIKKOR 24-70mm f/4S. P6: Courtesy of the PAAS.</p>
           </div>
           <div class="item-periodical">
-            June 20-25, 2025
+            Jun. 20-25, 2025
           </div>
         </div>
       </div>
@@ -362,7 +403,7 @@ type: list-gallery
             </p>
           </div>
           <div class="item-periodical">
-            July 20-27, 2024
+            Jul. 20-27, 2024
           </div>
         </div>
       </div>
@@ -402,7 +443,7 @@ type: list-gallery
             </p>
           </div>
           <div class="item-periodical">
-            July 20-27, 2024
+            Jul. 20-27, 2024
           </div>
         </div>
       </div>
