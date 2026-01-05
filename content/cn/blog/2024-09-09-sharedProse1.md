@@ -46,6 +46,10 @@ tags:
 
 而中年的心情，也许就是一种不再急切地去索求解答的心情了吧？也许就是在被误会时，不再辩解，再被刺伤时，不再躲闪的那一种心情了。无怨也无尤，只保有一个单纯的希望。希望终于能够在有一天，画出一张永不褪色的画来。
 
-{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily.jpeg" title="大都会博物馆中莫奈的《睡莲》，2025年12月26日" caption="看到这篇文章的四年后我来到了大都会博物馆，忽然间意识到，人生的路径，远比当初想象的更为辽阔。" width="500">}}
+{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily1.jpg" width="500">}}
+
+{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily2.jpg" width="500">}}
+
+{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily3.jpg" title="大都会博物馆中莫奈的《睡莲》，2025年12月26日" caption="看到这篇文章的四年后我来到了大都会博物馆，忽然间意识到，人生的路径，远比当初想象的更为辽阔。" width="600">}}
 
 [^1]: 作者：席慕容，全名穆伦·席连勃，当代画家、诗人、散文家。她于1963年毕业于台湾师范大学美术系，于1966年在比利时布鲁塞尔皇家艺术学院完成进修。
