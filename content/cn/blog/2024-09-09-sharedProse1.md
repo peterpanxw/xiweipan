@@ -50,6 +50,6 @@ tags:
 
 {{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily2.jpg" width="500">}}
 
-{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily3.jpg" title="大都会博物馆中莫奈的《睡莲》，2025年12月26日" caption="看到这篇文章的四年后我来到了大都会博物馆，忽然间意识到，人生的路径，远比当初想象的更为辽阔。" width="600">}}
+{{<figure src="/figures/blogFigs/chinese_blog/2025-12-26-water-lily3.jpg" title="大都会博物馆中莫奈的《睡莲》，2025年12月26日" caption="看到这篇文章的四年后我来到了大都会博物馆，忽然间意识到，人生的路径，远比当初想象的更为辽阔。" width="500">}}
 
 [^1]: 作者：席慕容，全名穆伦·席连勃，当代画家、诗人、散文家。她于1963年毕业于台湾师范大学美术系，于1966年在比利时布鲁塞尔皇家艺术学院完成进修。
