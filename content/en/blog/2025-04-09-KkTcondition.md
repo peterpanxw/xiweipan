@@ -1,9 +1,9 @@
 ---
-title: "Kuhn-Tucker Conditions and Contact Formulation"
+title: "Karush-Kuhn-Tucker Conditions and Contact Formulation"
 date: 2025-04-09T21:34:23+08:00
 type : list-single
 author: Xiwei Pan
-slug: kuhn-tucker-conditions
+slug: kkt-conditions
 draft: false
 toc: true
 categories:
@@ -13,10 +13,10 @@ tags:
   - contact mechanics
 ---
 ## Preface
-The general formulation of contact problems aligns closely with the structure of the [Kuhn-Tucker (KT) conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions). So, I take this opportunity to revisit the derivation of the KT conditions in order to deepen my understanding of both topics.
+The general formulation of contact problems aligns closely with the structure of the [Karush-Kuhn-Tucker (KKT) conditions](https://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions). So, I take this opportunity to revisit the derivation of the KKT conditions in order to deepen my understanding of both topics.
 
-## Kuhn-Tucker Conditions
-In this section, we will provide a detailed trace of deriving the well-known Kuhn-Tucker conditions, which serve as the 'first-order necessary conditions' for extremum.
+## Karush-Kuhn-Tucker Conditions
+In this section, we will provide a detailed trace of deriving the well-known Karush-Kuhn-Tucker conditions, which serve as the 'first-order necessary conditions' for extremum.
 ### Unconstrained Optimization of Univariate Functions
 `$$\min\ f(x),\quad -\infty\leq x\leq\infty$$`
 
@@ -114,7 +114,7 @@ Combine Equations `$\eqref{eq12}$` and `$\eqref{eq14}$`, the introduced relaxati
 &\text{If } h_j<0,\ \text{then }s_j>0,\ \lambda_j=0;\\
 &\text{If } h_j=0,\ \text{then }s_j=0,\ \lambda_j\geq0,
 \end{align}`
-this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KT conditions</mark>:
+this, together with Equation `$\eqref{eq11}$`, finally lead to the <mark>KKT conditions</mark>:
 > `\begin{align}
 \left\{
 	\begin{aligned}
@@ -130,10 +130,10 @@ Some remarks regarding Equation `$\eqref{eq15}$` should be made here. For the op
 - `$h_j(x^\ast)<0$`, then `$\lambda_j=0$`, the constraint gradient terms `$\partial h_j/\partial x_i$` are deactivated (passive constraints);
 - `$h_j(x^\ast)=0$`, then `$\lambda_j\geq0$`, the terms `$\partial h_j/\partial x_i$` are active (active constraints).
 
-Based on Equation `$\eqref{eq15}$`, the physical interpretation of the KT conditions is that <font color=Crimson>the negative gradient of the objective function at the optimal point should be a linear combination of all gradients of active constraints with non-negative coefficients.</font>
+Based on Equation `$\eqref{eq15}$`, the physical interpretation of the KKT conditions is that <font color=Crimson>the negative gradient of the objective function at the optimal point should be a linear combination of all gradients of active constraints with non-negative coefficients.</font>
 
 ## Contact Formulation
-As mentioned previously, the KT conditions closely align with the contact formulation, which can be proposed through the rigid obstacle problem illustrated in Fig. 1. Consider the problem of finite deformation of a continuum body constrained by the presence of a rigid obstacle. A material point `$\pmb{X}$` in the reference configuration `$\Omega$` is mapped to the corresponding one in the current configuration by `$\pmb{x}=\varphi(\pmb{X})$`, where `$\det\left(D_\varphi(\pmb{X},t)\right)>0$` holds for all time `$t$`. `$\Gamma$` denotes a section of `$\partial\Omega$`, which should include all possible points of contact. `$\gamma$` is the image of `$\Gamma$` over `$\varphi$`. Here, `$\mathbb{K}$` is defined as a (time-invariant) open subset of the ambient space which together with `$\partial\mathbb{K}$` comprises the admissible region for the motion of `$\Omega$`. The remainder of `$\mathbb{K}$` is assumed to be occupied by the obstacle.
+As mentioned previously, the KKT conditions closely align with the contact formulation, which can be proposed through the rigid obstacle problem illustrated in Fig. 1. Consider the problem of finite deformation of a continuum body constrained by the presence of a rigid obstacle. A material point `$\pmb{X}$` in the reference configuration `$\Omega$` is mapped to the corresponding one in the current configuration by `$\pmb{x}=\varphi(\pmb{X})$`, where `$\det\left(D_\varphi(\pmb{X},t)\right)>0$` holds for all time `$t$`. `$\Gamma$` denotes a section of `$\partial\Omega$`, which should include all possible points of contact. `$\gamma$` is the image of `$\Gamma$` over `$\varphi$`. Here, `$\mathbb{K}$` is defined as a (time-invariant) open subset of the ambient space which together with `$\partial\mathbb{K}$` comprises the admissible region for the motion of `$\Omega$`. The remainder of `$\mathbb{K}$` is assumed to be occupied by the obstacle.
 {{<figure src="/figures/blogFigs/KT_Contact/contact_notation.png" caption="Figure 1: Notation for the obstacle problem in finite deformations (J. C. SIMO and T. A. LAURSEN, 1990)" width="450">}}
 
 Define a *scalar-valued gauge function* `$h$` satisfying
@@ -154,4 +154,4 @@ and for simplicity, it is initially assumed that `$\mathbb{K}$` is convex, altho
 
 where `$\pmb{P}$` is the [first Piola-Kirchhoff stress tensor](https://en.wikipedia.org/wiki/Piola%E2%80%93Kirchhoff_stress_tensors), `$\pmb{n}$` and `$\pmb{N}$` represent the outward normal in the current and reference configuration, respectively. Further explanations regarding the above equations are needed. Equation `$\eqref{eq16}$` represents the impermeability of the rigid obstacle to the investigated body; Equation `$\eqref{eq17}$` indicates that the surface traction should be compressive; Equation `$\eqref{eq18}$` is a contact-detection condition ensuring `$t_N\neq0$` only when `$h(\pmb{x})=0$`; and the frictionless contact is ensured by Equation `$\eqref{eq19}$`.
 
-It can be seen that Equations `$\eqref{eq16}$`-`$\eqref{eq18}$` are exactly in the same form as the 'Constraint', 'Non-negativity', and 'Complementarity' conditions in the Kuhn-Tucker conditions (see the last three equations `$\eqref{eq15}$`). Further theoretical details related to contact mechanics will be added to this blog in the future when time permits.
+It can be seen that Equations `$\eqref{eq16}$`-`$\eqref{eq18}$` are exactly in the same form as the 'Constraint', 'Non-negativity', and 'Complementarity' conditions in the Karush-Kuhn-Tucker conditions (see the last three equations `$\eqref{eq15}$`). Further theoretical details related to contact mechanics will be added to this blog in the future when time permits.
