@@ -27,7 +27,7 @@ Given `$x\in\mathcal{C}$`, a vector `$d$` is called a **feasible direction** at 
 `$$x+td\in\mathcal{C},\qquad\forall t\in [0,\bar{t}]. \tag{1} \label{eq1}$$`
 
 Let `$F(x)$` denote the set of all feasible directions at `$x$`. We then illustrate this concept with the following three examples
-- `$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}\ \text{nullspace of }A$`
+- `$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}\ (\text{nullspace of }A)$`
 - `$\mathcal{C} = \{Ax\leq b\}\ \Rightarrow\  F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$`
 - `$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\ \Rightarrow\  F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$`
 
