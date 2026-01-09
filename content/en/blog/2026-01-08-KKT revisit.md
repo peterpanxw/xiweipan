@@ -27,6 +27,7 @@ Given `$x\in\mathcal{C}$`, a vector `$d$` is called a **feasible direction** at 
 `$$x+td\in\mathcal{C},\qquad\forall t\in [0,\bar{t}]. \tag{1} \label{eq1}$$`
 
 Let `$F(x)$` denote the set of all feasible directions at `$x$`. We then illustrate this concept with the following three examples
+
 - `$$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}$$` (nullspace of `$A$`)
 - `$$\mathcal{C} = \{Ax\leq b\}\ \Rightarrow\  F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$$`
 - `$$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\ \Rightarrow\  F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$$`
@@ -60,10 +61,11 @@ The two alternatives **cannot both be true**. Indeed, if `$x\geq 0,\ Ax=b,$` and
 
 They also **cannot both be false**, which can be shown via duality. Consider the following *primal-dual pair*:
 
-`$\begin{align}
+`\begin{align}
 &(P)\quad\mathrm{minimize}\quad 0 &\quad &\mathrm{s.t.}\quad Ax=b,\ x\geq 0,\\
 &(D)\quad\mathrm{maximize}\quad -b^\mathrm{T}y &\quad &\mathrm{s.t.}\quad A^\mathrm{T}y\geq 0.
-\end{align}$`
+\end{align}`
+and let `$p^\ast$` and `$d^\ast$` denote the optimal objective values of (P) and (D), respectively.
 
 The dual is always feasible (for example, `$y=0$`), and [strong duality](https://en.wikipedia.org/wiki/Strong_duality) holds. If the primal is feasible, then the optimal values satisfy `$p^\ast=d^\ast=0$`, which implies `$b^\mathrm{T}y\geq 0$` for all `$y$` with `$A^\mathrm{T}y\geq 0$`, which rules out the second alternative. If the primal is infeasible, then the dual is unbounded above (`$p^\ast=d^\ast=+\infty$`), yielding a vector `$y$` with `$A^\mathrm{T}y\geq 0$` and `$b^\mathrm{T}y<0$`. Here, `$y$` is an infeasibility certificate for `$Ax=b,\ x\geq 0$`.
 
@@ -90,7 +92,6 @@ They also cannot both be false. Consider the following *primal-dual pair*:
 &(P)\quad\mathrm{minimize}\quad\nabla f(x^\ast)^\mathrm{T}d &\quad &\mathrm{s.t.}\quad Ad=0,\\
 &(D)\quad\mathrm{maximize}\quad 0 &\quad &\mathrm{s.t.}\quad\nabla f(x^\ast)+A^\mathrm{T}y=0,
 \end{align}`
-and let `$p^\ast$` and `$d^\ast$` denote the optimal objective values of (P) and (D), respectively.
 
 If (i) holds, then the primal is unbounded below, i.e., `$p^\ast=-\infty$`. By strong duality, we have `$d^\ast=-\infty$` (dual infeasible). If (ii) holds, then the dual is feasible and hence `$d^\ast=0$`. Strong duality then yields `$p^\ast=0$`, which contradicts the descent direction condition in (i). Therefore, exactly one of the two alternatives holds. `$\blacksquare$`
 
@@ -177,11 +178,11 @@ With Equations `$\eqref{eq5}$` and `$\eqref{eq7}$`, we can readily derive the fo
 
 If `$x^\ast$` is a local minimizer and **LICQ holds**, then there exists `$y^\ast,\ v^\ast$` such that
 `\begin{align}
-&\nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0\quad &\text{(stationarity)}\\
-&y^\ast\geq 0\quad &\text{(dual feasibility)}\\
-&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m\quad &\text{(primal feasibility)}\\
-&h_i(x^\ast)=0,\quad i=1,\,\cdots,p\quad &\text{(primal feasibility)}\\
-&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m\quad &\text{(complementary slackness)}
+&\nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0&\quad &\text{(stationarity)}\\
+&y^\ast\geq 0&\quad &\text{(dual feasibility)}\\
+&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m&\quad &\text{(primal feasibility)}\\
+&h_i(x^\ast)=0,\quad i=1,\,\cdots,p&\quad &\text{(primal feasibility)}\\
+&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m&\quad &\text{(complementary slackness)}
 \end{align}`
 
 ## Duality
@@ -215,11 +216,11 @@ Under strong duality, the KKT conditions become the correct first-order characte
 
 If `$x^\ast$` is a local minimizer and **strong duality holds**, then there exists `$y^\ast,\ v^\ast$` such that
 `\begin{align}
-&\nabla_x L(x,y,v) = \nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0\quad &\text{(stationarity)}\\
-&y^\ast\geq 0\quad &\text{(dual feasibility)}\\
-&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m\quad &\text{(primal feasibility)}\\
-&h_i(x^\ast)=0,\quad i=1,\,\cdots,p\quad &\text{(primal feasibility)}\\
-&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m\quad &\text{(complementary slackness)}
+&\nabla_x L(x,y,v) = \nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0&\quad &\text{(stationarity)}\\
+&y^\ast\geq 0&\quad &\text{(dual feasibility)}\\
+&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m&\quad &\text{(primal feasibility)}\\
+&h_i(x^\ast)=0,\quad i=1,\,\cdots,p&\quad &\text{(primal feasibility)}\\
+&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m&\quad &\text{(complementary slackness)}
 \end{align}`
 
 ## For Convex Problems
