@@ -27,10 +27,9 @@ Given `$x\in\mathcal{C}$`, a vector `$d$` is called a **feasible direction** at 
 `$$x+td\in\mathcal{C},\qquad\forall t\in [0,\bar{t}]. \tag{1} \label{eq1}$$`
 
 Let `$F(x)$` denote the set of all feasible directions at `$x$`. We then illustrate this concept with the following three examples
-
-- `$$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}$$` (nullspace of `$A$`)
-- `$$\mathcal{C} = \{Ax\leq b\}\ \Rightarrow\  F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$$`
-- `$$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\ \Rightarrow\  F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$$`
+- `$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}\ \text{nullspace of }A$`
+- `$\mathcal{C} = \{Ax\leq b\}\ \Rightarrow\  F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$`
+- `$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\ \Rightarrow\  F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$`
 
 ### Descent Direction
 Suppose `$f$` is continuously differentiable. A vector `$d$` is called a **descent direction** at `$x$` if there exists `$\bar{t}$` such that
@@ -157,7 +156,7 @@ where `$\{i_1,\,\cdots,i_n\}=\mathcal{A}(x)$`, then Equation `$\eqref{eq3}$` is 
 `$$A^\mathrm{T}u=0,\quad\mathbf{1}^\mathrm{T}u=1.$$`
 
 Writing `$u=(u_0,u_{i_1},\,\cdots,u_{i_n})$`, this condition translates to
-`$$u_0\nabla f(x^\ast)+\sum_{i\in\mathcal{A}(x^\ast)}u_i\nabla g_i(x^\ast) = 0,quad u\geq 0,quad\mathbf{1}^\mathrm{T}u=1. \tag{9} \label{eq9}$$`
+`$$u_0\nabla f(x^\ast)+\sum_{i\in\mathcal{A}(x^\ast)}u_i\nabla g_i(x^\ast) = 0,\quad u\geq 0,\quad\mathbf{1}^\mathrm{T}u=1. \tag{9} \label{eq9}$$`
 If `$u_0=0$`, then `$\sum_{i\in\mathcal{A}(x^\ast)}u_i\nabla g_i(x^\ast)=0$`, which violates the LICQ since it is a nontrivial linear combination of active constraint gradients. Hence, `$u_0>0$`. Defining `$y_i = u_i/u_0$` yields
 `$$\nabla f(x^\ast)+\sum_{i\in\mathcal{A}(x^\ast)}y_i\nabla g_i(x^\ast) = 0,\quad y_i\geq 0. \tag{10} \label{eq10}$$`
 
