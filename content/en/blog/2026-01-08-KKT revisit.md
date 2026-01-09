@@ -27,9 +27,9 @@ Given `$x\in\mathcal{C}$`, a vector `$d$` is called a **feasible direction** at 
 `$$x+td\in\mathcal{C},\qquad\forall t\in [0,\bar{t}]. \tag{1} \label{eq1}$$`
 
 Let `$F(x)$` denote the set of all feasible directions at `$x$`. We then illustrate this concept with the following three examples
-- `$$\mathcal{C} = \{Ax=b\}\quad\Rightarrow\quad F(x) = \{d\,|\,Ad=0\}$$` (nullspace of `$A$`)
-- `$$\mathcal{C} = \{Ax\leq b\}\quad\Rightarrow\quad F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$$`
-- `$$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\quad\Rightarrow\quad F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$$`
+- `$$\mathcal{C} = \{Ax=b\}\ \Rightarrow\  F(x) = \{d\,|\,Ad=0\}$$` (nullspace of `$A$`)
+- `$$\mathcal{C} = \{Ax\leq b\}\ \Rightarrow\  F(x) = \{d\,|\,a_i^\mathrm{T}d\leq 0\quad\mathrm{if}\ a_i^\mathrm{T}x=b_i\}$$`
+- `$$\mathcal{C} = \{g_i(x)\leq 0,\ \mathrm{(nonlinear)}\}\ \Rightarrow\  F(x) = \{d\,|\,\nabla g_i(x)^\mathrm{T}d<0\quad\mathrm{if}\ g_i(x)=0\}$$`
 
 ### Descent Direction
 Suppose `$f$` is continuously differentiable. A vector `$d$` is called a **descent direction** at `$x$` if there exists `$\bar{t}$` such that
@@ -59,12 +59,13 @@ The two alternatives **cannot both be true**. Indeed, if `$x\geq 0,\ Ax=b,$` and
 `$$b^\mathrm{T}y = y^\mathrm{T}Ax\geq 0$$`, which contradicts `$b^\mathrm{T}y<0$` in alternative 2.
 
 They also **cannot both be false**, which can be shown via duality. Consider the following *primal-dual pair*:
+
 `$\begin{align}
 &(P)\quad\mathrm{minimize}\quad 0 &\quad &\mathrm{s.t.}\quad Ax=b,\ x\geq 0,\\
 &(D)\quad\mathrm{maximize}\quad -b^\mathrm{T}y &\quad &\mathrm{s.t.}\quad A^\mathrm{T}y\geq 0.
 \end{align}$`
 
-The dual is always feasible (for example, `$y=0$`), and strong duality holds. If the primal is feasible, then the optimal values satisfy `$p^\ast=d^\ast=0$`, which implies `$b^\mathrm{T}y\geq 0$` for all `$y$` with `$A^\mathrm{T}y\geq 0$`, which rules out the second alternative. If the primal is infeasible, then the dual is unbounded above (`$p^\ast=d^\ast=+\infty$`), yielding a vector `$y$` with `$A^\mathrm{T}y\geq 0$` and `$b^\mathrm{T}y<0$`. Here, `$y$` is an infeasibility certificate for `$Ax=b,\ x\geq 0$`.
+The dual is always feasible (for example, `$y=0$`), and [strong duality](https://en.wikipedia.org/wiki/Strong_duality) holds. If the primal is feasible, then the optimal values satisfy `$p^\ast=d^\ast=0$`, which implies `$b^\mathrm{T}y\geq 0$` for all `$y$` with `$A^\mathrm{T}y\geq 0$`, which rules out the second alternative. If the primal is infeasible, then the dual is unbounded above (`$p^\ast=d^\ast=+\infty$`), yielding a vector `$y$` with `$A^\mathrm{T}y\geq 0$` and `$b^\mathrm{T}y<0$`. Here, `$y$` is an infeasibility certificate for `$Ax=b,\ x\geq 0$`.
 
 ## Nonlinear Optimization with Equality Constraints
 `\begin{align}
@@ -77,6 +78,24 @@ The dual is always feasible (for example, `$y=0$`), and strong duality holds. If
 If `$x^\ast$` is a local optimum, then there exists `$y$` such that
 `$$\nabla f(x^\ast)+A^\mathrm{T}y=0. \tag{5} \label{eq5}$$`
 
+**Proof of therorem**
+
+To prove *Theorem 2*, it is useful to formulate the argument in terms of feasible and descent directions. At a local minimizer, these two sets cannot intersect (Equation `$\eqref{eq3}$`). This observation leads to a classical "**theorem of alternatives**". *Exactly* one of the following two statements must hold: (i) there exists a feasible descent direction satisfying `$Ad=0$` and `$\nabla f(x^\ast)^\mathrm{T}d<0$`; or (ii) there exists a vector `$y$` such that `$\nabla f(x^\ast)+A^\mathrm{T}y=0$`.
+
+They cannot both be true. If (ii) holds then for any `$d$` with `$Ad=0$` we have `$\nabla f(x^\ast)^\mathrm{T}d=-y^\mathrm{T}Ad=0$`, which contradicts the existence of a strict descent direction in alternative (i).
+
+They also cannot both be false. Consider the following *primal-dual pair*:
+
+`\begin{align}
+&(P)\quad\mathrm{minimize}\quad\nabla f(x^\ast)^\mathrm{T}d &\quad &\mathrm{s.t.}\quad Ad=0,\\
+&(D)\quad\mathrm{maximize}\quad 0 &\quad &\mathrm{s.t.}\quad\nabla f(x^\ast)+A^\mathrm{T}y=0,
+\end{align}`
+and let `$p^\ast$` and `$d^\ast$` denote the optimal objective values of (P) and (D), respectively.
+
+If (i) holds, then the primal is unbounded below, i.e., `$p^\ast=-\infty$`. By strong duality, we have `$d^\ast=-\infty$` (dual infeasible). If (ii) holds, then the dual is feasible and hence `$d^\ast=0$`. Strong duality then yields `$p^\ast=0$`, which contradicts the descent direction condition in (i). Therefore, exactly one of the two alternatives holds. `$\blacksquare$`
+
+**Geometric Interpretation**
+
 We now provide a geometric interpretation of the theorem. For the equality-constrained problem, the feasible directions at a candidate optimum `$x$` are exactly those `$d$` that keeps you on the contraint manifold to first order, i.e., `$Ad=0$` (`$d\in\mathrm{null}(A)$`). At a local minimum, taking an infinitesimal step in any feasible direction cannot decrease the objective value. Therefore, the directional derivative must satisfy
 `$$\nabla f(x^\ast)^\mathrm{T}d\geq 0,\quad \forall d\in\mathrm{null}(A).$$`
 
@@ -88,21 +107,6 @@ which shows `$\nabla f(x^\ast)\perp\mathrm{null}(A)$`. By the fundamental subspa
 `$$\nabla f(x^\ast)\in\mathrm{range}(A^\mathrm{T}).$$`
 
 Hence, there exists a multiplier `$y$` such that Equation `$\eqref{eq5}$` holds true. Geometrically, the gradient at the optimum is perpendicular to the feasible hyperplane `$\{x\,|\,Ax=b\}$`.
-
-**Proof of therorem**
-
-To prove *Theorem 2*, it is useful to formulate the argument in terms of feasible and descent directions. At a local minimizer, these two sets cannot intersect (Equation `$\eqref{eq3}$`). This observation leads to a classical "**theorem of alternatives**". *Exactly* one of the following two statements must hold: (i) there exists a feasible descent direction satisfying `$Ad=0$` and `$\nabla f(x^\ast)^\mathrm{T}d<0$`; or (ii) there exists a vector `$y$` such that `$\nabla f(x^\ast)+A^\mathrm{T}y=0$`.
-
-They cannot both be true. If (ii) holds then for any `$d$` with `$Ad=0$` we have `$\nabla f(x^\ast)^\mathrm{T}d=-y^\mathrm{T}Ad=0$`, which contradicts the existence of a strict descent direction in alternative (i).
-
-They also cannot both be false. Consider the following *primal-dual pair*:
-`$\begin{align}
-&(P)\quad\mathrm{minimize}\quad\nabla f(x^\ast)^\mathrm{T}d &\quad &\mathrm{s.t.}\quad Ad=0,\\
-&(D)\quad\mathrm{maximize}\quad 0 &\quad &\mathrm{s.t.}\quad\nabla f(x^\ast)+A^\mathrm{T}y=0,
-\end{align}$`
-and let `$p^\ast$` and `$d^\ast$` denote the optimal objective values of (P) and (D), respectively.
-
-If (i) holds, then the primal is unbounded below, i.e., `$p^\ast=-\infty$`. By strong duality, we have `$d^\ast=-\infty$` (dual infeasible). If (ii) holds, then the dual is feasible and hence `$d^\ast=0$`. Strong duality then yields `$p^\ast=0$`, which contradicts the descent direction condition in (i). Therefore, exactly one of the two alternatives holds. `$\blacksquare$`
 
 ## Nonlinear Optimization with Inequality Constraints
 `\begin{align}
@@ -141,7 +145,7 @@ Expanding Equation `$\eqref{eq8}$` gives
 `$$A^\mathrm{T}u=0,\quad \mathbf{1}^\mathrm{T}u=1,\quad u\geq 0,$$`
 which is exactly the second alternative in the variation. Hence the two alternatives cannot both be false. Therefore, the variation is equivalent to the abovementioned Farkas' Lemma via a simple reparameterization, and exactly one of the two statements must hold.
 
-Based on the examples presented in [this section](https://xiweipan.com/en/2025/04/09/kkt-revisit/#feasible-direction), the set of feasible directions at a local optimum `$x^\ast$` of Problem `$\eqref{eq6}$` is given by
+Based on the examples presented in [this section](https://xiweipan.com/en/2026/01/08/kkt-revisit/#feasible-direction), the set of feasible directions at a local optimum `$x^\ast$` of Problem `$\eqref{eq6}$` is given by
 `$$F(x^\ast) = \{d\,|\,\nabla g_i(x^\ast)^\mathrm{T}d<0,\ i\in\mathcal{A}(x)\}.$$`
 The set of descent directions is
 `$$D(x^\ast) = \{d\,|\,\nabla f(x^\ast)^\mathrm{T}d<0\}.$$`
@@ -164,18 +168,71 @@ We now consider the case with both equality and inequality constraints taken int
 `\begin{align}
 \mathrm{minimize}\quad& f(x)\\
 \mathrm{s.t.}\quad& g_i(x)\leq 0,\quad i=1,\,\cdots,m\\
-& h_i(x)=0,\quad i=1,\,\cdots,p
+& h_i(x)=0,\quad i=1,\,\cdots,p \tag{11} \label{eq11}
 \end{align}`
 
-With Equations `$\eqref{eq5}$` and `$\eqref{eq7}$`, we can readily derive the following theorem.
+With Equations `$\eqref{eq5}$` and `$\eqref{eq7}$`, we can readily derive the following theorem, thus giving the KKT conditions.
 
 **Theorem 4**
 
 If `$x^\ast$` is a local minimizer and **LICQ holds**, then there exists `$y^\ast,\ v^\ast$` such that
 `\begin{align}
-&\nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0\\
-&y^\ast\geq 0\\
-&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m\\
-&h_i(x^\ast)=0,\quad i=1,\,\cdots,p\\
-&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m
+&\nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0\quad &\text{(stationarity)}\\
+&y^\ast\geq 0\quad &\text{(dual feasibility)}\\
+&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m\quad &\text{(primal feasibility)}\\
+&h_i(x^\ast)=0,\quad i=1,\,\cdots,p\quad &\text{(primal feasibility)}\\
+&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m\quad &\text{(complementary slackness)}
 \end{align}`
+
+## Duality
+We can also investigate the KKT conditions from the perspective of *duality*. The *Lagrangian* of Problem `$\eqref{eq11}$` is written as
+`$$L(x,y,v) = f(x)+\sum_{i=1}^my_ig_i(x)+\sum_{i=1}^pv_ih_i(x),$$`
+where `$y\geq 0$` are multipliers for inequality constraints and `$v$` are multipliers for equality constraints. The *Lagrange dual function*
+`$$q(y,v) = \inf_x L(x,y,v)$$`
+provides a **lower bound** on the primal optimal value `$p^\ast$`, that is, for any `$y\geq 0$` and `$v$`, we have `$q(y,v)\leq p^\ast$`.
+
+*Proof*. Let `$\tilde{x}$` be a feasible point. Then,
+`$$q(y,v) = \inf_x L(x,y,v)\leq f(\tilde{x})+\sum_{i=1}^my_ig_i(\tilde{x})+\sum_{i=1}^pv_ih_i(\tilde{x})\leq f(\tilde{x}),$$`
+where the second inequality is due to the fact that `$y_i\geq 0,\ g_i(\tilde{x})\leq 0,\ h_i(\tilde{x})=0$`. `$\blacksquare$`
+
+The corresponding **dual problem** maximizes this bound:
+`$$d^\ast = \max_{y,v}\ q(y,v)\quad\mathrm{s.t.}\ y\geq 0.$$`
+Note that, this is always a convex optimization problem, even if the primal is not. The lower-bound property immediately implies [weak duality](https://en.wikipedia.org/wiki/Weak_duality): `$d^\ast\leq p^\ast$`. The strong duality `$p^\ast=d^\ast$` does not hold in general. However, for convex problems it does under mild constraint qualifications.
+
+**Theorem 5**
+
+If the problem is **convex** and there exists **at least a strictly feasible point** `$x$`, i.e.,
+`\begin{align}
+&g_i(x)\leq 0,\quad \text{(for all affine )}g_i\\
+&g_i(x)<0,\quad \text{(for all non-affine )}g_i\\
+&h_i(x)=0,\quad i=1,\,\cdots,p
+\end{align}`
+then the strong duality holds: `$p^\ast=d^\ast$`. This condition is known as the [**Slater's condition**](https://en.wikipedia.org/wiki/Slater%27s_condition), which is a sufficient condition for strong duality to hold for a convex optimization problem. Moreover, it implies that the dual is not unbounded (`$d^\ast\neq +\infty$`).
+
+Under strong duality, the KKT conditions become the correct first-order characterization of optimality. We have the following theorem.
+
+**Theorem 6**
+
+If `$x^\ast$` is a local minimizer and **strong duality holds**, then there exists `$y^\ast,\ v^\ast$` such that
+`\begin{align}
+&\nabla_x L(x,y,v) = \nabla f(x^\ast)+\sum_{i=1}^my_i^\ast\nabla g_i(x^\ast)+\sum_{i=1}^pv_i^\ast\nabla h_i(x^\ast) = 0\quad &\text{(stationarity)}\\
+&y^\ast\geq 0\quad &\text{(dual feasibility)}\\
+&g_i(x^\ast)\leq 0,\quad i=1,\,\cdots,m\quad &\text{(primal feasibility)}\\
+&h_i(x^\ast)=0,\quad i=1,\,\cdots,p\quad &\text{(primal feasibility)}\\
+&y_i^\ast g_i(x^\ast)=0,\quad i=1,\,\cdots,m\quad &\text{(complementary slackness)}
+\end{align}`
+
+## For Convex Problems
+For convex optimization problems, KKT conditions are <font color=Crimson>not only necessary but also sufficient</font>. That is, if `$x^\ast,\ y^\ast,\ v^\ast$` satisfy KKT conditions for convex problem, then they are optimal.
+
+*Proof*. By complementary slackness,
+`$$L(x^\ast,y^\ast,v^\ast) = f(x^\ast)+\sum_{i=1}^my_ig_i(x)+\sum_{i=1}^pv_ih_i(x)=f(x^\ast).$$`
+
+Since `$L(x,y,v)$` is convex in `$x$` and `$\nabla_xL(x^\ast,y^\ast,v^\ast) = 0$`, we have
+`$$q(y^\ast,v^\ast)=\inf_xL(x,y^\ast,v^\ast) = L(x^\ast,y^\ast,v^\ast)\ \Rightarrow\ p^\ast=f(x^\ast)=q(y^\ast,v^\ast)=d^\ast,$$`
+which means that `$x^\ast$` is globally optimal. Thus, in the convex setting, optimality, duality, and the KKT conditions fit together into a single, unified framework.
+
+**Some Remarks on KKT**
+- For unconstrained problems, they reduce to necessary first-order condition `$\nabla f(x)=0$`.
+- In general, we can replace *LICQ* assumption with *strong duality* (refer to **Theorem 4** and **Theorem 6**).
+- KKT conditions are always **sufficient**. If Slater's condition holds, KKT conditions are **necessary and sufficient**.
