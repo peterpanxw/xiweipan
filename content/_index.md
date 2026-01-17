@@ -2,7 +2,7 @@
 title: Home
 ---
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at Jinji Lake in Suzhou, Summer 2023 (Courtesy of Jiayi)" width="450">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at New York City, Winter 2025 (Courtesy of Jiayi)" width="320">}}
 
 <p class="serif"><font size="7">Hi There!</font></p>
 
