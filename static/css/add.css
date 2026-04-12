@@ -407,3 +407,103 @@ a {
     background-color: #007bff;
     border-color: #007bff;
 }
+
+@media only screen and (max-width: 820px) {
+  .publis-item {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .item-thumb-list {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .publis-list .item-thumb-list .item-thumb {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    float: none;
+  }
+
+  .publis-list .item-thumb-list .item-thumb img {
+    position: static;
+    top: auto;
+    transform: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .publis-list .item-content {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 0;
+  }
+
+  .item-thumb-list ~ .item-content .item-tit {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .item-thumb-list ~ .item-content .item-desc {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .item-thumb-list ~ .item-content .item-periodical {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .publis-list .item-btn {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .publis-list .publis-item .item-btn a {
+    margin-right: 0;
+  }
+
+  .publis-list p,
+  .publis-list .item-tit,
+  .publis-list .item-desc,
+  .publis-list .item-periodical,
+  .publis-list .item-abstract {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .pop-img img {
+    max-width: 92vw;
+    max-height: 85vh;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .page-link {
+    padding: 0.55rem 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .item-thumb-list {
+    grid-template-columns: 1fr;
+  }
+}

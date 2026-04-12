@@ -584,5 +584,11 @@ hr {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
-}
 
+  .contentproject {
+    max-width: 100%;
+    margin: 32px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+}
