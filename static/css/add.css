@@ -502,8 +502,3 @@ a {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .item-thumb-list {
-    grid-template-columns: 1fr;
-  }
-}
