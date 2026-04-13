@@ -143,60 +143,62 @@
   }
 
   @media only screen and (max-width: 820px) {
-    .wrapper {
-      padding-bottom: 0;
-    }
-
-    footer.footer {
-      position: static;
-      height: auto;
-      padding: 24px 16px;
-    }
-
-    footer.footer .container {
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      padding: 0 16px;
-    }
-
-    footer.footer .navbar-brand.social {
-      float: none;
-      margin: 0;
-      margin-left: 0;
-      margin-top: 0;
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    footer.footer .container .footer-links {
-      margin: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px 12px;
-      line-height: 1.8;
-    }
-
-    .footer-links li::before {
-      display: none;
-    }
-
-    .footer-links a {
-      margin: 0;
-    }
-
-    footer.footer .copyright-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      margin-top: 12px;
-      text-align: center;
-      padding: 0 16px;
-    }
+  .wrapper {
+    padding-bottom: 0;
   }
+
+  footer.footer {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 24px 16px;
+    box-sizing: border-box;
+  }
+
+  footer.footer .container {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+  }
+
+  footer.footer .navbar-brand,
+  footer.footer .navbar-brand.social {
+    float: none;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  footer.footer .container .footer-links {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    line-height: 1.8;
+  }
+
+  .footer-links li::before {
+    display: none;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+
+  footer.footer .copyright-content {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    text-align: center;
+    padding: 0;
+  }
+}
 </style>
