@@ -16,7 +16,15 @@ Beyond research, I enjoy playing (table) tennis, swimming, photography, and stay
 ## [**News**](/en/news/)
 <link rel="stylesheet" href="/css/add.css">
   <div class="list-page news-list-page">
-    <div class="list-item">
+      <div class="list-item">
+          <div class="item-time">
+              <p>Jun 21, 2026</p>
+          </div>
+          <div class="item-content">
+              <p>Presented on the 20th U.S. National Congress on Theoretical and Applied Mechanics (USNC-TAM26) @ Pasadena, California</p>
+          </div>
+      </div>
+      <div class="list-item">
           <div class="item-time">
               <p>Jul 01, 2025</p>
           </div>
@@ -24,7 +32,7 @@ Beyond research, I enjoy playing (table) tennis, swimming, photography, and stay
               <p>My second research paper got accepted by the <a href="https://www.sciencedirect.com/journal/international-journal-of-engineering-science"><em>International Journal of Engineering Science</em></a>!</p>
           </div>
       </div>
-      <div class="list-item">
+      <div class="list-item item-hide">
           <div class="item-time">
               <p>Jun 11, 2025</p>
           </div>
@@ -38,7 +46,7 @@ Beyond research, I enjoy playing (table) tennis, swimming, photography, and stay
           </div>
           <div class="item-content">
               <p>Recommended as an <i>Outstanding Graduate of the 2025 Class at DUT</i> and an <i>Outstanding Graduate of the 2025 Class of Liaoning Province</i>.</p>
-          </div>
+        </div>
       </div>
       <div class="list-item item-hide">
           <div class="item-time">
@@ -46,14 +54,6 @@ Beyond research, I enjoy playing (table) tennis, swimming, photography, and stay
           </div>
           <div class="item-content">
               <p>Rated as the <i>Outstanding Graduate Student of DUT</i>.</p>
-          </div>
-      </div>
-      <div class="list-item item-hide">
-          <div class="item-time">
-              <p>Jul 21, 2024</p>
-          </div>
-          <div class="item-content">
-              <p>Attend the 16th World Congress on Computational Mechanics (WCCM 2024) @ Vancouver, Canada.</p>
           </div>
       </div>
   </div>

@@ -5,6 +5,15 @@ date: ''
 ---
 <article class="layout_table">
   <div class="left">
+    <b>Jun 21, 2026</b>
+  </div>
+  <div class="right">
+    <p>Presented on the 20th U.S. National Congress on Theoretical and Applied Mechanics (USNC-TAM26) @ Pasadena, California</p>
+  </div>
+</article>
+
+<article class="layout_table">
+  <div class="left">
     <b>Jul 01, 2025</b>
   </div>
   <div class="right">
