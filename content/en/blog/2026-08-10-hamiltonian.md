@@ -48,7 +48,7 @@ In this way, we obtain the well-known [Euler-Lagrange equation](https://en.wikip
 The motivation for this definition will become clear when we later introduce the [Legendre transformation](https://en.wikipedia.org/wiki/Legendre_transformation). Moreover, the canonical momentum defined by Equation `$\eqref{eq2}$` does not necessarily equal to `$mv$`. For a particle described by a Cartesian coordinate `$x$`, we have
 `$$\mathcal{L} = \frac{1}{2}m\dot{x}^2-U(x),\quad p = \frac{\partial\mathcal{L}}{\partial\dot{x}} = m\dot{x} = mv.$$`
 However, for a generalized coordinate, the corresponding canonical momentum can take a different form. For example, for a simple pendulum described by the angular coordinate `$\theta$`,
-`$$\mathcal{L} = \frac{1}{2}ml^2\dot{\theta}^2-U(\theta),\quad p = \frac{\partial\mathcal{L}}{\partial\dor{\theta}} = ml^2\dot{\theta}\neq mv.$$`
+`$$\mathcal{L} = \frac{1}{2}ml^2\dot{\theta}^2-U(\theta),\quad p = \frac{\partial\mathcal{L}}{\partial\dot{\theta}} = ml^2\dot{\theta}\neq mv.$$`
 
 Now, let us turn to the Legendre transformation. For a differentiable convex (ensures one-to-one mapping and invertibility) function `$f(x)$`, the Legendre transformation replaces the original variable `$x$` with the slope
 `$$u = f^\prime(x), \tag{3} \label{eq3}$$`
@@ -81,6 +81,6 @@ Then, Equation `$\eqref{eq5}$` can be simplified to
 Compared with the total differentiation of the Hamiltonian,
 `$$\mathrm{d}\mathcal{H} = \sum_i\frac{\partial\mathcal{H}}{\partial q_i}\mathrm{d}q_i+\sum_i\frac{\partial\mathcal{H}}{\partial p_i}\mathrm{d}p_i+\frac{\partial\mathcal{H}}{\partial t}\mathrm{d}t,$$`
 we obtain the Hamiltonian equation
-`$$\dot{q}_i = \frac{\partial\mathcal{H}}{\partial p_i},\quad \dot{p}_i = -\frac{\partial\mathcal{H}}{\partial q_i},\quad \frac{\partial\mathcal{H}}{\partial t} = -\frac{\partial\mathcal{L}}{\partial t}.$$`
+`$$\boxed{\dot{q}_i = \frac{\partial\mathcal{H}}{\partial p_i},\quad \dot{p}_i = -\frac{\partial\mathcal{H}}{\partial q_i},\quad \frac{\partial\mathcal{H}}{\partial t} = -\frac{\partial\mathcal{L}}{\partial t}.}$$`
 
 The Hamiltonian formulation does not introduce new physics; rather, it reorganizes the same dynamics into a form that makes the structure of the system, conservation laws, and phase-space evolution more transparent. Although it does not usually make the equations of motion easier to solve explicitly, it provides a powerful framework for deriving important theoretical results, partly because the generalized coordinates and momenta are treated as independent variables with nearly symmetric roles. This formulation also serves as a natural foundation for statistical mechanics and quantum mechanics.
