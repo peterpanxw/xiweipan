@@ -51,7 +51,7 @@ Referring back to the expression for the microstates number given by Equation `$
 \mathrm{s.t.}\quad &\sum_l a_l-N=0\\
 &\sum_l a_l\varepsilon_l-U=0, \tag{4} \label{eq4}
 \end{align}` 
-where, for simplicity, we reformulate the problem of maximizing `$W$` as an equivalent problem of minimizing its negative logarithm. Note that, the number of particles `$N$` contained in real systems is sufficiently large, allowing us to further simplify the complex factorial operations using **Stirling's approximation**:
+where, for simplicity, we reformulate the problem of maximizing `$W$` as an equivalent problem of minimizing its negative logarithm. Note that, the number of particles `$N$` contained in real systems is sufficiently large, allowing us to further simplify the complex factorial operations using [**Stirling's approximation**](https://xiweipan.com/en/2026/08/16/stirling-formula/):
 `$$\ln n!\approx n\left(\ln n-1\right),\quad n\gg 1, \tag{5} \label{eq5}$$`
 then, taking the logarithm of Equation `$\eqref{eq2}$` and applying Stirling's approximation, we obtain
 `$$\ln W\approx N\ln N-N-\sum_l\left(a_l\ln a_l-a_l\right)+\sum_la_l\ln g_l. \tag{6} \label{eq6}$$`
