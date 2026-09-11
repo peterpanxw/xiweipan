@@ -2,9 +2,9 @@
 title: Home
 ---
 
-{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at New York City, Winter 2025 (Courtesy of Jiayi)" width="320">}}
+{{<figure src="/figures/Xiwei_Portrait.JPG" title="Me at New York City, Winter 2025 (Courtesy of Jiayi)" width="240">}}
 
-<p class="serif"><font size="7">Hi There!</font></p>
+<p class="serif"><font size="6">Hi There!</font></p>
 
 My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am a second-year Ph.D. student at [Princeton University](https://www.princeton.edu/), advised by Prof. [Liuchi Li](https://www.liuchili.info/). My research interests lie in multibody frictional contact, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
 
