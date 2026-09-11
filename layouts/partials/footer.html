@@ -78,9 +78,11 @@
         {{ .| markdownify }}
         {{ end }}
         {{ default (index $.Site.Params.lang.author $.Site.Params.defaultLang) (index $.Site.Params.lang.author $.Section) }}
-        {{ with .Site.Params.copyrightYear }}
+        <!-- {{ with .Site.Params.copyrightYear }}
         {{ .| markdownify }}
-        {{ end }}
+        {{ end }} -->
+        {{ with site.Params.copyrightStartYear }}{{ . }}-{{ end }}<span id="copyright-year">{{ now.Year }}</span>
+        <script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
       </div>
       <div style="text-align: center; color: gray; font-size: 19px;
       margin-bottom: 10px">
