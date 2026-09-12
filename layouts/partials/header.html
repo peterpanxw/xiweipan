@@ -44,6 +44,8 @@
             left: 0;
             z-index: 1;
             width: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
         .header-bigbg:after  {
             content:'';
@@ -55,7 +57,7 @@
             background:gray;
             opacity:.32;
         }
-        .header-bigbg img {
+        /*.header-bigbg img {
             position:relative;
             top:50%;
             left:50%;
@@ -63,6 +65,13 @@
             vertical-align: top;
             width: 100%;
             min-height: 100%;
+        }*/
+        .header-bigbg img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            display: block;
         }
 
         .header-bigbg .header-arrow {
