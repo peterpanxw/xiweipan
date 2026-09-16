@@ -369,7 +369,7 @@ figcaption {
 
 figcaption a {
   font-size: 14px;
-} 
+}
 
 /* Styling body texts. Based on https://github.com/xiangming/typo/blob/master/css/typo.css */
 
@@ -386,7 +386,6 @@ h3,
 h4,
 h5,
 h6 {
-  /* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
   margin-bottom: 25px;
   line-height: 1.25;
   text-align: center;

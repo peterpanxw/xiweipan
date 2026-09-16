@@ -6,12 +6,12 @@ title: Home
 
 <p class="serif"><font size="6">Hi There!</font></p>
 
-My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am a second-year Ph.D. student at [Princeton University](https://www.princeton.edu/), advised by Prof. [Liuchi Li](https://www.liuchili.info/). My research interests lie in multibody frictional contact, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
+My name is **Xiwei (Peter) Pan**, originally from the historic city of [Yangzhou](https://en.wikipedia.org/wiki/Yangzhou), China. I am a second-year Ph.D. student at [Princeton University](https://www.princeton.edu/), advised by Prof. [Liuchi Li](https://liuchili.cee.princeton.edu/). My research interests lie in multibody contact and friction, nonlinear problems, asymptotic analysis, plate and shell theories, and the application of machine learning methods to these areas.
 
 Prior to that, I earned a master's degree in Mechanics (advised by Prof. [Yichao Zhu](http://faculty.dlut.edu.cn/zhuyc/zh_CN/index/968943/list/index.htm)) and a bachelor's degree in Engineering Mechanics through the *Qian Lingxi Excellence in Education Program*, both from [Dalian University of Technology (DUT)](https://www.dlut.edu.cn/).
 
 <!-- - I am actively seeking possible (fall 2025) Ph.D. opportunities in **machine learning-assisted mechanical analysis/design and AI4Science**, here is my [<i class="fa fa-address-card" aria-hidden="true"></i> Curriculum Vitae (CV)](/files/Xiwei_CV.pdf).-->
-Beyond research, I enjoy playing (table) tennis, swimming, photography, and staying active (both physically and mentally).
+Outside of research, I enjoy playing (table) tennis, swimming, photography, and staying active (both physically and mentally).
 
 ## [**News**](/en/news/)
 <link rel="stylesheet" href="/css/add.css">
