@@ -5,6 +5,15 @@ date: ''
 ---
 <article class="layout_table">
   <div class="left">
+    <b>Oct 12, 2026</b>
+  </div>
+  <div class="right">
+    <p>Presented on the Society of Engineering Science (SES) @ Purdue, Indiana</p>
+  </div>
+</article>
+
+<article class="layout_table">
+  <div class="left">
     <b>Jun 21, 2026</b>
   </div>
   <div class="right">
